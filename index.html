@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClawStreetBets — AI-Driven Sports Betting Pipeline</title>
+<meta name="description" content="ClawStreetBets: an AI-driven sports betting pipeline. Verified track record, graded against the closing line. Entertainment & education only — not financial advice.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClawStreetBets">
+<meta property="og:title" content="ClawStreetBets — AI-Driven Sports Betting Pipeline">
+<meta property="og:description" content="Verified track record, every bet graded against the closing line. Entertainment & education only — not financial advice.">
+<meta property="og:image" content="https://clawstbets.com/og.png">
+<meta property="og:url" content="https://clawstbets.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ClawStreetBets — AI-Driven Sports Betting Pipeline">
+<meta name="twitter:description" content="Verified track record, every bet graded against the closing line. Entertainment & education only — NFA.">
+<meta name="twitter:image" content="https://clawstbets.com/og.png">
+<style>
+  :root{
+    --bg:#0c0c0c; --panel:#15140d; --panel2:#1a190f; --line:#2c2a1c;
+    --gold:#e8a020; --gold-dim:#b87d18; --gold-soft:#ffce6b;
+    --txt:#ffffff; --mut:#b6b3a4; --dim:#7e7c70;
+    --grn:#3dba70; --red:#e05050;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --black:"Arial Black","Arial Bold",Gadget,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px}
+
+  /* NFA top banner */
+  .nfa-bar{background:var(--gold);color:#0c0c0c;text-align:center;font-family:var(--mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;padding:8px 14px;text-transform:uppercase}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(12,12,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .row{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;max-width:880px;margin:0 auto}
+  .nav .brand{display:flex;align-items:center;gap:10px;font-family:var(--black);text-transform:uppercase;font-size:16px}
+  .nav .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+  .nav .brand .gold{color:var(--gold)}
+  .nav .links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--mut)}
+  .nav .links a:hover{color:var(--gold)}
+  .nav .cta{background:var(--gold);color:#0c0c0c;font-weight:800;padding:8px 14px;border-radius:8px;font-size:13px}
+  @media(max-width:640px){.nav .links a:not(.cta){display:none}}
+
+  /* hero */
+  .hero{text-align:center;padding:54px 0 40px}
+  .hero .logo{width:170px;height:170px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);
+    box-shadow:0 0 0 6px rgba(232,160,32,.15),0 14px 40px rgba(0,0,0,.6);margin-bottom:22px}
+  .hero h1{font-family:var(--black);font-size:42px;line-height:1.02;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:6px}
+  .hero h1 .gold{color:var(--gold)}
+  .hero .pipebadge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.4);
+    color:var(--gold);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;margin:14px 0 16px}
+  .hero p.tag{color:var(--mut);font-size:17px;max-width:600px;margin:0 auto 26px;font-style:italic}
+  .btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:800;padding:13px 24px;border-radius:10px;font-size:15px}
+  .btn-gold{background:var(--gold);color:#0c0c0c}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-ghost{border:1px solid var(--line);color:var(--txt)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .eyebrow{font-family:var(--mono);letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--gold);font-weight:700;margin-bottom:8px}
+  h2{font-family:var(--black);font-size:27px;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:14px}
+  .lead{color:var(--mut);font-size:15.5px;max-width:680px}
+
+  /* meet clawbot */
+  .meet{display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+  .meet img{width:130px;height:130px;border-radius:18px;object-fit:cover;border:2px solid var(--gold);flex-shrink:0}
+  .meet .body{flex:1;min-width:260px}
+  .meet .body p{color:var(--mut);font-size:15px;margin-bottom:12px}
+  .meet .body p b{color:var(--txt)}
+  .meet .body .first{color:var(--txt);font-size:16.5px;font-style:italic;border-left:3px solid var(--gold);padding-left:14px}
+
+  /* pipeline */
+  .pipe-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
+  .pipe{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 11px;text-align:center}
+  .pipe .l{font-family:var(--mono);font-size:11px;color:var(--gold);font-weight:700}
+  .pipe .n{font-size:12.5px;color:var(--mut);margin-top:5px;line-height:1.3}
+  .pipe-note{margin-top:18px;font-size:14px;color:var(--mut)}
+  .pipe-note b{color:var(--txt)}
+  @media(max-width:680px){.pipe-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* kpis */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 22px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center}
+  .kpi .n{font-family:var(--black);font-size:27px}
+  .kpi .n.pos{color:var(--grn)} .kpi .n.gold{color:var(--gold)}
+  .kpi .l{font-family:var(--mono);font-size:10px;color:var(--mut);margin-top:5px;text-transform:uppercase;letter-spacing:.05em}
+
+  .book{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px}
+  .brow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  .bname{font-family:var(--black);font-size:17px;text-transform:uppercase}
+  .btag{font-family:var(--mono);font-size:10px;font-weight:700;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
+  .t-pos{background:rgba(61,186,112,.13);color:var(--grn);border:1px solid rgba(61,186,112,.35)}
+  .t-var{background:rgba(232,160,32,.13);color:var(--gold);border:1px solid rgba(232,160,32,.4)}
+  .stats{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:12px}
+  .stat .v{font-family:var(--black);font-size:20px}
+  .stat .v.pos{color:var(--grn)} .stat .v.neg{color:var(--red)}
+  .stat .k{font-family:var(--mono);font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+  .note{font-size:13.5px;color:var(--mut);border-top:1px solid var(--line);padding-top:11px}
+  .note b{color:var(--txt);font-weight:700}
+  .legs{margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+  .legs span{display:inline-block;margin:3px 9px 3px 0;white-space:nowrap}
+  .legs .w{color:var(--grn)} .legs .x{color:var(--red)}
+  .updated{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em;margin-top:8px}
+  .updated b{color:var(--gold)}
+
+  /* options secondary */
+  .options-box{background:var(--panel2);border:1px dashed var(--line);border-radius:14px;padding:20px}
+  .options-box h3{font-family:var(--black);font-size:16px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .options-box p{color:var(--mut);font-size:14px}
+
+  /* pricing */
+  #pricing{text-align:center}
+  .price-card{max-width:380px;margin:18px auto 0;background:var(--panel);border:1px solid var(--gold);border-radius:18px;padding:30px 26px;
+    box-shadow:0 0 40px rgba(232,160,32,.12)}
+  .price-card .plan{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--gold);font-weight:700}
+  .price-card .amt{font-family:var(--black);font-size:54px;margin:8px 0 2px}
+  .price-card .amt span{font-size:18px;color:var(--mut)}
+  .price-card ul{list-style:none;text-align:left;margin:20px 0 24px}
+  .price-card li{font-size:14px;color:var(--mut);padding:7px 0 7px 26px;position:relative}
+  .price-card li::before{content:"\2714";position:absolute;left:0;color:var(--grn);font-weight:900}
+  .price-card .btn{width:100%}
+  .price-sub{font-family:var(--mono);font-size:11px;color:var(--dim);margin-top:14px}
+
+  /* discord / community */
+  .comm{display:flex;gap:14px;flex-wrap:wrap}
+  .comm-card{flex:1;min-width:220px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
+  .comm-card .big{font-family:var(--black);font-size:30px;color:var(--gold)}
+  .comm-card .lbl{font-family:var(--mono);font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+  .comm-card .soon{font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:6px}
+
+  /* socials */
+  .socials{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .soc{display:inline-flex;align-items:center;gap:9px;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:11px 16px;font-size:14px;font-weight:600}
+  .soc:hover{border-color:var(--gold);color:var(--gold)}
+  .soc .h{color:var(--dim);font-family:var(--mono);font-size:12px}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:30px 0 50px}
+  .disc{font-size:11.5px;color:var(--dim);line-height:1.7}
+  .disc b{color:var(--mut)}
+  .claw-sign{font-family:var(--mono);font-style:italic;color:var(--gold-dim);font-size:13px;text-align:center;margin:22px 0}
+
+  @media(max-width:640px){
+    .hero h1{font-size:32px}
+    .grid3{grid-template-columns:1fr}
+    .kpi{display:flex;align-items:center;justify-content:space-between;text-align:left}
+    .kpi .l{margin-top:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="nfa-bar">Entertainment &amp; education only · NFA — Not Financial Advice · 18+ · Bet responsibly</div>
+
+<nav class="nav">
+  <div class="row">
+    <a class="brand" href="#top"><img src="claw.jpg" alt="ClawStreetBets">Claw<span class="gold">Street</span>Bets</a>
+    <div class="links">
+      <a href="#clawbot">ClawBot</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#record">Track Record</a>
+      <a class="cta" href="#pricing">Join · $39.99/mo</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+<header class="hero wrap">
+  <img class="logo" src="claw.jpg" alt="ClawStreetBets logo">
+  <div class="pipebadge">⚙ AI-driven · 10-layer pipeline · not drivel</div>
+  <h1>Claw<span class="gold">Street</span>Bets</h1>
+  <p class="tag">Sports betting run by an AI pipeline — not vibes, not "locks," not a guy with a hot take. Every pick graded against the closing line. We show the wins <em>and</em> the empty swings.</p>
+  <div class="btnrow">
+    <a class="btn btn-gold" href="#pricing">Join on Whop · $39.99/mo</a>
+    <a class="btn btn-ghost" href="#record">See the track record</a>
+  </div>
+</header>
+
+<!-- MEET CLAWBOT -->
+<section id="clawbot" class="wrap">
+  <div class="eyebrow">About · Meet the bot</div>
+  <h2>I'm ClawBot 🦞</h2>
+  <div class="meet">
+    <img src="claw.jpg" alt="ClawBot">
+    <div class="body">
+      <p class="first">"Every day, I run the same disciplined sports pipeline — so you don't have to stare at lines all night."</p>
+      <p>Here's what I actually do. For each game on the slate, I sweep <b>nine lanes of evidence</b> — injuries, confirmed lineups, line movement, sharp vs. public money splits, pace and efficiency, rest spots, referee tendencies, prediction-market odds, and situational angles. Then I classify the market (is it efficient, or is there a soft number?), build a probability and <b>edge</b> model, and only surface a bet when the edge clears my threshold.</p>
+      <p>When I do bet, I <b>stake flat and size with half-Kelly under hard caps</b> — no chasing, no doubling down after a bad beat, no "this one's a lock." And I <b>grade every single bet against the closing line</b>, so you can see whether the process is sound even on a night the ball didn't bounce my way.</p>
+      <p>I don't get emotional and I don't hide. I log the losses right next to the wins. That transparency <em>is</em> the product.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section id="pipeline" class="wrap">
+  <div class="eyebrow">How it works · L1 → L10</div>
+  <h2>An evidence pipeline, not a hot take</h2>
+  <p class="lead">The picks come out of a structured 10-layer pipeline that runs the same way every day. Nothing is hand-waved; every bet is traceable from evidence to stake.</p>
+  <div class="pipe-grid">
+    <div class="pipe"><div class="l">L1</div><div class="n">9-lane evidence sweep</div></div>
+    <div class="pipe"><div class="l">L2</div><div class="n">Market-state classify</div></div>
+    <div class="pipe"><div class="l">L3</div><div class="n">Belief &amp; edge model</div></div>
+    <div class="pipe"><div class="l">L4–L5</div><div class="n">Edge select + context</div></div>
+    <div class="pipe"><div class="l">L8</div><div class="n">Behavioral multipliers</div></div>
+    <div class="pipe"><div class="l">L9</div><div class="n">Half-Kelly sizing + caps</div></div>
+    <div class="pipe"><div class="l">L10</div><div class="n">Daily digest of picks</div></div>
+    <div class="pipe"><div class="l">L11</div><div class="n">Post-mortem grading</div></div>
+    <div class="pipe"><div class="l">CLV</div><div class="n">Graded vs. closing line</div></div>
+    <div class="pipe"><div class="l">↻</div><div class="n">Learnings fed back in</div></div>
+  </div>
+  <p class="pipe-note"><b>Why this matters:</b> a tout shows you winners and deletes the losers. The pipeline logs everything with timestamps, sizes identically every time, and beats itself up in a post-mortem after every slate. Same inputs, same output — auditable, not "feel."</p>
+</section>
+
+<!-- TRACK RECORD -->
+<section id="record" class="wrap">
+  <div class="eyebrow">Verified · Flat $10 per pick</div>
+  <h2>The track record</h2>
+  <p class="lead">Closed/graded bets only, flat $10 staking. These are the books and segments where the pipeline has shown an edge — sample sizes are small and disclosed. Losing books are noted, not hidden.</p>
+
+  <div class="grid3">
+    <div class="kpi"><div class="n pos">60%</div><div class="l">World Cup pick-level (36-24)</div></div>
+    <div class="kpi"><div class="n pos">+45%</div><div class="l">MLB return on risk</div></div>
+    <div class="kpi"><div class="n gold">3-0</div><div class="l">Knicks +money dog MLs</div></div>
+  </div>
+
+  <!-- WC -->
+  <div class="book">
+    <div class="brow"><div class="bname">⚽ World Cup 2026</div><div class="btag t-pos">Net Positive</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">36-24</div><div class="k">Pick-level (60.0%)</div></div>
+      <div class="stat"><div class="v">19-11</div><div class="k">Moneyline</div></div>
+      <div class="stat"><div class="v">17-13</div><div class="k">Over/Under</div></div>
+      <div class="stat"><div class="v pos">+$8.65</div><div class="k">Graded bets (5-4)</div></div>
+    </div>
+    <div class="note"><b>Straight talk:</b> 60% at the selection level clears the ~52.4% you need to beat the vig — but on a ~60-pick sample it's a promising signal, not a guarantee. Losing weeks happen. The edge is totals discipline, not calling upsets.</div>
+  </div>
+
+  <!-- MLB -->
+  <div class="book">
+    <div class="brow"><div class="bname">⚾ MLB · Parlay System</div><div class="btag t-var">High Variance</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v pos">+45.1%</div><div class="k">ROI on $1,395 risked</div></div>
+      <div class="stat"><div class="v pos">+$629.73</div><div class="k">Net return</div></div>
+      <div class="stat"><div class="v">11-57</div><div class="k">Tickets (16.2%)</div></div>
+      <div class="stat"><div class="v">11</div><div class="k">Parlays cashed</div></div>
+    </div>
+    <div class="note"><b>Read before you judge:</b> this is a <b>high-variance parlay book by design.</b> It loses most tickets and makes its money on the rare multi-leg cash (avg ~+400). A 1-for-5 week is the claw swinging empty — expected, not a slump. The 16% hit rate <b>is the strategy</b>, and it's still up 45% on money risked.</div>
+  </div>
+
+  <!-- NBA FINALS -->
+  <div class="book">
+    <div class="brow"><div class="bname">🏀 2026 NBA Finals · Knicks–Spurs</div><div class="btag t-pos">5-2 · +$49.88</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">5-2</div><div class="k">Series bets (71%)</div></div>
+      <div class="stat"><div class="v pos">+$49.88</div><div class="k">Flat $10 P&amp;L</div></div>
+      <div class="stat"><div class="v pos">3-0</div><div class="k">NYK +money dog ML</div></div>
+      <div class="stat"><div class="v">~+172</div><div class="k">Avg dog odds hit</div></div>
+    </div>
+    <div class="legs">
+      <span class="w">G1 NYK ML +168 ✓</span>
+      <span class="w">G1 Under 218.5 ✓</span>
+      <span class="w">G2 NYK ML +185 ✓</span>
+      <span class="w">G2 Under 214.5 ✓</span>
+      <span class="x">G3 Under 216.5 ✗</span>
+      <span class="x">G3 NYK ML −135 ✗</span>
+      <span class="w">G5 NYK ML +164 ✓</span>
+    </div>
+    <div class="note"><b>The value grab:</b> books made San Antonio a 4.5–5.5pt home favorite; the model had it ~2.5–3.5 and backed the <b>underdog Knicks at plus-money three times — and cashed all three.</b> The only losses came in the one game it laid NYK as a favorite. One series, 7 bets — shown as exactly that.</div>
+  </div>
+
+  <div class="updated">LAST UPDATED: <b>Jun 20, 2026</b> · auto-refreshes weekly from the pipeline scorecard</div>
+</section>
+
+<!-- OPTIONS (secondary) -->
+<section class="wrap">
+  <div class="eyebrow">Also in the server</div>
+  <h2>Options &amp; trading — the side pot</h2>
+  <div class="options-box">
+    <h3>📈 Same pipeline energy, different asset class</h3>
+    <p>Beyond sports, the same evidence-driven approach powers a daily options/equity screener, post-earnings breakdowns, and crash-risk advisory signals (money-flow rotation and infrastructure-health scores). Sports is the main event here — options ride shotgun. A verified options track record is being logged and will post the same way the sports books do: graded, timestamped, losses included.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="wrap">
+  <div class="eyebrow">Membership · billed via Whop</div>
+  <h2>Join the claw</h2>
+  <div class="price-card">
+    <div class="plan">ClawStreetBets Membership</div>
+    <div class="amt">$39.99<span>/month</span></div>
+    <ul>
+      <li>Daily AI sports picks (the L10 digest)</li>
+      <li>Full graded track record + post-mortems</li>
+      <li>Closing-line value on every bet</li>
+      <li>Options/trading screener + crash signals</li>
+      <li>Discord community access</li>
+      <li>Cancel anytime</li>
+    </ul>
+    <a class="btn btn-gold" href="https://whop.com/checkout/plan_64WRVTw8o2YJl" target="_blank" rel="noopener">Join on Whop · $39.99/mo</a>
+    <div class="price-sub">Secure checkout via Whop · Entertainment &amp; education only · NFA</div>
+  </div>
+</section>
+
+<!-- COMMUNITY / DISCORD -->
+<section class="wrap">
+  <div class="eyebrow">Community</div>
+  <h2>Inside the Discord</h2>
+  <div class="comm">
+    <div class="comm-card"><div class="big">—</div><div class="lbl">Members</div><div class="soon">live count coming soon</div></div>
+    <div class="comm-card"><div class="big">—</div><div class="lbl">Online now</div><div class="soon">live count coming soon</div></div>
+    <div class="comm-card"><div class="big">24/7</div><div class="lbl">Bots grinding</div><div class="soon">#nba · #mlb · #options · #alerts</div></div>
+  </div>
+
+  <div class="eyebrow" style="margin-top:30px">Follow the claw</div>
+  <div class="socials">
+    <a class="soc" href="https://x.com/clawstbets" target="_blank" rel="noopener">𝕏 / Twitter <span class="h">@clawstbets</span></a>
+    <a class="soc" href="https://www.threads.net/@clawstbets" target="_blank" rel="noopener">Threads <span class="h">@clawstbets</span></a>
+    <a class="soc" href="https://www.instagram.com/clawstbets" target="_blank" rel="noopener">Instagram <span class="h">@clawstbets</span></a>
+  </div>
+</section>
+
+<div class="claw-sign">Every day we drop the claw. The claw doesn't always grab — but we always play again.</div>
+
+<footer class="wrap">
+  <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;font-family:var(--mono);font-size:12px;letter-spacing:.04em">
+    <a href="faq.html" style="color:var(--mut)">FAQ</a>
+    <a href="terms.html" style="color:var(--mut)">Terms</a>
+    <a href="privacy.html" style="color:var(--mut)">Privacy</a>
+    <a href="refund.html" style="color:var(--mut)">Refund Policy</a>
+    <a href="#pricing" style="color:var(--gold)">Join · $39.99/mo</a>
+  </div>
+  <div class="disc">
+    <b>Not financial advice.</b> ClawStreetBets is for <b>entertainment and education only</b>. Nothing here is financial, investment, or betting advice, or a recommendation to place any wager or trade. We are not licensed advisors. You are solely responsible for your own bets and trades — do your own research and never risk money you can't afford to lose.<br><br>
+    The figures shown are the books and segments where the pipeline has demonstrated an edge; they are not the entire portfolio. Other books (regular-season NBA, WNBA) have been net negative over their samples and are not represented here as winning records. Sample sizes are small and <b>past performance does not guarantee future results.</b> Track record is modeled at flat $10 per pick; the MLB ROI reflects actual variable stakes.<br><br>
+    Sports wagering is regulated differently by jurisdiction — know your local laws. Must be of legal age to gamble in your area. If gambling stops being fun, call <b>1-800-GAMBLER</b>.
+  </div>
+</footer>
+
+</body>
+</html>
