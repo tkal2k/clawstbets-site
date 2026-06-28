@@ -57,6 +57,8 @@
   .hero .pipebadge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.4);
     color:var(--gold);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
     padding:6px 12px;border-radius:999px;margin:14px 0 16px}
+  .hero p.slogan{font-family:var(--black);font-size:20px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:14px}
+  .hero p.slogan .gold{color:var(--gold)}
   .hero p.tag{color:var(--mut);font-size:17px;max-width:600px;margin:0 auto 26px;font-style:italic}
   .btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .btn{display:inline-block;font-weight:800;padding:13px 24px;border-radius:10px;font-size:15px}
@@ -100,6 +102,7 @@
   .btag{font-family:var(--mono);font-size:10px;font-weight:700;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
   .t-pos{background:rgba(61,186,112,.13);color:var(--grn);border:1px solid rgba(61,186,112,.35)}
   .t-var{background:rgba(232,160,32,.13);color:var(--gold);border:1px solid rgba(232,160,32,.4)}
+  .t-neg{background:rgba(224,80,80,.13);color:var(--red);border:1px solid rgba(224,80,80,.38)}
   .stats{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:12px}
   .stat .v{font-family:var(--black);font-size:20px}
   .stat .v.pos{color:var(--grn)} .stat .v.neg{color:var(--red)}
@@ -177,8 +180,9 @@
 <div id="top"></div>
 <header class="hero wrap">
   <img class="logo" src="clawbot.png" alt="ClawStreetBets logo">
-  <div class="pipebadge">⚙ AI-driven · 10-layer pipeline · not drivel</div>
+  <div class="pipebadge">⚙ AI-driven · 10-layer pipeline · for the win</div>
   <h1>Claw<span class="gold">Street</span>Bets</h1>
+  <p class="slogan">Claw<span class="gold">Street</span>Bets for the win.</p>
   <p class="tag">Sports betting run by an AI pipeline — not vibes, not "locks," not a guy with a hot take. Every pick graded against the closing line. We show the wins <em>and</em> the empty swings.</p>
   <div class="btnrow">
     <a class="btn btn-gold" href="#pricing">Join on Whop · $39.99/mo</a>
@@ -228,8 +232,8 @@
   <p class="lead">Closed/graded bets only. Dollar figures are estimated net at the unit size noted on each book; win-rate and ROI are stake-independent. These are the books and segments where the pipeline has shown an edge — sample sizes are small and disclosed. Losing books are noted, not hidden.</p>
 
   <div class="grid3">
-    <div class="kpi"><div class="n pos">60%</div><div class="l">World Cup pick-level (36-24)</div></div>
-    <div class="kpi"><div class="n pos">+45%</div><div class="l">MLB return on risk</div></div>
+    <div class="kpi"><div class="n pos">61%</div><div class="l">World Cup pick-level (81-51)</div></div>
+    <div class="kpi"><div class="n pos">+36%</div><div class="l">MLB return on risk</div></div>
     <div class="kpi"><div class="n gold">3-0</div><div class="l">Knicks +money dog MLs</div></div>
   </div>
 
@@ -237,24 +241,24 @@
   <div class="book">
     <div class="brow"><div class="bname">⚽ World Cup 2026</div><div class="btag t-pos">Net Positive</div></div>
     <div class="stats">
-      <div class="stat"><div class="v">36-24</div><div class="k">Pick-level (60.0%)</div></div>
-      <div class="stat"><div class="v">19-11</div><div class="k">Moneyline</div></div>
-      <div class="stat"><div class="v">17-13</div><div class="k">Over/Under</div></div>
-      <div class="stat"><div class="v pos">+$86.50</div><div class="k">Est. net, $100/unit (5-4)</div></div>
+      <div class="stat"><div class="v">81-51</div><div class="k">Pick-level (61.4%)</div></div>
+      <div class="stat"><div class="v">44-22</div><div class="k">Moneyline</div></div>
+      <div class="stat"><div class="v">37-29</div><div class="k">Over/Under</div></div>
+      <div class="stat"><div class="v pos">+$620.88</div><div class="k">Est. net, $100/unit (10-5)</div></div>
     </div>
-    <div class="note"><b>Straight talk:</b> 60% at the selection level clears the ~52.4% you need to beat the vig — but on a ~60-pick sample it's a promising signal, not a guarantee. Losing weeks happen. The edge is totals discipline, not calling upsets.</div>
+    <div class="note"><b>Straight talk:</b> 61.4% at the selection level clears the ~52.4% you need to beat the vig — but on a ~132-pick sample it's a promising signal, not a guarantee. Losing weeks happen. The edge is totals discipline, not calling upsets.</div>
   </div>
 
   <!-- MLB -->
   <div class="book">
     <div class="brow"><div class="bname">⚾ MLB · Parlay System</div><div class="btag t-var">High Variance</div></div>
     <div class="stats">
-      <div class="stat"><div class="v pos">+$306.97</div><div class="k">Est. net, $10/unit</div></div>
-      <div class="stat"><div class="v pos">+45.1%</div><div class="k">Return on risk</div></div>
-      <div class="stat"><div class="v">11-57</div><div class="k">Tickets (16.2%)</div></div>
-      <div class="stat"><div class="v">11</div><div class="k">Parlays cashed</div></div>
+      <div class="stat"><div class="v pos">+$551.65</div><div class="k">Actual net</div></div>
+      <div class="stat"><div class="v pos">+35.7%</div><div class="k">Return on risk</div></div>
+      <div class="stat"><div class="v">12-62</div><div class="k">Tickets (16.2%)</div></div>
+      <div class="stat"><div class="v">12</div><div class="k">Parlays cashed</div></div>
     </div>
-    <div class="note"><b>Read before you judge:</b> this is a <b>high-variance parlay book by design.</b> It loses most tickets and makes its money on the rare multi-leg cash (avg ~+400). A 1-for-5 week is the claw swinging empty — expected, not a slump. The 16% hit rate <b>is the strategy</b>, and it's still up 45% on money risked.</div>
+    <div class="note"><b>Read before you judge:</b> this is a <b>high-variance parlay book by design.</b> It loses most tickets and makes its money on the rare multi-leg cash (avg ~+400). A 1-for-5 week is the claw swinging empty — expected, not a slump. The 16% hit rate <b>is the strategy</b>, and it's still up 36% on money risked.</div>
   </div>
 
   <!-- NBA FINALS -->
@@ -278,7 +282,20 @@
     <div class="note"><b>The value grab:</b> books made San Antonio a 4.5–5.5pt home favorite; the model had it ~2.5–3.5 and backed the <b>underdog Knicks at plus-money three times — and cashed all three.</b> The only losses came in the one game it laid NYK as a favorite. One series, 7 bets — shown as exactly that.</div>
   </div>
 
-  <div class="updated">LAST UPDATED: <b>Jun 20, 2026</b> · auto-refreshes weekly from the pipeline scorecard</div>
+  <!-- WNBA:START -->
+  <div class="book">
+    <div class="brow"><div class="bname">🏀 WNBA</div><div class="btag t-neg">Net Negative</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">8-9</div><div class="k">Record (47.1%)</div></div>
+      <div class="stat"><div class="v neg">-8.1%</div><div class="k">ROI on exposure</div></div>
+      <div class="stat"><div class="v neg">-$202.90</div><div class="k">Est. net, $10/unit</div></div>
+      <div class="stat"><div class="v">17</div><div class="k">Bets placed</div></div>
+    </div>
+    <div class="note"><b>Shown because we don't hide losers:</b> the WNBA book is underwater on a small 17-bet sample. It's logged and graded exactly like the winners. Transparency cuts both ways.</div>
+  </div>
+  <!-- WNBA:END -->
+
+  <div class="updated">LAST UPDATED: <b>Jun 28, 2026</b> · auto-refreshes weekly from the pipeline scorecard</div>
 </section>
 
 <!-- OPTIONS (secondary) -->
@@ -341,7 +358,7 @@
   </div>
   <div class="disc">
     <b>Not financial advice.</b> ClawStreetBets is for <b>entertainment and education only</b>. Nothing here is financial, investment, or betting advice, or a recommendation to place any wager or trade. We are not licensed advisors. You are solely responsible for your own bets and trades — do your own research and never risk money you can't afford to lose.<br><br>
-    The figures shown are the books and segments where the pipeline has demonstrated an edge; they are not the entire portfolio. Other books (regular-season NBA, WNBA) have been net negative over their samples and are not represented here as winning records. Sample sizes are small and <b>past performance does not guarantee future results.</b> Track record dollar figures are modeled at the per-book unit sizes noted (World Cup $100, MLB $10, NBA $150 per unit); win rates and ROI are stake-independent and unchanged. The dollar figures shown are illustrations of the staking unit — not a promise, guarantee, or prediction of returns.<br><br>
+    The figures shown are the books and segments the pipeline has bet; they are not the entire portfolio. Other books (regular-season NBA) have been net negative over their samples and are not represented here. The WNBA book is shown in full, including its net-negative result. World Cup, NBA Finals, and WNBA dollar figures are modeled at the per-book unit sizes noted (World Cup $100, NBA $150, WNBA $10 per unit); the MLB figure is the actual net across all graded stakes. Win rates and ROI are stake-independent. Sample sizes are small and <b>past performance does not guarantee future results.</b> The dollar figures shown are illustrations — not a promise, guarantee, or prediction of returns.<br><br>
     Sports wagering is regulated differently by jurisdiction — know your local laws. Must be of legal age to gamble in your area. If gambling stops being fun, call <b>1-800-GAMBLER</b>.
   </div>
 </footer>
