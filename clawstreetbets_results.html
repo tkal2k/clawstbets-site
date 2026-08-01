@@ -1,0 +1,172 @@
+<!-- ============================================================= -->
+<!--  ClawStreetBets · Verified Results block                       -->
+<!--  PASTE-READY for GoDaddy. Everything is self-contained and     -->
+<!--  scoped under #csb so it won't fight GoDaddy's own styles.     -->
+<!--  No external fonts, no scripts. Just paste the whole block.    -->
+<!-- ============================================================= -->
+<div id="csb">
+<style>
+  #csb{
+    --bg:#0c0c0c; --panel:#15140d; --panel2:#1a190f; --line:#2c2a1c;
+    --gold:#e8a020; --gold-dim:#b87d18;
+    --txt:#ffffff; --mut:#b6b3a4; --dim:#7e7c70;
+    --grn:#3dba70; --red:#e05050;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --black:"Arial Black","Arial Bold",Gadget,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    background:var(--bg); color:var(--txt); font-family:var(--sans);
+    line-height:1.5; padding:34px 18px; -webkit-font-smoothing:antialiased;
+    border-radius:14px;
+  }
+  #csb *{box-sizing:border-box;margin:0;padding:0}
+  #csb .wrap{max-width:760px;margin:0 auto}
+
+  /* header */
+  #csb .brandrow{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px}
+  #csb .mark{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffce6b,var(--gold) 55%,var(--gold-dim));
+    display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px #000,0 0 0 3px var(--gold-dim)}
+  #csb .mark svg{width:26px;height:26px;display:block}
+  #csb .wordmark{font-family:var(--black);font-size:22px;letter-spacing:.01em;text-transform:uppercase}
+  #csb .wordmark .gold{color:var(--gold)}
+  #csb .head{text-align:center}
+  #csb .kick{font-family:var(--mono);letter-spacing:.24em;text-transform:uppercase;font-size:11px;color:var(--gold);font-weight:700}
+  #csb h1{font-family:var(--black);font-size:30px;line-height:1.05;margin:8px 0 8px;text-transform:uppercase;letter-spacing:-.01em}
+  #csb .tag{color:var(--mut);font-size:14px;max-width:580px;margin:0 auto;font-style:italic}
+  #csb .stamp{color:var(--dim);font-family:var(--mono);font-size:11px;margin-top:12px;letter-spacing:.04em}
+
+  /* kpi strip */
+  #csb .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
+  #csb .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center}
+  #csb .kpi .n{font-family:var(--black);font-size:27px;letter-spacing:-.02em}
+  #csb .kpi .n.pos{color:var(--grn)} #csb .kpi .n.gold{color:var(--gold)}
+  #csb .kpi .l{font-family:var(--mono);font-size:10px;color:var(--mut);margin-top:5px;text-transform:uppercase;letter-spacing:.05em}
+
+  /* book cards */
+  #csb .book{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px}
+  #csb .brow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  #csb .bname{font-family:var(--black);font-size:17px;text-transform:uppercase;letter-spacing:.01em}
+  #csb .btag{font-family:var(--mono);font-size:10px;font-weight:700;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
+  #csb .t-pos{background:rgba(61,186,112,.13);color:var(--grn);border:1px solid rgba(61,186,112,.35)}
+  #csb .t-var{background:rgba(232,160,32,.13);color:var(--gold);border:1px solid rgba(232,160,32,.4)}
+  #csb .stats{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:13px}
+  #csb .stat .v{font-family:var(--black);font-size:20px}
+  #csb .stat .v.pos{color:var(--grn)} #csb .stat .v.neg{color:var(--red)}
+  #csb .stat .k{font-family:var(--mono);font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+  #csb .note{font-size:13.5px;color:var(--mut);border-top:1px solid var(--line);padding-top:11px}
+  #csb .note b{color:var(--txt);font-weight:700}
+  #csb .legs{margin-top:11px;font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+  #csb .legs span{display:inline-block;margin:3px 9px 3px 0;white-space:nowrap}
+  #csb .legs .w{color:var(--grn)} #csb .legs .x{color:var(--red)}
+
+  /* how-different */
+  #csb .how{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}
+  #csb .how h3{font-family:var(--black);font-size:15px;text-transform:uppercase;margin-bottom:12px;color:var(--gold)}
+  #csb .how ul{list-style:none}
+  #csb .how li{font-size:13.5px;color:var(--mut);padding:6px 0 6px 24px;position:relative}
+  #csb .how li::before{content:"›";position:absolute;left:2px;color:var(--gold);font-weight:900;font-size:16px;line-height:1.2}
+  #csb .how li b{color:var(--txt);font-weight:700}
+
+  /* disclaimer */
+  #csb .disc{font-size:11.5px;color:var(--dim);border-top:1px solid var(--line);padding-top:14px;margin-top:16px;line-height:1.65}
+  #csb .disc b{color:var(--mut)}
+  #csb .claw-sign{font-style:italic;color:var(--gold-dim);font-size:13px;text-align:center;margin-top:18px;font-family:var(--mono)}
+
+  @media(max-width:560px){
+    #csb .grid{grid-template-columns:1fr;gap:10px}
+    #csb .kpi{display:flex;align-items:center;justify-content:space-between;text-align:left}
+    #csb .kpi .l{margin-top:0}
+    #csb h1{font-size:24px}
+  }
+</style>
+
+<div class="wrap">
+
+  <div class="brandrow">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0c0c0c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v7"/><path d="M12 10l-4 4M12 10l4 4"/><path d="M5 14l-2 3 3 1M19 14l2 3-3 1"/><path d="M8 18l4 3 4-3"/>
+      </svg>
+    </div>
+    <div class="wordmark">Claw<span class="gold">Street</span>Bets</div>
+  </div>
+
+  <div class="head">
+    <div class="kick">Verified Track Record</div>
+    <h1>The Claw Shows Its Receipts</h1>
+    <p class="tag">Flat $10 a pick. Every grab logged — the 10-baggers and the empty swings. Judged over the run, not one night. No "locks," no deleted tweets.</p>
+    <div class="stamp">RECORD THROUGH JUN 20, 2026 · CLOSED / GRADED BETS ONLY</div>
+  </div>
+
+  <div class="grid">
+    <div class="kpi"><div class="n pos">60%</div><div class="l">World Cup pick-level (36-24)</div></div>
+    <div class="kpi"><div class="n pos">+45%</div><div class="l">MLB return on risk</div></div>
+    <div class="kpi"><div class="n gold">3-0</div><div class="l">Knicks +money dog MLs</div></div>
+  </div>
+
+  <!-- WORLD CUP -->
+  <div class="book">
+    <div class="brow"><div class="bname">⚽ World Cup 2026</div><div class="btag t-pos">Net Positive</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">36-24</div><div class="k">Pick-level (60.0%)</div></div>
+      <div class="stat"><div class="v">19-11</div><div class="k">Moneyline</div></div>
+      <div class="stat"><div class="v">17-13</div><div class="k">Over/Under</div></div>
+      <div class="stat"><div class="v pos">+$8.65</div><div class="k">Graded bets (5-4)</div></div>
+    </div>
+    <div class="note"><b>Straight talk:</b> 60% at the selection level clears the ~52.4% you need to beat the vig — but on a ~60-pick sample that's a promising signal, not a guarantee. Losing weeks happen (last week ran 3-4). The edge is totals discipline, not calling upsets.</div>
+  </div>
+
+  <!-- MLB -->
+  <div class="book">
+    <div class="brow"><div class="bname">⚾ MLB · Parlay System</div><div class="btag t-var">High Variance</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v pos">+45.1%</div><div class="k">ROI on $1,395 risked</div></div>
+      <div class="stat"><div class="v pos">+$629.73</div><div class="k">Net return</div></div>
+      <div class="stat"><div class="v">11-57</div><div class="k">Tickets (16.2%)</div></div>
+      <div class="stat"><div class="v">11</div><div class="k">Parlays cashed</div></div>
+    </div>
+    <div class="note"><b>Read this before you judge it:</b> this is a <b>high-variance parlay book by design.</b> It loses most tickets and makes its money on the rare multi-leg cash (avg ~+400). A 1-for-5 week is the claw swinging empty — expected, not a slump. Can't sit through dry stretches? This book isn't for you. The 16% hit rate <b>is the strategy</b>, and it's still up 45% on money risked.</div>
+  </div>
+
+  <!-- NBA FINALS -->
+  <div class="book">
+    <div class="brow"><div class="bname">🏀 2026 NBA Finals · Knicks–Spurs</div><div class="btag t-pos">5-2 · +$49.88</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">5-2</div><div class="k">Series bets (71%)</div></div>
+      <div class="stat"><div class="v pos">+$49.88</div><div class="k">Flat $10 P&amp;L</div></div>
+      <div class="stat"><div class="v pos">3-0</div><div class="k">NYK +money dog ML</div></div>
+      <div class="stat"><div class="v">~+172</div><div class="k">Avg dog odds hit</div></div>
+    </div>
+    <div class="legs">
+      <span class="w">G1 NYK ML +168 ✓</span>
+      <span class="w">G1 Under 218.5 ✓</span>
+      <span class="w">G2 NYK ML +185 ✓</span>
+      <span class="w">G2 Under 214.5 ✓</span>
+      <span class="x">G3 Under 216.5 ✗</span>
+      <span class="x">G3 NYK ML −135 ✗</span>
+      <span class="w">G5 NYK ML +164 ✓</span>
+    </div>
+    <div class="note"><b>The value grab:</b> books made San Antonio a 4.5–5.5pt home favorite; the model had it ~2.5–3.5 and backed the <b>underdog Knicks at plus-money three times — and cashed all three.</b> The only losses came in the one game it laid NYK as a favorite. Backing live value over public narrative is the whole thesis. <b>One series, 7 bets — shown as exactly that.</b></div>
+  </div>
+
+  <!-- HOW IT'S DIFFERENT -->
+  <div class="how">
+    <h3>Why this beats a guy posting "locks"</h3>
+    <ul>
+      <li><b>The claw doesn't tilt.</b> Flat stake, every bet, every night. No chasing, no doubling down after a bad beat.</li>
+      <li><b>It grades against the closing line.</b> The process can be proven sound even on a losing night — the metric touts never show.</li>
+      <li><b>It shows the empty swings.</b> A 16% MLB ticket rate and the books that lost money are on the record. Transparency is the product.</li>
+      <li><b>It's auditable.</b> Same inputs, same output, logged with timestamps. Not a "feel."</li>
+    </ul>
+  </div>
+
+  <div class="disc">
+    <b>Full disclosure.</b> The figures above are the books and segments where the claw has shown an edge; they are not the entire portfolio. Other books (regular-season NBA, WNBA) have been net negative over their samples and are not shown here as winning records. Samples are small and past performance does not guarantee future results. Flat-$10 modeling; the MLB ROI reflects actual variable stakes. <b>For entertainment and education only — this is not financial or betting advice.</b> You are responsible for your own bets. Don't risk money you can't afford to lose. Sports wagering is regulated differently by jurisdiction — know your local rules. If gambling stops being fun, call 1-800-GAMBLER.
+  </div>
+
+  <div class="claw-sign">Every day we drop the claw. The claw doesn't always grab — but we always play again.</div>
+
+  <div class="disc" style="text-align:center;border-top:none;padding-top:6px">© 2026 THansAI Research Group LLC. ClawStreetBets is a service of THansAI Research Group LLC. All rights reserved.</div>
+
+</div>
+</div>
+<!-- ============== end ClawStreetBets results block ============== -->
