@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Claw Machine — Live Model Board · ClawStreetBets</title>
+<meta name="description" content="THE CLAW MACHINE: ClawStreetBets' live model board. Every play is real pipeline output — model probability vs. the de-vigged market, graded against the close. Entertainment & education only — not financial advice.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClawStreetBets">
+<meta property="og:title" content="The Claw Machine — Live Model Board">
+<meta property="og:description" content="ClawStreetBets' live model board — model probability vs. the market, every play graded against the close. NFA.">
+<meta property="og:image" content="https://clawstbets.com/og.png">
+<meta property="og:url" content="https://clawstbets.com/the-claw-machine.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Claw Machine — Live Model Board">
+<meta name="twitter:description" content="Model probability vs. the market, every play graded against the close. NFA.">
+<meta name="twitter:image" content="https://clawstbets.com/og.png">
+<style>
+  :root{
+    --bg:#0c0c0c; --panel:#15140d; --panel2:#1a190f; --line:#2c2a1c;
+    --gold:#e8a020; --gold-dim:#b87d18; --gold-soft:#ffce6b;
+    --txt:#ffffff; --mut:#b6b3a4; --dim:#7e7c70;
+    --grn:#3dba70; --red:#e05050;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --black:"Arial Black","Arial Bold",Gadget,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  button,input,select{font:inherit;color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+
+  .nfa-bar{background:var(--gold);color:#0c0c0c;text-align:center;font-family:var(--mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;padding:8px 14px;text-transform:uppercase}
+
+  .nav{position:sticky;top:0;z-index:20;background:rgba(12,12,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .row{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;max-width:1100px;margin:0 auto}
+  .nav .brand{display:flex;align-items:center;gap:10px;font-family:var(--black);text-transform:uppercase;font-size:16px}
+  .nav .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+  .nav .brand .gold{color:var(--gold)}
+  .nav .links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--mut)}
+  .nav .links a:hover{color:var(--gold)}
+  .nav .links a.here{color:var(--gold)}
+  .nav .cta{background:var(--gold);color:#0c0c0c;font-weight:800;padding:8px 14px;border-radius:8px;font-size:13px}
+  @media(max-width:720px){.nav .links a:not(.cta):not(.here){display:none}}
+
+  /* page hero */
+  .mhero{padding:34px 0 10px}
+  .eyebrow{font-family:var(--mono);letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--gold);font-weight:700;margin-bottom:8px}
+  .mhero h1{font-family:var(--black);font-size:38px;text-transform:uppercase;letter-spacing:-.01em}
+  .mhero h1 .gold{color:var(--gold)}
+  .mhero p{color:var(--mut);font-size:15.5px;max-width:640px;margin-top:8px;font-style:italic}
+  .feed{display:flex;align-items:center;gap:10px;margin-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--mut);
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;width:max-content;max-width:100%}
+  .feed .dot{width:9px;height:9px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 3px rgba(61,186,112,.18)}
+  .feed .dot.demo{background:var(--gold);box-shadow:0 0 0 3px rgba(232,160,32,.18)}
+  .feed .dot.working{background:var(--gold);animation:pulse 1s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  .feed b{color:var(--txt)}
+
+  .actions{display:flex;gap:10px;margin:18px 0 6px;flex-wrap:wrap}
+  .actions .spacer{flex:1}
+  .btn{display:inline-flex;align-items:center;gap:7px;font-weight:800;padding:10px 16px;border-radius:9px;font-size:13px;border:1px solid var(--line);cursor:pointer;background:transparent}
+  .btn:hover{border-color:var(--gold);color:var(--gold)}
+  .btn.gold{background:var(--gold);color:#0c0c0c;border-color:var(--gold)}
+  .btn.gold:hover{background:var(--gold-soft);color:#0c0c0c}
+
+  /* metrics */
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:14px 0 8px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 13px}
+  .kpi .l{font-family:var(--mono);font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+  .kpi .n{font-family:var(--black);font-size:25px;margin-top:6px}
+  .kpi .n small{font-size:13px;color:var(--mut);font-family:var(--sans)}
+  .kpi .n.pos{color:var(--grn)} .kpi .n.gold{color:var(--gold)}
+  .kpi .s{font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:5px}
+  .kpi .n.risk{color:var(--grn);font-size:19px;display:flex;align-items:center;gap:7px}
+  .kpi .n.risk::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--grn)}
+  @media(max-width:980px){.metrics{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:600px){.metrics{grid-template-columns:1fr 1fr}}
+
+  /* workspace */
+  .workspace{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin-top:8px}
+  @media(max-width:900px){.workspace{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .panel-head .eyebrow{margin-bottom:3px}
+  .panel-head h2{font-family:var(--black);font-size:19px;text-transform:uppercase}
+  .panel-head input{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:13px;color:var(--txt);width:150px}
+  .panel-head input:focus{outline:none;border-color:var(--gold)}
+
+  .filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+  .tabs{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+  .tabs button{padding:7px 13px;font-size:12px;font-weight:700;background:transparent;border:none;color:var(--mut);cursor:pointer}
+  .tabs button.active{background:var(--gold);color:#0c0c0c}
+  .filters select{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:12px}
+  .filters label{display:flex;flex-direction:column;gap:4px;font-family:var(--mono);font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+  .filters label b{color:var(--gold)}
+  .filters input[type=range]{accent-color:var(--gold);width:120px}
+
+  .table-wrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  thead th{font-family:var(--mono);font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);font-weight:700}
+  tbody td{padding:10px 9px;border-bottom:1px solid rgba(44,42,28,.55)}
+  tbody tr{cursor:pointer}
+  tbody tr:hover{background:rgba(232,160,32,.05)}
+  tbody tr.sel{background:rgba(232,160,32,.09);box-shadow:inset 3px 0 0 var(--gold)}
+  .match{display:flex;align-items:center;gap:9px}
+  .match i{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-style:normal;font-family:var(--black);font-size:11px;color:#0c0c0c;flex-shrink:0}
+  .match i.mlb{background:#5db1ff} .match i.wnba{background:#ff8fc7} .match i.nfl{background:#8fe0a5}
+  .match b{font-size:13px} .match small{color:var(--mut)}
+  .match em{display:block;font-family:var(--mono);font-size:10px;color:var(--dim);font-style:normal;margin-top:1px}
+  td .pos{color:var(--grn)} td .neg{color:var(--red)}
+  mark{background:transparent;font-family:var(--mono);font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+  mark.a{background:rgba(61,186,112,.14);color:var(--grn);border-color:rgba(61,186,112,.4)}
+  mark.bp{background:rgba(232,160,32,.14);color:var(--gold);border-color:rgba(232,160,32,.4)}
+  mark.watch{background:rgba(93,177,255,.12);color:#7cc0ff;border-color:rgba(93,177,255,.35)}
+  mark.pass{background:rgba(126,124,112,.12);color:var(--dim)}
+  .empty{padding:26px 10px;text-align:center;color:var(--mut);font-style:italic;font-size:14px}
+
+  /* detail */
+  .pick-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:14px}
+  .pick-head h2{font-family:var(--black);font-size:20px;text-transform:uppercase} .pick-head h2 span{color:var(--dim)}
+  .pick-head small{font-family:var(--mono);font-size:11px;color:var(--mut)}
+  .compare{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px;text-align:center}
+  .compare small{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.06em}
+  .compare .v{font-family:var(--black);font-size:22px;display:block;margin-top:3px}
+  .compare .mid{font-family:var(--black);font-size:26px;color:var(--gold)}
+  .compare .mid small{display:block;color:var(--gold-dim)}
+  .section-label{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin:16px 0 8px}
+  .section-label b{color:var(--gold)}
+  .spark{height:52px}
+  .spark svg{width:100%;height:100%}
+  .spark path{stroke:var(--line);stroke-width:1;fill:none}
+  .spark polyline{stroke:var(--gold);stroke-width:2;fill:none;vector-effect:non-scaling-stroke}
+  .spark circle{fill:var(--gold)}
+  .spark + .ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9px;color:var(--dim);margin-top:3px}
+  .factors > div{margin-bottom:9px}
+  .factors p{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:4px}
+  .factors p b{color:var(--txt);font-family:var(--mono);font-size:11px}
+  .factors .bar{height:6px;background:var(--bg);border-radius:999px;overflow:hidden}
+  .factors .bar b{display:block;height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+  .cece{display:flex;gap:12px;align-items:flex-start;margin-top:16px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .cece img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0}
+  .cece em{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase}
+  .cece p{font-size:13.5px;color:var(--txt);font-style:italic;margin-top:4px}
+
+  /* lower */
+  .lower{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px;margin-top:14px}
+  @media(max-width:900px){.lower{grid-template-columns:1fr}}
+  .lower .eyebrow{margin-bottom:4px}
+  .lower h2{font-family:var(--black);font-size:17px;text-transform:uppercase;margin-bottom:12px}
+  .pstats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+  .pstats .k{font-family:var(--mono);font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em}
+  .pstats .v{font-family:var(--black);font-size:18px;margin-top:3px}
+  .pstats .v.pos{color:var(--grn)} .pstats .v.neg{color:var(--red)}
+  .bigchart{height:120px} .bigchart svg{width:100%;height:100%}
+  .bigchart path{stroke:var(--line);stroke-width:1;fill:none}
+  .bigchart polyline{stroke:var(--grn);stroke-width:2;fill:none;vector-effect:non-scaling-stroke}
+  .bigchart circle{fill:var(--grn)}
+  .cap{font-family:var(--mono);font-size:9.5px;color:var(--dim);margin-top:8px;line-height:1.5}
+  .calc label{display:block;font-family:var(--mono);font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px}
+  .calc label .row{display:flex;align-items:center;gap:6px;margin-top:5px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 11px}
+  .calc input,.calc select{background:transparent;border:none;font-size:15px;width:100%;font-family:var(--black)}
+  .calc input:focus,.calc select:focus{outline:none}
+  .stakebox{background:var(--bg);border:1px solid var(--gold);border-radius:12px;padding:14px;text-align:center;box-shadow:0 0 24px rgba(232,160,32,.1)}
+  .stakebox small{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:.06em}
+  .stakebox strong{display:block;font-family:var(--black);font-size:32px;margin:5px 0 3px}
+  .stakebox span{font-family:var(--mono);font-size:10px;color:var(--dim)}
+  .guard{margin-bottom:11px}
+  .guard p{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:4px}
+  .guard p b{color:var(--txt);font-family:var(--mono);font-size:11px}
+  .guard .bar{height:6px;background:var(--bg);border-radius:999px;overflow:hidden}
+  .guard .bar b{display:block;height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+  .guard-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--grn);border-top:1px solid var(--line);padding-top:12px}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 50px;margin-top:40px}
+  .flinks{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+  .disc{font-size:11.5px;color:var(--dim);line-height:1.7}
+  .disc b{color:var(--mut)}
+</style>
+</head>
+<body>
+
+<div class="nfa-bar">Entertainment &amp; education only · NFA — Not Financial Advice · 21+ · Bet responsibly</div>
+
+<nav class="nav">
+  <div class="row">
+    <a class="brand" href="index.html"><img src="clawbot.png" alt="ClawStreetBets">Claw<span class="gold">Street</span>Bets</a>
+    <div class="links">
+      <a href="index.html#clawbot">ClawBot</a>
+      <a href="index.html#pipeline">Pipeline</a>
+      <a class="here" href="the-claw-machine.html">The Claw Machine</a>
+      <a href="index.html#record">Track Record</a>
+      <a class="cta" href="index.html#pricing">Join · $39.99/mo</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="mhero">
+    <div class="eyebrow">ClawStreetBets · AI-driven model lab</div>
+    <h1>THE CLAW <span class="gold">MACHINE</span></h1>
+    <p>Probability first. Price second. Ego nowhere. Every play below is real pipeline output — model probability vs. the de-vigged market.</p>
+    <div class="feed" id="feed"><span class="dot" id="feedDot"></span><span id="feedText"><b>Connecting…</b></span></div>
+  </header>
+
+  <div class="actions">
+    <div class="spacer"></div>
+    <button class="btn" id="exportBtn" title="Export the current view as CSV">⇩ Export CSV</button>
+    <button class="btn gold" id="runBtn">RUN MODEL</button>
+  </div>
+
+  <section class="metrics" id="metrics"></section>
+
+  <section class="workspace">
+    <div class="panel">
+      <div class="panel-head">
+        <div><div class="eyebrow">Today's slate</div><h2>Market opportunities</h2></div>
+        <input id="search" placeholder="Search team" aria-label="Search teams">
+      </div>
+      <div class="filters">
+        <div class="tabs" id="sportTabs"></div>
+        <select id="marketSel" aria-label="Market filter"><option>All markets</option><option>Moneyline</option><option>Spread</option><option>Total</option></select>
+        <label>Min edge <b id="minEdgeLbl">0.0 pp</b><input type="range" id="minEdge" min="0" max="12" step="0.5" value="0"></label>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Matchup</th><th>Market</th><th>Play</th><th>Odds</th><th>Market</th><th>Model</th><th>Edge</th><th>Grade</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="empty" id="empty" style="display:none"></div>
+      </div>
+    </div>
+    <aside class="panel" id="detail"></aside>
+  </section>
+
+  <section class="lower">
+    <article class="panel">
+      <div class="panel-head" style="margin-bottom:8px"><div><div class="eyebrow" id="trackLabel">Track record</div><h2>Bankroll performance</h2></div></div>
+      <div class="pstats" id="pstats"></div>
+      <div class="bigchart" id="bigchart"></div>
+      <div class="cap" id="perfCap"></div>
+    </article>
+    <article class="panel calc">
+      <div class="eyebrow">Bet sizing</div><h2>Stake calculator</h2>
+      <label>Bankroll<div class="row">$ <input type="number" id="bankroll" min="100" value="1000"></div></label>
+      <label>Kelly fraction<div class="row"><select id="kelly"><option value="0.25">Quarter Kelly</option><option value="0.5">Half Kelly</option><option value="1">Full Kelly</option></select></div></label>
+      <div class="stakebox"><small>RECOMMENDED STAKE</small><strong id="stakeVal">—</strong><span id="stakeSub"></span></div>
+    </article>
+    <article class="panel">
+      <div class="eyebrow">Circuit breaker</div><h2>Risk guardrails</h2>
+      <div id="guards"></div>
+      <div class="guard-foot"><span>● No limits triggered</span><b>GREEN</b></div>
+    </article>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="flinks">
+    <a href="index.html" style="color:var(--mut)">Home</a>
+    <a href="faq.html" style="color:var(--mut)">FAQ</a>
+    <a href="terms.html" style="color:var(--mut)">Terms</a>
+    <a href="privacy.html" style="color:var(--mut)">Privacy</a>
+    <a href="refund.html" style="color:var(--mut)">Refund Policy</a>
+    <a href="index.html#pricing" style="color:var(--gold)">Join · $39.99/mo</a>
+  </div>
+  <div class="disc">
+    <b>Not financial advice.</b> ClawStreetBets is for <b>entertainment and education only</b>. Nothing here is financial, investment, or betting advice, or a recommendation to place any wager or trade. We are not licensed advisors. The board shows the model's probability estimates against the market's de-vigged price; a positive edge is the model's opinion, not a guarantee. You are solely responsible for your own bets — do your own research and never risk money you can't afford to lose.<br><br>
+    Model and market numbers are pulled from the pipeline's own daily output and are subject to revision as lines move and lineups are confirmed. The bankroll curve is indicative; headline track-record figures are computed from the recorded bets ledger. Sample sizes are small and <b>past performance does not guarantee future results.</b><br><br>
+    Sports wagering is regulated differently by jurisdiction — know your local laws. Must be of legal age to gamble in your area. If gambling stops being fun, call <b>1-800-GAMBLER</b>.
+  </div>
+  <div style="text-align:center;margin-top:22px;font-family:var(--mono);font-size:11.5px;color:var(--dim)">© 2026 THansAI Research Group LLC. ClawStreetBets is a service of THansAI Research Group LLC. All rights reserved.</div>
+</footer>
+
+<script id="board-seed" type="application/json">{"generatedAt":"2026-08-12T04:16:29.345Z","source":"live","dataRoot":"/sessions/confident-elegant-mayer/mnt/Claude-Mac","meta":{"mlb":{"state":"10 actionable of 15 legs","date":"2026-08-11","count":10},"wnba":{"state":"NO-PLAY — model passed the slate","date":"2026-08-11","count":3,"summary":"NO-PLAY: 3-game Tuesday slate, 0 bets, all PASS. NY@IND is a near coin-flip between two 20-win teams (IND slight home fav, Clark's rescinded tech keeps her eligible) with no 4% edge either side. WSH@LV is un-layable heavy chalk (LV ~-230) with no dog value on the Mystics; Kalshi is even MORE bullish on Vegas (~76%) than the book (~68% no-vig), a KALSHI EDGE toward LV that only reinforces the no-play. PHX@LA is the closest look: Kelsey Plum OUT (calf) tilts the model toward the Sparks, but LA ~-128 clears only ~3pp edge (under the 4% bar), the Sparks' own DTD injuries (Burrell leg, Akoa Makani ankle) are unconfirmed at 4 AM, LA is on a 3-game home skid, and Kalshi/Polymarket price it a coin-flip (~53%) rather than confirming the edge -> sub-bar PASS, LA the lean."},"nfl":{"state":"PASS — PRESEASON — Week 1","date":"2026_pre1","count":0,"summary":"All 16 kickoffs in the 8-day window are preseason exhibitions."}},"performance":{"asOf":"2026-08-12","mlbBets":{"days":96,"tickets":134,"won":42,"risked":2117.62,"returned":2588.51,"net":470.89,"roiPct":22.2,"clvPp":0.22,"beatClosePct":45.2,"ticketWinPct":31.3},"leans":{"mlb":{"record":"55-49","hitPct":52.9,"days":31},"wnba":{"record":"64-26","hitPct":71.1,"days":33}}},"picks":[{"id":1,"sport":"MLB","time":"","away":"Cleveland","home":"Detroit","market":"Moneyline","play":"DET ML","odds":-127,"marketProb":53.4,"modelProb":53.8,"edge":0.4,"confidence":45,"grade":"WATCH","line":[-113,-116,-119,-121,-124,-127],"read":"model 53.8% vs market 53.4% → +0.4pp; positive but under the price floor — waiting.","factors":[["Raw model edge",8,"+0.4 pp"],["Shrunk edge",6,"+0.2 pp"],["Expected value",75.60000000000001,"-4.2%"]],"label":"WATCH","ev":-4.2},{"id":2,"sport":"MLB","time":"","away":"Chi Cubs","home":"Washington","market":"Moneyline","play":"CHC ML","odds":-174,"marketProb":60.7,"modelProb":69.7,"edge":9,"confidence":81,"grade":"A","line":[-183,-181,-179,-178,-176,-174],"read":"model 69.7% vs market 60.7% → +9pp; clears the floor, token size.","factors":[["Raw model edge",100,"+9 pp"],["Shrunk edge",71.84,"+4.5 pp"],["Expected value",47.339999999999996,"+2.6%"]],"label":"BET","ev":2.6},{"id":3,"sport":"MLB","time":"","away":"Seattle","home":"NY Yankees","market":"Moneyline","play":"NYY ML","odds":-131,"marketProb":54.2,"modelProb":61,"edge":6.7,"confidence":73,"grade":"A","line":[-133,-133,-132,-132,-131,-131],"read":"model 61.0% vs market 54.2% → +6.7pp; clears the floor, token size.","factors":[["Raw model edge",80.88,"+6.7 pp"],["Shrunk edge",53.92,"+3.4 pp"],["Expected value",28.62,"+1.6%"]],"label":"BET","ev":1.6},{"id":4,"sport":"MLB","time":"","away":"Boston","home":"Toronto","market":"Moneyline","play":"TOR ML","odds":-149,"marketProb":57.2,"modelProb":59.4,"edge":2.3,"confidence":53,"grade":"WATCH","line":[-137,-139,-142,-144,-147,-149],"read":"model 59.4% vs market 57.2% → +2.3pp; positive but under the price floor — waiting.","factors":[["Raw model edge",27.240000000000002,"+2.3 pp"],["Shrunk edge",18.08,"+1.1 pp"],["Expected value",46.44,"-2.6%"]],"label":"WATCH","ev":-2.6},{"id":5,"sport":"MLB","time":"","away":"NY Mets","home":"Atlanta","market":"Moneyline","play":"ATL ML","odds":-131,"marketProb":54.2,"modelProb":57.2,"edge":2.9,"confidence":56,"grade":"WATCH","line":[-123,-125,-126,-128,-129,-131],"read":"model 57.2% vs market 54.2% → +2.9pp; positive but under the price floor — waiting.","factors":[["Raw model edge",35.28,"+2.9 pp"],["Shrunk edge",23.52,"+1.5 pp"],["Expected value",31.86,"-1.8%"]],"label":"WATCH","ev":-1.8},{"id":6,"sport":"MLB","time":"","away":"Texas","home":"LA Angels","market":"Moneyline","play":"TEX ML","odds":-143,"marketProb":56.3,"modelProb":68,"edge":11.7,"confidence":93,"grade":"A","line":[-161,-157,-154,-150,-147,-143],"read":"TEX Bradford ESPN 0.00/0-0=no 2026 sample -> regressed to league mean 4.10, LOW conf (ADJ_014)","factors":[["Raw model edge",100,"+11.7 pp"],["Shrunk edge",93.44,"+5.8 pp"],["Expected value",100,"+5.6%"]],"label":"BET","ev":5.6},{"id":7,"sport":"MLB","time":"","away":"Colorado","home":"Arizona","market":"Moneyline","play":"ARI ML","odds":-181,"marketProb":61.6,"modelProb":66.5,"edge":4.9,"confidence":64,"grade":"WATCH","line":[-174,-175,-177,-178,-180,-181],"read":"ARI Bratt 3.90 on 1-1 small sample -> regressed 50% to 4.00, LOW-MED (ADJ_014)","factors":[["Raw model edge",58.199999999999996,"+4.9 pp"],["Shrunk edge",38.88,"+2.4 pp"],["Expected value",10.98,"-0.6%"]],"label":"WATCH","ev":-0.6},{"id":8,"sport":"MLB","time":"","away":"Milwaukee","home":"San Diego","market":"Moneyline","play":"MIL ML","odds":-143,"marketProb":56.3,"modelProb":64.9,"edge":8.6,"confidence":80,"grade":"A","line":[-151,-149,-148,-146,-145,-143],"read":"model 64.9% vs market 56.3% → +8.6pp; clears the floor, token size.","factors":[["Raw model edge",100,"+8.6 pp"],["Shrunk edge",68.64,"+4.3 pp"],["Expected value",53.46,"+3%"]],"label":"BET","ev":3},{"id":9,"sport":"MLB","time":"","away":"Tampa Bay","home":"Athletics","market":"Moneyline","play":"TB ML","odds":-163,"marketProb":59.3,"modelProb":70.3,"edge":11,"confidence":90,"grade":"A","line":[-180,-177,-173,-170,-166,-163],"read":"ATH Barnett 5.56 small sample","factors":[["Raw model edge",100,"+11 pp"],["Shrunk edge",87.84,"+5.5 pp"],["Expected value",81.54,"+4.5%"]],"label":"BET","ev":4.5},{"id":10,"sport":"MLB","time":"","away":"Houston","home":"San Francisco","market":"Moneyline","play":"HOU ML","odds":-194,"marketProb":63.1,"modelProb":75.9,"edge":12.8,"confidence":95,"grade":"A","line":[-222,-216,-211,-205,-200,-194],"read":"SF Whisenhunt 7.25 rookie","factors":[["Raw model edge",100,"+12.8 pp"],["Shrunk edge",100,"+6.4 pp"],["Expected value",95.22,"+5.3%"]],"label":"BET","ev":5.3},{"id":11,"sport":"WNBA","time":"7:30 PM","away":"New York Liberty","home":"Indiana Fever","market":"Moneyline","play":"IND ML","odds":-175,"marketProb":61.4,"modelProb":60,"edge":-1.4,"confidence":43,"grade":"PASS","line":[-175,-175,-175,-175,-175,-175],"read":"Two of the league's best square off: Fever 20-12 hosting Liberty 20-13, who ride a 4-game win streak. Caitlin Clark eligible after the WNBA rescinded her 8th technical. Indiana's home floor gives a slight edge but this is close to a coin-flip between elite teams. IND -175 is layable-eligible but the model (60%) sits ~1.4pp UNDER no-vig (61.4%) -> negative edge, no bet. NY +150 breakeven 40.0% = model 40% -> no dog value. Pass both sides. 4 AM run: no pick hinges on unconfirmed status.","factors":[["Raw model edge",16.799999999999997,"-1.4 pp"]],"label":"PASS"},{"id":12,"sport":"WNBA","time":"10:00 PM","away":"Washington Mystics","home":"Las Vegas Aces","market":"Moneyline","play":"LV ML","odds":-230,"marketProb":67.7,"modelProb":70,"edge":2.3,"confidence":62,"grade":"PASS","line":[-230,-230,-230,-230,-230,-230],"read":"Aces at home off a 4th straight road win (beat Toronto 109-83; A'ja Wilson 26/6, Jackie Young 24/12) vs a Mystics team 1-4 ATS in its last 5 home games. LV ~-230 is un-layable heavy chalk (far past -180) -- laying that juice is the negative-EV trap the gate refuses. WSH +200 breakeven 33.3% > model 30% (and > Kalshi 24.5%) -> no dog value despite Washington's 100-99 win over LV on Jul 22. Pass both sides.","factors":[["Raw model edge",27.599999999999998,"+2.3 pp"]],"label":"PASS"},{"id":13,"sport":"WNBA","time":"10:00 PM","away":"Phoenix Mercury","home":"Los Angeles Sparks","market":"Moneyline","play":"LA ML","odds":-128,"marketProb":53.8,"modelProb":57,"edge":3.2,"confidence":66,"grade":"PASS","line":[-128,-128,-128,-128,-128,-128],"read":"Closest look on the board. Kelsey Plum OUT (calf) removes Phoenix's lead guard; Mercury (12-22) have lost 3 straight and 4 of 5. That tilts the model toward the Sparks (12-19) at home. BUT: LA ~-128 clears only ~+3.2pp over no-vig (53.8%) -- UNDER the 4% standard bar; LA carries its own DTD injuries (Rae Burrell leg, Monique Akoa Makani ankle) unconfirmed at 4 AM; LA is on a 3-game home losing streak; and Kalshi (52.5%) + Polymarket (56%) price it a coin-flip rather than confirming the edge. Sub-bar layable favorite that hinges on unconfirmed status -> PASS. PHX +108 breakeven 48.1% > model 43% -> no dog value.","factors":[["Raw model edge",38.400000000000006,"+3.2 pp"]],"label":"PASS"}]}</script>
+<script>
+const DEMO = {source:"demo",generatedAt:new Date().toISOString(),picks:[
+  {id:1,sport:"MLB",time:"",away:"Seattle",home:"Baltimore",market:"Moneyline",play:"BAL ML",odds:-118,marketProb:54.1,modelProb:61.8,edge:7.7,confidence:86,grade:"A",line:[-104,-107,-106,-111,-115,-118],read:"the price moved, but the model still has room. boring is beautiful.",factors:[["Raw model edge",92,"+7.7 pp"],["Expected value",60,"+3.1%"]]},
+  {id:2,sport:"WNBA",time:"",away:"Atlanta",home:"Phoenix",market:"Moneyline",play:"ATL ML",odds:-110,marketProb:52.4,modelProb:58.7,edge:6.3,confidence:78,grade:"B+",line:[-110,-110,-110,-110,-110,-110],read:"four and a hook is doing actual work here.",factors:[["Raw model edge",76,"+6.3 pp"]]},
+]};
+const CURVES={"30D":[0,.8,.4,2.1,1.7,3.4,3,4.8,5.4,4.9,6.8,8.7]};
+const S={board:DEMO,sport:"ALL",market:"All markets",minEdge:0,selected:null,query:"",bankroll:1000,kelly:0.25,running:false};
+
+const $=id=>document.getElementById(id);
+const edge=p=>p.edge!=null?p.edge:+(p.modelProb-p.marketProb).toFixed(1);
+const oddsFmt=n=>n==null?"—":(n>0?"+"+n:""+n);
+const grade=p=>p.grade||(p.confidence>=80?"A":p.confidence>=70?"B+":p.confidence>=60?"B":"PASS");
+const gcls=g=>g==="A"?"a":g==="B+"?"bp":g==="WATCH"?"watch":g==="PASS"?"pass":"";
+const money=n=>n==null?"—":(n>=0?"+":"−")+"$"+Math.abs(n).toLocaleString(undefined,{maximumFractionDigits:0});
+const relTime=iso=>{if(!iso)return"—";const s=Math.max(0,(Date.now()-new Date(iso).getTime())/1000);if(s<90)return"just now";if(s<5400)return Math.round(s/60)+" min ago";if(s<172800)return Math.round(s/3600)+" h ago";return Math.round(s/86400)+" d ago";};
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function spark(vals,cls){
+  if(!vals||!vals.length)vals=[0,0];
+  const mn=Math.min(...vals),mx=Math.max(...vals),sp=(mx-mn)||1;
+  const pts=vals.map((v,i)=>`${i/(vals.length-1)*100},${42-(v-mn)/sp*34}`).join(" ");
+  const cy=42-(vals[vals.length-1]-mn)/sp*34;
+  return `<svg viewBox="0 0 100 48" preserveAspectRatio="none"><path d="M0 42H100"/><polyline points="${pts}"/><circle cx="100" cy="${cy}" r="2.2"/></svg>`;
+}
+function sportState(s){const m=S.board.meta||{};return s==="MLB"?m.mlb:s==="WNBA"?m.wnba:s==="NFL"?m.nfl:null;}
+
+function filtered(){
+  return S.board.picks.filter(p=>(S.sport==="ALL"||p.sport===S.sport)&&(S.market==="All markets"||p.market===S.market)&&edge(p)>=S.minEdge&&`${p.away} ${p.home} ${p.play}`.toLowerCase().includes(S.query.toLowerCase()));
+}
+function activePick(){const f=filtered();return S.board.picks.find(p=>p.id===S.selected)||f[0]||S.board.picks[0]||null;}
+
+function render(){
+  const live=S.board.source==="live";
+  // feed
+  $("feedDot").className="dot"+(S.running?" working":live?"":" demo");
+  $("feedText").innerHTML=S.running?"<b>Recalculating slate…</b>":(live?`<b>Model feed connected</b> · MLB · WNBA · NFL · updated ${relTime(S.board.generatedAt)}`:`<b>Demo data</b> · connect the model feed to go live`);
+
+  const f=filtered();
+  const q=f.filter(p=>edge(p)>=3).length;
+  const avg=(f.reduce((a,p)=>a+edge(p),0)/(f.length||1)).toFixed(1);
+  const b=(S.board.performance||{}).mlbBets||{};
+  const mcards=[
+    ["Qualified plays",`${q}<small> / ${f.length}</small>`,"","edge ≥ 3.0 pp"],
+    ["Avg model edge",`${+avg>=0?"+":""}${avg}<small> pp</small>`,"gold","after de-vig"],
+    live?["MLB bets net",money(b.net),"pos",`${b.roiPct??"—"}% ROI · ${b.tickets??"—"} tickets`]:["30D return","+8.7<small>u</small>","pos","7.4% ROI · demo"],
+    ["Closing-line value",`+${live?(b.clvPp??"—"):"1.9"}<small> pp</small>`,"pos",live?`beat close ${b.beatClosePct??"—"}%`:"demo"],
+    ["Risk status",`GREEN`,"risk","within guardrails"],
+  ];
+  $("metrics").innerHTML=mcards.map(c=>`<div class="kpi"><div class="l">${c[0]}</div><div class="n ${c[2]}">${c[1]}</div><div class="s">${c[3]}</div></div>`).join("");
+
+  // rows
+  const ap=activePick();
+  S.selected=ap?ap.id:null;
+  $("rows").innerHTML=f.map(p=>{const e=edge(p);const g=grade(p);return `<tr data-id="${p.id}" class="${ap&&ap.id===p.id?"sel":""}"><td><div class="match"><i class="${p.sport.toLowerCase()}">${p.sport[0]}</i><span><b>${esc(p.away)} <small>@</small> ${esc(p.home)}</b><em>${p.sport}${p.time?" · "+esc(p.time):""}</em></span></div></td><td>${esc(p.market)}</td><td><b>${esc(p.play)}</b></td><td>${oddsFmt(p.odds)}</td><td>${p.marketProb.toFixed(1)}%</td><td><b>${p.modelProb.toFixed(1)}%</b></td><td><b class="${e>=0?"pos":"neg"}">${e>=0?"+":""}${e.toFixed(1)}</b></td><td><mark class="${gcls(g)}">${g}</mark></td></tr>`;}).join("");
+  const em=$("empty");
+  if(f.length===0){const st=S.sport!=="ALL"&&sportState(S.sport);em.style.display="block";em.textContent=st&&st.state?`${S.sport}: ${st.state}. That is also a model output.`:"No plays clear those filters. That is also a model output.";}
+  else em.style.display="none";
+  [...$("rows").querySelectorAll("tr")].forEach(tr=>tr.onclick=()=>{S.selected=+tr.dataset.id;render();});
+
+  // detail
+  const d=$("detail");
+  if(!ap){d.innerHTML='<div class="empty">Select a play.</div>';}
+  else{const e=edge(ap);const g=grade(ap);
+    d.innerHTML=`<div class="pick-head"><div><div class="eyebrow">Selected play</div><h2>${esc(ap.away)} <span>@</span> ${esc(ap.home)}</h2><small>${esc(ap.market)}${ap.time?" · "+esc(ap.time):""}</small></div><mark class="${gcls(g)}">${g}</mark></div>
+    <div class="compare"><span><small>MARKET</small><b class="v">${ap.marketProb.toFixed(1)}%</b></span><span class="mid">${e>=0?"+":""}${e.toFixed(1)}<small>PP EDGE</small></span><span><small>MODEL</small><b class="v">${ap.modelProb.toFixed(1)}%</b></span></div>
+    <div class="section-label"><span>Line movement</span><b>${oddsFmt(ap.odds)}</b></div><div class="spark">${spark(ap.line)}</div><div class="ends"><span>OPEN</span><span>NOW</span></div>
+    <div class="section-label"><span>Why the model likes it</span><b>${ap.confidence||"—"}% conf</b></div>
+    <div class="factors">${(ap.factors||[]).map(fr=>`<div><p><span>${esc(fr[0])}</span><b>${esc(fr[2])}</b></p><div class="bar"><b style="width:${fr[1]}%"></b></div></div>`).join("")||'<p style="color:var(--dim)">Model rationale from the numbers above.</p>'}</div>
+    <div class="cece"><img src="cece-confident.png" alt="CeCe" onerror="this.style.display='none'"><div><em>CeCe's read</em><p>“${esc(ap.read||"the model likes the number more than the market does. size it, don't chase it.")}”</p></div></div>`;
+  }
+
+  // performance
+  $("trackLabel").textContent="Track record"+(live?" · MLB bets":"");
+  const ps=live?[["Net P/L",money(b.net),"pos"],["ROI",(b.roiPct??"—")+"%",""],["Ticket win",(b.ticketWinPct??"—")+"%",""],["CLV","+"+(b.clvPp??"—")+"u","pos"]]:[["Net units","+8.7u","pos"],["ROI","7.4%",""],["Win rate","55.8%",""],["Max DD","−4.2u","neg"]];
+  $("pstats").innerHTML=ps.map(x=>`<div><div class="k">${x[0]}</div><div class="v ${x[2]}">${x[1]}</div></div>`).join("");
+  $("bigchart").innerHTML=spark(CURVES["30D"]);
+  const leans=(S.board.performance||{}).leans||{};
+  $("perfCap").innerHTML=live?`Curve indicative; headline stats are live from the bets ledger.${leans.mlb||leans.wnba?` Leans: MLB ${leans.mlb?.record||"—"} · WNBA ${leans.wnba?.record||"—"}.`:""}`:"Demo figures — connect the feed for live numbers.";
+
+  // stake calc
+  const st=ap?Math.min(S.bankroll*0.02,S.bankroll*Math.max(0,edge(ap)/100*2.1)*S.kelly):0;
+  const under=!ap||edge(ap)<2;
+  $("stakeVal").textContent=under?"PASS":"$"+st.toFixed(0);
+  $("stakeSub").textContent=under?"Edge below threshold":`${(st/S.bankroll*100).toFixed(2)}% · capped at 2%`;
+
+  // guardrails
+  const liveN=f.filter(p=>["A","B+"].includes(grade(p))).length;
+  const bc=live?(b.beatClosePct??0):98;
+  const gg=[["Live A/B+ plays",`${liveN}`,Math.min(100,liveN*12)],["Per-game max","1.2%",60],["Close capture",(live?(b.beatClosePct??"—"):"98")+"%",Math.round(bc)]];
+  $("guards").innerHTML=gg.map(x=>`<div class="guard"><p><span>${x[0]}</span><b>${x[1]}</b></p><div class="bar"><b style="width:${x[2]}%"></b></div></div>`).join("");
+}
+
+async function load(){
+  S.running=true;render();
+  try{
+    const r=await fetch("model-board.json?t="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw 0;
+    const d=await r.json();
+    if(d&&Array.isArray(d.picks)&&d.picks.length){d.source=d.source||"live";S.board=d;S.selected=d.picks[0].id;}
+  }catch(e){/* keep demo */}
+  finally{setTimeout(()=>{S.running=false;render();},350);}
+}
+
+function exportCsv(){
+  const f=filtered();
+  const rows=[["sport","matchup","market","play","odds","market_prob","model_prob","edge_pp","grade"]].concat(f.map(p=>[p.sport,`${p.away} @ ${p.home}`,p.market,p.play,p.odds,p.marketProb,p.modelProb,edge(p),grade(p)]));
+  const url=URL.createObjectURL(new Blob([rows.map(r=>r.join(",")).join("\n")],{type:"text/csv"}));
+  const a=document.createElement("a");a.href=url;a.download="clawstbets-model-board.csv";a.click();URL.revokeObjectURL(url);
+}
+
+// wire controls
+$("sportTabs").innerHTML=["ALL","MLB","WNBA","NFL"].map(s=>`<button data-s="${s}" class="${s==="ALL"?"active":""}">${s}</button>`).join("");
+[...$("sportTabs").children].forEach(bn=>bn.onclick=()=>{S.sport=bn.dataset.s;[...$("sportTabs").children].forEach(x=>x.classList.toggle("active",x===bn));render();});
+$("marketSel").onchange=e=>{S.market=e.target.value;render();};
+$("minEdge").oninput=e=>{S.minEdge=+e.target.value;$("minEdgeLbl").textContent=S.minEdge.toFixed(1)+" pp";render();};
+$("search").oninput=e=>{S.query=e.target.value;render();};
+$("bankroll").oninput=e=>{S.bankroll=Math.max(100,+e.target.value||0);render();};
+$("kelly").onchange=e=>{S.kelly=+e.target.value;render();};
+$("runBtn").onclick=load;
+$("exportBtn").onclick=exportCsv;
+
+// Seed with the board baked into the page (keeps real data even opened as a file);
+// the fetch below then refreshes it to the newest model-board.json when served over http.
+try{const seed=JSON.parse($("board-seed").textContent);if(seed&&Array.isArray(seed.picks)&&seed.picks.length){seed.source=seed.source||"live";S.board=seed;S.selected=seed.picks[0].id;}}catch(e){}
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+{
+  "generatedAt": "2026-08-12T04:16:29.345Z",
+  "source": "live",
+  "dataRoot": "/sessions/confident-elegant-mayer/mnt/Claude-Mac",
+  "meta": {
+    "mlb": {
+      "state": "10 actionable of 15 legs",
+      "date": "2026-08-11",
+      "count": 10
+    },
+    "wnba": {
+      "state": "NO-PLAY — model passed the slate",
+      "date": "2026-08-11",
+      "count": 3,
+      "summary": "NO-PLAY: 3-game Tuesday slate, 0 bets, all PASS. NY@IND is a near coin-flip between two 20-win teams (IND slight home fav, Clark's rescinded tech keeps her eligible) with no 4% edge either side. WSH@LV is un-layable heavy chalk (LV ~-230) with no dog value on the Mystics; Kalshi is even MORE bullish on Vegas (~76%) than the book (~68% no-vig), a KALSHI EDGE toward LV that only reinforces the no-play. PHX@LA is the closest look: Kelsey Plum OUT (calf) tilts the model toward the Sparks, but LA ~-128 clears only ~3pp edge (under the 4% bar), the Sparks' own DTD injuries (Burrell leg, Akoa Makani ankle) are unconfirmed at 4 AM, LA is on a 3-game home skid, and Kalshi/Polymarket price it a coin-flip (~53%) rather than confirming the edge -> sub-bar PASS, LA the lean."
+    },
+    "nfl": {
+      "state": "PASS — PRESEASON — Week 1",
+      "date": "2026_pre1",
+      "count": 0,
+      "summary": "All 16 kickoffs in the 8-day window are preseason exhibitions."
+    }
+  },
+  "performance": {
+    "asOf": "2026-08-12",
+    "mlbBets": {
+      "days": 96,
+      "tickets": 134,
+      "won": 42,
+      "risked": 2117.62,
+      "returned": 2588.51,
+      "net": 470.89,
+      "roiPct": 22.2,
+      "clvPp": 0.22,
+      "beatClosePct": 45.2,
+      "ticketWinPct": 31.3
+    },
+    "leans": {
+      "mlb": {
+        "record": "55-49",
+        "hitPct": 52.9,
+        "days": 31
+      },
+      "wnba": {
+        "record": "64-26",
+        "hitPct": 71.1,
+        "days": 33
+      }
+    }
+  },
+  "picks": [
+    {
+      "id": 1,
+      "sport": "MLB",
+      "time": "",
+      "away": "Cleveland",
+      "home": "Detroit",
+      "market": "Moneyline",
+      "play": "DET ML",
+      "odds": -127,
+      "marketProb": 53.4,
+      "modelProb": 53.8,
+      "edge": 0.4,
+      "confidence": 45,
+      "grade": "WATCH",
+      "line": [
+        -113,
+        -116,
+        -119,
+        -121,
+        -124,
+        -127
+      ],
+      "read": "model 53.8% vs market 53.4% → +0.4pp; positive but under the price floor — waiting.",
+      "factors": [
+        [
+          "Raw model edge",
+          8,
+          "+0.4 pp"
+        ],
+        [
+          "Shrunk edge",
+          6,
+          "+0.2 pp"
+        ],
+        [
+          "Expected value",
+          75.60000000000001,
+          "-4.2%"
+        ]
+      ],
+      "label": "WATCH",
+      "ev": -4.2
+    },
+    {
+      "id": 2,
+      "sport": "MLB",
+      "time": "",
+      "away": "Chi Cubs",
+      "home": "Washington",
+      "market": "Moneyline",
+      "play": "CHC ML",
+      "odds": -174,
+      "marketProb": 60.7,
+      "modelProb": 69.7,
+      "edge": 9,
+      "confidence": 81,
+      "grade": "A",
+      "line": [
+        -183,
+        -181,
+        -179,
+        -178,
+        -176,
+        -174
+      ],
+      "read": "model 69.7% vs market 60.7% → +9pp; clears the floor, token size.",
+      "factors": [
+        [
+          "Raw model edge",
+          100,
+          "+9 pp"
+        ],
+        [
+          "Shrunk edge",
+          71.84,
+          "+4.5 pp"
+        ],
+        [
+          "Expected value",
+          47.339999999999996,
+          "+2.6%"
+        ]
+      ],
+      "label": "BET",
+      "ev": 2.6
+    },
+    {
+      "id": 3,
+      "sport": "MLB",
+      "time": "",
+      "away": "Seattle",
+      "home": "NY Yankees",
+      "market": "Moneyline",
+      "play": "NYY ML",
+      "odds": -131,
+      "marketProb": 54.2,
+      "modelProb": 61,
+      "edge": 6.7,
+      "confidence": 73,
+      "grade": "A",
+      "line": [
+        -133,
+        -133,
+        -132,
+        -132,
+        -131,
+        -131
+      ],
+      "read": "model 61.0% vs market 54.2% → +6.7pp; clears the floor, token size.",
+      "factors": [
+        [
+          "Raw model edge",
+          80.88,
+          "+6.7 pp"
+        ],
+        [
+          "Shrunk edge",
+          53.92,
+          "+3.4 pp"
+        ],
+        [
+          "Expected value",
+          28.62,
+          "+1.6%"
+        ]
+      ],
+      "label": "BET",
+      "ev": 1.6
+    },
+    {
+      "id": 4,
+      "sport": "MLB",
+      "time": "",
+      "away": "Boston",
+      "home": "Toronto",
+      "market": "Moneyline",
+      "play": "TOR ML",
+      "odds": -149,
+      "marketProb": 57.2,
+      "modelProb": 59.4,
+      "edge": 2.3,
+      "confidence": 53,
+      "grade": "WATCH",
+      "line": [
+        -137,
+        -139,
+        -142,
+        -144,
+        -147,
+        -149
+      ],
+      "read": "model 59.4% vs market 57.2% → +2.3pp; positive but under the price floor — waiting.",
+      "factors": [
+        [
+          "Raw model edge",
+          27.240000000000002,
+          "+2.3 pp"
+        ],
+        [
+          "Shrunk edge",
+          18.08,
+          "+1.1 pp"
+        ],
+        [
+          "Expected value",
+          46.44,
+          "-2.6%"
+        ]
+      ],
+      "label": "WATCH",
+      "ev": -2.6
+    },
+    {
+      "id": 5,
+      "sport": "MLB",
+      "time": "",
+      "away": "NY Mets",
+      "home": "Atlanta",
+      "market": "Moneyline",
+      "play": "ATL ML",
+      "odds": -131,
+      "marketProb": 54.2,
+      "modelProb": 57.2,
+      "edge": 2.9,
+      "confidence": 56,
+      "grade": "WATCH",
+      "line": [
+        -123,
+        -125,
+        -126,
+        -128,
+        -129,
+        -131
+      ],
+      "read": "model 57.2% vs market 54.2% → +2.9pp; positive but under the price floor — waiting.",
+      "factors": [
+        [
+          "Raw model edge",
+          35.28,
+          "+2.9 pp"
+        ],
+        [
+          "Shrunk edge",
+          23.52,
+          "+1.5 pp"
+        ],
+        [
+          "Expected value",
+          31.86,
+          "-1.8%"
+        ]
+      ],
+      "label": "WATCH",
+      "ev": -1.8
+    },
+    {
+      "id": 6,
+      "sport": "MLB",
+      "time": "",
+      "away": "Texas",
+      "home": "LA Angels",
+      "market": "Moneyline",
+      "play": "TEX ML",
+      "odds": -143,
+      "marketProb": 56.3,
+      "modelProb": 68,
+      "edge": 11.7,
+      "confidence": 93,
+      "grade": "A",
+      "line": [
+        -161,
+        -157,
+        -154,
+        -150,
+        -147,
+        -143
+      ],
+      "read": "TEX Bradford ESPN 0.00/0-0=no 2026 sample -> regressed to league mean 4.10, LOW conf (ADJ_014)",
+      "factors": [
+        [
+          "Raw model edge",
+          100,
+          "+11.7 pp"
+        ],
+        [
+          "Shrunk edge",
+          93.44,
+          "+5.8 pp"
+        ],
+        [
+          "Expected value",
+          100,
+          "+5.6%"
+        ]
+      ],
+      "label": "BET",
+      "ev": 5.6
+    },
+    {
+      "id": 7,
+      "sport": "MLB",
+      "time": "",
+      "away": "Colorado",
+      "home": "Arizona",
+      "market": "Moneyline",
+      "play": "ARI ML",
+      "odds": -181,
+      "marketProb": 61.6,
+      "modelProb": 66.5,
+      "edge": 4.9,
+      "confidence": 64,
+      "grade": "WATCH",
+      "line": [
+        -174,
+        -175,
+        -177,
+        -178,
+        -180,
+        -181
+      ],
+      "read": "ARI Bratt 3.90 on 1-1 small sample -> regressed 50% to 4.00, LOW-MED (ADJ_014)",
+      "factors": [
+        [
+          "Raw model edge",
+          58.199999999999996,
+          "+4.9 pp"
+        ],
+        [
+          "Shrunk edge",
+          38.88,
+          "+2.4 pp"
+        ],
+        [
+          "Expected value",
+          10.98,
+          "-0.6%"
+        ]
+      ],
+      "label": "WATCH",
+      "ev": -0.6
+    },
+    {
+      "id": 8,
+      "sport": "MLB",
+      "time": "",
+      "away": "Milwaukee",
+      "home": "San Diego",
+      "market": "Moneyline",
+      "play": "MIL ML",
+      "odds": -143,
+      "marketProb": 56.3,
+      "modelProb": 64.9,
+      "edge": 8.6,
+      "confidence": 80,
+      "grade": "A",
+      "line": [
+        -151,
+        -149,
+        -148,
+        -146,
+        -145,
+        -143
+      ],
+      "read": "model 64.9% vs market 56.3% → +8.6pp; clears the floor, token size.",
+      "factors": [
+        [
+          "Raw model edge",
+          100,
+          "+8.6 pp"
+        ],
+        [
+          "Shrunk edge",
+          68.64,
+          "+4.3 pp"
+        ],
+        [
+          "Expected value",
+          53.46,
+          "+3%"
+        ]
+      ],
+      "label": "BET",
+      "ev": 3
+    },
+    {
+      "id": 9,
+      "sport": "MLB",
+      "time": "",
+      "away": "Tampa Bay",
+      "home": "Athletics",
+      "market": "Moneyline",
+      "play": "TB ML",
+      "odds": -163,
+      "marketProb": 59.3,
+      "modelProb": 70.3,
+      "edge": 11,
+      "confidence": 90,
+      "grade": "A",
+      "line": [
+        -180,
+        -177,
+        -173,
+        -170,
+        -166,
+        -163
+      ],
+      "read": "ATH Barnett 5.56 small sample",
+      "factors": [
+        [
+          "Raw model edge",
+          100,
+          "+11 pp"
+        ],
+        [
+          "Shrunk edge",
+          87.84,
+          "+5.5 pp"
+        ],
+        [
+          "Expected value",
+          81.54,
+          "+4.5%"
+        ]
+      ],
+      "label": "BET",
+      "ev": 4.5
+    },
+    {
+      "id": 10,
+      "sport": "MLB",
+      "time": "",
+      "away": "Houston",
+      "home": "San Francisco",
+      "market": "Moneyline",
+      "play": "HOU ML",
+      "odds": -194,
+      "marketProb": 63.1,
+      "modelProb": 75.9,
+      "edge": 12.8,
+      "confidence": 95,
+      "grade": "A",
+      "line": [
+        -222,
+        -216,
+        -211,
+        -205,
+        -200,
+        -194
+      ],
+      "read": "SF Whisenhunt 7.25 rookie",
+      "factors": [
+        [
+          "Raw model edge",
+          100,
+          "+12.8 pp"
+        ],
+        [
+          "Shrunk edge",
+          100,
+          "+6.4 pp"
+        ],
+        [
+          "Expected value",
+          95.22,
+          "+5.3%"
+        ]
+      ],
+      "label": "BET",
+      "ev": 5.3
+    },
+    {
+      "id": 11,
+      "sport": "WNBA",
+      "time": "7:30 PM",
+      "away": "New York Liberty",
+      "home": "Indiana Fever",
+      "market": "Moneyline",
+      "play": "IND ML",
+      "odds": -175,
+      "marketProb": 61.4,
+      "modelProb": 60,
+      "edge": -1.4,
+      "confidence": 43,
+      "grade": "PASS",
+      "line": [
+        -175,
+        -175,
+        -175,
+        -175,
+        -175,
+        -175
+      ],
+      "read": "Two of the league's best square off: Fever 20-12 hosting Liberty 20-13, who ride a 4-game win streak. Caitlin Clark eligible after the WNBA rescinded her 8th technical. Indiana's home floor gives a slight edge but this is close to a coin-flip between elite teams. IND -175 is layable-eligible but the model (60%) sits ~1.4pp UNDER no-vig (61.4%) -> negative edge, no bet. NY +150 breakeven 40.0% = model 40% -> no dog value. Pass both sides. 4 AM run: no pick hinges on unconfirmed status.",
+      "factors": [
+        [
+          "Raw model edge",
+          16.799999999999997,
+          "-1.4 pp"
+        ]
+      ],
+      "label": "PASS"
+    },
+    {
+      "id": 12,
+      "sport": "WNBA",
+      "time": "10:00 PM",
+      "away": "Washington Mystics",
+      "home": "Las Vegas Aces",
+      "market": "Moneyline",
+      "play": "LV ML",
+      "odds": -230,
+      "marketProb": 67.7,
+      "modelProb": 70,
+      "edge": 2.3,
+      "confidence": 62,
+      "grade": "PASS",
+      "line": [
+        -230,
+        -230,
+        -230,
+        -230,
+        -230,
+        -230
+      ],
+      "read": "Aces at home off a 4th straight road win (beat Toronto 109-83; A'ja Wilson 26/6, Jackie Young 24/12) vs a Mystics team 1-4 ATS in its last 5 home games. LV ~-230 is un-layable heavy chalk (far past -180) -- laying that juice is the negative-EV trap the gate refuses. WSH +200 breakeven 33.3% > model 30% (and > Kalshi 24.5%) -> no dog value despite Washington's 100-99 win over LV on Jul 22. Pass both sides.",
+      "factors": [
+        [
+          "Raw model edge",
+          27.599999999999998,
+          "+2.3 pp"
+        ]
+      ],
+      "label": "PASS"
+    },
+    {
+      "id": 13,
+      "sport": "WNBA",
+      "time": "10:00 PM",
+      "away": "Phoenix Mercury",
+      "home": "Los Angeles Sparks",
+      "market": "Moneyline",
+      "play": "LA ML",
+      "odds": -128,
+      "marketProb": 53.8,
+      "modelProb": 57,
+      "edge": 3.2,
+      "confidence": 66,
+      "grade": "PASS",
+      "line": [
+        -128,
+        -128,
+        -128,
+        -128,
+        -128,
+        -128
+      ],
+      "read": "Closest look on the board. Kelsey Plum OUT (calf) removes Phoenix's lead guard; Mercury (12-22) have lost 3 straight and 4 of 5. That tilts the model toward the Sparks (12-19) at home. BUT: LA ~-128 clears only ~+3.2pp over no-vig (53.8%) -- UNDER the 4% standard bar; LA carries its own DTD injuries (Rae Burrell leg, Monique Akoa Makani ankle) unconfirmed at 4 AM; LA is on a 3-game home losing streak; and Kalshi (52.5%) + Polymarket (56%) price it a coin-flip rather than confirming the edge. Sub-bar layable favorite that hinges on unconfirmed status -> PASS. PHX +108 breakeven 48.1% > model 43% -> no dog value.",
+      "factors": [
+        [
+          "Raw model edge",
+          38.400000000000006,
+          "+3.2 pp"
+        ]
+      ],
+      "label": "PASS"
+    }
+  ]
+}
