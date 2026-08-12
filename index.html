@@ -46,8 +46,13 @@
   .nav .links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--mut)}
   .nav .links a:hover{color:var(--gold)}
   .nav .cta{background:var(--gold);color:#0c0c0c;font-weight:800;padding:8px 14px;border-radius:8px;font-size:13px}
-  @media(max-width:640px){.nav .links a:not(.cta):not(.ccm){display:none}}
   .nav .links a.ccm{color:var(--gold);font-weight:700}
+  .nav .links a.clawpill{display:none}
+  @media(max-width:640px){
+    .nav .links a:not(.cta):not(.clawpill){display:none}
+    .nav .links{gap:10px}
+    .nav .links a.clawpill{display:inline-flex;align-items:center;justify-content:center;width:40px;height:36px;font-size:18px;line-height:1;background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.55);border-radius:9px}
+  }
 
   /* hero */
   .hero{text-align:center;padding:54px 0 40px}
@@ -174,6 +179,7 @@
       <a href="#pipeline">Pipeline</a>
       <a class="ccm" href="the-claw-machine.html">The Claw Machine</a>
       <a href="#record">Track Record</a>
+      <a class="clawpill" href="the-claw-machine.html" title="The Claw Machine — live model board" aria-label="The Claw Machine">🦞</a>
       <a class="cta" href="#pricing">Join · $39.99/mo</a>
     </div>
   </div>
