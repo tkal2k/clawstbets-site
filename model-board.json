@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-12T05:02:09.697Z",
+  "generatedAt": "2026-08-12T12:00:48.443Z",
   "source": "live",
-  "dataRoot": "/sessions/confident-elegant-mayer/mnt/Claude-Mac",
+  "dataRoot": "/sessions/lucid-vibrant-knuth/mnt/Claude-Mac",
   "meta": {
     "mlb": {
       "state": "10 actionable of 15 legs",
@@ -10,9 +10,9 @@
     },
     "wnba": {
       "state": "NO-PLAY — model passed the slate",
-      "date": "2026-08-11",
+      "date": "2026-08-12",
       "count": 3,
-      "summary": "NO-PLAY: 3-game Tuesday slate, 0 bets, all PASS. NY@IND is a near coin-flip between two 20-win teams (IND slight home fav, Clark's rescinded tech keeps her eligible) with no 4% edge either side. WSH@LV is un-layable heavy chalk (LV ~-230) with no dog value on the Mystics; Kalshi is even MORE bullish on Vegas (~76%) than the book (~68% no-vig), a KALSHI EDGE toward LV that only reinforces the no-play. PHX@LA is the closest look: Kelsey Plum OUT (calf) tilts the model toward the Sparks, but LA ~-128 clears only ~3pp edge (under the 4% bar), the Sparks' own DTD injuries (Burrell leg, Akoa Makani ankle) are unconfirmed at 4 AM, LA is on a 3-game home skid, and Kalshi/Polymarket price it a coin-flip (~53%) rather than confirming the edge -> sub-bar PASS, LA the lean."
+      "summary": "NO-PLAY: 3-game Wednesday slate, 0 bets, all PASS. Every game is a heavy home favorite with no layable edge and no dog value. TOR@DAL: Dallas -385 is un-layable heavy chalk (far past -180) vs the worst-record expansion Tempo (10-22); TOR +290 breakeven 25.6% > model 22% -> no dog value. CHI@GS: Golden State -435 un-layable chalk at home (23-9); CHI +320 breakeven 23.8% > model 20% -> no dog value. MIN@POR: league-best Lynx (27-7) ~-700 un-layable chalk; POR +500 breakeven 16.7% >= model 15% -> no dog value even with Portland home off a win. All three Kalshi markets ALIGNED with the books (no KALSHI EDGE flags). Chalk-refusal + dog-no-value discipline -> clean pass."
     },
     "nfl": {
       "state": "PASS — PRESEASON — Week 1",
@@ -24,16 +24,16 @@
   "performance": {
     "asOf": "2026-08-12",
     "mlbBets": {
-      "days": 96,
-      "tickets": 134,
-      "won": 42,
-      "risked": 2117.62,
-      "returned": 2588.51,
-      "net": 470.89,
-      "roiPct": 22.2,
-      "clvPp": 0.22,
-      "beatClosePct": 45.2,
-      "ticketWinPct": 31.3
+      "days": 97,
+      "tickets": 136,
+      "won": 43,
+      "risked": 2137.62,
+      "returned": 2604.26,
+      "net": 466.64,
+      "roiPct": 21.8,
+      "clvPp": 0.31,
+      "beatClosePct": 47.7,
+      "ticketWinPct": 31.6
     },
     "leans": {
       "mlb": {
@@ -42,9 +42,9 @@
         "days": 31
       },
       "wnba": {
-        "record": "64-26",
-        "hitPct": 71.1,
-        "days": 33
+        "record": "66-27",
+        "hitPct": 71,
+        "days": 34
       }
     }
   },
@@ -482,31 +482,31 @@
     {
       "id": 11,
       "sport": "WNBA",
-      "time": "7:30 PM",
-      "away": "New York Liberty",
-      "home": "Indiana Fever",
+      "time": "8:00 PM",
+      "away": "Toronto Tempo",
+      "home": "Dallas Wings",
       "market": "Moneyline",
-      "play": "IND ML",
-      "odds": -175,
-      "marketProb": 61.4,
-      "modelProb": 60,
-      "edge": -1.4,
-      "confidence": 43,
+      "play": "DAL ML",
+      "odds": -385,
+      "marketProb": 75.6,
+      "modelProb": 78,
+      "edge": 2.4,
+      "confidence": 62,
       "grade": "PASS",
       "line": [
-        -175,
-        -175,
-        -175,
-        -175,
-        -175,
-        -175
+        -385,
+        -385,
+        -385,
+        -385,
+        -385,
+        -385
       ],
-      "read": "Two of the league's best square off: Fever 20-12 hosting Liberty 20-13, who ride a 4-game win streak. Caitlin Clark eligible after the WNBA rescinded her 8th technical. Indiana's home floor gives a slight edge but this is close to a coin-flip between elite teams. IND -175 is layable-eligible but the model (60%) sits ~1.4pp UNDER no-vig (61.4%) -> negative edge, no bet. NY +150 breakeven 40.0% = model 40% -> no dog value. Pass both sides. 4 AM run: no pick hinges on unconfirmed status.",
+      "read": "Wings 19-14 host the expansion Tempo (10-22, worst record in the league). DAL -385 is un-layable heavy chalk (far past the -180 line) -- laying that juice is the negative-EV trap the gate refuses. TOR +290 breakeven 25.6% > model 22% -> no dog value on the road for the league's weakest team. Pass both sides. 4 AM run: no pick hinges on unconfirmed status.",
       "factors": [
         [
           "Raw model edge",
-          16.799999999999997,
-          "-1.4 pp"
+          28.799999999999997,
+          "+2.4 pp"
         ]
       ],
       "label": "PASS"
@@ -515,30 +515,30 @@
       "id": 12,
       "sport": "WNBA",
       "time": "10:00 PM",
-      "away": "Washington Mystics",
-      "home": "Las Vegas Aces",
+      "away": "Chicago Sky",
+      "home": "Golden State Valkyries",
       "market": "Moneyline",
-      "play": "LV ML",
-      "odds": -230,
-      "marketProb": 67.7,
-      "modelProb": 70,
-      "edge": 2.3,
-      "confidence": 62,
+      "play": "GS ML",
+      "odds": -435,
+      "marketProb": 77.4,
+      "modelProb": 80,
+      "edge": 2.6,
+      "confidence": 63,
       "grade": "PASS",
       "line": [
-        -230,
-        -230,
-        -230,
-        -230,
-        -230,
-        -230
+        -435,
+        -435,
+        -435,
+        -435,
+        -435,
+        -435
       ],
-      "read": "Aces at home off a 4th straight road win (beat Toronto 109-83; A'ja Wilson 26/6, Jackie Young 24/12) vs a Mystics team 1-4 ATS in its last 5 home games. LV ~-230 is un-layable heavy chalk (far past -180) -- laying that juice is the negative-EV trap the gate refuses. WSH +200 breakeven 33.3% > model 30% (and > Kalshi 24.5%) -> no dog value despite Washington's 100-99 win over LV on Jul 22. Pass both sides.",
+      "read": "Valkyries 23-9 (2nd in the West) host the Sky 12-21 at Chase Center. GS -435 is un-layable heavy chalk (far past -180). CHI +320 breakeven 23.8% > model 20% -> no dog value despite Carrington/Cardoso capability; Chicago is a poor road dog against an elite home team. Pass both sides.",
       "factors": [
         [
           "Raw model edge",
-          27.599999999999998,
-          "+2.3 pp"
+          31.200000000000003,
+          "+2.6 pp"
         ]
       ],
       "label": "PASS"
@@ -547,30 +547,30 @@
       "id": 13,
       "sport": "WNBA",
       "time": "10:00 PM",
-      "away": "Phoenix Mercury",
-      "home": "Los Angeles Sparks",
+      "away": "Minnesota Lynx",
+      "home": "Portland Fire",
       "market": "Moneyline",
-      "play": "LA ML",
-      "odds": -128,
-      "marketProb": 53.8,
-      "modelProb": 57,
-      "edge": 3.2,
-      "confidence": 66,
+      "play": "MIN ML",
+      "odds": -700,
+      "marketProb": 84,
+      "modelProb": 85,
+      "edge": 1,
+      "confidence": 55,
       "grade": "PASS",
       "line": [
-        -128,
-        -128,
-        -128,
-        -128,
-        -128,
-        -128
+        -700,
+        -700,
+        -700,
+        -700,
+        -700,
+        -700
       ],
-      "read": "Closest look on the board. Kelsey Plum OUT (calf) removes Phoenix's lead guard; Mercury (12-22) have lost 3 straight and 4 of 5. That tilts the model toward the Sparks (12-19) at home. BUT: LA ~-128 clears only ~+3.2pp over no-vig (53.8%) -- UNDER the 4% standard bar; LA carries its own DTD injuries (Rae Burrell leg, Monique Akoa Makani ankle) unconfirmed at 4 AM; LA is on a 3-game home losing streak; and Kalshi (52.5%) + Polymarket (56%) price it a coin-flip rather than confirming the edge. Sub-bar layable favorite that hinges on unconfirmed status -> PASS. PHX +108 breakeven 48.1% > model 43% -> no dog value.",
+      "read": "League-best Lynx (27-7) on the road at the expansion Fire (13-19), who come in off a 100-93 home win over Seattle. Book ML not directly captured -- ESTIMATED at MIN ~-700 from the market spread (POR +12.5 at -114). MIN is un-layable heavy chalk regardless of the exact number. POR +500 breakeven 16.7% >= model 15% -> no dog value even with home-court and momentum; the class gap is too large and any home-dog lean would hinge on unconfirmed 4 AM statuses. Pass both sides.",
       "factors": [
         [
           "Raw model edge",
-          38.400000000000006,
-          "+3.2 pp"
+          12,
+          "+1 pp"
         ]
       ],
       "label": "PASS"
