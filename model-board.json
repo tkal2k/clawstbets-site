@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-15T12:00:48.298Z",
+  "generatedAt": "2026-08-16T12:00:51.290Z",
   "source": "live",
-  "dataRoot": "/sessions/vigilant-admiring-knuth/mnt/Claude-Mac",
+  "dataRoot": "/sessions/trusting-determined-cray/mnt/Claude-Mac",
   "meta": {
     "mlb": {
       "state": "13 actionable of 14 legs",
@@ -10,9 +10,9 @@
     },
     "wnba": {
       "state": "NO-PLAY — model passed the slate",
-      "date": "2026-08-15",
-      "count": 3,
-      "summary": "NO-PLAY: 3-game Saturday slate, 0 bets, all three PASS. NY@CONN: Liberty -325 heavy road chalk (model 77%) yields only +0.5pp vs the 5% heavy-fav bar; CONN +280 needs 26.3% vs model 23% -> no dog value. LA@WSH: Mystics -230 home chalk (model 72%) yields +2.3pp, under the 5% heavy-fav bar; LA +210 needs 32.3% vs model 28% -> no value. MIN@LV: Lynx -115 (model 56%) yields +2.5pp, under the 4% standard bar; LV +100 needs 50% vs model 44% -> no value. Kalshi ALIGNED on all three (max 1.5pp); Polymarket aligned except a mild 4.4pp gap on WSH (model higher). DATA NOTE: preview feeds quoted MIN -200/-203 against a -1.5 spread (internally contradictory); verified book board is MIN -115/-122, LV +100/-105 -- the -200 figure was a bad scrape and would have inverted the read. Chalk-refusal + dog-no-value discipline -> clean pass."
+      "date": "2026-08-16",
+      "count": 2,
+      "summary": "NO-PLAY: 3-game Sunday slate, 0 bets, all three PASS. CHI@SEA: model CHI 57.2% vs -125 breakeven 55.6% = +1.6pp, under the 4% standard bar; SEA +105 needs 48.8% vs model 42.8% -> no dog value. IND@ATL: model IND 49.7% vs +110 breakeven 47.6% = +2.1pp, under the 3.5% dog bar; ATL -130 needs 56.5% vs model 50.3% -> negative. POR@PHX: model PHX 61.7% vs -218 breakeven 68.6% = -6.9pp (and heavy-fav bar is 5% anyway); POR +180 needs 35.7% vs model 38.3% = +2.6pp, under the 3.5% dog bar. Kalshi ALIGNED on all three (max 3.6pp, PHX); Polymarket ALIGNED on all three (max 2.8pp). Every game is a 'right side, wrong price' read -- the model leans CHI, IND and POR respectively but none clears its threshold. Two of the three theses hinge on unresolved 4 AM statuses (Clark PROBABLE for IND; Diggins unconfirmed for CHI), which is a further argument for the pass."
     },
     "nfl": {
       "state": "PASS — PRESEASON — Week 1",
@@ -22,24 +22,24 @@
     }
   },
   "performance": {
-    "asOf": "2026-08-15",
+    "asOf": "2026-08-16",
     "mlbBets": {
-      "days": 100,
-      "tickets": 142,
+      "days": 101,
+      "tickets": 143,
       "won": 47,
-      "risked": 2197.62,
+      "risked": 2202.62,
       "returned": 2670.31,
-      "net": 472.69,
-      "roiPct": 21.5,
+      "net": 467.69,
+      "roiPct": 21.2,
       "clvPp": 0.46,
-      "beatClosePct": 54,
-      "ticketWinPct": 33.1
+      "beatClosePct": 54.9,
+      "ticketWinPct": 32.9
     },
     "leans": {
       "mlb": {
-        "record": "55-51",
-        "hitPct": 51.9,
-        "days": 32
+        "record": "55-52",
+        "hitPct": 51.4,
+        "days": 33
       },
       "wnba": {
         "record": "73-28",
@@ -546,31 +546,31 @@
     {
       "id": 14,
       "sport": "WNBA",
-      "time": "1:00 PM",
-      "away": "New York Liberty",
-      "home": "Connecticut Sun",
+      "time": "5:00 PM",
+      "away": "Chicago Sky",
+      "home": "Seattle Storm",
       "market": "Moneyline",
-      "play": "NY ML",
-      "odds": -325,
-      "marketProb": 74.4,
-      "modelProb": 77,
-      "edge": 2.6,
-      "confidence": 63,
+      "play": "CHI ML",
+      "odds": -125,
+      "marketProb": 53.2,
+      "modelProb": 57.2,
+      "edge": 4,
+      "confidence": 70,
       "grade": "PASS",
       "line": [
-        -325,
-        -325,
-        -325,
-        -325,
-        -325,
-        -325
+        -125,
+        -125,
+        -125,
+        -125,
+        -125,
+        -125
       ],
-      "read": "Liberty (21-14, 3rd East) at the league's worst team (8-24, 7th East), 1 PM ET matinee. New York is without Satou Sabally (concussion), a starter -- real subtraction that the price only partly reflects. Connecticut was blown out at home 104-69 by Atlanta last out; NY comes off an 85-81 win over Los Angeles (Ionescu 20). NY -325 is heavy chalk well past -180: model 77% vs 76.5% breakeven = +0.5pp, nowhere near the 5% heavy-fav bar -- this is exactly the juice the single-game gate refuses. CONN +280 breakeven 26.3% > model 23% -> no dog value despite the fat number; the Sun are 8-24 for a reason and the matinee doesn't change class. Pass both sides. 4 AM run: Sabally out is reported, not a confirmed final report.",
+      "read": "Rest is the whole story and the market has most of it. Seattle (7-29, 5-12 home) is on a ZERO-day back-to-back -- they lost 84-82 at home to Portland last night -- and are without Natisha Hiedeman (left shoulder) and Taina Mair (coach's decision), both confirmed out for this game. Chicago has two days off since Aug 13. That is the house's #1 WNBA edge (travel/fatigue) pointing at the Sky, worth roughly +4pp over the 53.2% no-vig market. Against it: Chicago is 1-4 in its last five including a 71-91 beatdown at Golden State, and Seattle already beat this exact team 97-88 on Aug 11 -- so the class gap the records imply is not showing up head-to-head (-3pp). Line movement supports Chicago (CHI -115 -> -125, total 179.5 -> 178.5). Net modifiers +4pp inside the +/-7pp cap -> model CHI 57.2%. At -125 the breakeven is 55.6%, so the edge is only +1.6pp against a 4% standard bar. This price also sits squarely in the -101..-179 favorite bucket that the priced grading flagged as a net loser. Pass both sides.",
       "factors": [
         [
           "Raw model edge",
-          31.200000000000003,
-          "+2.6 pp"
+          48,
+          "+4 pp"
         ]
       ],
       "label": "PASS"
@@ -578,63 +578,31 @@
     {
       "id": 15,
       "sport": "WNBA",
-      "time": "7:30 PM",
-      "away": "Los Angeles Sparks",
-      "home": "Washington Mystics",
+      "time": "7:00 PM",
+      "away": "Portland Fire",
+      "home": "Phoenix Mercury",
       "market": "Moneyline",
-      "play": "WSH ML",
-      "odds": -230,
-      "marketProb": 68.4,
-      "modelProb": 72,
-      "edge": 3.6,
-      "confidence": 68,
+      "play": "PHX ML",
+      "odds": -218,
+      "marketProb": 65.7,
+      "modelProb": 61.7,
+      "edge": -4,
+      "confidence": 40,
       "grade": "PASS",
       "line": [
-        -230,
-        -230,
-        -230,
-        -230,
-        -230,
-        -230
+        -218,
+        -218,
+        -218,
+        -218,
+        -218,
+        -218
       ],
-      "read": "Mystics (19-14, 7 of last 10) host the Sparks (12-21, 2 of last 10, out of the playoff race). Los Angeles is on the second leg of an East road trip -- they lost 85-81 at New York -- and is without leading scorer Kelsey Plum (ankle). Travel fatigue plus a motivation gap on an eliminated team is the house's #1 WNBA edge, so a +3.6pp modifier over the 68.4% no-vig market is defensible and sits inside the +/-7pp cap. But WSH -230 is heavy chalk past -180: model 72% vs 69.7% breakeven = +2.3pp, under the 5% heavy-fav bar. LA +210 breakeven 32.3% > model 28% -> no dog value. Right side, wrong price -> pass both. Note the widely-cited 'Mystics struggle ATS when favored at home' stat is an ATS record and does not bear on the moneyline.",
+      "read": "The best rest asymmetry on the board and the model still cannot get there. Portland is on a ZERO-day back-to-back after an 84-82 grinder at Seattle last night, then flies Seattle -> Phoenix; Phoenix has been off since Aug 12 (94-87 at the Sparks), three full days at home. Straight fatigue math is worth about +6pp to Phoenix. Everything else cuts the other way: Phoenix is without Kelsey Plum (calf, ruled out by Nate Tibbetts on 8/14 -- her second straight miss since the trade), which is a top-of-roster subtraction the -5.5 only partly absorbs (-4pp); Phoenix is 1-4 in its last five including 75-95 at Washington and 72-75 at Connecticut (-3pp); and Phoenix is a bad home team at 5-10 while Portland, an expansion side, is 3-2 L5 and playing well above a 14-20 record (-2pp). Line movement is contradictory -- DraftKings drifted to Phoenix (-205 -> -218) while Kalshi drifted to Portland (PHX 0.68 -> 0.66) -- so it gets zero. Net -4pp -> model PHX 61.7%. Phoenix at -218 needs 68.6%: badly negative, and it is heavy chalk facing a 5% bar regardless. Portland +180 needs 35.7% against model 38.3% = +2.6pp, under the 3.5% dog bar. This is the closest thing to a live dog on the slate and it still misses. Pass both sides.",
       "factors": [
         [
           "Raw model edge",
-          43.2,
-          "+3.6 pp"
-        ]
-      ],
-      "label": "PASS"
-    },
-    {
-      "id": 16,
-      "sport": "WNBA",
-      "time": "8:00 PM",
-      "away": "Minnesota Lynx",
-      "home": "Las Vegas Aces",
-      "market": "Moneyline",
-      "play": "MIN ML",
-      "odds": -115,
-      "marketProb": 51.7,
-      "modelProb": 56,
-      "edge": 4.3,
-      "confidence": 72,
-      "grade": "PASS",
-      "line": [
-        -115,
-        -115,
-        -115,
-        -115,
-        -115,
-        -115
-      ],
-      "read": "Third meeting in eight days between the league's best record (MIN 28-7, 14-2 on the road) and the reigning champion (LV 24-11, 11-5 at home); Minnesota won the last one 98-87 at home and the season series is split. Las Vegas gets A'ja Wilson and Jackie Young back off a rest game -- both off the injury report -- while missing Dana Evans (left leg) and Cheyenne Parker-Tyus (concussion, 8th straight). Minnesota is without Chloe Bibby and has Napheesa Collier back but on a minutes restriction, so her return is a smaller lift than the name implies. Model MIN 56% is a modest +4.3pp over the 51.7% no-vig market, justified by the road-record gap, but at MIN -115 the breakeven is 53.5% -> +2.5pp edge, under the 4% standard bar. LV +100 breakeven 50% vs model 44% -> clearly negative. Pass both sides.",
-      "factors": [
-        [
-          "Raw model edge",
-          51.599999999999994,
-          "+4.3 pp"
+          48,
+          "-4 pp"
         ]
       ],
       "label": "PASS"
