@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-17T12:00:57.226Z",
+  "generatedAt": "2026-08-18T12:00:12.914Z",
   "source": "live",
-  "dataRoot": "/sessions/youthful-keen-brahmagupta/mnt/Claude-Mac",
+  "dataRoot": "/sessions/stoic-youthful-knuth/mnt/Claude-Mac",
   "meta": {
     "mlb": {
       "state": "13 actionable of 14 legs",
@@ -10,9 +10,9 @@
     },
     "wnba": {
       "state": "NO-PLAY — model passed the slate",
-      "date": "2026-08-17",
-      "count": 1,
-      "summary": "NO-PLAY: 1-game Monday slate, 0 bets, 1 PASS. DAL@GS: model GS 73.5% vs -225 breakeven 69.2% = +4.3pp, UNDER the 5.0pp heavy-favorite bar (misses by 0.7pp). DAL +180 needs 35.7% vs model 26.5% -> -9.2pp, no dog value. Knife-edge pass: the model's cushion on GS sits inside its own error bars, and the heavy-fav bar exists precisely because laying -225 needs a real margin."
+      "date": "2026-08-18",
+      "count": 4,
+      "summary": "NO-PLAY: 4-game Tuesday slate, 0 bets, 4 PASS. Best edge on the board is CHI +160 at +1.9pp against a 3.5pp dog bar; LV -162 at +0.8pp against a 4.0pp standard bar. The two heavy-ish favorites (IND -395, NY -192) are both priced ABOVE the model. This is an efficiently-priced board, not a shy one — three of the four games sit inside 2.5pp of the model on both sides."
     },
     "nfl": {
       "state": "PASS — PRESEASON — Week 1",
@@ -22,18 +22,18 @@
     }
   },
   "performance": {
-    "asOf": "2026-08-17",
+    "asOf": "2026-08-18",
     "mlbBets": {
-      "days": 102,
-      "tickets": 145,
-      "won": 49,
-      "risked": 2222.62,
-      "returned": 2707.33,
-      "net": 484.71,
-      "roiPct": 21.8,
+      "days": 103,
+      "tickets": 146,
+      "won": 50,
+      "risked": 2232.62,
+      "returned": 2725.66,
+      "net": 493.04,
+      "roiPct": 22.1,
       "clvPp": 0.46,
       "beatClosePct": 54.9,
-      "ticketWinPct": 33.8
+      "ticketWinPct": 34.2
     },
     "leans": {
       "mlb": {
@@ -42,9 +42,9 @@
         "days": 33
       },
       "wnba": {
-        "record": "77-30",
-        "hitPct": 72,
-        "days": 39
+        "record": "78-30",
+        "hitPct": 72.2,
+        "days": 40
       }
     }
   },
@@ -546,31 +546,127 @@
     {
       "id": 14,
       "sport": "WNBA",
-      "time": "10:00 PM",
-      "away": "Dallas Wings",
-      "home": "Golden State Valkyries",
+      "time": "7:00 PM",
+      "away": "Los Angeles Sparks",
+      "home": "Connecticut Sun",
       "market": "Moneyline",
-      "play": "GS ML",
-      "odds": -225,
-      "marketProb": 66,
-      "modelProb": 73.5,
-      "edge": 7.5,
-      "confidence": 88,
+      "play": "LA ML",
+      "odds": -120,
+      "marketProb": 52.2,
+      "modelProb": 52.2,
+      "edge": 0,
+      "confidence": 50,
       "grade": "PASS",
       "line": [
-        -225,
-        -225,
-        -225,
-        -225,
-        -225,
-        -225
+        -120,
+        -120,
+        -120,
+        -120,
+        -120,
+        -120
       ],
       "read": "",
       "factors": [
         [
           "Raw model edge",
-          90,
-          "+7.5 pp"
+          8,
+          "+0 pp"
+        ]
+      ],
+      "label": "PASS"
+    },
+    {
+      "id": 15,
+      "sport": "WNBA",
+      "time": "7:00 PM",
+      "away": "Indiana Fever",
+      "home": "Toronto Tempo",
+      "market": "Moneyline",
+      "play": "IND ML",
+      "odds": -395,
+      "marketProb": 76.6,
+      "modelProb": 78.1,
+      "edge": 1.5,
+      "confidence": 58,
+      "grade": "PASS",
+      "line": [
+        -395,
+        -395,
+        -395,
+        -395,
+        -395,
+        -395
+      ],
+      "read": "",
+      "factors": [
+        [
+          "Raw model edge",
+          18,
+          "+1.5 pp"
+        ]
+      ],
+      "label": "PASS"
+    },
+    {
+      "id": 16,
+      "sport": "WNBA",
+      "time": "9:00 PM",
+      "away": "New York Liberty",
+      "home": "Chicago Sky",
+      "market": "Moneyline",
+      "play": "NY ML",
+      "odds": -192,
+      "marketProb": 63.1,
+      "modelProb": 59.6,
+      "edge": -3.5,
+      "confidence": 40,
+      "grade": "PASS",
+      "line": [
+        -192,
+        -192,
+        -192,
+        -192,
+        -192,
+        -192
+      ],
+      "read": "",
+      "factors": [
+        [
+          "Raw model edge",
+          42,
+          "-3.5 pp"
+        ]
+      ],
+      "label": "PASS"
+    },
+    {
+      "id": 17,
+      "sport": "WNBA",
+      "time": "9:00 PM",
+      "away": "Atlanta Dream",
+      "home": "Las Vegas Aces",
+      "market": "Moneyline",
+      "play": "LV ML",
+      "odds": -162,
+      "marketProb": 59.3,
+      "modelProb": 62.6,
+      "edge": 3.3,
+      "confidence": 67,
+      "grade": "PASS",
+      "line": [
+        -162,
+        -162,
+        -162,
+        -162,
+        -162,
+        -162
+      ],
+      "read": "",
+      "factors": [
+        [
+          "Raw model edge",
+          39.599999999999994,
+          "+3.3 pp"
         ]
       ],
       "label": "PASS"
