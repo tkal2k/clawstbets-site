@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-18T12:00:12.914Z",
+  "generatedAt": "2026-08-19T12:00:23.110Z",
   "source": "live",
-  "dataRoot": "/sessions/stoic-youthful-knuth/mnt/Claude-Mac",
+  "dataRoot": "/sessions/wizardly-great-franklin/mnt/Claude-Mac",
   "meta": {
     "mlb": {
       "state": "13 actionable of 14 legs",
@@ -10,19 +10,19 @@
     },
     "wnba": {
       "state": "NO-PLAY — model passed the slate",
-      "date": "2026-08-18",
-      "count": 4,
-      "summary": "NO-PLAY: 4-game Tuesday slate, 0 bets, 4 PASS. Best edge on the board is CHI +160 at +1.9pp against a 3.5pp dog bar; LV -162 at +0.8pp against a 4.0pp standard bar. The two heavy-ish favorites (IND -395, NY -192) are both priced ABOVE the model. This is an efficiently-priced board, not a shy one — three of the four games sit inside 2.5pp of the model on both sides."
+      "date": "2026-08-19",
+      "count": 2,
+      "summary": "NO-PLAY: 2-game Wednesday slate, 0 bets, 2 PASS. The board's only interesting price is WAS -390 at +1.4pp against a 5.0pp heavy-favorite bar — and it is the one game where Kalshi (83.5%) sits ABOVE both the model (81.0%) and the sportsbook no-vig (77.2%), having moved 79c -> 84c on 103k of 24h volume. That is a real signal, but it is a Kalshi signal, not a model edge, and the overlay is explicitly context-only. MIN @ GS is the most efficiently-priced game the pipeline has seen this month: model 55.5%, Kalshi 55.5%, book no-vig 54.7% — three independent reads inside 1pp. Nothing to bet on a two-game card."
     },
     "nfl": {
-      "state": "PASS — PRESEASON — Week 1",
-      "date": "2026_pre1",
+      "state": "PASS — PRESEASON - Week 2",
+      "date": "2026_pre2",
       "count": 0,
-      "summary": "All 16 kickoffs in the 8-day window are preseason exhibitions."
+      "summary": "Every kickoff in the 8-day window is a preseason exhibition. The framework model (football_model) and all of its fitted constants come from 7,017 REGULAR-SEASON games; preseason is not a draw from that distribution, so L3 belief is UNAVAILABLE for all 16 games and L4 (edge.evaluate) has no fair_prob to score. No edge can be computed, therefore no BET can exist."
     }
   },
   "performance": {
-    "asOf": "2026-08-18",
+    "asOf": "2026-08-19",
     "mlbBets": {
       "days": 103,
       "tickets": 146,
@@ -37,14 +37,14 @@
     },
     "leans": {
       "mlb": {
-        "record": "55-52",
-        "hitPct": 51.4,
-        "days": 33
+        "record": "55-54",
+        "hitPct": 50.5,
+        "days": 34
       },
       "wnba": {
-        "record": "78-30",
-        "hitPct": 72.2,
-        "days": 40
+        "record": "79-33",
+        "hitPct": 70.5,
+        "days": 41
       }
     }
   },
@@ -546,31 +546,31 @@
     {
       "id": 14,
       "sport": "WNBA",
-      "time": "7:00 PM",
-      "away": "Los Angeles Sparks",
-      "home": "Connecticut Sun",
+      "time": "19:30",
+      "away": "Toronto Tempo",
+      "home": "Washington Mystics",
       "market": "Moneyline",
-      "play": "LA ML",
-      "odds": -120,
-      "marketProb": 52.2,
-      "modelProb": 52.2,
-      "edge": 0,
-      "confidence": 50,
+      "play": "WAS ML",
+      "odds": -390,
+      "marketProb": 77.2,
+      "modelProb": 81,
+      "edge": 3.8,
+      "confidence": 69,
       "grade": "PASS",
       "line": [
-        -120,
-        -120,
-        -120,
-        -120,
-        -120,
-        -120
+        -390,
+        -390,
+        -390,
+        -390,
+        -390,
+        -390
       ],
       "read": "",
       "factors": [
         [
           "Raw model edge",
-          8,
-          "+0 pp"
+          45.599999999999994,
+          "+3.8 pp"
         ]
       ],
       "label": "PASS"
@@ -578,95 +578,31 @@
     {
       "id": 15,
       "sport": "WNBA",
-      "time": "7:00 PM",
-      "away": "Indiana Fever",
-      "home": "Toronto Tempo",
+      "time": "22:00",
+      "away": "Minnesota Lynx",
+      "home": "Golden State Valkyries",
       "market": "Moneyline",
-      "play": "IND ML",
-      "odds": -395,
-      "marketProb": 76.6,
-      "modelProb": 78.1,
-      "edge": 1.5,
-      "confidence": 58,
+      "play": "MIN ML",
+      "odds": -130,
+      "marketProb": 54.7,
+      "modelProb": 55.5,
+      "edge": 0.8,
+      "confidence": 54,
       "grade": "PASS",
       "line": [
-        -395,
-        -395,
-        -395,
-        -395,
-        -395,
-        -395
+        -130,
+        -130,
+        -130,
+        -130,
+        -130,
+        -130
       ],
       "read": "",
       "factors": [
         [
           "Raw model edge",
-          18,
-          "+1.5 pp"
-        ]
-      ],
-      "label": "PASS"
-    },
-    {
-      "id": 16,
-      "sport": "WNBA",
-      "time": "9:00 PM",
-      "away": "New York Liberty",
-      "home": "Chicago Sky",
-      "market": "Moneyline",
-      "play": "NY ML",
-      "odds": -192,
-      "marketProb": 63.1,
-      "modelProb": 59.6,
-      "edge": -3.5,
-      "confidence": 40,
-      "grade": "PASS",
-      "line": [
-        -192,
-        -192,
-        -192,
-        -192,
-        -192,
-        -192
-      ],
-      "read": "",
-      "factors": [
-        [
-          "Raw model edge",
-          42,
-          "-3.5 pp"
-        ]
-      ],
-      "label": "PASS"
-    },
-    {
-      "id": 17,
-      "sport": "WNBA",
-      "time": "9:00 PM",
-      "away": "Atlanta Dream",
-      "home": "Las Vegas Aces",
-      "market": "Moneyline",
-      "play": "LV ML",
-      "odds": -162,
-      "marketProb": 59.3,
-      "modelProb": 62.6,
-      "edge": 3.3,
-      "confidence": 67,
-      "grade": "PASS",
-      "line": [
-        -162,
-        -162,
-        -162,
-        -162,
-        -162,
-        -162
-      ],
-      "read": "",
-      "factors": [
-        [
-          "Raw model edge",
-          39.599999999999994,
-          "+3.3 pp"
+          9.600000000000001,
+          "+0.8 pp"
         ]
       ],
       "label": "PASS"
