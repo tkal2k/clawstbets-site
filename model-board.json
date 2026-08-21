@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-20T12:00:21.715Z",
+  "generatedAt": "2026-08-21T12:00:53.786Z",
   "source": "live",
-  "dataRoot": "/sessions/sleepy-inspiring-cerf/mnt/Claude-Mac",
+  "dataRoot": "/sessions/zealous-peaceful-knuth/mnt/Claude-Mac",
   "meta": {
     "mlb": {
       "state": "13 actionable of 14 legs",
@@ -10,9 +10,9 @@
     },
     "wnba": {
       "state": "NO-PLAY — model passed the slate",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "count": 3,
-      "summary": "NO-PLAY: 3-game Thursday slate, 0 bets, 3 PASS. The only pick that came within reach was DAL +140 at home off two days' rest — model 43.5% vs a 40.0% no-vig line is +3.5pp, which lands EXACTLY on the 3.5pp dog bar with zero cushion. Three independent reads say don't press it: the spread moved 2 full points toward Indiana (open IND -1.5 -> -3.5), Kalshi prices IND at 60.5% (4.0pp above the model, a KALSHI EDGE flag against our side), and Kelsey Mitchell's status is unconfirmed at 4 AM after she left Q4 of the Aug 18 win. The two heavy chalks (LV -1200, ATL -380) are efficiently priced — +1.3pp and +0.5pp against a 5.0pp heavy-favorite bar. Polymarket confirms all three within 3pp."
+      "summary": "NO-PLAY: 3-game Friday slate, 0 bets, 3 PASS. Two of the three were genuinely close and both were killed by the same thing — a model base that disagrees with three independent markets. (1) MIN @ WSH: Napheesa Collier is OUT (confirmed 'Out - Rest', unchanged across three injury-report editions since 5 PM ET Aug 20) and the market already moved the spread 3 full points, MIN -6.5 to -3.5. The capped model lands at MIN 60.1% against a 60.0% no-vig line — a 0.1pp edge, i.e. nothing. Uncapped it would say WSH +140 is worth +4.4pp, but that uncapped number is exactly the one Kalshi rejects: Kalshi has MIN at 61.5% on 100K of 24h volume, the heaviest WNBA market on the board, and Polymarket has MIN 60.5%. Both sit ABOVE the model, not below. (2) POR @ TOR: the documented log5-on-win-pct base produces a +11.0pp edge on Portland, which is a red flag rather than an opportunity — POR is 15-20 with a -4.4 point differential and TOR is 10-25 with -6.6, so log5 on raw W-L is inflated by both teams' close-game luck. Rebuilt on point differential the belief is POR 60.6% for a +3.4pp edge, short of the 4.0pp standard bar. The book (57.2%), Kalshi (56.5%) and Polymarket (57.5%) cluster inside a single point of each other and all sit BELOW even the rebuilt model. (3) GS @ CHI: GS 71.7% vs a 69.1% no-vig line is +2.6pp against a 5.0pp heavy-favorite bar, and Kalshi (70.5%) and Polymarket (70.5%) are both within 1.3pp. Nothing to do. All three games ALIGNED on Polymarket; the only Kalshi divergence flag on the board fires against our own log5 number, not against the market."
     },
     "nfl": {
       "state": "PASS — PRESEASON - Week 2",
@@ -22,7 +22,7 @@
     }
   },
   "performance": {
-    "asOf": "2026-08-20",
+    "asOf": "2026-08-21",
     "mlbBets": {
       "days": 105,
       "tickets": 147,
@@ -42,9 +42,9 @@
         "days": 34
       },
       "wnba": {
-        "record": "81-33",
-        "hitPct": 71.1,
-        "days": 42
+        "record": "83-34",
+        "hitPct": 70.9,
+        "days": 43
       }
     }
   },
@@ -546,16 +546,16 @@
     {
       "id": 14,
       "sport": "WNBA",
-      "time": "20:00",
-      "away": "Indiana Fever",
-      "home": "Dallas Wings",
+      "time": "19:30",
+      "away": "Minnesota Lynx",
+      "home": "Washington Mystics",
       "market": "Moneyline",
-      "play": "IND ML",
+      "play": "MIN ML",
       "odds": -166,
       "marketProb": 60,
-      "modelProb": 56.5,
-      "edge": -3.5,
-      "confidence": 40,
+      "modelProb": 60.1,
+      "edge": 0.1,
+      "confidence": 51,
       "grade": "PASS",
       "line": [
         -166,
@@ -569,8 +569,8 @@
       "factors": [
         [
           "Raw model edge",
-          42,
-          "-3.5 pp"
+          8,
+          "+0.1 pp"
         ]
       ],
       "label": "PASS"
@@ -578,31 +578,31 @@
     {
       "id": 15,
       "sport": "WNBA",
-      "time": "22:00",
-      "away": "Connecticut Sun",
-      "home": "Las Vegas Aces",
+      "time": "19:30",
+      "away": "Golden State Valkyries",
+      "home": "Chicago Sky",
       "market": "Moneyline",
-      "play": "LV ML",
-      "odds": -1200,
-      "marketProb": 88.7,
-      "modelProb": 90,
-      "edge": 1.3,
-      "confidence": 57,
+      "play": "GS ML",
+      "odds": -258,
+      "marketProb": 69.1,
+      "modelProb": 71.7,
+      "edge": 2.6,
+      "confidence": 63,
       "grade": "PASS",
       "line": [
-        -1200,
-        -1200,
-        -1200,
-        -1200,
-        -1200,
-        -1200
+        -258,
+        -258,
+        -258,
+        -258,
+        -258,
+        -258
       ],
       "read": "",
       "factors": [
         [
           "Raw model edge",
-          15.600000000000001,
-          "+1.3 pp"
+          31.200000000000003,
+          "+2.6 pp"
         ]
       ],
       "label": "PASS"
@@ -611,30 +611,30 @@
       "id": 16,
       "sport": "WNBA",
       "time": "22:00",
-      "away": "Atlanta Dream",
-      "home": "Los Angeles Sparks",
+      "away": "Portland Fire",
+      "home": "Toronto Tempo",
       "market": "Moneyline",
-      "play": "ATL ML",
-      "odds": -380,
-      "marketProb": 76,
-      "modelProb": 76.5,
-      "edge": 0.5,
-      "confidence": 53,
+      "play": "POR ML",
+      "odds": -148,
+      "marketProb": 57.2,
+      "modelProb": 60.6,
+      "edge": 3.4,
+      "confidence": 67,
       "grade": "PASS",
       "line": [
-        -380,
-        -380,
-        -380,
-        -380,
-        -380,
-        -380
+        -148,
+        -148,
+        -148,
+        -148,
+        -148,
+        -148
       ],
       "read": "",
       "factors": [
         [
           "Raw model edge",
-          8,
-          "+0.5 pp"
+          40.8,
+          "+3.4 pp"
         ]
       ],
       "label": "PASS"
