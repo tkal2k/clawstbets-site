@@ -44,7 +44,10 @@
   .nav .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
   .nav .brand .gold{color:var(--gold)}
   .nav .links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--mut)}
+  .nav .row{gap:24px}
+  .nav .links a{white-space:nowrap}
   .nav .links a:hover{color:var(--gold)}
+  @media(max-width:980px){.nav .links a.nav-sm{display:none}}
   .nav .cta{background:var(--gold);color:#0c0c0c;font-weight:800;padding:8px 14px;border-radius:8px;font-size:13px}
   .nav .links a.ccm{color:var(--gold);font-weight:700}
   .nav .links a.clawpill{display:none}
@@ -175,10 +178,11 @@
   <div class="row">
     <a class="brand" href="#top"><img src="clawbot.png" alt="ClawStreetBets">Claw<span class="gold">Street</span>Bets</a>
     <div class="links">
-      <a href="#clawbot">ClawBot</a>
-      <a href="#pipeline">Pipeline</a>
+      <a class="nav-sm" href="#clawbot">ClawBot</a>
+      <a class="nav-sm" href="#pipeline">Pipeline</a>
       <a class="ccm" href="the-claw-machine.html">The Claw Machine</a>
       <a href="#record">Track Record</a>
+      <a href="nfl-postmortem.html">NFL Post-Mortem</a>
       <a class="clawpill" href="the-claw-machine.html" title="The Claw Machine — live model board" aria-label="The Claw Machine">🦞</a>
       <a class="cta" href="#pricing">Join · $39.99/mo</a>
     </div>
@@ -334,6 +338,7 @@
     <div class="note"><b>Two records, one firewall:</b> the staked NFL book has not booked a bet yet — the edge floor and the disagreement cap are never loosened to buy volume, so a week of PASS is a result, not a gap. The Slate Four is the mandatory pick board — at least three ranked, unsized picks for every slate day, Wednesday opener through Monday night — captured and graded against the close exactly like a bet, at stake $0. Its dollar line is what a flat $100 a pick would have returned: hypothetical, and kept out of the tiles and the all-books number above by rule. 20 graded picks so far: Sunday board 5-9; standalone days (Wed / TNF / MNF, pooled) 2-3-1; beat the closing line on 60% of 5. The standalone lanes are on the clock: at 40 picks, a beat-close rate at or under 50% with an ATS under 50% demotes them to record-keeping only.</div>
   </div>
   <!-- NFL:END -->
+  <div class="btnrow" style="justify-content:flex-start;margin:-2px 0 14px"><a class="btn btn-ghost" href="nfl-postmortem.html">🏈 Weekly NFL post-mortem: our picks vs the NFL.com experts →</a></div>
 
   <!-- LEANS:START -->
   <div class="book" style="border-style:dashed;opacity:.96">
@@ -415,6 +420,7 @@
     <a href="terms.html" style="color:var(--mut)">Terms</a>
     <a href="privacy.html" style="color:var(--mut)">Privacy</a>
     <a href="refund.html" style="color:var(--mut)">Refund Policy</a>
+    <a href="nfl-postmortem.html" style="color:var(--mut)">NFL Post-Mortem</a>
     <a href="#pricing" style="color:var(--gold)">Join · $39.99/mo</a>
   </div>
   <div class="disc">
