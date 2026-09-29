@@ -2,91 +2,158 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NFL Post-Mortem — ClawStreetBets</title>
-<meta name="description" content="Weekly NFL post-mortem: our pick'em and spread sheet graded against the NFL.com experts, every game, every week.">
+<meta name="description" content="Weekly NFL post-mortem: our pick'em and The Spread Sheet graded against the NFL.com experts, every game, every week. Entertainment & education only — not financial advice.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<meta property="og:image" content="og.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ClawStreetBets">
+<meta property="og:title" content="NFL Post-Mortem — ClawStreetBets">
+<meta property="og:description" content="Our pick'em vs the NFL.com experts, graded every week. Entertainment & education only — NFA.">
+<meta property="og:image" content="https://clawstbets.com/og.png">
+<meta property="og:url" content="https://clawstbets.com/nfl-postmortem">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://clawstbets.com/og.png">
 <style>
-  :root{--bg:#0c0c0c;--panel:#15140d;--line:#2c2a1c;--line2:#211f15;--gold:#e8a020;--txt:#fff;--mut:#b6b3a4;--dim:#7e7c70;
-    --blue:#3987e5;--orange:#d95926;--good:#4cb672;--bad:#e2665d;
-    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--black:"Arial Black","Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
+  /* tokens + nav + section + card styles copied from index.html so the page matches the homepage */
+  :root{
+    --bg:#0c0c0c; --panel:#15140d; --panel2:#1a190f; --line:#2c2a1c;
+    --gold:#e8a020; --gold-dim:#b87d18; --gold-soft:#ffce6b;
+    --txt:#ffffff; --mut:#b6b3a4; --dim:#7e7c70;
+    --grn:#3dba70; --red:#e05050;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --black:"Arial Black","Arial Bold",Gadget,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    color-scheme:dark;
+  }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.6}
-  a{color:var(--gold);text-decoration:none}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
   a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-  .nfa-bar{background:var(--gold);color:#0c0c0c;text-align:center;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:8px 14px;text-transform:uppercase}
-  .top{border-bottom:1px solid var(--line)}
-  .top .row{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-  .brand{font-family:var(--black);text-transform:uppercase;font-size:15px;color:var(--txt)}
-  .brand .g{color:var(--gold)}
-  .wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:38px 60px;display:flex;flex-direction:column;gap:52px}
-  h1{font-family:var(--black);text-transform:uppercase;font-size:clamp(28px,6vw,42px);line-height:1.05;text-wrap:balance}
-  h2{font-family:var(--black);text-transform:uppercase;font-size:22px;line-height:1.15;text-wrap:balance}
-  h3{font-size:16px}
-  p{max-width:68ch;color:var(--mut)}
-  p strong,li strong{color:var(--txt)}
-  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
-  section,header{display:flex;flex-direction:column;gap:16px}
-  .num,td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
-  .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-  .tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
-  .tile .big{font-family:var(--black);font-size:34px;line-height:1.05;font-variant-numeric:tabular-nums}
-  .tile .big.g{color:var(--gold)}
-  .tile .lbl{font-size:13px;color:var(--mut)}
-  @media (max-width:640px){.tiles{grid-template-columns:1fr}}
-  .tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px}
+  .nfa-bar{background:var(--gold);color:#0c0c0c;text-align:center;font-family:var(--mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;padding:8px 14px;text-transform:uppercase}
+  .nav{position:sticky;top:0;z-index:20;background:rgba(12,12,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .row{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;max-width:880px;margin:0 auto}
+  .nav .brand{display:flex;align-items:center;gap:10px;font-family:var(--black);text-transform:uppercase;font-size:16px}
+  .nav .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+  .nav .brand .gold{color:var(--gold)}
+  .nav .links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--mut)}
+  .nav .row{gap:24px}
+  .nav .links a{white-space:nowrap}
+  .nav .links a:hover{color:var(--gold)}
+  @media(max-width:980px){.nav .links a.nav-sm{display:none}}
+  .nav .links a.here{color:var(--gold);font-weight:700}
+  .nav .cta{background:var(--gold);color:#0c0c0c;font-weight:800;padding:8px 14px;border-radius:8px;font-size:13px}
+  .nav .links a.ccm{color:var(--gold);font-weight:700}
+  .nav .links a.clawpill{display:none}
+  @media(max-width:640px){
+    .nav .links a:not(.cta):not(.clawpill){display:none}
+    .nav .links{gap:10px}
+    .nav .links a.clawpill{display:inline-flex;align-items:center;justify-content:center;width:40px;height:36px;font-size:18px;line-height:1;background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.55);border-radius:9px}
+  }
+  .hero{padding:44px 0 36px}
+  .hero h1{font-family:var(--black);font-size:42px;line-height:1.02;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:10px;text-wrap:balance}
+  .hero h1 .gold{color:var(--gold)}
+  .pipebadge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.4);
+    color:var(--gold);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;margin-bottom:16px}
+  .lead{color:var(--mut);font-size:15.5px;max-width:680px}
+  .lead b,.lead strong{color:var(--txt)}
+  section{padding:44px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:16px}
+  .eyebrow{font-family:var(--mono);letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--gold);font-weight:700}
+  h2{font-family:var(--black);font-size:27px;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;text-wrap:balance}
+  p{color:var(--mut);font-size:15px;max-width:680px}
+  p strong,p b,li strong{color:var(--txt)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center}
+  .kpi .n{font-family:var(--black);font-size:27px;font-variant-numeric:tabular-nums}
+  .kpi .n.gold{color:var(--gold)}
+  .kpi .l{font-family:var(--mono);font-size:10px;color:var(--mut);margin-top:5px;text-transform:uppercase;letter-spacing:.05em;line-height:1.5}
+  .book{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+  .bname{font-family:var(--black);font-size:17px;text-transform:uppercase}
+  .btag{display:inline-block;align-self:flex-start;font-family:var(--mono);font-size:10px;font-weight:700;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
+  .t-pos{background:rgba(61,186,112,.13);color:var(--grn);border:1px solid rgba(61,186,112,.35)}
+  .t-var{background:rgba(232,160,32,.13);color:var(--gold);border:1px solid rgba(232,160,32,.4)}
+  .book ul{padding-left:18px;color:var(--mut);font-size:14px;display:flex;flex-direction:column;gap:6px}
+  .book p{font-size:14px}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
   table{border-collapse:collapse;width:100%;font-size:14px}
-  th,td{padding:9px 12px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--line2)}
-  th{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+  th,td{padding:10px 14px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--line)}
+  th{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+  td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
   tr:last-child td{border-bottom:0}
   .r{text-align:right}
   tr.hl td{color:var(--gold);font-weight:700}
-  .chip{display:inline-block;font-family:var(--mono);font-size:11px;padding:1px 6px;border-radius:4px;border:1px solid var(--line);color:var(--dim)}
-  .chip.y{border-color:var(--good);color:var(--good)}
-  .chart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;position:relative}
+  .chart{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;position:relative}
   .chart svg{display:block;width:100%;height:auto}
   .cap{font-size:13px;color:var(--dim);margin-top:10px}
-  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--mut);margin-bottom:8px}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
   .legend span{display:inline-flex;align-items:center;gap:6px}
   .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
-  .tip{position:absolute;pointer-events:none;background:#fff;color:#0c0c0c;font-size:12px;font-family:var(--mono);padding:6px 8px;border-radius:4px;white-space:nowrap;z-index:5}
+  .tip{position:absolute;pointer-events:none;background:var(--gold);color:#0c0c0c;font-size:12px;font-weight:700;font-family:var(--mono);padding:6px 8px;border-radius:6px;white-space:nowrap;z-index:5}
   .lab{fill:var(--mut);font-family:var(--sans);font-size:12px}
-  .lab.s{fill:var(--txt);font-weight:700}
+  .lab.s{fill:var(--gold);font-weight:700}
   .val{fill:var(--txt);font-family:var(--mono);font-size:11.5px}
-  .grid line{stroke:var(--line2);stroke-width:1}
+  .grid line{stroke:var(--line);stroke-width:1}
   .hit{fill:transparent}
-  .list{display:grid;gap:0}
   .item{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
-  .item .n{font-family:var(--black);font-size:26px;line-height:1;color:var(--gold)}
+  .item .num-b{font-family:var(--black);font-size:26px;line-height:1;color:var(--gold)}
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  @media (max-width:640px){.cols{grid-template-columns:1fr}}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
-  .card ul{padding-left:18px;color:var(--mut);font-size:14.5px;display:flex;flex-direction:column;gap:6px}
-  .tests{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
-  .test{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
-  .test .m{font-family:var(--black);text-transform:uppercase;font-size:17px}
-  .test .line{font-family:var(--mono);font-size:12px;color:var(--gold)}
-  .test p{font-size:14px}
-  details summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);padding:6px 0}
-  .fine{font-size:13px;color:var(--dim);display:flex;flex-direction:column;gap:8px}
-  footer{border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--dim);font-family:var(--mono);display:flex;flex-direction:column;gap:10px}
-  footer a{color:var(--mut);margin-right:16px}
+  .tests{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+  .test .bname{font-size:16px}
+  details summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:6px 0}
+  .fine{display:flex;flex-direction:column;gap:10px}
+  .fine p{font-size:13.5px}
+  .btnrow{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:800;padding:13px 24px;border-radius:10px;font-size:15px}
+  .btn-gold{background:var(--gold);color:#0c0c0c}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-ghost{border:1px solid var(--line);color:var(--txt)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  footer{border-top:1px solid var(--line);padding:30px 0 50px}
+  .disc{font-size:11.5px;color:var(--dim);line-height:1.7}
+  .disc b{color:var(--mut)}
+  .claw-sign{font-family:var(--mono);font-style:italic;color:var(--gold-dim);font-size:13px;text-align:center;margin:22px 0}
+  @media(max-width:640px){
+    .hero h1{font-size:32px}
+    .grid3{grid-template-columns:1fr}
+    .kpi{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left}
+    .kpi .l{margin-top:0;text-align:right}
+    .cols{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
-<div class="nfa-bar">Entertainment &amp; education only · NFA — Not Financial Advice · 21+</div>
-<div class="top"><div class="row"><a class="brand" href="index.html">Claw<span class="g">Street</span>Bets</a><a href="index.html" style="font-size:13px">← Back to site</a></div></div>
 
-<div class="wrap" id="app">
+<div class="nfa-bar">Entertainment &amp; education only · NFA — Not Financial Advice · 21+ · Bet responsibly</div>
 
-<header>
-  <div class="eyebrow" id="eyebrow">NFL post-mortem</div>
+<nav class="nav">
+  <div class="row">
+    <a class="brand" href="index.html"><img src="clawbot.png" alt="ClawStreetBets">Claw<span class="gold">Street</span>Bets</a>
+    <div class="links">
+      <a class="nav-sm" href="index.html#clawbot">ClawBot</a>
+      <a class="nav-sm" href="index.html#pipeline">Pipeline</a>
+      <a class="ccm" href="the-claw-machine.html">The Claw Machine</a>
+      <a href="index.html#record">Track Record</a>
+      <a class="here" href="nfl-postmortem.html" aria-current="page">NFL Post-Mortem</a>
+      <a class="clawpill" href="the-claw-machine.html" title="The Claw Machine — live model board" aria-label="The Claw Machine">🦞</a>
+      <a class="cta" href="index.html#pricing">Join · $39.99/mo</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="app">
+
+<header class="hero">
+  <div class="pipebadge" id="eyebrow">NFL post-mortem</div>
   <h1 id="headline">Our pick'em vs the NFL.com experts</h1>
-  <p id="lede"></p>
-  <div class="tiles" id="tiles"></div>
+  <p class="lead" id="lede"></p>
+  <div class="grid3" id="tiles"></div>
 </header>
-
 <section>
   <div class="eyebrow">Our published record</div>
   <h2>Every card we posted, graded</h2>
@@ -95,7 +162,7 @@
     <thead><tr><th>Week</th><th class="r">Pick'em (straight up)</th><th class="r">Spread Sheet (ATS)</th><th class="r">Spread Sheet moneyline</th></tr></thead>
     <tbody id="pub-tbody"></tbody>
   </table></div>
-  <p class="fine" id="pub-note"></p>
+  <p id="pub-note" style="font-size:13.5px"></p>
 </section>
 
 <section>
@@ -116,11 +183,11 @@
   <div class="eyebrow">Why</div>
   <h2>Why the favorite keeps winning</h2>
   <div class="chart" id="c-split">
-    <div class="legend"><span><i class="sw" style="background:var(--gold)"></i>When they picked the favorite</span><span><i class="sw" style="background:var(--blue)"></i>When they picked the underdog</span></div>
+    <div class="legend"><span><i class="sw" style="background:var(--gold)"></i>When they picked the favorite</span><span><i class="sw" style="background:var(--mut)"></i>When they picked the underdog</span></div>
     <svg id="split-svg" role="img" aria-label="Win rate picking the favorite versus the underdog"></svg>
     <div class="cap">Everyone does about the same when they agree with the favorite. The gap between the experts comes from their underdog picks.</div>
   </div>
-  <div class="list" id="why"></div>
+  <div id="why"></div>
   <div class="chart" id="c-drift">
     <svg id="drift-svg" role="img" aria-label="Distance from the betting line versus average margin miss"></svg>
     <div class="cap">Each dot is an expert. Across: how far their predicted margin sits from the betting line on average. Up: how far their predicted margin missed the real one. The line itself sits at zero.</div>
@@ -158,7 +225,7 @@
   <h2>Where the market is behind</h2>
   <p>Total points each team has beaten or missed the spread by this season. A big positive number means the market keeps underrating a team; a big negative one means it keeps pricing them too high.</p>
   <div class="chart" id="c-teams">
-    <div class="legend"><span><i class="sw" style="background:var(--blue)"></i>Beat the spread</span><span><i class="sw" style="background:var(--orange)"></i>Missed the spread</span></div>
+    <div class="legend"><span><i class="sw" style="background:var(--grn)"></i>Beat the spread</span><span><i class="sw" style="background:var(--red)"></i>Missed the spread</span></div>
     <svg id="teams-svg" role="img" aria-label="Season cover margin by team"></svg>
   </div>
   <div class="cols" id="story-cols"></div>
@@ -186,14 +253,34 @@
   </div>
 </section>
 
-<footer>
-  <div>Picks, not stakes. 18+ (21+ where required). Not financial advice. Gambling problem? Call 1-800-GAMBLER.</div>
-  <div><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>
+<section style="align-items:center;text-align:center">
+  <div class="eyebrow">Get every pick</div>
+  <h2>Picks posted before kickoff, graded after</h2>
+  <p>Every card on this page was posted before the week's first game. Members get the picks, the track record and the post-mortems in Discord.</p>
+  <div class="btnrow" style="justify-content:center"><a class="btn btn-gold" href="index.html#pricing">Join on Whop · $39.99/mo</a><a class="btn btn-ghost" href="index.html#record">See the track record</a></div>
+</section>
+</main>
+
+<div class="claw-sign">Every day we drop the claw. The claw doesn't always grab — but we always play again.</div>
+
+<footer class="wrap">
+  <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;font-family:var(--mono);font-size:12px;letter-spacing:.04em">
+    <a href="faq.html" style="color:var(--mut)">FAQ</a>
+    <a href="terms.html" style="color:var(--mut)">Terms</a>
+    <a href="privacy.html" style="color:var(--mut)">Privacy</a>
+    <a href="refund.html" style="color:var(--mut)">Refund Policy</a>
+    <a href="index.html#pricing" style="color:var(--gold)">Join · $39.99/mo</a>
+  </div>
+  <div class="disc">
+    <b>Not financial advice.</b> ClawStreetBets is for <b>entertainment and education only</b>. Nothing here is financial, investment, or betting advice, or a recommendation to place any wager or trade. We are not licensed advisors. You are solely responsible for your own bets and trades — do your own research and never risk money you can't afford to lose.<br><br>
+    The pick'em and The Spread Sheet are unsized picks, not stakes; they never enter the staked track record. Expert picks come from NFL.com's public picks articles and are graded from final scores. Sample sizes are small and <b>past performance does not guarantee future results.</b><br><br>
+    Sports wagering is regulated differently by jurisdiction — know your local laws. Must be of legal age to gamble in your area. If gambling stops being fun, call <b>1-800-GAMBLER</b>.
+  </div>
+  <div style="text-align:center;margin-top:22px;font-family:var(--mono);font-size:11.5px;color:var(--dim)">© 2026 THansAI Research Group LLC. ClawStreetBets is a service of THansAI Research Group LLC. All rights reserved.</div>
 </footer>
-</div>
 
 <script>
-const PM={"season": 2026, "week": 3, "built_at": "2026-09-29T14:49:02+00:00", "records": {"pickem": {"su": {"w": 31, "l": 17, "p": 0, "n": 48, "pct": 0.6458, "txt": "31-17"}, "su_w1": {"w": 12, "l": 4, "p": 0, "n": 16, "pct": 0.75, "txt": "12-4"}, "su_fav": {"w": 31, "l": 17, "p": 0, "n": 48, "pct": 0.6458, "txt": "31-17"}, "su_w2": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "su_w3": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_week": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}}, "bergman": {"su": {"w": 26, "l": 22, "p": 0, "n": 48, "pct": 0.5417, "txt": "26-22"}, "su_w1": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "su_fav": {"w": 24, "l": 15, "p": 0, "n": 39, "pct": 0.6154, "txt": "24-15"}, "ats": {"w": 20, "l": 28, "p": 0, "n": 48, "pct": 0.4167, "txt": "20-28"}, "ats_w1": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_dog": {"w": 2, "l": 7, "p": 0, "n": 9, "pct": 0.2222, "txt": "2-7"}, "su_w2": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_week": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "ats_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "cersosimo": {"su": {"w": 30, "l": 18, "p": 0, "n": 48, "pct": 0.625, "txt": "30-18"}, "su_w1": {"w": 13, "l": 3, "p": 0, "n": 16, "pct": 0.8125, "txt": "13-3"}, "su_fav": {"w": 27, "l": 14, "p": 0, "n": 41, "pct": 0.6585, "txt": "27-14"}, "ats": {"w": 26, "l": 22, "p": 0, "n": 48, "pct": 0.5417, "txt": "26-22"}, "ats_w1": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "su_dog": {"w": 3, "l": 4, "p": 0, "n": 7, "pct": 0.4286, "txt": "3-4"}, "su_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "su_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_week": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "ats_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}}, "filice": {"su": {"w": 25, "l": 23, "p": 0, "n": 48, "pct": 0.5208, "txt": "25-23"}, "su_w1": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "su_fav": {"w": 23, "l": 15, "p": 0, "n": 38, "pct": 0.6053, "txt": "23-15"}, "ats": {"w": 19, "l": 29, "p": 0, "n": 48, "pct": 0.3958, "txt": "19-29"}, "ats_w1": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}, "su_dog": {"w": 2, "l": 8, "p": 0, "n": 10, "pct": 0.2, "txt": "2-8"}, "su_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_week": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "ats_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "kownack": {"su": {"w": 29, "l": 19, "p": 0, "n": 48, "pct": 0.6042, "txt": "29-19"}, "su_w1": {"w": 12, "l": 4, "p": 0, "n": 16, "pct": 0.75, "txt": "12-4"}, "su_fav": {"w": 26, "l": 14, "p": 0, "n": 40, "pct": 0.65, "txt": "26-14"}, "ats": {"w": 20, "l": 28, "p": 0, "n": 48, "pct": 0.4167, "txt": "20-28"}, "ats_w1": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_dog": {"w": 3, "l": 5, "p": 0, "n": 8, "pct": 0.375, "txt": "3-5"}, "su_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w2": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_week": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "ats_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}}, "parr": {"su": {"w": 28, "l": 20, "p": 0, "n": 48, "pct": 0.5833, "txt": "28-20"}, "su_w1": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "su_fav": {"w": 26, "l": 15, "p": 0, "n": 41, "pct": 0.6341, "txt": "26-15"}, "ats": {"w": 21, "l": 27, "p": 0, "n": 48, "pct": 0.4375, "txt": "21-27"}, "ats_w1": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_dog": {"w": 2, "l": 5, "p": 0, "n": 7, "pct": 0.2857, "txt": "2-5"}, "su_w2": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_w2": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_w3": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_week": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ats_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}}, "panel": {"su": {"w": 26, "l": 22, "p": 0, "n": 48, "pct": 0.5417, "txt": "26-22"}, "su_w1": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "su_fav": {"w": 25, "l": 16, "p": 0, "n": 41, "pct": 0.6098, "txt": "25-16"}, "ats": {"w": 17, "l": 31, "p": 0, "n": 48, "pct": 0.3542, "txt": "17-31"}, "ats_w1": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}, "ats_fav": {"w": 12, "l": 20, "p": 0, "n": 32, "pct": 0.375, "txt": "12-20"}, "su_dog": {"w": 1, "l": 6, "p": 0, "n": 7, "pct": 0.1429, "txt": "1-6"}, "ats_dog": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}, "su_w2": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_w2": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_week": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "ats_w3": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}}, "fav": {"ats": {"w": 23, "l": 25, "p": 0, "n": 48, "pct": 0.4792, "txt": "23-25"}, "ats_w1": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_fav": {"w": 23, "l": 25, "p": 0, "n": 48, "pct": 0.4792, "txt": "23-25"}, "ats_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ats_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "model": {"su": {"w": 27, "l": 20, "p": 0, "n": 47, "pct": 0.5745, "txt": "27-20"}, "su_w1": {"w": 9, "l": 6, "p": 0, "n": 15, "pct": 0.6, "txt": "9-6"}, "su_fav": {"w": 21, "l": 11, "p": 0, "n": 32, "pct": 0.6562, "txt": "21-11"}, "ats": {"w": 23, "l": 24, "p": 0, "n": 47, "pct": 0.4894, "txt": "23-24"}, "ats_w1": {"w": 6, "l": 9, "p": 0, "n": 15, "pct": 0.4, "txt": "6-9"}, "ats_dog": {"w": 21, "l": 21, "p": 0, "n": 42, "pct": 0.5, "txt": "21-21"}, "su_dog": {"w": 6, "l": 9, "p": 0, "n": 15, "pct": 0.4, "txt": "6-9"}, "ats_fav": {"w": 2, "l": 3, "p": 0, "n": 5, "pct": 0.4, "txt": "2-3"}, "su_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ats_w2": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_w3": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "su_week": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w3": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}}}, "differ": {"model": {"w": 21, "l": 21, "p": 0, "n": 42, "pct": 0.5, "txt": "21-21"}, "fav": {"w": 21, "l": 21, "p": 0, "n": 42, "pct": 0.5, "txt": "21-21"}}, "consensus": [{"fav_backers": 0, "result": "L", "n": 1}, {"fav_backers": 1, "result": "W", "n": 1}, {"fav_backers": 2, "result": "W", "n": 5}, {"fav_backers": 3, "result": "L", "n": 1}, {"fav_backers": 3, "result": "W", "n": 2}, {"fav_backers": 4, "result": "L", "n": 5}, {"fav_backers": 4, "result": "W", "n": 6}, {"fav_backers": 5, "result": "L", "n": 10}, {"fav_backers": 5, "result": "W", "n": 17}], "upsets": [{"week": 1, "game": "SF at LAR", "final": "27-7", "fav": "LAR", "fav_prob": 0.641, "analysts": ["Cersosimo", "Kownack"], "model": false}, {"week": 1, "game": "NYJ at TEN", "final": "23-10", "fav": "TEN", "fav_prob": 0.5333, "analysts": ["Bergman", "Cersosimo", "Filice", "Kownack", "Parr"], "model": false}, {"week": 1, "game": "ARI at LAC", "final": "26-14", "fav": "LAC", "fav_prob": 0.809, "analysts": [], "model": false}, {"week": 1, "game": "DAL at NYG", "final": "20-28", "fav": "DAL", "fav_prob": 0.5853, "analysts": ["Cersosimo"], "model": true}, {"week": 2, "game": "CIN at HOU", "final": "20-6", "fav": "HOU", "fav_prob": 0.5721, "analysts": ["Kownack"], "model": true}, {"week": 2, "game": "CLE at TB", "final": "23-19", "fav": "TB", "fav_prob": 0.7659, "analysts": [], "model": false}, {"week": 2, "game": "MIN at CHI", "final": "9-3", "fav": "CHI", "fav_prob": 0.6447, "analysts": [], "model": false}, {"week": 2, "game": "NO at BAL", "final": "24-17", "fav": "BAL", "fav_prob": 0.7659, "analysts": [], "model": false}, {"week": 2, "game": "LV at LAC", "final": "26-14", "fav": "LAC", "fav_prob": 0.7221, "analysts": [], "model": true}, {"week": 3, "game": "ATL at GB", "final": "35-14", "fav": "GB", "fav_prob": 0.6908, "analysts": [], "model": false}, {"week": 3, "game": "CAR at CLE", "final": "18-21", "fav": "CAR", "fav_prob": 0.5721, "analysts": ["Filice"], "model": false}, {"week": 3, "game": "CIN at PIT", "final": "27-30", "fav": "CIN", "fav_prob": 0.6309, "analysts": [], "model": false}, {"week": 3, "game": "HOU at IND", "final": "17-19", "fav": "HOU", "fav_prob": 0.5635, "analysts": [], "model": true}, {"week": 3, "game": "SEA at WSH", "final": "31-33", "fav": "SEA", "fav_prob": 0.718, "analysts": [], "model": false}, {"week": 3, "game": "LV at NO", "final": "35-27", "fav": "NO", "fav_prob": 0.6309, "analysts": ["Parr"], "model": true}, {"week": 3, "game": "LAR at DEN", "final": "26-30", "fav": "LAR", "fav_prob": 0.5635, "analysts": [], "model": false}, {"week": 3, "game": "PHI at CHI", "final": "7-27", "fav": "PHI", "fav_prob": 0.6636, "analysts": ["Bergman"], "model": true}], "calibration": {"season_expected": 31.5, "season_actual": 31, "week_expected": 10.4, "week_actual": 8, "week_dog_covers": 10, "week_games": 16}, "drift": {"bergman": {"drift": 3.93, "miss": 12.21, "n": 48}, "cersosimo": {"drift": 2.47, "miss": 10.75, "n": 48}, "filice": {"drift": 4.82, "miss": 12.81, "n": 48}, "kownack": {"drift": 3.01, "miss": 11.79, "n": 48}, "parr": {"drift": 2.97, "miss": 11.19, "n": 48}}, "market_miss": 10.49, "teams": [{"team": "LV", "su": "3-0", "ats": "3-0", "cover": 40.0, "pd": 34, "fav": 1}, {"team": "JAX", "su": "2-1", "ats": "2-1", "cover": 37.0, "pd": 46, "fav": 2}, {"team": "CHI", "su": "2-1", "ats": "2-1", "cover": 33.0, "pd": 36, "fav": 2}, {"team": "MIN", "su": "3-0", "ats": "3-0", "cover": 31.5, "pd": 30, "fav": 2}, {"team": "SF", "su": "3-0", "ats": "2-1", "cover": 29.5, "pd": 48, "fav": 2}, {"team": "KC", "su": "3-0", "ats": "2-1", "cover": 17.5, "pd": 38, "fav": 3}, {"team": "NYJ", "su": "1-2", "ats": "2-1", "cover": 14.5, "pd": 3, "fav": 0}, {"team": "CIN", "su": "2-1", "ats": "2-1", "cover": 13.0, "pd": 17, "fav": 2}, {"team": "SEA", "su": "2-1", "ats": "1-2", "cover": 11.0, "pd": 25, "fav": 3}, {"team": "NO", "su": "1-2", "ats": "2-1", "cover": 10.5, "pd": -2, "fav": 1}, {"team": "BUF", "su": "3-0", "ats": "3-0", "cover": 10.0, "pd": 23, "fav": 3}, {"team": "CAR", "su": "1-2", "ats": "1-2", "cover": 4.0, "pd": 6, "fav": 2}, {"team": "ARI", "su": "1-2", "ats": "2-1", "cover": 3.5, "pd": -18, "fav": 0}, {"team": "CLE", "su": "2-1", "ats": "2-1", "cover": 2.5, "pd": -17, "fav": 0}, {"team": "DAL", "su": "1-2", "ats": "2-1", "cover": 2.5, "pd": 6, "fav": 2}, {"team": "WSH", "su": "1-2", "ats": "2-1", "cover": -1.0, "pd": -17, "fav": 0}, {"team": "PIT", "su": "2-1", "ats": "2-1", "cover": -1.5, "pd": -7, "fav": 1}, {"team": "BAL", "su": "2-1", "ats": "1-2", "cover": -1.5, "pd": 14, "fav": 3}, {"team": "NYG", "su": "2-1", "ats": "2-1", "cover": -2.0, "pd": -9, "fav": 1}, {"team": "ATL", "su": "1-2", "ats": "1-2", "cover": -6.5, "pd": -17, "fav": 0}, {"team": "IND", "su": "1-2", "ats": "2-1", "cover": -6.5, "pd": -19, "fav": 0}, {"team": "DEN", "su": "2-1", "ats": "2-1", "cover": -7.5, "pd": -10, "fav": 1}, {"team": "DET", "su": "2-1", "ats": "1-2", "cover": -11.0, "pd": -2, "fav": 2}, {"team": "NE", "su": "1-2", "ats": "2-1", "cover": -14.0, "pd": -15, "fav": 1}, {"team": "TEN", "su": "0-3", "ats": "1-2", "cover": -14.0, "pd": -22, "fav": 1}, {"team": "LAR", "su": "1-2", "ats": "1-2", "cover": -15.0, "pd": -2, "fav": 3}, {"team": "TB", "su": "0-3", "ats": "0-3", "cover": -20.5, "pd": -17, "fav": 1}, {"team": "MIA", "su": "0-3", "ats": "0-3", "cover": -21.5, "pd": -50, "fav": 0}, {"team": "HOU", "su": "0-3", "ats": "0-3", "cover": -25.0, "pd": -21, "fav": 2}, {"team": "PHI", "su": "2-1", "ats": "0-3", "cover": -30.0, "pd": -14, "fav": 3}, {"team": "LAC", "su": "0-3", "ats": "0-3", "cover": -41.0, "pd": -32, "fav": 2}, {"team": "GB", "su": "1-2", "ats": "0-3", "cover": -41.5, "pd": -35, "fav": 2}], "spread_sheet": {"week": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "season": {"w": 19, "l": 28, "p": 0, "n": 47, "pct": 0.4043, "txt": "19-28"}, "ml_week": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ml_season": {"w": 22, "l": 25, "p": 0, "n": 47, "pct": 0.4681, "txt": "22-25"}, "by_week": {"1": {"w": 5, "l": 10, "p": 0, "n": 15, "pct": 0.3333, "txt": "5-10"}, "2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "ml_by_week": {"1": {"w": 3, "l": 12, "p": 0, "n": 15, "pct": 0.2, "txt": "3-12"}, "2": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "3": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}}}, "pickem_by_week": [{"week": 1, "pickem": {"w": 12, "l": 4, "p": 0, "pending": 0, "n_picks": 16, "pct": 0.75}, "survivor": {"team": "LAC", "opp": "ARI", "label": "LOCK", "prob": 0.809, "result": "L", "final": "14-26"}}, {"week": 2, "pickem": {"w": 11, "l": 5, "p": 0, "pending": 0, "n_picks": 16, "pct": 0.688}, "survivor": {"team": "SF", "opp": "MIA", "label": "LOCK", "prob": 0.8989, "result": "W", "final": "35-13"}}, {"week": 3, "pickem": {"w": 8, "l": 8, "p": 0, "pending": 0, "n_picks": 16, "pct": 0.5}, "survivor": {"team": "KC", "opp": "MIA", "label": "LOCK", "prob": 0.8371, "result": "W", "final": "24-10"}}], "pickem_totals": {"pickem": {"w": 31, "l": 17, "p": 0, "pct": 0.646}, "survivor": {"w": 2, "l": 1, "p": 0}, "model_shadow": {"w": 14, "l": 18, "p": 0}}, "notes": {"headline": "Our pick'em vs the NFL.com experts", "lede": "Our pick'em takes the betting favorite in every game. After three weeks it is 31-17, the best straight-up record of any source we track: all five NFL.com experts, their majority vote, and our own model. The experts lost ground almost every time they went against the favorite.", "why": ["<strong>Going against the favorite cost the experts.</strong> Together they went 12-29 on underdog picks. Gennaro Filice took 10 underdogs and went 2-8, which is exactly why he is last. Brooke Cersosimo took the fewest and leads the experts.", "<strong>The closer an expert stays to the betting line, the better they do.</strong> The line missed final margins by 10.5 points on average, better than every expert. Cersosimo stays closest to it and misses by 10.75. Filice drifts furthest and misses by 12.8.", "<strong>The experts agreeing against the favorite meant nothing.</strong> In the five games where three of the five took the underdog, the favorite won all five. Their majority vote is 1-6 on underdogs."], "week_summary": "Favorites went 8-8 when the odds said about 10.4 wins, and underdogs covered in 10 of 16. Quarterback injuries ran through the week: Washington was without Jayden Daniels, the Giants had lost Jaxson Dart, and Chicago's top two quarterbacks were hurt going into Monday night. All three won. The experts called 3 of the 8 upsets.", "market_behind": ["<strong>LV 3-0</strong>, 3-0 ATS, +40. Called a mirage going into week 3; won 35-27 in New Orleans.", "<strong>MIN 3-0</strong>, 3-0 ATS, +31.5.", "<strong>JAX</strong> +37 and <strong>CHI</strong> +33, both 2-1.", "<strong>SF 3-0</strong>, +29.5. <strong>BUF 3-0</strong>, 3-0 ATS."], "market_ahead": ["<strong>LAC 0-3</strong>, 0-3 ATS, \u221241. Favored twice, lost both by 12.", "<strong>GB 1-2</strong>, 0-3 ATS, \u221241.5.", "<strong>PHI 2-1</strong> but 0-3 ATS, \u221230. Favored all three weeks.", "<strong>HOU, TB, MIA</strong>: all 0-3 and 0-3 ATS."], "next_week": [{"game": "KC at LV", "line": "KC \u22124.5 \u00b7 66%", "why": "3-0 against 3-0. The market still makes the Raiders a clear home underdog."}, {"game": "GB at TB", "line": "GB \u22124.5 \u00b7 64%", "why": "The worst ATS team in the league laying points on the road against another 0-3 ATS team."}, {"game": "LAR at PHI", "line": "LAR \u22123 \u00b7 58%", "why": "Philadelphia is an underdog for the first time this season."}, {"game": "LAC at SEA", "line": "SEA \u22127 \u00b7 75%", "why": "LAC has missed the spread by 41 points. Seattle just lost at Washington as a 7-point favorite."}, {"game": "DAL at HOU", "line": "HOU \u22122.5 \u00b7 56%", "why": "Houston is favored again after going 0-3 and 0-3 ATS."}, {"game": "MIA at MIN", "line": "MIN \u221211.5 \u00b7 85%", "why": "The biggest favorite on the board, against the league's worst point differential (\u221250)."}], "takeaways": [{"title": "Pick'em", "items": ["We stay on the favorite. Every departure from it this season, by the experts or our model, lost games.", "Expert agreement never flips a pick."]}, {"title": "The Spread Sheet", "items": ["From week 4 the sheet posts our model's side instead of the favorite. The model is 23-24 ATS so far, a coin flip, so we will grade the switch in the open every week."]}, {"title": "The experts", "items": ["Useful for injury and quarterback news.", "Not a signal for who wins: the line beats all five on margin."]}, {"title": "Sample size", "items": ["48 games is small. The pattern (experts 12-29 on underdogs) matters more than the exact order of the leaderboard."]}]}};
+const PM={"season": 2026, "week": 3, "built_at": "2026-09-29T15:13:17+00:00", "records": {"pickem": {"su": {"w": 31, "l": 17, "p": 0, "n": 48, "pct": 0.6458, "txt": "31-17"}, "su_w1": {"w": 12, "l": 4, "p": 0, "n": 16, "pct": 0.75, "txt": "12-4"}, "su_fav": {"w": 31, "l": 17, "p": 0, "n": 48, "pct": 0.6458, "txt": "31-17"}, "su_w2": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "su_w3": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_week": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}}, "bergman": {"su": {"w": 26, "l": 22, "p": 0, "n": 48, "pct": 0.5417, "txt": "26-22"}, "su_w1": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "su_fav": {"w": 24, "l": 15, "p": 0, "n": 39, "pct": 0.6154, "txt": "24-15"}, "ats": {"w": 20, "l": 28, "p": 0, "n": 48, "pct": 0.4167, "txt": "20-28"}, "ats_w1": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_dog": {"w": 2, "l": 7, "p": 0, "n": 9, "pct": 0.2222, "txt": "2-7"}, "su_w2": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_week": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "ats_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "cersosimo": {"su": {"w": 30, "l": 18, "p": 0, "n": 48, "pct": 0.625, "txt": "30-18"}, "su_w1": {"w": 13, "l": 3, "p": 0, "n": 16, "pct": 0.8125, "txt": "13-3"}, "su_fav": {"w": 27, "l": 14, "p": 0, "n": 41, "pct": 0.6585, "txt": "27-14"}, "ats": {"w": 26, "l": 22, "p": 0, "n": 48, "pct": 0.5417, "txt": "26-22"}, "ats_w1": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "su_dog": {"w": 3, "l": 4, "p": 0, "n": 7, "pct": 0.4286, "txt": "3-4"}, "su_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "su_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_week": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "ats_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}}, "filice": {"su": {"w": 25, "l": 23, "p": 0, "n": 48, "pct": 0.5208, "txt": "25-23"}, "su_w1": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "su_fav": {"w": 23, "l": 15, "p": 0, "n": 38, "pct": 0.6053, "txt": "23-15"}, "ats": {"w": 19, "l": 29, "p": 0, "n": 48, "pct": 0.3958, "txt": "19-29"}, "ats_w1": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}, "su_dog": {"w": 2, "l": 8, "p": 0, "n": 10, "pct": 0.2, "txt": "2-8"}, "su_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_week": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "ats_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "kownack": {"su": {"w": 29, "l": 19, "p": 0, "n": 48, "pct": 0.6042, "txt": "29-19"}, "su_w1": {"w": 12, "l": 4, "p": 0, "n": 16, "pct": 0.75, "txt": "12-4"}, "su_fav": {"w": 26, "l": 14, "p": 0, "n": 40, "pct": 0.65, "txt": "26-14"}, "ats": {"w": 20, "l": 28, "p": 0, "n": 48, "pct": 0.4167, "txt": "20-28"}, "ats_w1": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_dog": {"w": 3, "l": 5, "p": 0, "n": 8, "pct": 0.375, "txt": "3-5"}, "su_w2": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w2": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_week": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "ats_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}}, "parr": {"su": {"w": 28, "l": 20, "p": 0, "n": 48, "pct": 0.5833, "txt": "28-20"}, "su_w1": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "su_fav": {"w": 26, "l": 15, "p": 0, "n": 41, "pct": 0.6341, "txt": "26-15"}, "ats": {"w": 21, "l": 27, "p": 0, "n": 48, "pct": 0.4375, "txt": "21-27"}, "ats_w1": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_dog": {"w": 2, "l": 5, "p": 0, "n": 7, "pct": 0.2857, "txt": "2-5"}, "su_w2": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_w2": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_w3": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "su_week": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ats_w3": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}}, "panel": {"su": {"w": 26, "l": 22, "p": 0, "n": 48, "pct": 0.5417, "txt": "26-22"}, "su_w1": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "su_fav": {"w": 25, "l": 16, "p": 0, "n": 41, "pct": 0.6098, "txt": "25-16"}, "ats": {"w": 17, "l": 31, "p": 0, "n": 48, "pct": 0.3542, "txt": "17-31"}, "ats_w1": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}, "ats_fav": {"w": 12, "l": 20, "p": 0, "n": 32, "pct": 0.375, "txt": "12-20"}, "su_dog": {"w": 1, "l": 6, "p": 0, "n": 7, "pct": 0.1429, "txt": "1-6"}, "ats_dog": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}, "su_w2": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_w2": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "su_week": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "ats_w3": {"w": 5, "l": 11, "p": 0, "n": 16, "pct": 0.3125, "txt": "5-11"}}, "fav": {"ats": {"w": 23, "l": 25, "p": 0, "n": 48, "pct": 0.4792, "txt": "23-25"}, "ats_w1": {"w": 9, "l": 7, "p": 0, "n": 16, "pct": 0.5625, "txt": "9-7"}, "ats_fav": {"w": 23, "l": 25, "p": 0, "n": 48, "pct": 0.4792, "txt": "23-25"}, "ats_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ats_w3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "model": {"su": {"w": 27, "l": 20, "p": 0, "n": 47, "pct": 0.5745, "txt": "27-20"}, "su_w1": {"w": 9, "l": 6, "p": 0, "n": 15, "pct": 0.6, "txt": "9-6"}, "su_fav": {"w": 21, "l": 11, "p": 0, "n": 32, "pct": 0.6562, "txt": "21-11"}, "ats": {"w": 23, "l": 24, "p": 0, "n": 47, "pct": 0.4894, "txt": "23-24"}, "ats_w1": {"w": 6, "l": 9, "p": 0, "n": 15, "pct": 0.4, "txt": "6-9"}, "ats_dog": {"w": 21, "l": 21, "p": 0, "n": 42, "pct": 0.5, "txt": "21-21"}, "su_dog": {"w": 6, "l": 9, "p": 0, "n": 15, "pct": 0.4, "txt": "6-9"}, "ats_fav": {"w": 2, "l": 3, "p": 0, "n": 5, "pct": 0.4, "txt": "2-3"}, "su_w2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ats_w2": {"w": 7, "l": 9, "p": 0, "n": 16, "pct": 0.4375, "txt": "7-9"}, "su_w3": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "su_week": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}, "ats_w3": {"w": 10, "l": 6, "p": 0, "n": 16, "pct": 0.625, "txt": "10-6"}}}, "differ": {"model": {"w": 21, "l": 21, "p": 0, "n": 42, "pct": 0.5, "txt": "21-21"}, "fav": {"w": 21, "l": 21, "p": 0, "n": 42, "pct": 0.5, "txt": "21-21"}}, "consensus": [{"fav_backers": 0, "result": "L", "n": 1}, {"fav_backers": 1, "result": "W", "n": 1}, {"fav_backers": 2, "result": "W", "n": 5}, {"fav_backers": 3, "result": "L", "n": 1}, {"fav_backers": 3, "result": "W", "n": 2}, {"fav_backers": 4, "result": "L", "n": 5}, {"fav_backers": 4, "result": "W", "n": 6}, {"fav_backers": 5, "result": "L", "n": 10}, {"fav_backers": 5, "result": "W", "n": 17}], "upsets": [{"week": 1, "game": "SF at LAR", "final": "27-7", "fav": "LAR", "fav_prob": 0.641, "analysts": ["Cersosimo", "Kownack"], "model": false}, {"week": 1, "game": "NYJ at TEN", "final": "23-10", "fav": "TEN", "fav_prob": 0.5333, "analysts": ["Bergman", "Cersosimo", "Filice", "Kownack", "Parr"], "model": false}, {"week": 1, "game": "ARI at LAC", "final": "26-14", "fav": "LAC", "fav_prob": 0.809, "analysts": [], "model": false}, {"week": 1, "game": "DAL at NYG", "final": "20-28", "fav": "DAL", "fav_prob": 0.5853, "analysts": ["Cersosimo"], "model": true}, {"week": 2, "game": "CIN at HOU", "final": "20-6", "fav": "HOU", "fav_prob": 0.5721, "analysts": ["Kownack"], "model": true}, {"week": 2, "game": "CLE at TB", "final": "23-19", "fav": "TB", "fav_prob": 0.7659, "analysts": [], "model": false}, {"week": 2, "game": "MIN at CHI", "final": "9-3", "fav": "CHI", "fav_prob": 0.6447, "analysts": [], "model": false}, {"week": 2, "game": "NO at BAL", "final": "24-17", "fav": "BAL", "fav_prob": 0.7659, "analysts": [], "model": false}, {"week": 2, "game": "LV at LAC", "final": "26-14", "fav": "LAC", "fav_prob": 0.7221, "analysts": [], "model": true}, {"week": 3, "game": "ATL at GB", "final": "35-14", "fav": "GB", "fav_prob": 0.6908, "analysts": [], "model": false}, {"week": 3, "game": "CAR at CLE", "final": "18-21", "fav": "CAR", "fav_prob": 0.5721, "analysts": ["Filice"], "model": false}, {"week": 3, "game": "CIN at PIT", "final": "27-30", "fav": "CIN", "fav_prob": 0.6309, "analysts": [], "model": false}, {"week": 3, "game": "HOU at IND", "final": "17-19", "fav": "HOU", "fav_prob": 0.5635, "analysts": [], "model": true}, {"week": 3, "game": "SEA at WSH", "final": "31-33", "fav": "SEA", "fav_prob": 0.718, "analysts": [], "model": false}, {"week": 3, "game": "LV at NO", "final": "35-27", "fav": "NO", "fav_prob": 0.6309, "analysts": ["Parr"], "model": true}, {"week": 3, "game": "LAR at DEN", "final": "26-30", "fav": "LAR", "fav_prob": 0.5635, "analysts": [], "model": false}, {"week": 3, "game": "PHI at CHI", "final": "7-27", "fav": "PHI", "fav_prob": 0.6636, "analysts": ["Bergman"], "model": true}], "calibration": {"season_expected": 31.5, "season_actual": 31, "week_expected": 10.4, "week_actual": 8, "week_dog_covers": 10, "week_games": 16}, "drift": {"bergman": {"drift": 3.93, "miss": 12.21, "n": 48}, "cersosimo": {"drift": 2.47, "miss": 10.75, "n": 48}, "filice": {"drift": 4.82, "miss": 12.81, "n": 48}, "kownack": {"drift": 3.01, "miss": 11.79, "n": 48}, "parr": {"drift": 2.97, "miss": 11.19, "n": 48}}, "market_miss": 10.49, "teams": [{"team": "LV", "su": "3-0", "ats": "3-0", "cover": 40.0, "pd": 34, "fav": 1}, {"team": "JAX", "su": "2-1", "ats": "2-1", "cover": 37.0, "pd": 46, "fav": 2}, {"team": "CHI", "su": "2-1", "ats": "2-1", "cover": 33.0, "pd": 36, "fav": 2}, {"team": "MIN", "su": "3-0", "ats": "3-0", "cover": 31.5, "pd": 30, "fav": 2}, {"team": "SF", "su": "3-0", "ats": "2-1", "cover": 29.5, "pd": 48, "fav": 2}, {"team": "KC", "su": "3-0", "ats": "2-1", "cover": 17.5, "pd": 38, "fav": 3}, {"team": "NYJ", "su": "1-2", "ats": "2-1", "cover": 14.5, "pd": 3, "fav": 0}, {"team": "CIN", "su": "2-1", "ats": "2-1", "cover": 13.0, "pd": 17, "fav": 2}, {"team": "SEA", "su": "2-1", "ats": "1-2", "cover": 11.0, "pd": 25, "fav": 3}, {"team": "NO", "su": "1-2", "ats": "2-1", "cover": 10.5, "pd": -2, "fav": 1}, {"team": "BUF", "su": "3-0", "ats": "3-0", "cover": 10.0, "pd": 23, "fav": 3}, {"team": "CAR", "su": "1-2", "ats": "1-2", "cover": 4.0, "pd": 6, "fav": 2}, {"team": "ARI", "su": "1-2", "ats": "2-1", "cover": 3.5, "pd": -18, "fav": 0}, {"team": "CLE", "su": "2-1", "ats": "2-1", "cover": 2.5, "pd": -17, "fav": 0}, {"team": "DAL", "su": "1-2", "ats": "2-1", "cover": 2.5, "pd": 6, "fav": 2}, {"team": "WSH", "su": "1-2", "ats": "2-1", "cover": -1.0, "pd": -17, "fav": 0}, {"team": "PIT", "su": "2-1", "ats": "2-1", "cover": -1.5, "pd": -7, "fav": 1}, {"team": "BAL", "su": "2-1", "ats": "1-2", "cover": -1.5, "pd": 14, "fav": 3}, {"team": "NYG", "su": "2-1", "ats": "2-1", "cover": -2.0, "pd": -9, "fav": 1}, {"team": "ATL", "su": "1-2", "ats": "1-2", "cover": -6.5, "pd": -17, "fav": 0}, {"team": "IND", "su": "1-2", "ats": "2-1", "cover": -6.5, "pd": -19, "fav": 0}, {"team": "DEN", "su": "2-1", "ats": "2-1", "cover": -7.5, "pd": -10, "fav": 1}, {"team": "DET", "su": "2-1", "ats": "1-2", "cover": -11.0, "pd": -2, "fav": 2}, {"team": "NE", "su": "1-2", "ats": "2-1", "cover": -14.0, "pd": -15, "fav": 1}, {"team": "TEN", "su": "0-3", "ats": "1-2", "cover": -14.0, "pd": -22, "fav": 1}, {"team": "LAR", "su": "1-2", "ats": "1-2", "cover": -15.0, "pd": -2, "fav": 3}, {"team": "TB", "su": "0-3", "ats": "0-3", "cover": -20.5, "pd": -17, "fav": 1}, {"team": "MIA", "su": "0-3", "ats": "0-3", "cover": -21.5, "pd": -50, "fav": 0}, {"team": "HOU", "su": "0-3", "ats": "0-3", "cover": -25.0, "pd": -21, "fav": 2}, {"team": "PHI", "su": "2-1", "ats": "0-3", "cover": -30.0, "pd": -14, "fav": 3}, {"team": "LAC", "su": "0-3", "ats": "0-3", "cover": -41.0, "pd": -32, "fav": 2}, {"team": "GB", "su": "1-2", "ats": "0-3", "cover": -41.5, "pd": -35, "fav": 2}], "spread_sheet": {"week": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}, "season": {"w": 19, "l": 28, "p": 0, "n": 47, "pct": 0.4043, "txt": "19-28"}, "ml_week": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "ml_season": {"w": 22, "l": 25, "p": 0, "n": 47, "pct": 0.4681, "txt": "22-25"}, "by_week": {"1": {"w": 5, "l": 10, "p": 0, "n": 15, "pct": 0.3333, "txt": "5-10"}, "2": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}, "3": {"w": 6, "l": 10, "p": 0, "n": 16, "pct": 0.375, "txt": "6-10"}}, "ml_by_week": {"1": {"w": 3, "l": 12, "p": 0, "n": 15, "pct": 0.2, "txt": "3-12"}, "2": {"w": 11, "l": 5, "p": 0, "n": 16, "pct": 0.6875, "txt": "11-5"}, "3": {"w": 8, "l": 8, "p": 0, "n": 16, "pct": 0.5, "txt": "8-8"}}}, "pickem_by_week": [{"week": 1, "pickem": {"w": 12, "l": 4, "p": 0, "pending": 0, "n_picks": 16, "pct": 0.75}, "survivor": {"team": "LAC", "opp": "ARI", "label": "LOCK", "prob": 0.809, "result": "L", "final": "14-26"}}, {"week": 2, "pickem": {"w": 11, "l": 5, "p": 0, "pending": 0, "n_picks": 16, "pct": 0.688}, "survivor": {"team": "SF", "opp": "MIA", "label": "LOCK", "prob": 0.8989, "result": "W", "final": "35-13"}}, {"week": 3, "pickem": {"w": 8, "l": 8, "p": 0, "pending": 0, "n_picks": 16, "pct": 0.5}, "survivor": {"team": "KC", "opp": "MIA", "label": "LOCK", "prob": 0.8371, "result": "W", "final": "24-10"}}], "pickem_totals": {"pickem": {"w": 31, "l": 17, "p": 0, "pct": 0.646}, "survivor": {"w": 2, "l": 1, "p": 0}, "model_shadow": {"w": 14, "l": 18, "p": 0}}, "notes": {"headline": "Our pick'em vs the NFL.com experts", "lede": "Our pick'em takes the betting favorite in every game. After three weeks it is 31-17, the best straight-up record of any source we track: all five NFL.com experts, their majority vote, and our own model. The experts lost ground almost every time they went against the favorite.", "why": ["<strong>Going against the favorite cost the experts.</strong> Together they went 12-29 on underdog picks. Gennaro Filice took 10 underdogs and went 2-8, which is exactly why he is last. Brooke Cersosimo took the fewest and leads the experts.", "<strong>The closer an expert stays to the betting line, the better they do.</strong> The line missed final margins by 10.5 points on average, better than every expert. Cersosimo stays closest to it and misses by 10.75. Filice drifts furthest and misses by 12.8.", "<strong>The experts agreeing against the favorite meant nothing.</strong> In the five games where three of the five took the underdog, the favorite won all five. Their majority vote is 1-6 on underdogs."], "week_summary": "Favorites went 8-8 when the odds said about 10.4 wins, and underdogs covered in 10 of 16. Quarterback injuries ran through the week: Washington was without Jayden Daniels, the Giants had lost Jaxson Dart, and Chicago's top two quarterbacks were hurt going into Monday night. All three won. The experts called 3 of the 8 upsets.", "market_behind": ["<strong>LV 3-0</strong>, 3-0 ATS, +40. Called a mirage going into week 3; won 35-27 in New Orleans.", "<strong>MIN 3-0</strong>, 3-0 ATS, +31.5.", "<strong>JAX</strong> +37 and <strong>CHI</strong> +33, both 2-1.", "<strong>SF 3-0</strong>, +29.5. <strong>BUF 3-0</strong>, 3-0 ATS."], "market_ahead": ["<strong>LAC 0-3</strong>, 0-3 ATS, \u221241. Favored twice, lost both by 12.", "<strong>GB 1-2</strong>, 0-3 ATS, \u221241.5.", "<strong>PHI 2-1</strong> but 0-3 ATS, \u221230. Favored all three weeks.", "<strong>HOU, TB, MIA</strong>: all 0-3 and 0-3 ATS."], "next_week": [{"game": "KC at LV", "line": "KC \u22124.5 \u00b7 66%", "why": "3-0 against 3-0. The market still makes the Raiders a clear home underdog."}, {"game": "GB at TB", "line": "GB \u22124.5 \u00b7 64%", "why": "The worst ATS team in the league laying points on the road against another 0-3 ATS team."}, {"game": "LAR at PHI", "line": "LAR \u22123 \u00b7 58%", "why": "Philadelphia is an underdog for the first time this season."}, {"game": "LAC at SEA", "line": "SEA \u22127 \u00b7 75%", "why": "LAC has missed the spread by 41 points. Seattle just lost at Washington as a 7-point favorite."}, {"game": "DAL at HOU", "line": "HOU \u22122.5 \u00b7 56%", "why": "Houston is favored again after going 0-3 and 0-3 ATS."}, {"game": "MIA at MIN", "line": "MIN \u221211.5 \u00b7 85%", "why": "The biggest favorite on the board, against the league's worst point differential (\u221250)."}], "takeaways": [{"title": "Pick'em", "items": ["We stay on the favorite. Every departure from it this season, by the experts or our model, lost games.", "Expert agreement never flips a pick."]}, {"title": "The Spread Sheet", "items": ["From week 4 the sheet posts our model's side instead of the favorite. The model is 23-24 ATS so far, a coin flip, so we will grade the switch in the open every week."]}, {"title": "The experts", "items": ["Useful for injury and quarterback news.", "Not a signal for who wins: the line beats all five on margin."]}, {"title": "Sample size", "items": ["48 games is small. The pattern (experts 12-29 on underdogs) matters more than the exact order of the leaderboard."]}]}};
 (function(){
 if(!PM){document.getElementById("lede").textContent="The post-mortem is being rebuilt. Check back shortly.";return;}
 const $=id=>document.getElementById(id), NS="http://www.w3.org/2000/svg", R=PM.records, W=PM.week, notes=PM.notes||{};
@@ -214,10 +301,10 @@ $("eyebrow").textContent=`${PM.season} NFL · Weeks 1–${W} · Updated ${new Da
 if(notes.headline)$("headline").textContent=notes.headline;
 $("lede").innerHTML=esc(notes.lede||`Our pick'em takes the betting favorite in every game. After ${pk.n} games it is ${pk.txt}. The best of the five NFL.com experts is ${R[best].su.txt}. The experts lose ground almost every time they go against the favorite.`);
 $("tiles").innerHTML=[
- [pk.txt,"g",`Our pick'em straight up (${pct(pk)}%). Best expert: ${NAME[best]} ${R[best].su.txt}.`],
+ [pk.txt,"gold",`Our pick'em straight up (${pct(pk)}%). Best expert: ${NAME[best]} ${R[best].su.txt}.`],
  [`${dogW}-${dogL}`,"",`The five experts combined when they picked the underdog (${Math.round(100*dogW/(dogW+dogL))}%).`],
  [`${cal.season_actual} / ${cal.season_expected}`,"",`Favorites won ${cal.season_actual}. The betting odds said ${cal.season_expected}.`]
-].map(t=>`<div class="tile"><span class="big ${t[1]} num">${esc(t[0])}</span><span class="lbl">${esc(t[2])}</span></div>`).join("");
+].map(t=>`<div class="kpi"><div class="n ${t[1]}">${esc(t[0])}</div><div class="l">${esc(t[2])}</div></div>`).join("");
 
 /* published record */
 const pbw={};(PM.pickem_by_week||[]).forEach(x=>pbw[x.week]=x.pickem);
@@ -248,7 +335,7 @@ $("su-tbody").innerHTML=order.map(k=>{const d=R[k];let r=`<tr${k==="pickem"?' cl
  ks.forEach((k,i)=>{const f=R[k].su_fav,d=R[k].su_dog||{w:0,l:0,n:0,txt:"0-0"},y=i*rh+4,pf=f.n?100*f.w/f.n:0,pd=d.n?100*d.w/d.n:0;
   el("text",{x:L-10,y:y+19,"text-anchor":"end",class:"lab"},svg,NAME[k]);
   el("rect",{x:x(0),y:y+2,width:x(pf)-x(0),height:13,rx:3,fill:"var(--gold)"},svg);el("text",{x:x(pf)+6,y:y+13,class:"val"},svg,f.txt);
-  el("rect",{x:x(0),y:y+17,width:Math.max(2,x(pd)-x(0)),height:13,rx:3,fill:"var(--blue)"},svg);el("text",{x:x(pd)+6,y:y+28,class:"val"},svg,d.txt);
+  el("rect",{x:x(0),y:y+17,width:Math.max(2,x(pd)-x(0)),height:13,rx:3,fill:"var(--mut)"},svg);el("text",{x:x(pd)+6,y:y+28,class:"val"},svg,d.txt);
   hov(el("rect",{x:0,y:y-2,width:Wd,height:rh,class:"hit"},svg),tip,`${NAME[k]}: favorite ${f.txt} · underdog ${d.txt}`);});
 })();
 
@@ -260,7 +347,7 @@ const why=notes.why||[
  `<strong>Going against the favorite cost the experts.</strong> Together they went ${dogW}-${dogL} on underdog picks. ${NAME[far]} took the most underdogs among the leaders' rivals and sits at ${R[far].su.txt}.`,
  `<strong>The closer an expert stays to the betting line, the better they do.</strong> The line missed final margins by ${PM.market_miss} points on average, better than every expert. ${NAME[close]} stays closest to it and misses by ${dr[close].miss}; ${NAME[far]} drifts furthest and misses by ${dr[far].miss}.`,
  `<strong>The experts agreeing against the favorite meant nothing.</strong> When most of them took the underdog, the favorite still went ${cW}-${cL}.${pd?` Their majority vote is ${pd.txt} on underdogs.`:""}`];
-$("why").innerHTML=why.map((w,i)=>`<div class="item"><div class="n">${i+1}</div><p>${w}</p></div>`).join("");
+$("why").innerHTML=why.map((w,i)=>`<div class="item"><div class="num-b">${i+1}</div><p>${w}</p></div>`).join("");
 (function(){const pts=[["The betting line",0,PM.market_miss,1]].concat(ex.map(a=>[NAME[a],dr[a].drift,dr[a].miss,0]));
  const box=$("c-drift"),svg=$("drift-svg"),tip=tipper(box),Wd=760,H=300,L=56,Rr=30,T=16,B=44;svg.setAttribute("viewBox",`0 0 ${Wd} ${H}`);
  const ys=pts.map(p=>p[2]),lo=Math.floor(Math.min(...ys)*2)/2-.5,hi=Math.ceil(Math.max(...ys)*2)/2+.5,xm=Math.ceil(Math.max(...pts.map(p=>p[1])))+1;
@@ -284,7 +371,7 @@ const pa=R.panel&&R.panel.ats;
 $("ats-p").innerHTML=esc(notes.ats||`Against the spread, everyone is near or below a coin flip, including our own Spread Sheet at ${ss.season.txt}. The standout goes the wrong way: the experts' majority vote has covered ${pa?pct(pa):"—"}% of the time.`);
 
 /* upsets */
-const up=PM.upsets, yn=v=>v?'<span class="chip y">called it</span>':'<span class="chip">no</span>', who=a=>a.length?esc(a.join(", ")):'<span style="color:var(--dim)">none</span>';
+const up=PM.upsets, yn=v=>v?'<span class="btag t-pos">called it</span>':'<span class="btag" style="color:var(--dim);border:1px solid var(--line)">no</span>', who=a=>a.length?esc(a.join(", ")):'<span style="color:var(--dim)">none</span>';
 const urow=u=>`<td>${esc(u.game)}</td><td class="num">${esc(u.final)}</td><td class="num">${esc(u.fav)} ${Math.round(100*u.fav_prob)}%</td><td>${who(u.analysts)}</td><td>${yn(u.model)}</td>`;
 $("wk-tbody").innerHTML=up.filter(u=>u.week===W).map(u=>`<tr>${urow(u)}</tr>`).join("")||`<tr><td colspan="5">No upsets this week.</td></tr>`;
 $("all-tbody").innerHTML=up.map(u=>`<tr><td class="num">${u.week}</td>${urow(u)}</tr>`).join("");
@@ -298,22 +385,22 @@ $("wk-p").innerHTML=esc(notes.week_summary||`Favorites went ${cal.week_actual}-$
  for(let v=-m;v<=m;v+=m/2){el("line",{x1:x(v),x2:x(v),y1:0,y2:H-24},g);el("text",{x:x(v),y:H-8,"text-anchor":"middle",class:"lab"},svg,(v>0?"+":"")+v);}
  el("line",{x1:x(0),x2:x(0),y1:0,y2:H-24,stroke:"var(--dim)"},svg);
  T.forEach((t,i)=>{const y=i*rh+3,v=t.cover,pos=v>=0;el("text",{x:L-8,y:y+12,"text-anchor":"end",class:"lab"},svg,t.team);
-  el("rect",{x:pos?x(0)+1:x(v),y:y+2,width:Math.max(2,Math.abs(x(v)-x(0))-1),height:13,rx:3,fill:pos?"var(--blue)":"var(--orange)"},svg);
+  el("rect",{x:pos?x(0)+1:x(v),y:y+2,width:Math.max(2,Math.abs(x(v)-x(0))-1),height:13,rx:3,fill:pos?"var(--grn)":"var(--red)"},svg);
   el("text",{x:pos?x(v)+5:x(v)-5,y:y+12,"text-anchor":pos?"start":"end",class:"val"},svg,(pos?"+":"")+v);
   hov(el("rect",{x:0,y:y,width:Wd,height:rh,class:"hit"},svg),tip,`${t.team}: ${t.su} straight up, ${t.ats} ATS, ${(pos?"+":"")+v} vs the spread`);});
 })();
 const T=PM.teams, top=notes.market_behind||T.slice(0,5).map(t=>`<strong>${t.team} ${t.su}</strong>, ${t.ats} ATS, ${t.cover>0?"+":""}${t.cover}.`), bot=notes.market_ahead||T.slice(-5).reverse().map(t=>`<strong>${t.team} ${t.su}</strong>, ${t.ats} ATS, ${t.cover}.`);
-$("story-cols").innerHTML=`<div class="card"><h3>Market still catching up</h3><ul>${top.map(s=>`<li>${s}</li>`).join("")}</ul></div><div class="card"><h3>Market still too high</h3><ul>${bot.map(s=>`<li>${s}</li>`).join("")}</ul></div>`;
+$("story-cols").innerHTML=`<div class="book"><div class="bname">Market still catching up</div><ul>${top.map(s=>`<li>${s}</li>`).join("")}</ul></div><div class="book"><div class="bname">Market still too high</div><ul>${bot.map(s=>`<li>${s}</li>`).join("")}</ul></div>`;
 
 /* next week */
-if(notes.next_week&&notes.next_week.length){$("next-eyebrow").textContent=`Week ${W+1}`;$("tests").innerHTML=notes.next_week.map(t=>`<div class="test"><div class="m">${esc(t.game)}</div><div class="line">${esc(t.line)}</div><p>${esc(t.why)}</p></div>`).join("");}
+if(notes.next_week&&notes.next_week.length){$("next-eyebrow").textContent=`Week ${W+1}`;$("tests").innerHTML=notes.next_week.map(t=>`<div class="book test"><div class="bname">${esc(t.game)}</div><div class="btag t-var">${esc(t.line)}</div><p>${esc(t.why)}</p></div>`).join("");}
 else $("next-sec").hidden=true;
 
 /* takeaways */
 const tk=notes.takeaways||[
  {title:"Pick'em",items:["We stay on the favorite. Every departure from it this season, by the experts or our model, lost games."]},
  {title:"The experts",items:["Useful for injury and quarterback news. Not a signal for who wins: the line beats all of them on margin."]}];
-$("takeaways").innerHTML=tk.map(c=>`<div class="card"><h3>${esc(c.title)}</h3><ul>${c.items.map(s=>`<li>${esc(s)}</li>`).join("")}</ul></div>`).join("");
+$("takeaways").innerHTML=tk.map(c=>`<div class="book"><div class="bname">${esc(c.title)}</div><ul>${c.items.map(s=>`<li>${esc(s)}</li>`).join("")}</ul></div>`).join("");
 $("built").textContent=`Built ${new Date(PM.built_at).toUTCString()} from final scores. Rebuilt every Tuesday.`;
 })();
 </script>
