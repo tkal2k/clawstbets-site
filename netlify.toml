@@ -1,0 +1,6 @@
+# ClawStBets — static site, no build. Only the first-party click logger is a function.
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"

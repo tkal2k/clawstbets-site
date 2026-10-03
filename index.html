@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ClawStreetBets — AI-Driven Sports Betting Pipeline</title>
-<meta name="description" content="ClawStreetBets: an AI-driven sports betting pipeline. Verified track record, graded against the closing line. Entertainment & education only — not financial advice.">
+<title>ClawStBets — Free Daily Leans, Graded Record</title>
+<meta name="description" content="ClawStBets: free daily leans, a public graded record, and a paid card only when the edge clears. Every staked play graded against the closing line. 21+ · Entertainment & education only — not financial advice.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="ClawStreetBets">
-<meta property="og:title" content="ClawStreetBets — AI-Driven Sports Betting Pipeline">
+<meta property="og:site_name" content="ClawStBets">
+<meta property="og:title" content="ClawStBets — Free Daily Leans, Graded Record">
 <meta property="og:description" content="Verified track record, every bet graded against the closing line. Entertainment & education only — not financial advice.">
 <meta property="og:image" content="https://clawstbets.com/og.png">
 <meta property="og:url" content="https://clawstbets.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ClawStreetBets — AI-Driven Sports Betting Pipeline">
+<meta name="twitter:title" content="ClawStBets — Free Daily Leans, Graded Record">
 <meta name="twitter:description" content="Verified track record, every bet graded against the closing line. Entertainment & education only — NFA.">
 <meta name="twitter:image" content="https://clawstbets.com/og.png">
 <style>
@@ -168,7 +168,28 @@
     .kpi{display:flex;align-items:center;justify-content:space-between;text-align:left}
     .kpi .l{margin-top:0}
   }
+
+  /* proof strip */
+  .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+  .proof .pc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .proof .pc h3{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .proof .pc p{font-size:14px;color:var(--mut)}
+  .proof .pc p b{color:var(--txt)}
+  .keep{margin-top:18px;font-size:14px;color:var(--mut)}
+  .keep li{margin:4px 0 4px 18px}
+  .keep b{color:var(--txt)}
+  .hero .paidline{margin-top:16px;font-size:13px;color:var(--mut)}
+  .hero .paidline a{color:var(--gold);font-weight:700;border-bottom:1px solid rgba(232,160,32,.4)}
+  .lean-label{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.08em;color:#0c0c0c;background:var(--gold);padding:3px 8px;border-radius:5px}
+  .comm[hidden]{display:none}
+  .comm-card .soon{font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:6px}
+  @media(max-width:680px){.proof{grid-template-columns:1fr}}
 </style>
+<!-- Cloudflare Web Analytics (cookieless). Loads only once a real site token is set below. -->
+<script>
+(function(){var T="79a414acd13c4c2a82d2cebbe2640607";var s=document.createElement("script");s.defer=true;
+s.src="https://static.cloudflareinsights.com/beacon.min.js";s.setAttribute("data-cf-beacon",JSON.stringify({token:T}));document.head.appendChild(s);})();
+</script>
 </head>
 <body>
 
@@ -176,32 +197,180 @@
 
 <nav class="nav">
   <div class="row">
-    <a class="brand" href="#top"><img src="clawbot.png" alt="ClawStreetBets">Claw<span class="gold">Street</span>Bets</a>
+    <a class="brand" href="#top"><img src="clawbot.png" alt="ClawStBets"><span>Claw<span class="gold">Street</span>Bets</span></a>
     <div class="links">
-      <a class="nav-sm" href="#clawbot">ClawBot</a>
+      <a class="nav-sm" href="#free-vs-paid">Free vs. paid</a>
       <a class="nav-sm" href="#pipeline">Pipeline</a>
       <a class="ccm" href="the-claw-machine.html">The Claw Machine</a>
       <a href="#record">Track Record</a>
       <a href="nfl-postmortem.html">NFL Post-Mortem</a>
       <a class="clawpill" href="the-claw-machine.html" title="The Claw Machine — live model board" aria-label="The Claw Machine">🦞</a>
-      <a class="cta" href="#pricing">Join · $39.99/mo</a>
+      <a class="cta" href="#pricing" data-track="nav_join">Join · $39.99/mo</a>
     </div>
   </div>
 </nav>
 
 <div id="top"></div>
 <header class="hero wrap">
-  <img class="logo" src="clawbot.png" alt="ClawStreetBets logo">
-  <div class="pipebadge">⚙ AI-driven · 10-layer pipeline · for the win</div>
-  <h1>Claw<span class="gold">Street</span>Bets</h1>
-  <p class="slogan">Claw<span class="gold">Street</span>Bets for the win.</p>
-  <p class="tag">Sports betting run by an AI pipeline — not vibes, not "locks," not a guy with a hot take. Every pick graded against the closing line. We show the wins <em>and</em> the empty swings.</p>
+  <img class="logo" src="clawbot.png" alt="ClawStBets logo">
+  <div class="pipebadge">⚙ ClawStBets · evidence pipeline · graded vs. the close</div>
+  <h1>Free daily leans. <span class="gold">Paid card only when the edge clears.</span></h1>
+  <p class="tag">ClawStBets runs the same evidence pipeline every day, sizes the plays that qualify, and grades every result against the closing line. No locks. No chasing. Losses stay posted.</p>
   <div class="btnrow">
-    <a class="btn btn-gold" href="#pricing">Join on Whop · $39.99/mo</a>
-    <a class="btn btn-ghost" href="#record">See the track record</a>
-    <a class="btn btn-ghost" href="the-claw-machine.html">🦞 Live model board</a>
+    <a class="btn btn-gold" href="https://discord.gg/pfuRrzvwhc" data-invite="hero" data-track="hero_free_leans" target="_blank" rel="noopener">See today's free leans</a>
+    <a class="btn btn-ghost" href="#record" data-track="hero_record">View the record</a>
   </div>
+  <p class="paidline">Want the full sized card? <a href="#pricing" data-track="hero_paid">Membership · $39.99/mo</a> · 21+ · Bet responsibly</p>
 </header>
+
+<!-- TRACK RECORD -->
+<section id="record" class="wrap" data-rp-snapshot="0fa41bd49294e971fa7035f58cce56194fc05a1569b0d1f88bef548b2ecd5639" data-rp-synced="2026-10-03T20:42:06+00:00" data-rp-net="589.91" data-rp-record="114-152-0" data-rp-status="ok">
+  <div class="eyebrow">Verified · booked stakes · every graded row is public</div>
+  <h2>The track record</h2>
+  <p class="lead">Closed, graded, staked bets only — at the stakes the pipeline booked. No bet here carries a broker fill confirmation: these are declared stakes and graded outcomes, rebuilt nightly from the source slips and checked row by row before anything is published. Open bets are not counted. Voids settle at $0. Leans are unsized reads, shown separately below and never added to any staked number.</p>
+
+  <div class="grid3">
+    <div class="kpi" data-rp-tile="net"><div class="n pos">+$589.91</div><div class="l">All books net since Mar 27, 2026</div></div>
+    <div class="kpi" data-rp-tile="record"><div class="n">114-152-0</div><div class="l">Staked W-L-P · 42.9% · 2 void</div></div>
+    <div class="kpi" data-rp-tile="staked"><div class="n gold">$9,120</div><div class="l">Risked · 6.5% on stake</div></div>
+  </div>
+
+  <!-- RP:MLB -->
+  <div class="book" data-rp-sport="mlb" data-rp-net="571.09" data-rp-record="82-123-0">
+    <div class="brow"><div class="bname">⚾ MLB</div><div class="btag t-pos">Net Positive</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">82-123-0</div><div class="k">Staked record W-L-P (40.0%)</div></div>
+      <div class="stat"><div class="v pos">+$571.09</div><div class="k">Net at booked stakes</div></div>
+      <div class="stat"><div class="v">$7,467.62</div><div class="k">Risked · 7.6% on stake</div></div>
+      <div class="stat"><div class="v">Sep 30, 2026</div><div class="k">Last graded</div></div>
+    </div>
+    <div class="note"><b>205 graded bets</b> since Mar 27, 2026. Parlays 13-67, +$329.54; straights 69-56, +$241.55. 2 voids settled at $0.00. Every row is on the full public ledger.</div>
+  </div>
+  <!-- RP:WNBA -->
+  <div class="book" data-rp-sport="wnba" data-rp-net="-177.34" data-rp-record="15-16-0">
+    <div class="brow"><div class="bname">🏀 WNBA</div><div class="btag t-neg">Net Negative</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">15-16-0</div><div class="k">Staked record W-L-P (48.4%)</div></div>
+      <div class="stat"><div class="v neg">−$177.34</div><div class="k">Net at booked stakes</div></div>
+      <div class="stat"><div class="v">$973.00</div><div class="k">Risked · -18.2% on stake</div></div>
+      <div class="stat"><div class="v">Oct 2, 2026</div><div class="k">Last graded</div></div>
+    </div>
+    <div class="note"><b>31 graded bets</b> since May 31, 2026. Every row is on the full public ledger.</div>
+  </div>
+  <!-- RP:WC -->
+  <div class="book" data-rp-sport="wc" data-rp-net="93.73" data-rp-record="12-11-0">
+    <div class="brow"><div class="bname">⚽ World Cup 2026</div><div class="btag t-pos">Net Positive</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">12-11-0</div><div class="k">Staked record W-L-P (52.2%)</div></div>
+      <div class="stat"><div class="v pos">+$93.73</div><div class="k">Net at booked stakes</div></div>
+      <div class="stat"><div class="v">$539.00</div><div class="k">Risked · 17.4% on stake</div></div>
+      <div class="stat"><div class="v">Jul 9, 2026</div><div class="k">Last graded</div></div>
+    </div>
+    <div class="note"><b>23 graded bets</b> since Jun 12, 2026. Every row is on the full public ledger.</div>
+  </div>
+  <!-- RP:NBA -->
+  <div class="book" data-rp-sport="nba" data-rp-net="102.43" data-rp-record="5-2-0">
+    <div class="brow"><div class="bname">🏀 NBA Finals 2026</div><div class="btag t-pos">Net Positive</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">5-2-0</div><div class="k">Staked record W-L-P (71.4%)</div></div>
+      <div class="stat"><div class="v pos">+$102.43</div><div class="k">Net at booked stakes</div></div>
+      <div class="stat"><div class="v">$140.00</div><div class="k">Risked · 73.2% on stake</div></div>
+      <div class="stat"><div class="v">Jun 13, 2026</div><div class="k">Last graded</div></div>
+    </div>
+    <div class="note"><b>7 graded bets</b> since Jun 3, 2026. Every row is on the full public ledger.</div>
+  </div>
+
+  <!-- NFL:START -->
+  <div class="book" data-rp-sport-unsized="nfl">
+    <div class="brow"><div class="bname">🏈 NFL 2026</div><div class="btag t-var">Unsized picks only · no staked bet yet</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">0</div><div class="k">Staked NFL bets · none booked yet</div></div>
+      <div class="stat"><div class="v ">$0.00</div><div class="k">Staked NFL net</div></div>
+      <div class="stat" data-rp-lean-board="NFL Slate Four (card)"><div class="v">7-14-1</div><div class="k">Slate Four · UNSIZED LEAN — NOT A STAKED BET</div></div>
+    </div>
+    <div class="note"><b>UNSIZED LEAN — NOT A STAKED BET.</b> The Slate Four is the weekly unsized pick board, graded against the close like a bet at stake $0 (beat the closing line on 3 of 5 measured). It carries no stake, no dollar line and no ROI, and it is never part of the totals above.</div>
+  </div>
+  <!-- NFL:END -->
+
+  <!-- LEANS:START -->
+  <div class="book" style="border-style:dashed;opacity:.96" data-rp-leans="358-269-1">
+    <div class="brow"><div class="bname">🐾 Leans · the unsized board</div><div class="btag t-var">UNSIZED LEAN — NOT A STAKED BET</div></div>
+    <div class="stats">
+      <div class="stat" data-rp-lean-board="MLB leans" data-rp-lean-record="227-205-0"><div class="v">227-205-0</div><div class="k">MLB leans · 52.5% hit · unsized</div></div>
+      <div class="stat" data-rp-lean-board="NFL Slate Four" data-rp-lean-record="7-14-1"><div class="v">7-14-1</div><div class="k">NFL Slate Four · 33.3% hit · unsized</div></div>
+      <div class="stat" data-rp-lean-board="WNBA leans" data-rp-lean-record="124-50-0"><div class="v">124-50-0</div><div class="k">WNBA leans · 71.3% hit · unsized</div></div>
+    </div>
+    <div class="note" style="margin-top:0"><b>UNSIZED LEAN — NOT A STAKED BET.</b> Directional reads the claw surfaces but does not stake. Graded like bets, tallied win-loss only — no stake, no P&amp;L, no ROI, no units — and never summed into the staked record above. 2 voided and 70 ungraded leans are listed on the ledger, not counted.</div>
+  </div>
+  <!-- LEANS:END -->
+
+  <div class="btnrow" style="justify-content:flex-start;margin:4px 0 6px"><a class="btn btn-ghost" href="ledger.html" data-track="record_full_ledger">Every graded row — the full public ledger →</a></div>
+  <div class="updated" data-rp-sync="ok">Record synced Oct 3, 2026 1:42 PM PT · next sync nightly ~4:30 AM PT · snapshot <b>0fa41bd49294</b></div>
+  <div class="updated">21+ · Entertainment & education only · Not financial advice · 1-800-GAMBLER</div>
+</section>
+<!-- TRACK RECORD:END -->
+
+<!-- FREE VS PAID -->
+<section id="free-vs-paid" class="wrap">
+  <div class="eyebrow">Free vs. paid · what never gets blurred</div>
+  <h2>Leans are reads. The card is the bet.</h2>
+  <div class="proof">
+    <div class="pc"><h3>What is free?</h3><p>The daily leans board in the Discord: <b>directional reads, never staked bets.</b> Every lean is posted as <span class="lean-label">UNSIZED LEAN — NOT A STAKED BET</span> and never counts toward the staked profit-and-loss.</p></div>
+    <div class="pc"><h3>What is paid?</h3><p>The <b>L10 card with stake sizing</b>, full evidence write-ups, closing-line value on every staked play, nightly post-mortems, and options alerts.</p></div>
+    <div class="pc"><h3>What stays public?</h3><p>The <b>full graded ledger</b>, every staked row, wins and losses alike, plus the sync time so you can see how fresh it is.</p></div>
+  </div>
+  <ul class="keep">
+    <li><b>Losses are logged next to wins.</b> Nothing gets deleted.</li>
+    <li><b>Staked plays are graded against the closing line</b>, so you can judge the process on nights the ball doesn't bounce.</li>
+    <li><b>A pass is a result.</b> When the edge threshold isn't met, nothing is staked and nothing is forced.</li>
+  </ul>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="wrap">
+  <div class="eyebrow">Membership · billed via Whop</div>
+  <h2>Join the member room — $39.99/month</h2>
+  <div class="price-card">
+    <div class="plan">ClawStBets Membership</div>
+    <div class="amt">$39.99<span>/month</span></div>
+    <p style="font-size:14px;color:var(--mut);text-align:left;margin-top:10px">Get the complete decision trail, not a list of unexplained picks:</p>
+    <ul>
+      <li>L10 card with stake sizing</li>
+      <li>Full evidence write-ups</li>
+      <li>Closing-line value on every staked play</li>
+      <li>Nightly post-mortems</li>
+      <li>Options and trading alerts</li>
+      <li>Member Discord access</li>
+    </ul>
+    <!-- A/B slot: variant a = "Join now" primary, variant b = "Try the free Discord first" primary. See ab.js below. -->
+    <div id="ab-cta" style="display:flex;flex-direction:column;gap:10px">
+      <a class="btn btn-gold" id="cta-whop" href="https://whop.com/checkout/plan_64WRVTw8o2YJl" data-track="pricing_whop" target="_blank" rel="noopener">Join on Whop</a>
+      <a class="btn btn-ghost" id="cta-discord" href="https://discord.gg/pfuRrzvwhc" data-invite="pricing" data-track="pricing_discord" target="_blank" rel="noopener">Try the free Discord first</a>
+    </div>
+    <div class="price-sub">Cancel anytime. Entertainment and education only. Bet responsibly. 21+ · Secure checkout via Whop</div>
+  </div>
+</section>
+
+<!-- COMMUNITY / DISCORD -->
+<section id="discord" class="wrap">
+  <div class="eyebrow">Community · free to join</div>
+  <h2>Inside the Discord</h2>
+  <p class="lead">Today's free leans, a visible results ledger, slate discussion, and a member room for the complete card.</p>
+  <!-- Counts render only when fetched live from Discord; on any failure the tiles stay hidden. -->
+  <div class="comm" id="discord-counts" hidden style="margin-top:18px">
+    <div class="comm-card"><div class="big" id="dc-members"></div><div class="lbl">Members</div></div>
+    <div class="comm-card"><div class="big" id="dc-online"></div><div class="lbl">Online now</div><div class="soon" id="dc-asof"></div></div>
+  </div>
+  <div class="btnrow" style="margin-top:20px"><a class="btn btn-gold" href="https://discord.gg/pfuRrzvwhc" data-invite="discord_block" data-track="discord_block" target="_blank" rel="noopener">Enter the free Discord</a></div>
+  <div class="eyebrow" style="margin-top:30px">Follow the claw</div>
+  <div class="socials">
+    <a class="soc" href="https://x.com/clawstbets" target="_blank" rel="noopener">𝕏 / Twitter <span class="h">@clawstbets</span></a>
+    <a class="soc" href="https://www.threads.net/@clawstbets" target="_blank" rel="noopener">Threads <span class="h">@clawstbets</span></a>
+    <a class="soc" href="https://www.instagram.com/clawstbets" target="_blank" rel="noopener">Instagram <span class="h">@clawstbets</span></a>
+    <a class="soc" href="https://www.tiktok.com/@clawstbets" target="_blank" rel="noopener">TikTok <span class="h">@clawstbets</span></a>
+  </div>
+</section>
+
 
 <!-- MEET CLAWBOT -->
 <section id="clawbot" class="wrap">
@@ -220,9 +389,9 @@
 
 <!-- PIPELINE -->
 <section id="pipeline" class="wrap">
-  <div class="eyebrow">How it works · L1 → L10</div>
+  <div class="eyebrow">How it works · L1 → L10, then the L11 grading loop</div>
   <h2>An evidence pipeline, not a hot take</h2>
-  <p class="lead">The picks come out of a structured 10-layer pipeline that runs the same way every day. Nothing is hand-waved; every bet is traceable from evidence to stake.</p>
+  <p class="lead">Ten layers pick and size the plays (L1–L10), the same way every day. L11 is the post-mortem and grading loop: every result is graded against the closing line and the learnings feed back into L1. Nothing is hand-waved; every staked play is traceable from evidence to stake to grade.</p>
   <div class="pipe-grid">
     <div class="pipe"><div class="l">L1</div><div class="n">9-lane evidence sweep</div></div>
     <div class="pipe"><div class="l">L2</div><div class="n">Market-state classify</div></div>
@@ -231,128 +400,16 @@
     <div class="pipe"><div class="l">L8</div><div class="n">Behavioral multipliers</div></div>
     <div class="pipe"><div class="l">L9</div><div class="n">Half-Kelly sizing + caps</div></div>
     <div class="pipe"><div class="l">L10</div><div class="n">Daily digest of picks</div></div>
-    <div class="pipe"><div class="l">L11</div><div class="n">Post-mortem grading</div></div>
+    <div class="pipe"><div class="l">L11</div><div class="n">Post-mortem &amp; grading loop</div></div>
     <div class="pipe"><div class="l">CLV</div><div class="n">Graded vs. closing line</div></div>
     <div class="pipe"><div class="l">↻</div><div class="n">Learnings fed back in</div></div>
   </div>
   <p class="pipe-note"><b>Why this matters:</b> a tout shows you winners and deletes the losers. The pipeline logs everything with timestamps, sizes identically every time, and beats itself up in a post-mortem after every slate. Same inputs, same output — auditable, not "feel."</p>
 </section>
 
-<!-- TRACK RECORD -->
-<section id="record" class="wrap">
-  <div class="eyebrow">Verified · booked stakes · every number below is read from the one record, not typed</div>
-  <h2>The track record</h2>
-  <p class="lead">Closed/graded bets only, at the stakes the pipeline actually booked — tickets ran $5–$25 through Aug 21, 2026 and a flat $100 from Aug 22. No bet on this page carries a broker fill confirmation: these are the pipeline's declared stakes and graded outcomes, rebuilt nightly from the source slips. Win rate and ROI are on stake. Losing books and losing eras are shown, not hidden.</p>
-
-  <div class="grid3">
-    <div class="kpi"><div class="n pos">+$442.15</div><div class="l">All books since Mar 27, 2026 · 111-150 on $8,619.62 (5.1% on stake)</div></div>
-    <div class="kpi"><div class="n pos">61.2%</div><div class="l">World Cup pick-level (120-76, unsized board)</div></div>
-    <div class="kpi"><div class="n gold">3-0</div><div class="l">Knicks +money dog MLs</div></div>
-  </div>
-
-  <!-- WC -->
-  <div class="book">
-    <div class="brow"><div class="bname">⚽ World Cup 2026</div><div class="btag t-pos">Net Positive · closed Jul 19</div></div>
-    <div class="stats">
-      <div class="stat"><div class="v">12-11</div><div class="k">Sized bets (52.2%)</div></div>
-      <div class="stat"><div class="v pos">+$93.73</div><div class="k">Net at booked stakes, $539 risked (17.4%)</div></div>
-      <div class="stat"><div class="v">64-34</div><div class="k">Moneyline picks (unsized)</div></div>
-      <div class="stat"><div class="v">56-42</div><div class="k">Over/Under picks (unsized)</div></div>
-    </div>
-    <div class="note"><b>Straight talk:</b> the pick-level board clears the ~52.4% you need to beat the vig, but the sized book is 12-11 on a $1,000 tournament bankroll — a promising signal, not a proof. The record now includes a $10 to-advance futures bet the pipeline settled as a loss but never booked into its own bankroll; we count it. The edge was totals discipline, not calling upsets.</div>
-  </div>
-
-  <!-- MLB -->
-  <div class="book">
-    <div class="brow"><div class="bname">⚾ MLB</div><div class="btag t-var">High Variance</div></div>
-    <div class="stats">
-      <div class="stat"><div class="v pos">+$373.33</div><div class="k">Net at booked stakes, $7,267.62 risked (5.1%)</div></div>
-      <div class="stat"><div class="v">80-123</div><div class="k">Tickets (39.4%)</div></div>
-      <div class="stat"><div class="v pos">13-67</div><div class="k">Parlays, +$329.54 (Mar–Jul; suspended since Jul 17)</div></div>
-      <div class="stat"><div class="v pos">67-56</div><div class="k">Straights, +$43.79</div></div>
-    </div>
-    <div class="note"><b>Read it whole:</b> the profit is parlay windfalls from the spring; the straight-bet book that replaced them is 67-56 and +$43.79, and the flat-$100 era since Aug 22 is 25-28, +$9.94 on $5,050. 2 postponed tickets voided at no cost; 0 ungraded. Every ticket, including the ones an earlier version of this page could not read, is in the record.</div>
-  </div>
-
-  <!-- NBA FINALS -->
-  <div class="book">
-    <div class="brow"><div class="bname">🏀 2026 NBA Finals · Knicks–Spurs</div><div class="btag t-pos">5-2 · +$102.43</div></div>
-    <div class="stats">
-      <div class="stat"><div class="v">5-2</div><div class="k">Series bets (71.4%)</div></div>
-      <div class="stat"><div class="v pos">+$102.43</div><div class="k">Net at booked stakes ($10–$25 a bet, $140 risked)</div></div>
-      <div class="stat"><div class="v pos">3-0</div><div class="k">NYK +money dog ML</div></div>
-      <div class="stat"><div class="v">~+172</div><div class="k">Avg dog odds hit</div></div>
-    </div>
-    <div class="legs">
-      <span class="w">G1 NYK ML +168 ✓</span>
-      <span class="w">G1 UNDER 218.5 −110 ✓</span>
-      <span class="w">G2 NYK ML +185 ✓</span>
-      <span class="w">G2 UNDER 214.5 −110 ✓</span>
-      <span class="x">G3 NYK ML −135 ✗</span>
-      <span class="x">G3 UNDER 216.5 −110 ✗</span>
-      <span class="w">G5 NYK ML +164 ✓</span>
-    </div>
-    <div class="note"><b>The value grab:</b> books made San Antonio a 4.5–5.5pt home favorite; the model had it ~2.5–3.5 and backed the <b>underdog Knicks at plus-money three times — and cashed all three.</b> The only losses came in the one game it laid NYK as a favorite. One series, 7 bets, at the sizes actually booked — shown as exactly that. The playoff rounds before the Finals (26 bets, −$323.79) are outside this book and disclosed in the footer.</div>
-  </div>
-
-  <!-- WNBA:START -->
-  <div class="book">
-    <div class="brow"><div class="bname">🏀 WNBA</div><div class="btag t-var">Net Negative</div></div>
-    <div class="stats">
-      <div class="stat"><div class="v">14-14</div><div class="k">Record (50.0%)</div></div>
-      <div class="stat"><div class="v neg">-18.9%</div><div class="k">ROI on $673 risked</div></div>
-      <div class="stat"><div class="v neg">−$127.34</div><div class="k">Net at booked stakes ($8–$22 a bet through Jul 17; $100 since Aug 22)</div></div>
-      <div class="stat"><div class="v">28</div><div class="k">Bets placed · last 2026-09-27</div></div>
-    </div>
-    <div class="note"><b>Reported the same way we reported it red:</b> this book sat net negative for most of its life on small Kelly-sized tickets, and one $100 winner on Aug 22 (ATL ML at Phoenix) moved it to net positive — and the $100 tickets since have taken it back to net negative, where it stands now. The Jul 16 Dallas ticket that was postponed is counted as the loss it became on the rescheduled date. That is how a thin margin on a 28-bet sample behaves: one settlement swings it either way. No edge claimed — just the number.</div>
-  </div>
-  <!-- WNBA:END -->
-
-  <!-- NFL:START -->
-  <div class="book">
-    <div class="brow"><div class="bname">🏈 NFL 2026</div><div class="btag t-var">Unsized picks only · no staked bet yet</div></div>
-    <div class="stats">
-      <div class="stat"><div class="v">0</div><div class="k">Staked bets · none booked yet</div></div>
-      <div class="stat"><div class="v ">$0.00</div><div class="k">Net at booked stakes · nothing risked</div></div>
-      <div class="stat"><div class="v">7-12-1</div><div class="k">Slate Four picks, unsized (36.8% ATS)</div></div>
-      <div class="stat"><div class="v neg">−$566.27</div><div class="k">If every pick were $100 — hypothetical, never booked</div></div>
-    </div>
-    <div class="legs">
-      <span class="x">Wk1 Sun CLE −8.5 (−108) ✗</span>
-      <span class="x">Wk1 Sun DAL +3 (−112) ✗</span>
-      <span class="w">Wk1 Sun NO −7 (−110) ✓</span>
-      <span class="x">Wk1 MNF DEN −2.5 (−112) ✗</span>
-      <span class="w">Wk2 TNF BUF +5.5 (−107) ✓</span>
-      <span class="x">Wk2 Sun TB +8.5 (−108) ✗</span>
-      <span class="x">Wk2 Sun LAC +6.5 (−122) ✗</span>
-      <span class="w">Wk2 Sun SF +13.5 (−105) ✓</span>
-      <span class="x">Wk2 Sun BAL +8.5 (−108) ✗</span>
-      <span class="x">Wk2 Sun PHI +7 (−112) ✗</span>
-      <span class="w">Wk2 MNF LAR +7 (−115) ✓</span>
-      <span class="x">Wk3 TNF GB +4.5 (−112) ✗</span>
-      <span class="x">Wk3 Sun SF +8.5 (−108) ✗</span>
-      <span class="w">Wk3 Sun KC +10 (−112) ✓</span>
-      <span class="w">Wk3 Sun BUF +7 (−115) ✓</span>
-      <span class="x">Wk3 Sun SEA +7.5 (−118) ✗</span>
-    </div>
-    <div class="note"><b>Two records, one firewall:</b> the staked NFL book has not booked a bet yet — the edge floor and the disagreement cap are never loosened to buy volume, so a week of PASS is a result, not a gap. The Slate Four is the mandatory pick board — at least three ranked, unsized picks for every slate day, Wednesday opener through Monday night — captured and graded against the close exactly like a bet, at stake $0. Its dollar line is what a flat $100 a pick would have returned: hypothetical, and kept out of the tiles and the all-books number above by rule. 20 graded picks so far: Sunday board 5-9; standalone days (Wed / TNF / MNF, pooled) 2-3-1; beat the closing line on 60% of 5. The standalone lanes are on the clock: at 40 picks, a beat-close rate at or under 50% with an ATS under 50% demotes them to record-keeping only.</div>
-  </div>
-  <!-- NFL:END -->
-  <div class="btnrow" style="justify-content:flex-start;margin:-2px 0 14px"><a class="btn btn-ghost" href="nfl-postmortem.html">🏈 Weekly NFL post-mortem: our picks vs the NFL.com experts →</a></div>
-
-  <!-- LEANS:START -->
-  <div class="book" style="border-style:dashed;opacity:.96">
-    <div class="brow"><div class="bname">🐾 Leans · the unsized board</div><div class="btag t-var">Directional · not staked</div></div>
-    <div class="note" style="margin-top:0">These are the lower-conviction reads the claw <b>surfaces but does not stake</b> — the daily board it posts to the free channel. They're graded exactly like the bets, but kept <b>off the staked P&amp;L above</b> on purpose: the record you pay for is the sized book, this is the color. Building the sample now — checks in as postmortems grade each night.</div>
-  </div>
-  <!-- LEANS:END -->
-
-  <div class="updated">LAST UPDATED: <b>Sep 28, 2026</b> · regenerated from the graded record, built 2026-09-28</div>
-</section>
-
 <!-- OPTIONS (secondary) -->
 <section class="wrap">
-  <div class="eyebrow">Also in the server</div>
+  <div class="eyebrow">Also in the member room</div>
   <h2>Options &amp; trading — the side pot</h2>
   <div class="options-box">
     <h3>📈 Same pipeline energy, different asset class</h3>
@@ -372,44 +429,6 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="wrap">
-  <div class="eyebrow">Membership · billed via Whop</div>
-  <h2>Join the claw</h2>
-  <div class="price-card">
-    <div class="plan">ClawStreetBets Membership</div>
-    <div class="amt">$39.99<span>/month</span></div>
-    <ul>
-      <li>Daily AI sports picks (the L10 digest)</li>
-      <li>Full graded track record + post-mortems</li>
-      <li>Closing-line value on every bet</li>
-      <li>Options/trading screener + crash signals</li>
-      <li>Discord community access</li>
-      <li>Cancel anytime</li>
-    </ul>
-    <a class="btn btn-gold" href="https://whop.com/checkout/plan_64WRVTw8o2YJl" target="_blank" rel="noopener">Join on Whop · $39.99/mo</a>
-    <div class="price-sub">Secure checkout via Whop · Entertainment &amp; education only · NFA</div>
-  </div>
-</section>
-
-<!-- COMMUNITY / DISCORD -->
-<section class="wrap">
-  <div class="eyebrow">Community</div>
-  <h2>Inside the Discord</h2>
-  <div class="comm">
-    <div class="comm-card"><div class="big">—</div><div class="lbl">Members</div><div class="soon">live count coming soon</div></div>
-    <div class="comm-card"><div class="big">—</div><div class="lbl">Online now</div><div class="soon">live count coming soon</div></div>
-    <div class="comm-card"><div class="big">24/7</div><div class="lbl">Bots grinding</div><div class="soon">#nba · #mlb · #options · #alerts</div></div>
-  </div>
-
-  <div class="eyebrow" style="margin-top:30px">Follow the claw</div>
-  <div class="socials">
-    <a class="soc" href="https://x.com/clawstbets" target="_blank" rel="noopener">𝕏 / Twitter <span class="h">@clawstbets</span></a>
-    <a class="soc" href="https://www.threads.net/@clawstbets" target="_blank" rel="noopener">Threads <span class="h">@clawstbets</span></a>
-    <a class="soc" href="https://www.instagram.com/clawstbets" target="_blank" rel="noopener">Instagram <span class="h">@clawstbets</span></a>
-    <a class="soc" href="https://www.tiktok.com/@clawstbets" target="_blank" rel="noopener">TikTok <span class="h">@clawstbets</span></a>
-  </div>
-</section>
 
 <div class="claw-sign">Every day we drop the claw. The claw doesn't always grab — but we always play again.</div>
 
@@ -420,15 +439,68 @@
     <a href="privacy.html" style="color:var(--mut)">Privacy</a>
     <a href="refund.html" style="color:var(--mut)">Refund Policy</a>
     <a href="nfl-postmortem.html" style="color:var(--mut)">NFL Post-Mortem</a>
+    <a href="ledger.html" style="color:var(--mut)">Full Ledger</a>
     <a href="#pricing" style="color:var(--gold)">Join · $39.99/mo</a>
   </div>
   <div class="disc">
-    <b>Not financial advice.</b> ClawStreetBets is for <b>entertainment and education only</b>. Nothing here is financial, investment, or betting advice, or a recommendation to place any wager or trade. We are not licensed advisors. You are solely responsible for your own bets and trades — do your own research and never risk money you can't afford to lose.<br><br>
+    <b>Not financial advice.</b> ClawStBets is for <b>entertainment and education only</b>. Nothing here is financial, investment, or betting advice, or a recommendation to place any wager or trade. We are not licensed advisors. You are solely responsible for your own bets and trades — do your own research and never risk money you can't afford to lose.<br><br>
     The figures shown are the books the pipeline has bet; they are not the entire portfolio. The NBA playoff rounds before the Finals (26 bets, net negative) are outside the Finals book and are excluded and disclosed rather than blended in; the WNBA book is shown in full, red or green. The NFL Slate Four is an unsized pick board: its win-loss and its dollar line at a hypothetical $100 a pick appear on the NFL card only and are never summed into the all-books figure. Track record dollar figures are the pipeline's booked stakes and graded outcomes (tickets $5–$25 through Aug 21, 2026; flat $100 from Aug 22, 2026), rebuilt nightly from the source slips; no figure is modeled at a nominal unit and no bet carries a broker fill confirmation. Win rates and ROI are on stake. Sample sizes are small and <b>past performance does not guarantee future results.</b> The dollar figures shown are a record of declared stakes — not a promise, guarantee, or prediction of returns.<br><br>
-    Sports wagering is regulated differently by jurisdiction — know your local laws. Must be of legal age to gamble in your area. If gambling stops being fun, call <b>1-800-GAMBLER</b>.
+    Sports wagering is regulated differently by jurisdiction — know your local laws. ClawStBets is 21+ only, and you must also meet the legal gambling age where you live. If gambling stops being fun, call <b>1-800-GAMBLER</b>.
   </div>
-  <div style="text-align:center;margin-top:22px;font-family:var(--mono);font-size:11.5px;color:var(--dim)">© 2026 THansAI Research Group LLC. ClawStreetBets is a service of THansAI Research Group LLC. All rights reserved.</div>
+  <div style="text-align:center;margin-top:22px;font-family:var(--mono);font-size:11.5px;color:var(--dim)">© 2026 THansAI Research Group LLC. ClawStBets is a service of THansAI Research Group LLC. All rights reserved.</div>
 </footer>
 
+
+<script>
+/* ClawStBets site runtime: invite links, CTA A/B test, click beacon, live Discord counts. */
+(function(){
+  // Permanent invites, one per slot so Discord's per-invite use counts measure joins by source.
+  // Never-expiring invites created 2026-10-03; landing channel differs per slot so Discord counts uses separately.
+  var INVITES={hero:"NXj977HQaR",pricing_a:"bVXNTMbnqy",pricing_b:"kuGTsD5f3G",discord_block:"pfuRrzvwhc"};
+  var COUNT_INVITE="pfuRrzvwhc";
+  var WHOP="https://whop.com/checkout/plan_64WRVTw8o2YJl";
+
+  // A/B: a = "Join now" primary, b = "Try the free Discord first" primary. ?v=a|b forces a variant.
+  var v=null, q=(location.search.match(/[?&]v=([ab])\b/)||[])[1];
+  try{v=q||localStorage.getItem("csb_ab_cta");}catch(e){v=q;}
+  if(v!=="a"&&v!=="b"){v=Math.random()<0.5?"a":"b";}
+  try{localStorage.setItem("csb_ab_cta",v);}catch(e){}
+  document.documentElement.setAttribute("data-ab",v);
+
+  function inviteFor(slot){var k=slot==="pricing"?"pricing_"+v:slot;return "https://discord.gg/"+(INVITES[k]||INVITES.hero);}
+  document.querySelectorAll("[data-invite]").forEach(function(a){a.href=inviteFor(a.getAttribute("data-invite"));});
+
+  var whop=document.getElementById("cta-whop"), dc=document.getElementById("cta-discord");
+  if(whop){whop.href=WHOP+"?utm_source=clawstbets.com&utm_medium=site&utm_campaign=cta_ab_wk1&utm_content="+v;}
+  if(whop&&dc){
+    if(v==="a"){whop.textContent="Join now";whop.className="btn btn-gold";dc.className="btn btn-ghost";}
+    else{dc.className="btn btn-gold";whop.className="btn btn-ghost";whop.textContent="Join on Whop";dc.parentNode.insertBefore(dc,whop);}
+  }
+
+  // First-party click beacon (no cookies, no personal data): slot, variant, path.
+  document.addEventListener("click",function(e){
+    var a=e.target.closest&&e.target.closest("[data-track]"); if(!a)return;
+    var body=JSON.stringify({ev:"click",slot:a.getAttribute("data-track"),v:v,ts:Date.now(),ref:document.referrer?new URL(document.referrer).hostname:""});
+    try{navigator.sendBeacon&&navigator.sendBeacon("/api/track",new Blob([body],{type:"application/json"}));}catch(err){}
+  },true);
+  try{navigator.sendBeacon&&navigator.sendBeacon("/api/track",new Blob([JSON.stringify({ev:"view",slot:"index",v:v,ts:Date.now(),ref:document.referrer?new URL(document.referrer).hostname:""})],{type:"application/json"}));}catch(err){}
+
+  // Live Discord counts: shown only when fetched successfully just now.
+  var box=document.getElementById("discord-counts");
+  if(box&&window.fetch){
+    var ctl=window.AbortController?new AbortController():null; if(ctl)setTimeout(function(){ctl.abort();},4000);
+    fetch("https://discord.com/api/v10/invites/"+COUNT_INVITE+"?with_counts=true",ctl?{signal:ctl.signal}:{})
+      .then(function(r){if(!r.ok)throw 0;return r.json();})
+      .then(function(d){
+        var m=d.approximate_member_count,o=d.approximate_presence_count;
+        if(typeof m!=="number"||typeof o!=="number")return;
+        document.getElementById("dc-members").textContent=m.toLocaleString();
+        document.getElementById("dc-online").textContent=o.toLocaleString();
+        document.getElementById("dc-asof").textContent="live from Discord · "+new Date().toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});
+        box.hidden=false;
+      }).catch(function(){});
+  }
+})();
+</script>
 </body>
 </html>
