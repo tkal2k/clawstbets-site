@@ -1,6 +1,8 @@
 const stories = document.querySelector("#stories");
 const status = document.querySelector("#notes-status");
 const formatDate = new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" });
+const formatReturn = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: "exceptZero" });
+const quoteSymbol = /^[A-Z0-9_]+:[A-Z0-9._-]+$/;
 let current;
 
 function element(tag, value, className) {
@@ -8,6 +10,49 @@ function element(tag, value, className) {
   if (value) node.textContent = value;
   if (className) node.className = className;
   return node;
+}
+
+function returns(label, value) {
+  const box = element("div", "", "return");
+  box.append(element("span", label), element("strong", formatReturn.format(value) + "%", value < 0 ? "down" : "up"));
+  return box;
+}
+
+function marketCard(note) {
+  const card = element("aside", "", "panel market");
+  card.setAttribute("aria-label", note.ticker + " stock performance");
+  card.append(element("h3", note.ticker + " stock performance"));
+  const performance = note.performance;
+  if (performance) {
+    card.append(element("p", performance.window, "market-context"));
+    const row = element("div", "", "return-row");
+    row.append(returns(note.ticker, performance.stockPct), returns(performance.benchmark, performance.benchmarkPct));
+    card.append(row);
+  }
+  if (quoteSymbol.test(note.symbol ?? "")) {
+    const widget = element("div", "", "tradingview-widget-container");
+    const attribution = element("div", "", "tradingview-widget-copyright");
+    const link = element("a", "Market data by TradingView");
+    link.href = "https://www.tradingview.com/symbols/" + note.symbol.replace(":", "-") + "/";
+    link.target = "_blank";
+    link.rel = "noopener nofollow";
+    attribution.append(link);
+    const script = document.createElement("script");
+    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
+    script.async = true;
+    script.textContent = JSON.stringify({
+      symbols: [{ proName: note.symbol, title: note.ticker }, { proName: "NASDAQ:SOXX", title: "Chip benchmark" }],
+      colorTheme: "dark", locale: "en", isTransparent: true, showSymbolLogo: true, displayMode: "adaptive",
+    });
+    widget.append(element("div", "", "tradingview-widget-container__widget"), attribution, script);
+    card.append(element("p", "Latest quotes · exchange delays may apply", "market-context"), widget);
+  }
+  if (note.flowRemark) {
+    const flow = element("div", "", "flow");
+    flow.append(element("h4", "DeeDee on options flow"), element("p", note.flowRemark));
+    card.append(flow);
+  }
+  return card;
 }
 
 function createStory(note) {
@@ -18,12 +63,10 @@ function createStory(note) {
   const permalink = element("a", note.title);
   permalink.href = "#" + note.id;
   title.append(permalink);
-  const body = element("dl");
-  for (const [label, text] of [["What happened", note.facts], ["DeeDee’s read", note.read], ["What I’m watching", note.watch]]) {
-    const row = element("div");
-    row.append(element("dt", label), element("dd", text));
-    body.append(row);
-  }
+  story.append(element("p", label.join(" · "), "eyebrow"), title);
+  const body = element("div", "", "blurb");
+  const paragraphs = note.body ?? [note.facts, note.read, note.watch];
+  for (const paragraph of paragraphs) body.append(element("p", paragraph));
   const sources = element("div", "", "sources");
   for (const source of note.sources) {
     const url = new URL(source.url);
@@ -32,39 +75,44 @@ function createStory(note) {
     link.href = url.href;
     sources.append(link);
   }
-  story.append(element("p", label.join(" · "), "eyebrow"), title, body, sources);
-  return story;
+  story.append(body, sources);
+  const layout = element("div", "", "issue");
+  layout.append(story, marketCard(note));
+  return layout;
 }
 
 async function readJson(url) {
   const response = await fetch(url, { signal: AbortSignal.timeout(8000) });
   if (!response.ok) throw new Error("Desk feed unavailable");
   const data = await response.json();
-  if (!data.notes?.length || !Number.isFinite(Date.parse(data.updatedAt))) throw new Error("Invalid desk feed");
+  if (!data.notes?.[0]?.body?.length || !Number.isFinite(Date.parse(data.updatedAt))) throw new Error("Invalid desk feed");
   return data;
 }
 
 function render(data) {
-  const notes = data.notes.map(createStory);
-  stories.replaceChildren(...notes);
-  if (!current && location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
-  current = data.updatedAt;
-  status.textContent = "Last editorial update · " + formatDate.format(new Date(current));
+  const selection = data.notes.find(note => location.hash === "#" + note.id) ?? data.notes[0];
+  stories.replaceChildren(createStory(selection));
+  if (!current && location.hash) document.getElementById(selection.id)?.scrollIntoView();
+  current = data;
+  status.textContent = "Issue date · " + formatDate.format(new Date(selection.date));
 }
 
 async function refresh() {
   try {
     const data = await readJson("/.netlify/functions/deedee-notes");
-    if (!current || Date.parse(data.updatedAt) > Date.parse(current)) render(data);
+    if (!current || Date.parse(data.updatedAt) > Date.parse(current.updatedAt)) render(data);
   } catch {
     if (current) return;
     try {
       render(await readJson("./notes.json"));
     } catch {
-      status.textContent = "Desk notes are temporarily unavailable.";
+      status.textContent = "The daily issue is temporarily unavailable.";
     }
   }
 }
 
+window.addEventListener("hashchange", () => {
+  if (current) render(current);
+});
 await refresh();
 setInterval(refresh, 300_000);

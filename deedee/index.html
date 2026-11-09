@@ -17,7 +17,7 @@
 <nav class="top" aria-label="Site navigation">
   <div class="wrap">
     <a class="brand" href="/">Claw<span>Street</span>Bets</a>
-    <div><a href="#market">Market board</a><a href="#notes">Desk notes</a></div>
+    <div><a href="#notes">Today’s issue</a></div>
   </div>
 </nav>
 <main class="wrap">
@@ -30,26 +30,13 @@
     </div>
     <img class="portrait" src="deedee.webp" width="640" height="953" alt="DeeDee, the illustrated goth analyst from ClawStreetBets">
   </header>
-  <section class="panel market" id="market" aria-labelledby="market-title">
-    <header class="section-heading">
-      <h2 id="market-title">Market board</h2>
-      <p>Quotes update automatically. Exchange delays may apply.</p>
-    </header>
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" target="_blank" rel="noopener nofollow">Market data by TradingView</a></div>
-      <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {"symbols":[{"proName":"NASDAQ:SOXX","title":"Chip benchmark"},{"proName":"NASDAQ:QQQ","title":"Nasdaq-100 ETF"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:SNDK","title":"Sandisk"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NYSE:ORCL","title":"Oracle"}],"colorTheme":"dark","locale":"en","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive"}
-      </script>
-    </div>
-  </section>
   <section id="notes" aria-labelledby="notes-title">
     <header class="section-heading notes-heading">
-      <h2 id="notes-title">Desk notes</h2>
+      <h2 id="notes-title">The Daily DD</h2>
       <p id="notes-status" role="status">Loading the desk…</p>
     </header>
     <div id="stories"></div>
-    <noscript><p>Enable JavaScript to read the market board and desk notes.</p></noscript>
+    <noscript><p>Enable JavaScript to read the daily issue and stock performance.</p></noscript>
   </section>
 </main>
 <footer><div class="wrap">DeeDee is a fictional financial commentator. Not financial advice. Just DD.</div></footer>

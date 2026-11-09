@@ -38,22 +38,31 @@ h3 { margin: .38rem 0 .55rem; font-size: clamp(1.48rem, 3vw, 2.1rem); line-heigh
 .tradingview-widget-container__widget { min-height: 45px; }
 .tradingview-widget-copyright { font-size: .75rem; }
 .notes-heading { margin-top: 25px; }
-#stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 32px; }
-.story { scroll-margin-top: 12px; }
-.story:first-child { grid-column: 1 / -1; border-top: 2px solid var(--pink); }
-.story:first-child .eyebrow { color: var(--pink); }
+#stories { margin-bottom: 32px; }
+.issue { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+.story { scroll-margin-top: 12px; border-top: 2px solid var(--pink); }
+.story .eyebrow { color: var(--pink); }
 .story h3 a { color: inherit; text-decoration: none; }
 .story h3 a:hover { text-decoration: underline; }
-.story dl { margin: 14px 0; display: grid; gap: 10px; }
-.story dl div { border-top: 1px solid var(--line); padding-top: 8px; }
-.story dt { font-weight: 770; color: var(--gold); }
-.story dd { margin: 2px 0 0; }
+.blurb { max-width: 68ch; }
+.blurb p + p { margin-top: 12px; }
+.market h3 { font-size: 1.4rem; }
+.market-context { color: var(--muted); font-size: .83rem; }
+.return-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0 14px; }
+.return { display: grid; padding: 8px; border: 1px solid var(--line); border-radius: 8px; font: .82rem/1.5 var(--mono); }
+.return strong { font-size: 1.15rem; }
+.down { color: #ffaaa2; }
+.up { color: #9be1b0; }
+.flow, .sources { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 10px; }
+.flow h4 { margin: 0 0 4px; color: var(--gold); }
+.flow p { font-size: .93rem; }
 .sources { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: .84rem; }
 footer { border-top: 1px solid var(--line); padding: 14px 0 24px; color: var(--muted); font-size: .85rem; }
 @media (max-width: 650px) {
   .hero { padding-top: 22px; grid-template-columns: minmax(0, 1fr) 100px; gap: 10px; }
   .portrait { height: 152px; border-radius: 10px; }
-  #stories { grid-template-columns: 1fr; }
+  .issue { grid-template-columns: 1fr; }
+  .market { grid-row: 1; }
 }
 @media (max-width: 360px) {
   .wrap { width: calc(100% - 24px); }
