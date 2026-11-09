@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T17:04:07+00:00",
+  "updatedAt": "2026-11-09T18:32:02+00:00",
   "notes": [
     {
       "id": "2026-11-09-nvda-board-review",
@@ -9,13 +9,13 @@
       "symbol": "NASDAQ:NVDA",
       "title": "Nvidia ghosted the rally. The board has questions.",
       "body": [
-        "Monday’s market came to the party. Nvidia stood in the corner, arms crossed, refreshing its phone. The index went green. The chip king went red. Nobody in the group chat had to ask who was being weird.",
-        "The gossip, minus the gossip: on Sunday, Nvidia’s board said it opened an independent investigation after reports that CEO Jensen Huang was targeted by a foreign intelligence effort. Same statement, very next breath: no reason to think company secrets or national security were compromised. Corporate for “we’re checking the locks, nothing looks missing, please stop calling.” Fine. I’ll stop calling when I see what the checking turns up.",
-        "And Nvidia already had a rough week out. Stocks partied after the midterms. Then Thursday turned the lights on. The Nasdaq fell 5.5%. SOXX, a fund that holds a basket of chip stocks, fell 12.15%. The fear: after Democrats won, new data centers could catch more fights over permits and power bills. That’s investors pricing a fight that hasn’t happened yet. But a GPU can write your wedding toast in nine languages and still can’t get the zoning board to text back. No building, no rack. No rack, no delivery.",
-        "Plot twist nobody’s framing: Nvidia actually held up better than its friends. Five sessions through Nov. 6, Nvidia fell 8.8%. The chip fund fell 13.1%. Not a trophy. Still a tell. Thursday was the whole group getting dragged out together. Monday was Nvidia going red alone while the market bounced. That’s the moment the board story earns its own headline. The chart shows me the split. It can’t tell me how much of the drop is the investigation and how much is leftover hangover.",
-        "Now, the dip. I know. It’s down, it’s Nvidia, your thumb is hovering over buy like it’s hovering over an ex’s new story at 1 a.m. Very human. Also how people end up apologizing in the morning. Before I touch it, I want one receipt. Customers pushing deliveries? Show me dates. Shipping on time but getting paid slower? Show me the cash. Other chip names sliding again? Then it’s a group problem, not an Nvidia scandal.",
-        "Because there’s a canyon between a customer saying “take the chips in March instead” and an investor saying “what if they take the chips in March instead?” The first moves real revenue out of the quarter. The second moves the stock before a single order changes. If someone swears a delay is real, ask for the project name and the date. Rumors don’t come with those. Receipts do.",
-        "Nvidia reports Nov. 17. I want two answers. What has the board found? And did any customer actually move a delivery date? Until then, the chart gets one browser tab and the receipts get another. Yes, I have too many tabs. These two are paying rent."
+        "Monday’s market showed up to the party in sequins. Nvidia showed up in sunglasses, parked itself by the snack table and refused to dance. The index went green. The chip king went red. When the most popular kid skips the group photo, people start texting.",
+        "Here’s what we actually know. On Sunday, Nvidia’s board said it opened an independent investigation after reports that CEO Jensen Huang was targeted by a foreign intelligence effort. Same statement, same breath: the board has no reason to think company secrets or national security were compromised. That’s corporate for “we’re checking the locks, nothing looks missing, please stop ringing the doorbell.” Cute. I’ll stop ringing when I see what the locksmith finds.",
+        "Also, this was not Nvidia’s first bad night out this week. Stocks partied after the midterms. Then Thursday flipped the lights on at 2 a.m. The Nasdaq fell 5.5%. SOXX, a fund that holds a basket of chip stocks, fell 12.15%. The worry: after Democrats won, new data centers could catch more fights over permits and power bills. That’s a fear about future fights, not a new law. But a GPU can write your wedding toast in nine languages and still can’t get the zoning board to text back. No building, no rack. No rack, no delivery.",
+        "Plot twist the timeline missed: Nvidia actually held up better than its friends. Five sessions through Nov. 6, Nvidia fell 8.8%. The chip fund fell 13.13%. Not a trophy. Still a receipt. Thursday was the whole squad getting dragged out of the club together. Monday was Nvidia doing the walk of shame alone while everyone else went to brunch. That’s when the board story earns its own headline. The chart shows me the split. It can’t tell me how much is scandal and how much is leftover hangover.",
+        "Now, the dip. I see you. It’s down, it’s Nvidia, and your thumb is hovering over buy like it’s hovering over an ex’s new story at 1 a.m. Very human. Also how people end up apologizing over coffee. Before I touch it, I want one receipt. Customers pushing deliveries? Show me dates. Shipping on time but getting paid slower? Show me the cash. Other chip names sliding again? Then it’s a group-chat problem, not an Nvidia scandal.",
+        "Because there’s a canyon between a customer saying “take the chips in March instead” and an investor whispering “what if they take the chips in March instead?” One moves real revenue out of the quarter. The other just moves the stock, before a single order changes. If someone swears a delay is real, ask for the project name and the date. Rumors never bring those. Receipts always do.",
+        "Nvidia reports Nov. 17, and I’ll be in the front row. Two questions. What did the board find? And did any customer actually move a delivery date? Until then, the chart gets one browser tab and the receipts get another. Yes, I have too many tabs. These two pay rent."
       ],
       "performance": {
         "window": "Five sessions through Nov. 6, 2026 · close to close",
@@ -23,7 +23,7 @@
         "benchmark": "SOXX",
         "benchmarkPct": -13.13
       },
-      "flowRemark": "Friday’s options bets were placed before the board said a word, so they’re old news. I’m watching whether people keep paying up for crash insurance now that the headline is out.",
+      "flowRemark": "Friday’s options bets were placed before the board said a word, so they’re yesterday’s gossip. I’m watching whether people keep paying up for crash insurance now that the headline is out.",
       "sources": [
         {
           "label": "Nvidia · board statement",
