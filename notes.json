@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T16:56:20+00:00",
+  "updatedAt": "2026-11-09T16:59:31+00:00",
   "notes": [
     {
       "id": "2026-11-09-nvda-board-review",
@@ -9,12 +9,12 @@
       "symbol": "NASDAQ:NVDA",
       "title": "Nvidia left the rally on read",
       "body": [
-        "The market bounced Monday. Nvidia went the other way. The weekend group chat had an update. Nvidia’s board opened an independent investigation after reports that someone had targeted CEO Jensen Huang to gather information for a foreign government. The board said it had no reason to believe company secrets or national security were compromised. The review is still open. That’s the part we actually know.",
-        "Now rewind to last week. Stocks rallied right after the midterms. The next day, the Nasdaq fell 5.5% and SOXX, a fund that tracks chip stocks, fell 12.15%. What had people spooked? After Democrats won, investors worried it might get harder to build new data centers. Think permits, power, and local pushback. A GPU can do a lot. It still can’t approve its own power hookup. A delayed build can mean a later shipment.",
-        "Here’s where Nvidia gets interesting. It finished last week down 8.8%. Ugly, sure. But the chip fund lost 13.1% over those same five sessions. Nvidia was actually holding up better than the group. On Monday morning the wider market was up and Nvidia was down. A chip selloff can explain why a lot of names fell together last week. It doesn’t get me very far when I’m trying to explain why Nvidia went the other way on Monday. That’s where I’d pay attention to the board news.",
-        "So did customers cancel anything? I haven’t seen evidence of that. The board’s statement tells us it’s looking into what happened. It doesn’t say a shipment slipped. The election story has the same problem if you push it too far. Worrying about a permit is one thing. A project actually getting delayed is another. Show me the schedule. I’ll even open the spreadsheet. If the rest of the chip group keeps bouncing while Nvidia lags, I’ll keep a closer eye on Nvidia. If they all start sliding together again, I’ll zoom back out to the broader market.",
-        "This is where the boring stuff earns its keep. If customers push back deliveries, I want to know whether Nvidia is sitting on more inventory. If sales keep climbing but customers take longer to pay, I want to see what happened to cash. Those are clues I can check. A rough morning for the stock can tell me investors are nervous. It can’t tell me what’s sitting in a warehouse.",
-        "Nvidia reports Nov. 17. I’m watching two things. Does the board find anything that changes how the company operates? And does management say customers are moving delivery dates? Until there’s an answer, I’m keeping last week’s chip selloff and Monday’s Nvidia drop on separate tabs. Yes, I have too many tabs. These two are employed."
+        "Green market. Red Nvidia. Awkward when you’re usually the reason the screen is green. On Sunday, Nvidia’s board said it was opening an independent investigation after reports that CEO Jensen Huang had been targeted by a foreign intelligence effort. The board said it had no reason to think company secrets or national security were compromised. By Monday morning, the wider market was up and Nvidia was down.",
+        "Last week had its own mess. Stocks cheered after the midterms. Then Thursday showed up. The Nasdaq dropped 5.5%, and SOXX, the chip-stock fund, dropped 12.15%. After Democrats won, investors worried new data centers could face more pushback over permits and power bills. A GPU can write you a breakup text in seven languages. It still can’t get the zoning board to call you back. If the building slips, the boxes meant to go inside it can ship later.",
+        "Nvidia actually lost less than the chip fund last week. Down 8.8% for Nvidia, down 13.1% for the fund. Nobody’s putting that on a trophy, but it matters. Thursday had a whole group of chip stocks selling off together. Monday had Nvidia going red while the wider market bounced. That’s when the board news gets its own tab. The stock chart can show me the split. It can’t tell me how much of the drop belongs to the investigation.",
+        "I get the temptation to call every red candle a sale. I also get the temptation to text an ex because they changed their profile picture. In both cases, I’d like one more piece of evidence. If customers are pushing back deliveries, show me the dates. If Nvidia is shipping on time but waiting longer to get paid, show me the cash. And if the other chip names start sliding again too, I’m looking back at the whole group before I pin everything on Nvidia.",
+        "There’s a real difference between a customer saying, “We’ll take the chips in March instead,” and an investor saying, “What if they take the chips in March instead?” One can move money out of this quarter. The other can move the share price before anybody has changed an order. If you hear about a real delay, look for the project name and the date. That’s the part I can check next quarter.",
+        "Nvidia reports Nov. 17. I want two updates. What has the board learned? And are customers moving delivery dates? Until I see something on either one, the chart gets one tab and the receipts get another. Yes, I have too many tabs. These are the ones paying rent."
       ],
       "performance": {
         "window": "Five sessions through Nov. 6, 2026 · close to close",
@@ -22,7 +22,7 @@
         "benchmark": "SOXX",
         "benchmarkPct": -13.13
       },
-      "flowRemark": "Friday’s options trades came before the news. They don’t get credit for seeing Sunday coming. I’m watching who still wants downside protection once the dust settles.",
+      "flowRemark": "Friday’s options trades didn’t time travel. I’m watching whether people are still paying to protect against a drop after the headline.",
       "sources": [
         {
           "label": "Nvidia · board statement",
@@ -56,7 +56,7 @@
         },
         {
           "paragraph": 3,
-          "mood": "side-eye"
+          "mood": "naughty"
         },
         {
           "paragraph": 5,
