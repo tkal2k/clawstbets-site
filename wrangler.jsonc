@@ -16,6 +16,10 @@
       "database_id": "8b791382-1153-408e-8e71-8be0b464bf09"
     }
   ],
+  "routes": [
+    { "pattern": "clawstbets.com", "custom_domain": true },
+    { "pattern": "www.clawstbets.com", "custom_domain": true }
+  ],
   "workers_dev": true,
   "preview_urls": false,
   "observability": { "enabled": true }
