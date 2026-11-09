@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T16:54:09+00:00",
+  "updatedAt": "2026-11-09T16:56:20+00:00",
   "notes": [
     {
       "id": "2026-11-09-nvda-board-review",
@@ -47,6 +47,20 @@
         {
           "label": "Nvidia · Nov. 17 earnings date",
           "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
+        }
+      ],
+      "reactions": [
+        {
+          "paragraph": 1,
+          "mood": "sad"
+        },
+        {
+          "paragraph": 3,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 5,
+          "mood": "laugh"
         }
       ]
     }
