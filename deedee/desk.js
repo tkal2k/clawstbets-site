@@ -83,9 +83,6 @@ function ransom(target, text) {
   return target;
 }
 
-function ransomTitle(tag, text) {
-  return ransom(element(tag), text);
-}
 
 /* ---------- highlighter: yellow on % moves, pink on dates ---------- */
 const MARKS = /([−-]?\d+(?:\.\d+)?%)|((?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\.? \d{1,2}\b)/g;
@@ -145,7 +142,7 @@ function marketCard(note, marks) {
   const card = element("aside", "", "market nb-index-card");
   card.setAttribute("aria-label", note.ticker + " stock performance");
   card.append(element("span", "", "nb-tape nb-tape-top"));
-  card.append(ransomTitle("h3", note.ticker + " stock performance"));
+  card.append(element("h3", note.ticker + " stock performance", "nb-block"));
   const performance = note.performance;
   if (performance) {
     card.append(element("p", performance.window, "market-context"));
@@ -170,7 +167,7 @@ function marketCard(note, marks) {
   if (note.flowRemark) {
     const flow = element("div", "", "flow");
     const remark = element("p", note.flowRemark);
-    flow.append(ransomTitle("h4", "DeeDee on options flow"), remark);
+    flow.append(element("h4", "DeeDee on options flow", "nb-block"), remark);
     card.append(flow);
     marks.push([remark, { type: "bracket", brackets: ["left"], color: RED, strokeWidth: 2 }]);
   }
@@ -183,10 +180,9 @@ function createStory(note, marks) {
   story.id = note.id;
   const label = [note.kind, note.ticker, formatDate.format(new Date(note.date))].filter(Boolean);
   const title = element("h3");
-  const permalink = element("a");
+  const permalink = element("a", note.title);
   permalink.href = "#" + note.id;
-  ransom(permalink, note.title);
-  title.className = "nb-ransom";
+  title.className = "nb-block nb-headline";
   title.append(permalink);
   story.append(element("p", label.join(" · "), "eyebrow"), title);
   const body = element("div", "", "blurb");
@@ -219,7 +215,7 @@ function createStory(note, marks) {
   if (watchIndex >= 0) {
     const sticky = element("aside", "", "nb-sticky");
     sticky.setAttribute("aria-label", "Watch list");
-    sticky.append(ransomTitle("h4", "watch list"), paragraph(paragraphs[watchIndex]));
+    sticky.append(element("h4", "watch list", "nb-block nb-marker"), paragraph(paragraphs[watchIndex]));
     story.append(sticky);
   }
   const sources = element("div", "", "sources");

@@ -132,6 +132,16 @@ h4.nb-ransom { font-size: 1.45rem; margin-bottom: 10px; }
 .nb-c-red { background: #d7261e; color: #fff; }
 .nb-c-dots { background: radial-gradient(circle, rgba(0,0,0,.28) 1.1px, transparent 1.4px) 0 0 / 5px 5px, #f3efe4; color: #111; }
 
+/* Readable block-letter subheads (only the page title uses cut-out letters) */
+.nb-block { font-family: "Anton", "Bebas Neue", sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .02em; line-height: 1.08; color: var(--ink); }
+.nb-block a { color: inherit; text-decoration: none; }
+.nb-block a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: var(--red-pen); }
+h2.nb-block { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+h3.nb-block { font-size: 1.45rem; margin-bottom: 12px; }
+h3.nb-headline { font-size: clamp(1.9rem, 3.6vw, 2.75rem); line-height: 1.04; margin: 4px 0 18px; max-width: 22ch; }
+h4.nb-block { font-size: 1.2rem; margin-bottom: 8px; color: var(--red-pen); }
+h4.nb-marker { font-family: "Permanent Marker", cursive; text-transform: none; font-size: 1.6rem; color: #1b1a2a; letter-spacing: 0; }
+
 /* Section heading */
 .section-heading { display: flex; flex-wrap: wrap; gap: 3px 14px; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 #notes-status { font: 1.25rem var(--hand); color: var(--blue-pen); font-weight: 700; }
@@ -212,7 +222,7 @@ footer { padding: 6px 0 28px; color: #cfc8ba; font: .85rem var(--type); }
   .nb-tape { width: 46px; height: 15px; }
   .nb-tagline { font-size: 1.1rem; }
   h1.nb-ransom { font-size: 1.65rem; }
-  h3.nb-ransom { font-size: 1.35rem; }
+  h3.nb-headline { font-size: 1.75rem; }
   .nb-sticky { font-size: 1.3rem; }
 }
 @media (max-width: 380px) {
