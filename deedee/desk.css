@@ -41,7 +41,9 @@ a:focus-visible { outline: 2px dashed var(--red-pen); outline-offset: 3px; }
 .top .wrap { min-height: 54px; justify-content: space-between; flex-wrap: wrap; }
 .top a { color: #f4efe2; font: .9rem var(--type); text-decoration: none; }
 .top a:hover { color: var(--gold); }
-.brand span { color: var(--gold); }
+.brand-name span { color: var(--gold); }
+.top a.brand { display: inline-flex; align-items: center; gap: 9px; }
+.brand-dd { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; flex: none; }
 
 /* The page */
 .nb-paper {
