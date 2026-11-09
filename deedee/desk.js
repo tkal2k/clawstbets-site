@@ -48,24 +48,37 @@ function tornEdge(rand) {
   return `polygon(${pts.join(",")})`;
 }
 
-function ransom(target, text) {
+/* "press" = the newsprint headline look: cream, black and red tiles, heavy serif caps, small tilt */
+const PRESS_FONTS = ["nb-f-slab", "nb-f-dmserif", "nb-f-serif", "nb-f-slab"];
+const PRESS_COLORS = ["nb-c-cream", "nb-c-news", "nb-c-black", "nb-c-red", "nb-c-cream", "nb-c-black"];
+
+function ransom(target, text, press = false) {
   const rand = seeded(text);
+  const fonts = press ? PRESS_FONTS : FONTS, colors = press ? PRESS_COLORS : COLORS;
   const clippings = element("span");
   clippings.setAttribute("aria-hidden", "true");
   clippings.style.display = "contents";
   let lastFont = "", lastColor = "", taped = 0;
   for (const word of text.split(/\s+/).filter(Boolean)) {
     const wordBox = element("span", "", "nb-word");
-    const chars = [...word];
+    const chars = [...(press ? word.toUpperCase() : word)];
     for (let i = 0; i < chars.length;) {
-      const size = rand() < .16 && i + 1 < chars.length ? 2 : 1;
+      const size = !press && rand() < .16 && i + 1 < chars.length ? 2 : 1;
       const chunk = chars.slice(i, i + size).join("");
       i += size;
-      let font = pick(rand, FONTS), color = pick(rand, COLORS);
-      if (font === lastFont) font = pick(rand, FONTS);
-      if (color === lastColor) color = pick(rand, COLORS);
+      let font = pick(rand, fonts), color = pick(rand, colors);
+      if (font === lastFont) font = pick(rand, fonts);
+      while (color === lastColor) color = pick(rand, colors);
       lastFont = font; lastColor = color;
       const clip = element("span", chunk, `nb-clip ${font} ${color}`);
+      if (press) {
+        clip.style.padding = `${between(rand, .1, .16).toFixed(2)}em ${between(rand, .12, .2).toFixed(2)}em`;
+        clip.style.fontSize = `${between(rand, .94, 1.06).toFixed(2)}em`;
+        clip.style.transform = `translateY(${between(rand, -2, 2).toFixed(1)}px) rotate(${between(rand, -3.5, 3.5).toFixed(1)}deg)`;
+        clip.style.clipPath = tornEdge(rand);
+        wordBox.append(clip);
+        continue;
+      }
       const padX = between(rand, .08, .2).toFixed(2), padT = between(rand, .06, .16).toFixed(2), padB = between(rand, .06, .18).toFixed(2);
       clip.style.padding = `${padT}em ${padX}em ${padB}em`;
       clip.style.fontSize = `${between(rand, .86, 1.16).toFixed(2)}em`;
@@ -177,14 +190,15 @@ function marketCard(note, marks) {
 /* ---------- the story ---------- */
 function createStory(note, marks) {
   const story = element("article", "", "story");
-  story.id = note.id;
   const label = [note.kind, note.ticker, formatDate.format(new Date(note.date))].filter(Boolean);
   const title = element("h3");
-  const permalink = element("a", note.title);
+  const permalink = element("a");
   permalink.href = "#" + note.id;
-  title.className = "nb-block nb-headline";
+  ransom(permalink, note.title, true);
+  title.className = "nb-ransom nb-press nb-headline";
   title.append(permalink);
-  story.append(element("p", label.join(" · "), "eyebrow"), title);
+  const banner = element("header", "", "issue-banner");
+  banner.append(element("p", label.join(" · "), "eyebrow"), title);
   const body = element("div", "", "blurb");
   const paragraphs = note.body ?? [note.facts, note.read, note.watch];
   const reactions = new Map((note.reactions ?? []).map(({ paragraph, mood }) => [paragraph, mood]));
@@ -228,7 +242,8 @@ function createStory(note, marks) {
   }
   story.append(sources);
   const layout = element("div", "", "issue");
-  layout.append(story, marketCard(note, marks));
+  layout.id = note.id;
+  layout.append(banner, story, marketCard(note, marks));
   return layout;
 }
 
@@ -317,7 +332,8 @@ function render(data) {
   if (!current && location.hash) document.getElementById(selection.id)?.scrollIntoView();
   current = data;
   status.textContent = "Issue date · " + formatDate.format(new Date(selection.date));
-  requestAnimationFrame(() => { placeDoodles(); annotateAll(marks); });
+  const settle = document.fonts?.ready ?? Promise.resolve();
+  settle.then(() => requestAnimationFrame(() => { placeDoodles(); annotateAll(marks); }));
 }
 
 async function refresh() {

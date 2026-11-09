@@ -130,6 +130,14 @@ h4.nb-ransom { font-size: 1.45rem; margin-bottom: 10px; }
 .nb-c-gold { background: #ffd23f; color: #111; }
 .nb-c-pink { background: #ff4fa0; color: #111; }
 .nb-c-red { background: #d7261e; color: #fff; }
+.nb-c-cream { background: #efe5cf; color: #141414; }
+.nb-press .nb-c-news { background: #ddd5c3; }
+.nb-press .nb-c-red { background: #c3271f; color: #f5ecd8; }
+.nb-press .nb-c-black { background: #161515; color: #f5ecd8; }
+.nb-press .nb-clip { min-width: .82em; text-align: center; box-shadow: 1px 2px 0 rgba(0,0,0,.25), 3px 5px 8px rgba(0,0,0,.2); }
+.nb-press .nb-word { gap: .04em; }
+h3.nb-press.nb-headline { font-size: clamp(2rem, 4.6vw, 3.6rem); max-width: none; gap: .28em .5em; margin: 10px 0 8px; }
+.issue-banner { grid-column: 1 / -1; scroll-margin-top: 12px; }
 .nb-c-dots { background: radial-gradient(circle, rgba(0,0,0,.28) 1.1px, transparent 1.4px) 0 0 / 5px 5px, #f3efe4; color: #111; }
 
 /* Readable block-letter subheads (only the page title uses cut-out letters) */
@@ -207,7 +215,7 @@ footer { padding: 6px 0 28px; color: #cfc8ba; font: .85rem var(--type); }
 
 @media (max-width: 860px) {
   .issue { grid-template-columns: 1fr; }
-  .market { grid-row: 1; max-width: 520px; }
+  .market { grid-row: 2; max-width: 520px; }
 }
 @media (max-width: 700px) {
   :root { --margin-x: 44px; }
@@ -223,6 +231,7 @@ footer { padding: 6px 0 28px; color: #cfc8ba; font: .85rem var(--type); }
   .nb-tagline { font-size: 1.1rem; }
   h1.nb-ransom { font-size: 1.65rem; }
   h3.nb-headline { font-size: 1.75rem; }
+  h3.nb-press.nb-headline { font-size: 1.7rem; }
   .nb-sticky { font-size: 1.3rem; }
 }
 @media (max-width: 380px) {
