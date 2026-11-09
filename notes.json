@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T16:50:47+00:00",
+  "updatedAt": "2026-11-09T16:53:29+00:00",
   "notes": [
     {
       "id": "2026-11-09-nvda-board-review",
@@ -7,14 +7,14 @@
       "kind": "Company news",
       "ticker": "NVDA",
       "symbol": "NASDAQ:NVDA",
-      "title": "Nvidia fell while the market bounced",
+      "title": "The market bounced. Nvidia missed the memo.",
       "body": [
-        "On Friday, Nvidia rose 2.78% as chip stocks recovered from Thursday’s rout. By Monday morning the broader market was bouncing again and Nvidia was falling. Same stock, different headline. On Sunday, Nvidia’s board announced an independent investigation after reports that its CEO, Jensen Huang, had been targeted by a foreign intelligence effort. The board said it had no reason to believe national security or company secrets had been compromised. Independent directors and outside counsel will oversee the review. That’s what the company has put on the record so far.",
-        "Start with last week, because the timing matters. Stocks initially rallied after the midterms. On Thursday, the Nasdaq Composite fell 5.5% and the SOXX semiconductor ETF fell 12.15%. Reporting pointed to concern that Democratic wins could make it harder or slower to build data centers. That’s a specific risk to the AI trade. If a project can’t get permitted or powered on schedule, the equipment it was meant to house may ship later. That was an investor concern, and it still takes an actual change in permits or orders to show up in the business.",
-        "Nvidia closed last week down 8.80%, compared with a 13.13% drop for SOXX over the same five sessions. By that measure Nvidia held up better than its sector. Monday was a different comparison. AP reported a rising broader market and weakness in Nvidia after the board’s announcement. The split makes the company news a more plausible part of Monday’s move than it would be on a day when every chip stock was falling. It still doesn’t tell me how much of the move to put on the investigation.",
-        "Here’s the business question. Before the weekend, I was watching whether the people buying AI systems could get the financing and power to install them. I’m still watching that. Now there’s a second question about whether the inquiry changes anything customers, employees, or regulators actually do. A board announcement doesn’t answer either question. I’d watch for a change in customer delivery schedules or company guidance before I start treating a governance headline as a shipment forecast.",
-        "There’s a number I care about more than the size of the first red candle. It’s the gap between growth on the income statement and cash coming in the door. An order booked for a cluster is one thing. A customer ready to take delivery and pay is another. If the market is right about slower construction, I’d expect to see it first in delivery schedules, working capital or the way management describes the next quarter.",
-        "Nvidia reports on Nov. 17. I’ll read the board’s next update for the scope of the inquiry and the earnings release for data-center demand and delivery timing. The quickest way to lose the plot here is to let one stock chart answer both questions. The board has its work. I’ll be in the footnotes."
+        "The market bounced Monday. Nvidia went the other way. So what happened over the weekend? Nvidia’s board opened an independent investigation after reports that someone had targeted CEO Jensen Huang to gather information for a foreign government. The board said it had no reason to believe company secrets or national security were compromised. The review is still open. That’s the part we actually know.",
+        "Now rewind to last week. Stocks rallied right after the midterms. The next day, the Nasdaq fell 5.5% and SOXX, a fund that tracks chip stocks, fell 12.15%. What had people spooked? After Democrats won, investors worried it might get harder to build new data centers. Think permits, power, and local pushback. A customer can order all the GPUs it wants. Somebody still has to find a place to plug them in. A delayed build can mean a later shipment.",
+        "Here’s where Nvidia gets interesting. It finished last week down 8.8%. Ugly, sure. But the chip fund lost 13.1% over those same five sessions. Nvidia was actually holding up better than the group. On Monday morning the wider market was up and Nvidia was down. A chip selloff can explain why a lot of names fell together last week. It doesn’t get me very far when I’m trying to explain why Nvidia went the other way on Monday. That’s where I’d pay attention to the board news.",
+        "So did customers cancel anything? I haven’t seen evidence of that. The board’s statement tells us it’s looking into what happened. It doesn’t say a shipment slipped. The election story has the same problem if you push it too far. Worrying about a permit is one thing. A project actually getting delayed is another. Show me the schedule. If the rest of the chip group keeps bouncing while Nvidia lags, I’ll keep a closer eye on Nvidia. If they all start sliding together again, I’ll zoom back out to the broader market.",
+        "This is where the boring stuff earns its keep. If customers push back deliveries, I want to know whether Nvidia is sitting on more inventory. If sales keep climbing but customers take longer to pay, I want to see what happened to cash. Those are clues I can check. A rough morning for the stock can tell me investors are nervous. It can’t tell me what’s sitting in a warehouse.",
+        "Nvidia reports Nov. 17. I’m watching two things. Does the board find anything that changes how the company operates? And does management say customers are moving delivery dates? Until there’s an answer, I’m keeping last week’s chip selloff and Monday’s Nvidia drop on separate tabs. Yes, I have too many tabs. These two have a job."
       ],
       "performance": {
         "window": "Five sessions through Nov. 6, 2026 · close to close",
@@ -22,7 +22,7 @@
         "benchmark": "SOXX",
         "benchmarkPct": -13.13
       },
-      "flowRemark": "Friday’s options activity predates the board statement. I’m watching whether demand for protection persists after the news.",
+      "flowRemark": "Options flow is just what traded. Friday’s trades came before the news. I’m watching whether people keep paying for downside protection after the first reaction.",
       "sources": [
         {
           "label": "Nvidia · board statement",
