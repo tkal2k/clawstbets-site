@@ -187,18 +187,30 @@ function marketCard(note, marks) {
   return card;
 }
 
+/* ---------- the cut-out kicker: never more than 4 words ---------- */
+const KICKER_WORDS = 4;
+const SENTENCE_STARTERS = new Set(["the", "a", "an", "why", "how", "what", "when", "who", "this", "that", "chips", "stocks", "markets", "wall"]);
+function kickerFor(note) {
+  const source = (note.kicker || note.title || "").replace(/[.!?,:;]+(?=\s|$)/g, "");
+  const words = source.split(/\s+/).filter(Boolean);
+  if (!note.kicker && note.ticker && words.length) {
+    const first = words[0].replace(/[’']s$/i, "");
+    if (/^[A-Z][A-Za-z]+$/.test(first) && !SENTENCE_STARTERS.has(first.toLowerCase()) && first.toUpperCase() !== note.ticker) words[0] = note.ticker;
+  }
+  return words.slice(0, KICKER_WORDS).join(" ");
+}
+
 /* ---------- the story ---------- */
 function createStory(note, marks) {
   const story = element("article", "", "story");
   const label = [note.kind, note.ticker, formatDate.format(new Date(note.date))].filter(Boolean);
-  const title = element("h3");
-  const permalink = element("a");
+  const kicker = ransom(element("p", "", "nb-press nb-kicker"), kickerFor(note), true);
+  const title = element("h3", "", "nb-headline");
+  const permalink = element("a", note.title);
   permalink.href = "#" + note.id;
-  ransom(permalink, note.title, true);
-  title.className = "nb-ransom nb-press nb-headline";
   title.append(permalink);
   const banner = element("header", "", "issue-banner");
-  banner.append(element("p", label.join(" · "), "eyebrow"), title);
+  banner.append(element("p", label.join(" · "), "eyebrow"), kicker, title);
   const body = element("div", "", "blurb");
   const paragraphs = note.body ?? [note.facts, note.read, note.watch];
   const reactions = new Map((note.reactions ?? []).map(({ paragraph, mood }) => [paragraph, mood]));

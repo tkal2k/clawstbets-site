@@ -77,8 +77,8 @@ a:focus-visible { outline: 2px dashed var(--red-pen); outline-offset: 3px; }
 .nb-doodle-strip .nb-doodle { position: static; }
 
 /* Tagline */
-.nb-tagline { font: 1.6rem/1.1 "Rock Salt", var(--hand); color: var(--blue-pen); transform: rotate(-2deg); margin: 10px 0 14px; letter-spacing: .01em; }
-.nb-tagline-foot { font-size: 1rem; margin: 26px 0 0; text-align: right; transform: rotate(-1deg); color: var(--muted); }
+.nb-tagline { font: 700 2.1rem/1.1 "Caveat", "Gochi Hand", cursive; color: var(--blue-pen); transform: rotate(-2deg); margin: 10px 0 14px; letter-spacing: .01em; }
+.nb-tagline-foot { font-size: 1.35rem; margin: 26px 0 0; text-align: right; transform: rotate(-1deg); color: var(--muted); }
 
 /* Hero */
 .hero { padding: 6px 0 22px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(150px, 250px); gap: 30px; align-items: center; }
@@ -136,7 +136,7 @@ h4.nb-ransom { font-size: 1.45rem; margin-bottom: 10px; }
 .nb-press .nb-c-black { background: #161515; color: #f5ecd8; }
 .nb-press .nb-clip { min-width: .82em; text-align: center; box-shadow: 1px 2px 0 rgba(0,0,0,.25), 3px 5px 8px rgba(0,0,0,.2); }
 .nb-press .nb-word { gap: .04em; }
-h3.nb-press.nb-headline { font-size: clamp(2rem, 4.6vw, 3.6rem); max-width: none; gap: .28em .5em; margin: 10px 0 8px; }
+.nb-kicker { font-size: clamp(1.6rem, 3vw, 2.3rem); gap: .2em .42em; margin: 10px 0 14px; }
 .issue-banner { grid-column: 1 / -1; scroll-margin-top: 12px; }
 .nb-c-dots { background: radial-gradient(circle, rgba(0,0,0,.28) 1.1px, transparent 1.4px) 0 0 / 5px 5px, #f3efe4; color: #111; }
 
@@ -146,7 +146,9 @@ h3.nb-press.nb-headline { font-size: clamp(2rem, 4.6vw, 3.6rem); max-width: none
 .nb-block a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: var(--red-pen); }
 h2.nb-block { font-size: clamp(1.6rem, 3vw, 2.1rem); }
 h3.nb-block { font-size: 1.45rem; margin-bottom: 12px; }
-h3.nb-headline { font-size: clamp(1.9rem, 3.6vw, 2.75rem); line-height: 1.04; margin: 4px 0 18px; max-width: 22ch; }
+h3.nb-headline { font: 800 clamp(1.35rem, 2.4vw, 1.8rem)/1.2 var(--sans); letter-spacing: -.015em; margin: 0 0 22px; max-width: 40ch; }
+h3.nb-headline a { color: var(--ink); text-decoration: none; }
+h3.nb-headline a:hover { text-decoration: underline; text-decoration-color: var(--red-pen); text-decoration-thickness: 3px; }
 h4.nb-block { font-size: 1.2rem; margin-bottom: 8px; color: var(--red-pen); }
 h4.nb-marker { font-family: "Permanent Marker", cursive; text-transform: none; font-size: 1.6rem; color: #1b1a2a; letter-spacing: 0; }
 
@@ -160,8 +162,7 @@ h4.nb-marker { font-family: "Permanent Marker", cursive; text-transform: none; f
 .issue { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 36px; align-items: start; }
 .story { scroll-margin-top: 12px; }
 .story > .eyebrow { margin-bottom: 4px; }
-.blurb { max-width: 66ch; font-family: "Kalam", var(--sans); font-size: 1.12rem; color: #1c2033; }
-.flow p { font-family: "Kalam", var(--sans); }
+.blurb { max-width: 66ch; font-family: var(--sans); color: #1c2033; }
 .blurb > * + * { margin-top: var(--line); }
 .reaction-beat { display: flow-root; }
 .reaction-stamp { float: right; width: clamp(86px, 20vw, 116px); margin: 0 0 6px 14px; }
@@ -228,13 +229,23 @@ footer { padding: 6px 0 28px; color: #cfc8ba; font: .85rem var(--type); }
   .nb-polaroid { padding: 6px 6px 22px; }
   .nb-polaroid .portrait { height: 140px; }
   .nb-tape { width: 46px; height: 15px; }
-  .nb-tagline { font-size: 1.1rem; }
+  .nb-tagline { font-size: 1.6rem; }
   h1.nb-ransom { font-size: 1.65rem; }
-  h3.nb-headline { font-size: 1.75rem; }
-  h3.nb-press.nb-headline { font-size: 1.7rem; }
+  h3.nb-headline { font-size: 1.25rem; }
+  .nb-kicker { font-size: 1.22rem; gap: .2em .3em; }
   .nb-sticky { font-size: 1.3rem; }
 }
 @media (max-width: 380px) {
   .hero { grid-template-columns: minmax(0, 1fr) 86px; }
   .nb-polaroid .portrait { height: 110px; }
+}
+
+/* Credits */
+.nb-credits { margin-top: 10px; text-align: right; font: .74rem/1.5 var(--type); color: var(--muted); }
+.nb-credits a { color: var(--muted); }
+
+/* Reduced motion: no draw-in or decorative motion; final states stay */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; scroll-behavior: auto !important; }
+  .rough-annotation path { stroke-dashoffset: 0 !important; }
 }
