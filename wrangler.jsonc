@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "clawstbets",
+  "compatibility_date": "2026-05-28",
+  // Static site served as assets. The Worker only runs for the two dynamic routes.
+  "main": "src/worker.js",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/.netlify/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "clawstbets-funnel",
+      "database_id": "8b791382-1153-408e-8e71-8be0b464bf09"
+    }
+  ],
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true }
+}

@@ -325,7 +325,7 @@ function render(data) {
 }
 
 async function refresh() {
-  const sources = current ? ["/.netlify/functions/deedee-notes"] : ["/.netlify/functions/deedee-notes", "./notes.json"];
+  const sources = current ? ["/api/deedee-notes"] : ["/api/deedee-notes", "./notes.json"];
   const responses = await Promise.allSettled(sources.map(readJson));
   const available = responses.flatMap(result => result.status === "fulfilled" ? [result.value] : []);
   const latest = available.sort((a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt))[0];

@@ -4,3 +4,9 @@
 
 [functions]
   directory = "netlify/functions"
+
+# Keep the desk working on Netlify until DNS moves to the Cloudflare Worker.
+[[redirects]]
+  from = "/api/deedee-notes"
+  to = "/.netlify/functions/deedee-notes"
+  status = 200
