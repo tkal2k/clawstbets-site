@@ -46,7 +46,13 @@ h3 { margin: .38rem 0 .55rem; font-size: clamp(1.48rem, 3vw, 2.1rem); line-heigh
 .story h3 a { color: inherit; text-decoration: none; }
 .story h3 a:hover { text-decoration: underline; }
 .blurb { max-width: 68ch; }
-.blurb p + p { margin-top: 12px; }
+.blurb > * + * { margin-top: 14px; }
+.reaction-beat { display: grid; grid-template-columns: minmax(0, 1fr) 67px; gap: 10px; align-items: end; }
+.reaction-stamp { margin: 0 0 4px; padding: 2px 2px 4px; text-align: center; color: var(--gold); background: #211922; border: 1px solid currentColor; border-radius: 9px; transform: rotate(3deg); }
+.reaction-stamp img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 6px; }
+.reaction-stamp figcaption { font: 750 .61rem/1.35 var(--mono); letter-spacing: .02em; text-transform: uppercase; }
+.reaction-stamp.sad { color: #c4c5ff; }
+.reaction-stamp.laugh { color: var(--pink); }
 .market h3 { font-size: 1.4rem; }
 .market-context { color: var(--muted); font-size: .83rem; }
 .return-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0 14px; }

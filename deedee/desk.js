@@ -3,6 +3,7 @@ const status = document.querySelector("#notes-status");
 const formatDate = new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" });
 const formatReturn = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: "exceptZero" });
 const quoteSymbol = /^[A-Z0-9_]+:[A-Z0-9._-]+$/;
+const moods = { "side-eye": "Side-eye", laugh: "Laugh", sad: "Sad", gasp: "Gasp", noted: "Noted" };
 let current;
 
 function element(tag, value, className) {
@@ -68,7 +69,26 @@ function createStory(note) {
   story.append(element("p", label.join(" · "), "eyebrow"), title);
   const body = element("div", "", "blurb");
   const paragraphs = note.body ?? [note.facts, note.read, note.watch];
-  for (const paragraph of paragraphs) body.append(element("p", paragraph));
+  const reactions = new Map((note.reactions ?? []).map(({ paragraph, mood }) => [paragraph, mood]));
+  paragraphs.forEach((paragraph, index) => {
+    const mood = reactions.get(index);
+    const copy = element("p", paragraph);
+    if (!Object.hasOwn(moods, mood)) {
+      body.append(copy);
+      return;
+    }
+    const beat = element("div", "", "reaction-beat");
+    const stamp = element("figure", "", "reaction-stamp " + mood);
+    const face = element("img");
+    face.src = "stamps/" + mood + ".webp";
+    face.alt = "";
+    face.width = 64;
+    face.height = 64;
+    face.loading = "lazy";
+    stamp.append(face, element("figcaption", moods[mood]));
+    beat.append(copy, stamp);
+    body.append(beat);
+  });
   const sources = element("div", "", "sources");
   for (const source of note.sources) {
     const url = new URL(source.url);
@@ -100,17 +120,12 @@ function render(data) {
 }
 
 async function refresh() {
-  try {
-    const data = await readJson("/.netlify/functions/deedee-notes");
-    if (!current || Date.parse(data.updatedAt) > Date.parse(current.updatedAt)) render(data);
-  } catch {
-    if (current) return;
-    try {
-      render(await readJson("./notes.json"));
-    } catch {
-      status.textContent = "The daily issue is temporarily unavailable.";
-    }
-  }
+  const sources = current ? ["/.netlify/functions/deedee-notes"] : ["/.netlify/functions/deedee-notes", "./notes.json"];
+  const responses = await Promise.allSettled(sources.map(readJson));
+  const available = responses.flatMap(result => result.status === "fulfilled" ? [result.value] : []);
+  const latest = available.sort((a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt))[0];
+  if (latest && (!current || Date.parse(latest.updatedAt) > Date.parse(current.updatedAt))) render(latest);
+  if (!current) status.textContent = "The daily issue is temporarily unavailable.";
 }
 
 window.addEventListener("hashchange", () => {
