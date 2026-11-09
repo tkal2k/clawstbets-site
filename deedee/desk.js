@@ -18,6 +18,22 @@ function returns(label, value) {
   return box;
 }
 
+function liveQuote(symbol) {
+  const widget = element("div", "", "tradingview-widget-container");
+  const attribution = element("div", "", "tradingview-widget-copyright");
+  const link = element("a", "Market data by TradingView");
+  link.href = "https://www.tradingview.com/symbols/" + symbol.replace(":", "-") + "/";
+  link.target = "_blank";
+  link.rel = "noopener nofollow";
+  attribution.append(link);
+  const script = document.createElement("script");
+  script.src = "https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js";
+  script.async = true;
+  script.textContent = JSON.stringify({ symbol, width: "100%", colorTheme: "dark", isTransparent: false, locale: "en" });
+  widget.append(element("div", "", "tradingview-widget-container__widget"), attribution, script);
+  return widget;
+}
+
 function marketCard(note) {
   const card = element("aside", "", "panel market");
   card.setAttribute("aria-label", note.ticker + " stock performance");
@@ -30,22 +46,8 @@ function marketCard(note) {
     card.append(row);
   }
   if (quoteSymbol.test(note.symbol ?? "")) {
-    const widget = element("div", "", "tradingview-widget-container");
-    const attribution = element("div", "", "tradingview-widget-copyright");
-    const link = element("a", "Market data by TradingView");
-    link.href = "https://www.tradingview.com/symbols/" + note.symbol.replace(":", "-") + "/";
-    link.target = "_blank";
-    link.rel = "noopener nofollow";
-    attribution.append(link);
-    const script = document.createElement("script");
-    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
-    script.async = true;
-    script.textContent = JSON.stringify({
-      symbols: [{ proName: note.symbol, title: note.ticker }, { proName: "NASDAQ:SOXX", title: "Chip benchmark" }],
-      colorTheme: "dark", locale: "en", isTransparent: true, showSymbolLogo: true, displayMode: "adaptive",
-    });
-    widget.append(element("div", "", "tradingview-widget-container__widget"), attribution, script);
-    card.append(element("p", "Latest quotes · exchange delays may apply", "market-context"), widget);
+    card.append(element("p", "Latest quotes · exchange delays may apply", "market-context"));
+    for (const symbol of [note.symbol, "NASDAQ:SOXX"]) card.append(liveQuote(symbol));
   }
   if (note.flowRemark) {
     const flow = element("div", "", "flow");

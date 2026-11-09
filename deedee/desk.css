@@ -35,6 +35,7 @@ h3 { margin: .38rem 0 .55rem; font-size: clamp(1.48rem, 3vw, 2.1rem); line-heigh
 .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: clamp(13px, 2.5vw, 24px); }
 .section-heading { display: flex; flex-wrap: wrap; gap: 3px 12px; align-items: baseline; justify-content: space-between; margin-bottom: 9px; }
 .section-heading p { font-size: .82rem; }
+.tradingview-widget-container { margin-top: 5px; }
 .tradingview-widget-container__widget { min-height: 45px; }
 .tradingview-widget-copyright { font-size: .75rem; }
 .notes-heading { margin-top: 25px; }
