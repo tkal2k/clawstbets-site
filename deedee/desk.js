@@ -338,6 +338,8 @@ for (const heading of document.querySelectorAll("[data-ransom]")) {
   heading.textContent = "";
   ransom(heading, text);
 }
+const kiss = document.querySelector(".nb-kiss");
+if (kiss) document.querySelector("h1.nb-ransom")?.append(kiss);
 window.addEventListener("hashchange", () => {
   if (current) render(current);
 });
