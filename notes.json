@@ -1,75 +1,52 @@
 {
-  "updatedAt": "2026-11-09T16:40:00Z",
+  "updatedAt": "2026-11-09T16:50:47+00:00",
   "notes": [
     {
-      "id": "2026-11-09-ai-buildout",
+      "id": "2026-11-09-nvda-board-review",
       "date": "2026-11-09",
-      "kind": "Market backdrop",
-      "ticker": "SOXX",
-      "title": "The chip selloff had a permit problem",
-      "facts": "Stocks initially rallied after the U.S. midterms. On Nov. 5, the Nasdaq Composite closed down 5.5% and the SOXX chip ETF fell 12.15%. AP and Reuters reported that investors were worried Democratic wins could bring more scrutiny and restrictions on data-center construction. Stocks rallied again Friday and were up Monday morning.",
-      "read": "A chip order looks inevitable right up until someone asks where the power is coming from. The selloff fits a market rethinking how fast the buildout can happen. The rally the day after the vote and the rebound that followed are good reasons to keep the causal claim narrow.",
-      "watch": "Actual permitting votes, utility agreements and changes to customer delivery schedules. If the projects still get power and break ground on time, the market may have priced in a bigger delay than customers are seeing.",
+      "kind": "Company news",
+      "ticker": "NVDA",
+      "symbol": "NASDAQ:NVDA",
+      "title": "Nvidia fell while the market bounced",
+      "body": [
+        "On Friday, Nvidia rose 2.78% as chip stocks recovered from Thursday’s rout. By Monday morning the broader market was bouncing again and Nvidia was falling. Same stock, different headline. On Sunday, Nvidia’s board announced an independent investigation after reports that its CEO, Jensen Huang, had been targeted by a foreign intelligence effort. The board said it had no reason to believe national security or company secrets had been compromised. Independent directors and outside counsel will oversee the review. That’s what the company has put on the record so far.",
+        "Start with last week, because the timing matters. Stocks initially rallied after the midterms. On Thursday, the Nasdaq Composite fell 5.5% and the SOXX semiconductor ETF fell 12.15%. Reporting pointed to concern that Democratic wins could make it harder or slower to build data centers. That’s a specific risk to the AI trade. If a project can’t get permitted or powered on schedule, the equipment it was meant to house may ship later. That was an investor concern, and it still takes an actual change in permits or orders to show up in the business.",
+        "Nvidia closed last week down 8.80%, compared with a 13.13% drop for SOXX over the same five sessions. By that measure Nvidia held up better than its sector. Monday was a different comparison. AP reported a rising broader market and weakness in Nvidia after the board’s announcement. The split makes the company news a more plausible part of Monday’s move than it would be on a day when every chip stock was falling. It still doesn’t tell me how much of the move to put on the investigation.",
+        "Here’s the business question. Before the weekend, I was watching whether the people buying AI systems could get the financing and power to install them. I’m still watching that. Now there’s a second question about whether the inquiry changes anything customers, employees, or regulators actually do. A board announcement doesn’t answer either question. I’d watch for a change in customer delivery schedules or company guidance before I start treating a governance headline as a shipment forecast.",
+        "There’s a number I care about more than the size of the first red candle. It’s the gap between growth on the income statement and cash coming in the door. An order booked for a cluster is one thing. A customer ready to take delivery and pay is another. If the market is right about slower construction, I’d expect to see it first in delivery schedules, working capital or the way management describes the next quarter.",
+        "Nvidia reports on Nov. 17. I’ll read the board’s next update for the scope of the inquiry and the earnings release for data-center demand and delivery timing. The quickest way to lose the plot here is to let one stock chart answer both questions. The board has its work. I’ll be in the footnotes."
+      ],
+      "performance": {
+        "window": "Five sessions through Nov. 6, 2026 · close to close",
+        "stockPct": -8.8,
+        "benchmark": "SOXX",
+        "benchmarkPct": -13.13
+      },
+      "flowRemark": "Friday’s options activity predates the board statement. I’m watching whether demand for protection persists after the news.",
       "sources": [
         {
-          "label": "AP · Nov. 5 closing recap",
-          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-afe254c608c3d1fe2ea792812ba9765a"
+          "label": "Nvidia · board statement",
+          "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors?embed=true"
         },
         {
-          "label": "Reuters · rebound and policy context",
-          "url": "https://www.fidelity.com/news/article/default/202611061739RTRSNEWSCOMBINED_L2N46N14O_1"
-        },
-        {
-          "label": "SOXX close history",
-          "url": "https://stockanalysis.com/etf/soxx/history/"
-        },
-        {
-          "label": "AP · Nov. 9 update",
+          "label": "AP · Monday market update",
           "url": "https://apnews.com/article/stocks-markets-ai-trump-oil-d938f8e6ff42b3706e1d36e6245ec56b"
-        }
-      ]
-    },
-    {
-      "id": "phison-q3-fy26",
-      "date": "2026-11-06",
-      "kind": "Earnings",
-      "ticker": "8299",
-      "title": "Phison sold more. The extra sale paid less.",
-      "facts": "Phison’s quarterly revenue rose 26.8% from the prior quarter in Taiwan dollars. Gross margin went from 65.3% to 59.7%.",
-      "read": "A bigger receipt feels great. Then you look at what it cost to fill the order. At Phison, the extra sales earned a thinner gross margin than they did the prior quarter.",
-      "watch": "My December-quarter check is gross margin at or below 57.8%. A higher result would make me revisit how quickly the more expensive inventory is passing through costs.",
-      "sources": [
-        {
-          "label": "Phison · Q3 results and earnings presentation",
-          "url": "https://www.phison.com/investor-relations/"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-05-sandisk-after-earnings",
-      "date": "2026-11-05",
-      "kind": "After earnings",
-      "ticker": "SNDK",
-      "title": "Sandisk sold off twice. The second drop had company.",
-      "facts": "Sandisk fell 13.47% on Oct. 30 after beating the top of its revenue guide by $231M. On Nov. 5 it fell another 22.26% in a broad chip selloff. SOXX was down 8.24% and 12.15% on those respective sessions.",
-      "read": "Two dates, two questions. At earnings I’m watching whether higher shipment volumes can carry growth as price contributes less. A week later, investors were also reassessing whether data-center projects would get built on schedule. Sandisk lagged its benchmark on both days. The gap alone can’t tell me how much blame to assign to either story.",
-      "watch": "Watch for customer delivery changes before the December-quarter print. At earnings, my checks are at least $6B in data-center sales and non-GAAP gross margin at or below 85.5%.",
-      "sources": [
-        {
-          "label": "Sandisk · Oct. 29 earnings release",
-          "url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-first-quarter-2027-financial-results"
         },
         {
-          "label": "SNDK close history",
-          "url": "https://stockanalysis.com/stocks/sndk/history/"
+          "label": "AP · Thursday selloff",
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-afe254c608c3d1fe2ea792812ba9765a"
         },
         {
-          "label": "SOXX close history",
+          "label": "NVDA price history",
+          "url": "https://stockanalysis.com/stocks/nvda/history/"
+        },
+        {
+          "label": "SOXX price history",
           "url": "https://stockanalysis.com/etf/soxx/history/"
         },
         {
-          "label": "AP · Nov. 5 selloff",
-          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-afe254c608c3d1fe2ea792812ba9765a"
+          "label": "Nvidia · Nov. 17 earnings date",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
         }
       ]
     }
