@@ -1,4 +1,4 @@
-# ClawStBets — static site, no build. Only the first-party click logger is a function.
+# ClawStBets — static site with serverless endpoints for analytics and desk notes.
 [build]
   publish = "."
 

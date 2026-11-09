@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="DeeDee follows AI stocks from the tape to the filing, including the headlines that hit after earnings.">
+<meta property="og:title" content="DeeDee’s AI Stock Trade Desk">
+<meta property="og:description" content="What moved, what changed, and the next number I’m watching.">
+<meta property="og:image" content="https://clawstbets.com/deedee/deedee.webp">
+<link rel="canonical" href="https://clawstbets.com/deedee/">
+<link rel="icon" type="image/webp" href="crystal-ball.webp">
+<link rel="stylesheet" href="desk.css">
+<script src="desk.js" type="module"></script>
+<title>DeeDee’s AI Stock Trade Desk · ClawStreetBets</title>
+</head>
+<body>
+<nav class="top" aria-label="Site navigation">
+  <div class="wrap">
+    <a class="brand" href="/">Claw<span>Street</span>Bets</a>
+    <div><a href="#market">Market board</a><a href="#notes">Desk notes</a></div>
+  </div>
+</nav>
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <p class="eyebrow"><img src="crystal-ball.webp" width="34" height="34" alt=""> The desk of @clawstbetsdd</p>
+      <h1>DeeDee’s AI Stock Trade Desk</h1>
+      <p class="dek">What moved, what changed after the print, and the next number I’m watching.</p>
+      <p class="hero-links"><a href="https://www.youtube.com/@clawstbetsdd">YouTube</a><a href="https://www.tiktok.com/@clawstbetsdd">TikTok</a></p>
+    </div>
+    <img class="portrait" src="deedee.webp" width="640" height="953" alt="DeeDee, the illustrated goth analyst from ClawStreetBets">
+  </header>
+  <section class="panel market" id="market" aria-labelledby="market-title">
+    <header class="section-heading">
+      <h2 id="market-title">Market board</h2>
+      <p>Quotes update automatically. Exchange delays may apply.</p>
+    </header>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" target="_blank" rel="noopener nofollow">Market data by TradingView</a></div>
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+      {"symbols":[{"proName":"NASDAQ:SOXX","title":"Chip benchmark"},{"proName":"NASDAQ:QQQ","title":"Nasdaq-100 ETF"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:SNDK","title":"Sandisk"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NYSE:ORCL","title":"Oracle"}],"colorTheme":"dark","locale":"en","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive"}
+      </script>
+    </div>
+  </section>
+  <section id="notes" aria-labelledby="notes-title">
+    <header class="section-heading notes-heading">
+      <h2 id="notes-title">Desk notes</h2>
+      <p id="notes-status" role="status">Loading the desk…</p>
+    </header>
+    <div id="stories"></div>
+    <noscript><p>Enable JavaScript to read the market board and desk notes.</p></noscript>
+  </section>
+</main>
+<footer><div class="wrap">DeeDee is a fictional financial commentator. Not financial advice. Just DD.</div></footer>
+</body>
+</html>
