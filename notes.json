@@ -1,0 +1,77 @@
+{
+  "updatedAt": "2026-11-09T16:40:00Z",
+  "notes": [
+    {
+      "id": "2026-11-09-ai-buildout",
+      "date": "2026-11-09",
+      "kind": "Market backdrop",
+      "ticker": "SOXX",
+      "title": "The chip selloff had a permit problem",
+      "facts": "Stocks initially rallied after the U.S. midterms. On Nov. 5, the Nasdaq Composite closed down 5.5% and the SOXX chip ETF fell 12.15%. AP and Reuters reported that investors were worried Democratic wins could bring more scrutiny and restrictions on data-center construction. Stocks rallied again Friday and were up Monday morning.",
+      "read": "A chip order looks inevitable right up until someone asks where the power is coming from. The selloff fits a market rethinking how fast the buildout can happen. The rally the day after the vote and the rebound that followed are good reasons to keep the causal claim narrow.",
+      "watch": "Actual permitting votes, utility agreements and changes to customer delivery schedules. If the projects still get power and break ground on time, the market may have priced in a bigger delay than customers are seeing.",
+      "sources": [
+        {
+          "label": "AP · Nov. 5 closing recap",
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-afe254c608c3d1fe2ea792812ba9765a"
+        },
+        {
+          "label": "Reuters · rebound and policy context",
+          "url": "https://www.fidelity.com/news/article/default/202611061739RTRSNEWSCOMBINED_L2N46N14O_1"
+        },
+        {
+          "label": "SOXX close history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        },
+        {
+          "label": "AP · Nov. 9 update",
+          "url": "https://apnews.com/article/stocks-markets-ai-trump-oil-d938f8e6ff42b3706e1d36e6245ec56b"
+        }
+      ]
+    },
+    {
+      "id": "phison-q3-fy26",
+      "date": "2026-11-06",
+      "kind": "Earnings",
+      "ticker": "8299",
+      "title": "Phison sold more. The extra sale paid less.",
+      "facts": "Phison’s quarterly revenue rose 26.8% from the prior quarter in Taiwan dollars. Gross margin went from 65.3% to 59.7%.",
+      "read": "A bigger receipt feels great. Then you look at what it cost to fill the order. At Phison, the extra sales earned a thinner gross margin than they did the prior quarter.",
+      "watch": "My December-quarter check is gross margin at or below 57.8%. A higher result would make me revisit how quickly the more expensive inventory is passing through costs.",
+      "sources": [
+        {
+          "label": "Phison · Q3 results and earnings presentation",
+          "url": "https://www.phison.com/investor-relations/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-sandisk-after-earnings",
+      "date": "2026-11-05",
+      "kind": "After earnings",
+      "ticker": "SNDK",
+      "title": "Sandisk sold off twice. The second drop had company.",
+      "facts": "Sandisk fell 13.47% on Oct. 30 after beating the top of its revenue guide by $231M. On Nov. 5 it fell another 22.26% in a broad chip selloff. SOXX was down 8.24% and 12.15% on those respective sessions.",
+      "read": "Two dates, two questions. At earnings I’m watching whether higher shipment volumes can carry growth as price contributes less. A week later, investors were also reassessing whether data-center projects would get built on schedule. Sandisk lagged its benchmark on both days. The gap alone can’t tell me how much blame to assign to either story.",
+      "watch": "Watch for customer delivery changes before the December-quarter print. At earnings, my checks are at least $6B in data-center sales and non-GAAP gross margin at or below 85.5%.",
+      "sources": [
+        {
+          "label": "Sandisk · Oct. 29 earnings release",
+          "url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-first-quarter-2027-financial-results"
+        },
+        {
+          "label": "SNDK close history",
+          "url": "https://stockanalysis.com/stocks/sndk/history/"
+        },
+        {
+          "label": "SOXX close history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        },
+        {
+          "label": "AP · Nov. 5 selloff",
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-afe254c608c3d1fe2ea792812ba9765a"
+        }
+      ]
+    }
+  ]
+}
