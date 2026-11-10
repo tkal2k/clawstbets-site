@@ -1,6 +1,67 @@
 {
-  "updatedAt": "2026-11-09T18:32:02+00:00",
+  "updatedAt": "2026-11-10T18:35:42+00:00",
   "notes": [
+    {
+      "id": "2026-11-10-amd-google-spare-key",
+      "date": "2026-11-10",
+      "kind": "Company news",
+      "ticker": "AMD",
+      "symbol": "NASDAQ:AMD",
+      "kicker": "AMD got the key",
+      "title": "Google built its own lock. Then it called AMD.",
+      "body": [
+        "Monday, the chip crowd limped back from a brutal week. AMD walked in with a fresh haircut and a story to tell. The stock closed up 13.26%, at $508.58. SOXX, a fund that holds a basket of chip stocks, rose 7.49%. Same session, nearly double the group’s bounce.",
+        "The story landed before the opening bell. AMD said its fifth-generation EPYC processors run the host side of Google Cloud’s new TPU 8tx. A TPU is Google’s own AI chip. The host CPU is the stage manager: it schedules the work, preps the data and keeps the TPUs fed. Google Cloud’s Mark Lohmeyer said the pairing brings hardware-enforced confidential computing to Cloud TPUs for the first time. In normal words, the data stays locked even while the machine is working on it. Model weights, prompts, the whole diary.",
+        "Plot twist. Google already makes its own server CPU. It’s called Axion, it’s Arm-based, and Google has run it alongside its recent TPUs so it leans less on outside chip vendors. So this is the homeowner who designed a custom lock, then handed the neighbor the spare key to the safe room. My read: when the job was security, Google decided the neighbor’s deadbolt was better. That’s a real compliment from a company that would love to need nobody.",
+        "Now rewind to Thursday. AMD fell 17.26% in one session, to $404.40, when the market dumped anything tied to AI data centers. Two sessions later, it closed 4.05% above Wednesday’s close. SOXX is still 2.25% under it. The rest of the class is icing its ankles. AMD is already running laps. Oppenheimer also upgraded the stock Monday, per Yahoo Finance’s recap, so the press release showed up with a hype man.",
+        "Here are the receipts I don’t have. Neither company put a dollar figure on this. No chip count. No price. No date for general availability, which is when any customer can actually rent the thing. This is a seating chart, not an invoice. A 13% day is a lot of applause for an announcement that hasn’t billed anyone yet.",
+        "I get the itch. The stock took a punch, got up swinging, and your thumb wants in like it’s a limited drop. The catch: buying after a 13% day means paying Monday’s price for news that may not show up in revenue for a while. And if Google’s next TPU quietly ships with Axion as the host, the chosen-one story gets a lot shorter. That’s what would prove the hype wrong.",
+        "One thing on my calendar: the day Google posts TPU 8tx pricing and a general-availability date. That’s when a press release turns into a bill. Until then, AMD has the spare key. I want to see who actually moves in."
+      ],
+      "performance": {
+        "window": "Nov. 9, 2026 · one session, close to close (Nov. 6 to Nov. 9)",
+        "stockPct": 13.26,
+        "benchmark": "SOXX",
+        "benchmarkPct": 7.49
+      },
+      "flowRemark": "The options crowd was busy on the same day as the news, and some of it looked like people buying short-dated protection after the pop. I read that as a seatbelt for the ride home, not a verdict. I’m watching whether that insurance gets rolled out or quietly dropped this week.",
+      "sources": [
+        {
+          "label": "AMD · EPYC hosts Google Cloud TPU 8tx",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1304/amd-epyc-expands-its-leadership-at-the-foundation-of-ai"
+        },
+        {
+          "label": "Seoul Economic Daily · Google picks AMD CPUs for TPU 8tx",
+          "url": "https://en.sedaily.com/world/2026/11/10/google-taps-amd-cpus-for-new-ai-chips-despite-in-house-push"
+        },
+        {
+          "label": "Yahoo Finance · Nov. 9 market recap",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-9-223002825.html"
+        },
+        {
+          "label": "AMD price history",
+          "url": "https://stockanalysis.com/stocks/amd/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 4,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 5,
+          "mood": "lip-lick"
+        }
+      ]
+    },
     {
       "id": "2026-11-09-nvda-board-review",
       "date": "2026-11-09",
