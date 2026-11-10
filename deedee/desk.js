@@ -207,7 +207,7 @@ function createStory(note, marks) {
   const kicker = ransom(element("p", "", "nb-press nb-kicker"), kickerFor(note), true);
   const title = element("h3", "", "nb-headline");
   const permalink = element("a", note.title);
-  permalink.href = "#" + note.id;
+  permalink.href = "/deedee/" + note.id;
   title.append(permalink);
   const banner = element("header", "", "issue-banner");
   banner.append(element("p", label.join(" · "), "eyebrow"), kicker, title);
@@ -338,7 +338,10 @@ async function readJson(url) {
 }
 
 function render(data) {
-  const selection = data.notes.find(note => location.hash === "#" + note.id) ?? data.notes[0];
+  const pathId = location.pathname.replace(/\/+$/, "").split("/").pop();
+  const selection = data.notes.find(note => location.hash === "#" + note.id)
+    ?? data.notes.find(note => note.id === pathId)
+    ?? data.notes[0];
   const marks = [];
   stories.replaceChildren(createStory(selection, marks));
   if (!current && location.hash) document.getElementById(selection.id)?.scrollIntoView();

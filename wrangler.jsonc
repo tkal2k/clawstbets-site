@@ -7,7 +7,7 @@
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*", "/.netlify/*"]
+    "run_worker_first": ["/api/*", "/.netlify/*", "/deedee/", "/deedee/20*", "/deedee/feed.xml", "/sitemap.xml", "/llms.txt"]
   },
   "d1_databases": [
     {

@@ -251,3 +251,11 @@ footer { padding: 6px 0 28px; color: #cfc8ba; font: .85rem var(--type); }
   *, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; scroll-behavior: auto !important; }
   .rough-annotation path { stroke-dashoffset: 0 !important; }
 }
+
+/* Server-rendered issue + archive (search engines, AI readers, no-JS). desk.js replaces #stories on load. */
+.ssr-story .blurb p { margin: 0 0 1em; }
+.ssr-perf, .ssr-flow, .ssr-disclaimer { margin: .75em 0; }
+.ssr-sources { margin: .25em 0 1em 1.25em; }
+.nb-archive { margin: 2.5rem auto 1rem; }
+.nb-archive ul { list-style: none; padding: 0; margin: .75rem 0 0; }
+.nb-archive li { margin: .35rem 0; }
