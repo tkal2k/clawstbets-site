@@ -21,6 +21,9 @@ const BIO_LINKS = [
   { slot: "dd_bio_rss", label: "RSS feed", sub: "for the reader nerds", href: "/deedee/feed.xml" },
   { slot: "dd_bio_discord", label: "Free Discord", sub: "ClawStreetBets sports leans", href: "https://discord.gg/pfuRrzvwhc" },
 ];
+const MOODS = new Set(["side-eye", "laugh", "sad", "gasp", "noted", "lip-lick", "naughty"]);
+const moodImage = note => `/deedee/assets/moods/${
+  [note?.mood, ...(note?.reactions ?? []).map(r => r?.mood)].find(m => MOODS.has(m)) ?? "default"}.webp`;
 const ALLOWED_ORIGINS = new Set([SITE, "https://www.clawstbets.com"]);
 
 // Static pages worth indexing, with the canonical (extensionless) path. Keep in sync with _headers.
@@ -132,6 +135,7 @@ async function deskPage(request, env, id) {
       if (id) el.append(`<meta property="article:published_time" content="${esc(note.date)}">`, { html: true });
       el.append(`<script type="application/ld+json">${ldJson(jsonld)}</script>`, { html: true });
     } })
+    .on("img.portrait", { element(el) { el.setAttribute("src", moodImage(note)); el.setAttribute("width", "640"); el.setAttribute("height", "800"); } })
     .on("#notes-status", { element(el) { el.setInnerContent(`Issue date · ${longDate(note.date)}`); } })
     .on("#stories", { element(el) { el.setInnerContent(issueHtml(note), { html: true }); } })
     .on("section#notes", { element(el) { el.after(archiveHtml(notes, note.id), { html: true }); } })
@@ -329,7 +333,10 @@ async function bioPage(request, env) {
 :root{color-scheme:light;--desk:#24211e;--paper:#fbfaf6;--ink:#1f1f22;--muted:#55525a;--blue:#23409a;--red:#c8251f;--gold:#ffd84a;--pink:#ff5fa8;--rule:rgba(84,132,204,.32)}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--desk);color:var(--ink);font:16px/1.45 Inter,system-ui,sans-serif;padding:22px 16px 40px}
 main{max-width:460px;margin:0 auto;background:var(--paper);background-image:repeating-linear-gradient(180deg,transparent 0 27px,var(--rule) 27px 28px);border-radius:6px;padding:28px 20px 24px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
-header{text-align:center}header img{width:96px;height:96px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;background:#111}
+header{text-align:center}
+.pol{margin:4px auto 8px;width:200px;background:#f7f3ea;padding:10px 10px 0;transform:rotate(-3deg);box-shadow:0 10px 22px rgba(0,0,0,.3),0 1px 2px rgba(0,0,0,.25)}
+.pol img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.pol figcaption{font:700 1.35rem/2.3rem Caveat,cursive;color:var(--blue)}
 h1{font:700 2.3rem/1 Caveat,cursive;margin:10px 0 2px}.h{font:.95rem "Special Elite",monospace;color:var(--muted);margin:0}.dek{margin:8px 0 18px;font-size:.95rem}
 a{color:inherit;text-decoration:none}
 .today{display:block;background:var(--gold);border:2px solid var(--ink);border-radius:8px;padding:14px 16px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-.6deg);margin-bottom:22px}
@@ -341,7 +348,7 @@ h2{font:700 1.5rem Caveat,cursive;margin:22px 0 6px;color:var(--blue)}ul{list-st
 li a{display:block;padding:8px 0;border-bottom:1px dashed #bbb;font-weight:600;font-size:.95rem}li .d{display:block;font:400 .78rem "Special Elite",monospace;color:var(--muted)}
 footer{margin-top:22px;text-align:center;font:.8rem "Special Elite",monospace;color:var(--muted)}a:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
 </style></head><body><main>
-<header><img src="/deedee/assets/dd-avatar.webp" width="96" height="96" alt="DeeDee"><h1>DeeDee</h1><p class="h">@clawstbetsdd</p>
+<header><figure class="pol"><img src="${moodImage(latest)}" width="640" height="800" alt="DeeDee, today’s mood"><figcaption>today’s mood</figcaption></figure><h1>DeeDee</h1><p class="h">@clawstbetsdd</p>
 <p class="dek">One AI or chip stock a day: what moved, why, and the next thing I’m watching.</p></header>
 ${hero}
 ${links}

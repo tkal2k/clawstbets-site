@@ -337,12 +337,20 @@ async function readJson(url) {
   return data;
 }
 
+// The polaroid shows the issue's mood: note.mood if set, else its first reaction stamp.
+function issueMood(note) {
+  const pick = [note.mood, ...(note.reactions ?? []).map(r => r.mood)].find(m => moods.has(m));
+  return pick ?? "default";
+}
+
 function render(data) {
   const pathId = location.pathname.replace(/\/+$/, "").split("/").pop();
   const selection = data.notes.find(note => location.hash === "#" + note.id)
     ?? data.notes.find(note => note.id === pathId)
     ?? data.notes[0];
   const marks = [];
+  const portrait = document.querySelector(".nb-polaroid .portrait");
+  if (portrait) portrait.src = "/deedee/assets/moods/" + issueMood(selection) + ".webp";
   stories.replaceChildren(createStory(selection, marks));
   if (!current && location.hash) document.getElementById(selection.id)?.scrollIntoView();
   current = data;
