@@ -1,6 +1,63 @@
 {
-  "updatedAt": "2026-11-10T18:35:42+00:00",
+  "updatedAt": "2026-11-11T18:39:03+00:00",
   "notes": [
+    {
+      "id": "2026-11-11-crwv-sold-out-tour",
+      "date": "2026-11-11",
+      "kind": "Earnings",
+      "ticker": "CRWV",
+      "symbol": "NASDAQ:CRWV",
+      "kicker": "CRWV sold out arenas",
+      "title": "CoreWeave sold out the tour. The fans are paying for the stage.",
+      "body": [
+        "Tuesday night, CoreWeave walked into earnings looking like it slept in its car. The stock had dropped 9.32% in five sessions, to $48.73. SOXX, a fund that holds a basket of chip stocks, fell 5.43% over the same stretch. CNBC put the one-month slide near 40%. Then the numbers hit, and Wednesday morning it opened near $56. The session isn’t over, so that’s a snapshot, not a receipt.",
+        "Quick intro for the new kids. CoreWeave rents out AI computers. It fills data centers with Nvidia chips and leases the horsepower to AI labs. Last quarter, revenue was $3.661 billion, up 168% from a year ago. It raised its full-year sales target to $13.0 to $13.3 billion. And the backlog, meaning signed contracts it hasn’t delivered yet, hit about $132.5 billion. That’s a tour sold out for years.",
+        "Plot twist. The sold-out tour still lost money. The business earned $207 million in operating income, which is profit before interest and taxes. Interest on its debt cost $846 million. That’s four times what the show cleared at the door. Net loss: $709 million. The band is packing arenas, and the loan on the tour bus is eating the merch table.",
+        "And the loans are getting pricey. CNBC reported that some CoreWeave bonds recently yielded more than 16%, and that the finance chief told analysts the company doesn’t plan to sell more of that kind of debt through 2027 at those rates. So who pays for the next stage? CEO Michael Intrator said it in the release: “approximately $9 billion in customer prepayments and deposits expected in the next three months alone.” Read that again. The fans are fronting the cash for the venue.",
+        "My read: that’s the real headline. When lenders want 16% and customers hand over deposits instead, the customers need the computers more than CoreWeave needs the bond market. That’s leverage, the good kind. It also means the same AI labs are now the tenant and the bank. If one of them slows down, both doors close at once.",
+        "I get the itch. A beaten-up stock jumps on a record quarter and your thumb starts doing math. The catch: capital spending, the money going into chips and buildings, is guided to $37 to $39 billion this year. That’s nearly three times the sales target. The company also told us interest runs $1.05 to $1.15 billion next quarter. Chasing the pop is a bet that the deposits keep showing up faster than the bills. If the prepayments come in light, that bet is wrong.",
+        "One thing on my calendar: the next quarterly report. I want to see that $9 billion actually land on the balance sheet. A sold-out tour is a promise. A deposit is a receipt. I’ll clap for the encore when the check clears."
+      ],
+      "performance": {
+        "window": "Five sessions through Nov. 10, 2026 · close to close (Nov. 3 to Nov. 10), before the earnings reaction",
+        "stockPct": -9.32,
+        "benchmark": "SOXX",
+        "benchmarkPct": -5.43
+      },
+      "flowRemark": "The options bets I can see were placed Tuesday, before the numbers dropped, and some of it looked like people buying short-dated protection going into the print. That insurance met a jump at the open. I’m watching whether the hedgers reload after the pop or quietly walk away.",
+      "sources": [
+        {
+          "label": "CoreWeave · Q3 2026 results release (SEC)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm"
+        },
+        {
+          "label": "CNBC · CoreWeave beats and lifts guidance",
+          "url": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html"
+        },
+        {
+          "label": "CRWV price history",
+          "url": "https://stockanalysis.com/stocks/crwv/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ],
+      "reactions": [
+        {
+          "paragraph": 1,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 2,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 5,
+          "mood": "lip-lick"
+        }
+      ]
+    },
     {
       "id": "2026-11-10-amd-google-spare-key",
       "date": "2026-11-10",
