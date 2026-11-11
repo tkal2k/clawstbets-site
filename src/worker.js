@@ -3,6 +3,7 @@
 //   /api/track          first-party funnel beacons -> D1 (no cookies, IPs or user agents)
 //   /deedee/, /deedee/<issue-id>   desk pages with the issue server-rendered for search and AI crawlers
 //   /sitemap.xml, /llms.txt, /deedee/feed.xml   generated from the live desk feed
+//   /dd                 DeeDee's link-in-bio page (latest issue first); /links and /bio redirect here
 // Everything else is a static asset and never runs this code (see run_worker_first).
 const SITE = "https://clawstbets.com";
 const NOTES_SOURCE = "https://raw.githubusercontent.com/tkal2k/clawstbets-site/refs/heads/deedee-data/notes.json";
@@ -11,6 +12,15 @@ const ISSUE_PATH = /^\/deedee\/(20\d\d-\d\d-\d\d-[a-z0-9]+(?:-[a-z0-9]+)*)(\/?)$
 const SHARE_IMAGE = `${SITE}/deedee/assets/dd-share.jpg`;
 const SLOTS = /^[a-z0-9_]{1,40}$/;
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
+const BIO_ALIASES = new Set(["/dd/", "/links", "/links/", "/bio", "/bio/", "/deedee/links"]);
+const BIO_LINKS = [
+  { slot: "dd_bio_archive", label: "Every past issue", sub: "the whole desk", href: "/deedee/" },
+  { slot: "dd_bio_tiktok", label: "TikTok", sub: "@clawstbetsdd", href: "https://www.tiktok.com/@clawstbetsdd" },
+  { slot: "dd_bio_youtube", label: "YouTube", sub: "@ClawStBets", href: "https://www.youtube.com/@ClawStBets" },
+  { slot: "dd_bio_x", label: "X", sub: "@clawstbets", href: "https://x.com/clawstbets" },
+  { slot: "dd_bio_rss", label: "RSS feed", sub: "for the reader nerds", href: "/deedee/feed.xml" },
+  { slot: "dd_bio_discord", label: "Free Discord", sub: "ClawStreetBets sports leans", href: "https://discord.gg/pfuRrzvwhc" },
+];
 const ALLOWED_ORIGINS = new Set([SITE, "https://www.clawstbets.com"]);
 
 // Static pages worth indexing, with the canonical (extensionless) path. Keep in sync with _headers.
@@ -20,6 +30,7 @@ const PAGES = [
   { path: "/the-claw-machine", title: "The Claw Machine: live model board", note: "Model probability vs the de-vigged market for each play, graded against the close." },
   { path: "/nfl-postmortem", title: "NFL post-mortem", note: "Weekly NFL pick'em and The Spread Sheet graded against the NFL.com experts." },
   { path: "/deedee/", title: "DeeDee's Daily DD", note: "Daily AI and chip-stock commentary from DeeDee, ClawStreetBets' fictional goth analyst: one stock, one story, the move against SOXX and the next thing to watch." },
+  { path: "/dd", title: "DeeDee's links", note: "Today's DeeDee's Daily DD issue, past issues, and DeeDee's TikTok, YouTube and X." },
   { path: "/faq", title: "FAQ", note: "How ClawStBets picks, grades and publishes." },
   { path: "/terms", title: "Terms of service", note: "" },
   { path: "/privacy", title: "Privacy policy", note: "" },
@@ -38,6 +49,8 @@ export default {
     if (pathname === "/llms.txt") return llms(env, url);
     if (pathname === "/deedee/feed.xml") return rss(env, url);
     if (pathname === "/deedee/") return deskPage(request, env, null);
+    if (pathname === "/dd") return bioPage(request, env);
+    if (BIO_ALIASES.has(pathname)) return Response.redirect(`${SITE}/dd${url.search}`, 301);
     const issue = ISSUE_PATH.exec(pathname);
     if (issue) {
       if (issue[2]) return Response.redirect(`${SITE}/deedee/${issue[1]}`, 301);
@@ -278,6 +291,71 @@ async function track(request, env) {
   await env.DB.prepare("INSERT INTO funnel (t, ev, slot, v, ref) VALUES (?1, ?2, ?3, ?4, ?5)")
     .bind(new Date().toISOString(), ev, slot, v, ref).run();
   return new Response(null, { status: 204, headers: noindex });
+}
+
+
+// ---------- link-in-bio ----------
+async function bioPage(request, env) {
+  const url = new URL(request.url);
+  const feed = await loadFeed(env, url);
+  const notes = (feed?.notes ?? []).filter(n => n?.id && n?.title);
+  const [latest, ...older] = notes;
+  const issueLink = n => `/deedee/${encodeURIComponent(n.id)}`;
+  const hero = latest
+    ? `<a class="today" href="${issueLink(latest)}" data-slot="dd_bio_today">
+        <span class="tag">Today’s DD · ${esc(longDate(latest.date))}</span>
+        <span class="kick">${esc(latest.kicker || latest.ticker || "")}</span>
+        <span class="ttl">${esc(latest.title)}</span>
+        <span class="go">Read it →</span></a>`
+    : `<a class="today" href="/deedee/" data-slot="dd_bio_today"><span class="ttl">Today’s issue</span><span class="go">Read it →</span></a>`;
+  const recent = older.slice(0, 3).map(n =>
+    `<li><a href="${issueLink(n)}" data-slot="dd_bio_recent"><span class="d">${esc(longDate(n.date))}${n.ticker ? " · " + esc(n.ticker) : ""}</span>${esc(n.title)}</a></li>`).join("");
+  const links = BIO_LINKS.map(l => {
+    const ext = l.href.startsWith("http");
+    return `<a class="lnk" href="${l.href}" data-slot="${l.slot}"${ext ? ' target="_blank" rel="noopener"' : ""}><b>${esc(l.label)}</b><span>${esc(l.sub)}</span></a>`;
+  }).join("");
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DeeDee · links · ClawStreetBets</title>
+<meta name="description" content="DeeDee’s links: today’s Daily DD on AI and chip stocks, past issues, TikTok, YouTube and X.">
+<link rel="canonical" href="${SITE}/dd">
+<meta property="og:title" content="DeeDee’s links"><meta property="og:description" content="Today’s Daily DD and everywhere else DeeDee posts.">
+<meta property="og:url" content="${SITE}/dd"><meta property="og:type" content="website"><meta property="og:image" content="${SHARE_IMAGE}">
+<meta name="twitter:card" content="summary"><meta name="theme-color" content="#24211e">
+<link rel="icon" type="image/svg+xml" href="/deedee/assets/kiss.svg"><link rel="apple-touch-icon" href="/deedee/assets/dd-share.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Special+Elite&family=Inter:wght@400;600;800&display=swap">
+<style>
+:root{color-scheme:light;--desk:#24211e;--paper:#fbfaf6;--ink:#1f1f22;--muted:#55525a;--blue:#23409a;--red:#c8251f;--gold:#ffd84a;--pink:#ff5fa8;--rule:rgba(84,132,204,.32)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--desk);color:var(--ink);font:16px/1.45 Inter,system-ui,sans-serif;padding:22px 16px 40px}
+main{max-width:460px;margin:0 auto;background:var(--paper);background-image:repeating-linear-gradient(180deg,transparent 0 27px,var(--rule) 27px 28px);border-radius:6px;padding:28px 20px 24px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+header{text-align:center}header img{width:96px;height:96px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;background:#111}
+h1{font:700 2.3rem/1 Caveat,cursive;margin:10px 0 2px}.h{font:.95rem "Special Elite",monospace;color:var(--muted);margin:0}.dek{margin:8px 0 18px;font-size:.95rem}
+a{color:inherit;text-decoration:none}
+.today{display:block;background:var(--gold);border:2px solid var(--ink);border-radius:8px;padding:14px 16px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-.6deg);margin-bottom:22px}
+.today span{display:block}.tag{font:.8rem "Special Elite",monospace;text-transform:uppercase;letter-spacing:.04em}.kick{font-weight:800;color:var(--red);margin-top:6px;font-size:.9rem}
+.ttl{font-weight:800;font-size:1.15rem;line-height:1.25;margin-top:2px}.go{margin-top:8px;font:700 1.3rem Caveat,cursive;color:var(--blue)}
+.lnk{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:12px 14px;margin-bottom:10px;box-shadow:3px 3px 0 var(--ink)}
+.lnk span{color:var(--muted);font-size:.85rem;text-align:right}.lnk:hover,.today:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--pink)}
+h2{font:700 1.5rem Caveat,cursive;margin:22px 0 6px;color:var(--blue)}ul{list-style:none;margin:0;padding:0}
+li a{display:block;padding:8px 0;border-bottom:1px dashed #bbb;font-weight:600;font-size:.95rem}li .d{display:block;font:400 .78rem "Special Elite",monospace;color:var(--muted)}
+footer{margin-top:22px;text-align:center;font:.8rem "Special Elite",monospace;color:var(--muted)}a:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
+</style></head><body><main>
+<header><img src="/deedee/assets/dd-avatar.webp" width="96" height="96" alt="DeeDee"><h1>DeeDee</h1><p class="h">@clawstbetsdd</p>
+<p class="dek">One AI or chip stock a day: what moved, why, and the next thing I’m watching.</p></header>
+${hero}
+${links}
+${recent ? `<h2>Last few issues</h2><ul>${recent}</ul>` : ""}
+<footer>Not financial advice, just dd. · <a href="/">ClawStreetBets</a></footer>
+</main>
+<script>
+(function(){function b(ev,slot){try{var d=JSON.stringify({ev:ev,slot:slot,ref:(document.referrer?new URL(document.referrer).hostname:"")});if(navigator.sendBeacon)navigator.sendBeacon("/api/track",new Blob([d],{type:"application/json"}));else fetch("/api/track",{method:"POST",body:d,keepalive:true,headers:{"Content-Type":"application/json"}})}catch(e){}}
+b("view","dd_bio");document.addEventListener("click",function(e){var a=e.target.closest("a[data-slot]");if(a)b("click",a.dataset.slot)});})();
+</script></body></html>`;
+  return new Response(request.method === "HEAD" ? null : html, {
+    status: 200,
+    headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=120" },
+  });
 }
 
 // ---------- helpers ----------
