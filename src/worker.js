@@ -3,7 +3,8 @@
 //   /api/track          first-party funnel beacons -> D1 (no cookies, IPs or user agents)
 //   /deedee/, /deedee/<issue-id>   desk pages with the issue server-rendered for search and AI crawlers
 //   /sitemap.xml, /llms.txt, /deedee/feed.xml   generated from the live desk feed
-//   /dd                 DeeDee's link-in-bio page (latest issue first); /links and /bio redirect here
+//   /dd                 DeeDee's link-in-bio page (latest issue first, then a tap-a-post grid); /links and /bio redirect here
+//   /dd/t/<media_id>.jpg grid thumbnails, proxied from the deedee-data branch (bio/thumbs/)
 // Everything else is a static asset and never runs this code (see run_worker_first).
 const SITE = "https://clawstbets.com";
 const NOTES_SOURCE = "https://raw.githubusercontent.com/tkal2k/clawstbets-site/refs/heads/deedee-data/notes.json";
@@ -12,6 +13,8 @@ const ISSUE_PATH = /^\/deedee\/(20\d\d-\d\d-\d\d-[a-z0-9]+(?:-[a-z0-9]+)*)(\/?)$
 const SHARE_IMAGE = `${SITE}/deedee/assets/dd-share.jpg`;
 const SLOTS = /^[a-z0-9_]{1,40}$/;
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
+const DATA_RAW = "https://raw.githubusercontent.com/tkal2k/clawstbets-site/refs/heads/deedee-data/";
+const THUMB_PATH = /^\/dd\/t\/(\d{5,25})\.jpg$/;
 const BIO_ALIASES = new Set(["/dd/", "/links", "/links/", "/bio", "/bio/", "/deedee/links"]);
 const BIO_LINKS = [
   { slot: "dd_bio_archive", label: "Every past issue", sub: "the whole desk", href: "/deedee/" },
@@ -53,6 +56,8 @@ export default {
     if (pathname === "/deedee/feed.xml") return rss(env, url);
     if (pathname === "/deedee/") return deskPage(request, env, null);
     if (pathname === "/dd") return bioPage(request, env);
+    const thumb = THUMB_PATH.exec(pathname);
+    if (thumb) return bioThumb(thumb[1]);
     if (BIO_ALIASES.has(pathname)) return Response.redirect(`${SITE}/dd${url.search}`, 301);
     const issue = ISSUE_PATH.exec(pathname);
     if (issue) {
@@ -299,9 +304,23 @@ async function track(request, env) {
 
 
 // ---------- link-in-bio ----------
+async function loadBioPosts() {
+  try {
+    const r = await fetch(DATA_RAW + "bio/posts.json", { signal: AbortSignal.timeout(5000), cf: { cacheTtl: 180, cacheEverything: true } });
+    const data = r.ok ? await r.json() : null;
+    return Array.isArray(data?.posts) ? data.posts.filter(p => /^\d+$/.test(p?.media_id) && /^https:\/\//.test(p?.link)) : [];
+  } catch { return []; }
+}
+
+async function bioThumb(id) {
+  const r = await fetch(`${DATA_RAW}bio/thumbs/${id}.jpg`, { cf: { cacheTtl: 86400, cacheEverything: true } });
+  if (!r.ok) return notFound();
+  return new Response(r.body, { headers: { "Content-Type": "image/jpeg", "Cache-Control": "public, max-age=86400", "X-Robots-Tag": "noindex" } });
+}
+
 async function bioPage(request, env) {
   const url = new URL(request.url);
-  const feed = await loadFeed(env, url);
+  const [feed, posts] = await Promise.all([loadFeed(env, url), loadBioPosts()]);
   const notes = (feed?.notes ?? []).filter(n => n?.id && n?.title);
   const [latest, ...older] = notes;
   const issueLink = n => `/deedee/${encodeURIComponent(n.id)}`;
@@ -317,6 +336,12 @@ async function bioPage(request, env) {
   const links = BIO_LINKS.map(l => {
     const ext = l.href.startsWith("http");
     return `<a class="lnk" href="${l.href}" data-slot="${l.slot}"${ext ? ' target="_blank" rel="noopener"' : ""}><b>${esc(l.label)}</b><span>${esc(l.sub)}</span></a>`;
+  }).join("");
+  const grid = posts.slice(0, 12).map(p => {
+    const ext = !p.link.startsWith(SITE);
+    const href = ext ? p.link : p.link.slice(SITE.length) || "/";
+    return `<a class="tile" href="${esc(href)}" data-slot="dd_bio_post_${esc(p.kind || "x")}"${ext ? ' target="_blank" rel="noopener"' : ""}>`
+      + `<img src="/dd/t/${p.media_id}.jpg" loading="lazy" width="270" height="480" alt=""><span>${esc(p.title)}</span></a>`;
   }).join("");
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -346,11 +371,18 @@ a{color:inherit;text-decoration:none}
 .lnk span{color:var(--muted);font-size:.85rem;text-align:right}.lnk:hover,.today:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--pink)}
 h2{font:700 1.5rem Caveat,cursive;margin:22px 0 6px;color:var(--blue)}ul{list-style:none;margin:0;padding:0}
 li a{display:block;padding:8px 0;border-bottom:1px dashed #bbb;font-weight:600;font-size:.95rem}li .d{display:block;font:400 .78rem "Special Elite",monospace;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:0 -8px}
+.tile{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;background:#222;border-radius:3px}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile span{position:absolute;inset:auto 0 0 0;padding:16px 6px 5px;font-size:.66rem;line-height:1.2;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.82));display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.tile:hover img{opacity:.85}.gnote{margin:-2px 0 8px;font:.8rem "Special Elite",monospace;color:var(--muted)}
 footer{margin-top:22px;text-align:center;font:.8rem "Special Elite",monospace;color:var(--muted)}a:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
 </style></head><body><main>
 <header><figure class="pol"><img src="${moodImage(latest)}" width="640" height="800" alt="DeeDee, today’s mood"><figcaption>today’s mood</figcaption></figure><h1>DeeDee</h1><p class="h">@clawstbetsdd</p>
 <p class="dek">One AI or chip stock a day: what moved, why, and the next thing I’m watching.</p></header>
 ${hero}
+${grid ? `<h2>Tap a post</h2><p class="gnote">Saw it on my feed? Tap it for the link.</p><div class="grid">${grid}</div>` : ""}
+<h2>Everywhere else</h2>
 ${links}
 ${recent ? `<h2>Last few issues</h2><ul>${recent}</ul>` : ""}
 <footer>Not financial advice, just dd. · <a href="/">ClawStreetBets</a></footer>
