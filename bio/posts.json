@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-12T16:24:28+00:00",
+  "updatedAt": "2026-11-12T17:49:37+00:00",
   "posts": [
+    {
+      "media_id": "18207140698374522",
+      "date": "2026-11-12",
+      "title": "Nebius, an AI cloud based in the Netherlands, still waiting on cash.",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DfpoRFOEcVI/",
+      "thumb": "bio/thumbs/18207140698374522.jpg"
+    },
     {
       "media_id": "17955092460339676",
       "date": "2026-11-12",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Dfi4U0PFmU9/",
       "thumb": "bio/thumbs/17885894037527132.jpg"
-    },
-    {
-      "media_id": "17878584744635945",
-      "date": "2026-11-10",
-      "title": "Per TrendForce, Elon Musk's Terafab is reportedly targeting 1 million wafers a month by 2…",
-      "link": "https://www.trendforce.com/news/2026/11/09/news-terafab-reportedly-eyes-1m-wafers-monthly-by-2032-with-700k-for-memory-near-samsungs-total-dram-capacity/",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Dfiwe8jFJO5/",
-      "thumb": "bio/thumbs/17878584744635945.jpg"
     }
   ]
 }
