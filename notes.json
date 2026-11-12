@@ -1,6 +1,68 @@
 {
-  "updatedAt": "2026-11-11T18:39:03+00:00",
+  "updatedAt": "2026-11-12T18:40:04+00:00",
   "notes": [
+    {
+      "id": "2026-11-12-nbis-one-time-bonus",
+      "date": "2026-11-12",
+      "kind": "Earnings",
+      "ticker": "NBIS",
+      "symbol": "NASDAQ:NBIS",
+      "kicker": "NBIS cashed a bonus",
+      "title": "Nebius cashed a one-time bonus. Then it retired the scoreboard.",
+      "body": [
+        "Wednesday, Nebius strutted into earnings like it already knew the verdict. The stock closed up 15.44%, at $154.69, the day after CoreWeave reported. SOXX, a fund that holds a basket of chip stocks, rose 6.01%. Then Thursday morning the report landed, and by late morning the stock was trading near $130. The session isn't over, so that's a snapshot, not a receipt.",
+        "Quick intro for the new kids. Nebius rents out AI computers. It fills data centers with Nvidia chips and leases the horsepower to people building AI. Third-quarter revenue was $980.8 million, up 571% from a year ago and up 68% from the second quarter. On the red carpet, that's a full glow-up.",
+        "Plot twist. In its shareholder letter, Nebius says about $325 million of that was non-recurring revenue, tied to what it calls its asset-light model. One-time money. Take it out and the quarter is roughly $656 million. Against $582.3 million in the second quarter, that's growth of about 13%. Still growth. Just not the 68% on the poster.",
+        "Same letter, one more line: “We no longer see ARR as the right measure of our business.” ARR means annual recurring revenue, the yearly pace of repeat sales, and it was the number this crowd lived by. It's like landing a one-time bonus, letting everyone think it's your salary, then announcing salary isn't a useful number anymore. Maybe there's a good reason. The timing is still the gossip. Nebius also now expects 2026 revenue at the low end of its $3.0 to $3.4 billion range.",
+        "Now the cash. Operating cash flow, the money the business actually brought in, was negative $273 million. Last quarter it was positive $2.25 billion. By the end of September, customers owed Nebius about $4.04 billion. My read: big prepaid deals got billed, but the checks hadn't cleared yet. Meanwhile it spent $7.3 billion on equipment in three months.",
+        "Here's the part I'll defend. The letter says prepayments on deals signed in the third quarter covered more than 100% of the related equipment spending. For 2027, it guides revenue of $12 to $13 billion and capital spending of $40 to $45 billion, with 75% to 85% of that covered by customer prepayments and loans backed by the gear. Pre-tax breakeven is pegged for the fourth quarter of 2027. So the customers are also the bank. That's leverage. It's also concentration: if a big tenant pays late, the landlord feels it fast.",
+        "I get the itch. A hot stock gives back a chunk in one morning, and your thumb starts calling it a markdown. The catch: buying here is a bet that those invoices turn into cash on schedule. If next quarter's operating cash flow is still negative, that bet is wrong.",
+        "One thing on my calendar: the next quarterly report. I want operating cash flow back above zero and that receivables pile shrinking. A bonus is nice. A paycheck that shows up every month is the business."
+      ],
+      "performance": {
+        "window": "Nov. 11, 2026 · one session, close to close (Nov. 10 to Nov. 11), before the Nov. 12 earnings reaction",
+        "stockPct": 15.44,
+        "benchmark": "SOXX",
+        "benchmarkPct": 6.01
+      },
+      "flowRemark": "The options bets I can see were placed Wednesday, before the letter, and the crowd leaned both ways: some bought protection months out, others bought calls that expire this week. The short-dated calls met a gap down. I'm watching whether the longer-dated insurance gets cashed in or rolled.",
+      "sources": [
+        {
+          "label": "Nebius · Q3 2026 results release (SEC 6-K)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-1.htm"
+        },
+        {
+          "label": "Nebius · Q3 2026 shareholder letter (SEC 6-K)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm"
+        },
+        {
+          "label": "Nebius · Q2 2026 results release (SEC 6-K)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094568/tm2622968d1_ex99-1.htm"
+        },
+        {
+          "label": "NBIS price history",
+          "url": "https://stockanalysis.com/stocks/nbis/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 3,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 6,
+          "mood": "naughty"
+        }
+      ]
+    },
     {
       "id": "2026-11-11-crwv-sold-out-tour",
       "date": "2026-11-11",
