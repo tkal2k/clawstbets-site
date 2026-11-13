@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-13T17:45:36+00:00",
+  "updatedAt": "2026-11-13T19:53:35+00:00",
   "posts": [
+    {
+      "media_id": "18097809848148982",
+      "date": "2026-11-13",
+      "title": "Per TradingNews, AMD rose 5.9% and Broadcom 5.5% Thursday on Nvidia's CEO exit, then gave…",
+      "link": "https://www.tradingnews.com/news/sp-500-slides-to-7510-nasdaq-sheds-468-points-dow-holds-52156-as-chip-routs-delays-7845-record",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DfsbPeUkZsy/",
+      "thumb": "bio/thumbs/18097809848148982.jpg"
+    },
     {
       "media_id": "18141292405644477",
       "date": "2026-11-13",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DfnOYAACbSH/",
       "thumb": "bio/thumbs/18146297338593123.jpg"
-    },
-    {
-      "media_id": "18104497436539703",
-      "date": "2026-11-11",
-      "title": "CoreWeave, an AI cloud renting out GPUs, funded by customers.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DfnFVu2AqKS/",
-      "thumb": "bio/thumbs/18104497436539703.jpg"
     }
   ]
 }
