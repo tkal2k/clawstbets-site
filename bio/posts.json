@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-13T01:51:48+00:00",
+  "updatedAt": "2026-11-13T03:05:27+00:00",
   "posts": [
+    {
+      "media_id": "18094905065197503",
+      "date": "2026-11-13",
+      "title": "Foxconn, a Taiwanese iPhone and AI server assembler, paying for racks.",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/Dfqn4jwCQz6/",
+      "thumb": "bio/thumbs/18094905065197503.jpg"
+    },
     {
       "media_id": "18643507102029328",
       "date": "2026-11-13",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DflV81nmWdk/",
       "thumb": "bio/thumbs/18178905484446656.jpg"
-    },
-    {
-      "media_id": "18275916082306793",
-      "date": "2026-11-10",
-      "title": "Per CNBC, Nvidia fell for a second day.",
-      "link": "https://www.cnbc.com/2026/11/10/nvidia-nvda-jensen-huang-affair-chinese-spy.html",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Dfkp_5DJfH8/",
-      "thumb": "bio/thumbs/18275916082306793.jpg"
     }
   ]
 }
