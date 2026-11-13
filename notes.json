@@ -1,6 +1,64 @@
 {
-  "updatedAt": "2026-11-12T18:40:04+00:00",
+  "updatedAt": "2026-11-13T18:44:14+00:00",
   "notes": [
+    {
+      "id": "2026-11-13-amat-extra-week",
+      "date": "2026-11-13",
+      "kind": "Earnings",
+      "ticker": "AMAT",
+      "symbol": "NASDAQ:AMAT",
+      "kicker": "AMAT padded the calendar",
+      "title": "Applied Materials guided to a record. It needed an extra week to get there.",
+      "body": [
+        "Thursday night, Applied Materials strutted out of earnings with a record in one hand and a forecast in the other. Friday morning, the paparazzi caught it slipping. By late morning the stock was near $365, down about 4%. Before anyone calls it a breakup, look around the room. SOXX, a fund that holds a basket of chip stocks, was down about the same. The session isn't over, so that's a snapshot, not a receipt.",
+        "Quick intro for the new kids. Applied doesn't make chips. It makes the machines that make chips: the tools that lay down, carve and polish the layers on a silicon wafer. Last quarter, revenue was $10.41 billion, up 53% from a year ago. The fiscal year came in at $34.45 billion. Everyone building AI factories needs these machines, and Applied is the one selling them.",
+        "Plot twist. Then came the guide, meaning management's forecast for next quarter: $11.1 billion, give or take $500 million. A record. Except on the call, the finance chief said it's a 14-week quarter. The one that just ended had 13. Split it per week and the new guide lands about 1% below what Applied just did. That's my math, not theirs. It's like bragging about your biggest Spotify Wrapped ever in a leap year. Technically true. You also had an extra day.",
+        "So is the glow-up fake? My read: no. On the call, the finance chief said clean room capacity “remains a gating factor,” and that “our Q1 number would be slightly higher if everything were perfectly available.” A clean room is the dust-free building where these machines get installed. Translation: customers want more tools than there are rooms to plug them into. And they're paying early. Contract liabilities, money customers paid before getting everything they ordered, hit $3.59 billion, up from $2.57 billion a year ago. Inventory climbed to $6.89 billion. That looks like a company stocking up to ship, not one waiting by the phone.",
+        "Here's who has the leverage. When buyers prepay and the bottleneck is buildings, the toolmaker isn't the one begging. CEO Gary Dickerson said the company's current view is that demand for chipmaking equipment rises more than 30% next year. Applied also spent $2 billion buying back its own stock last quarter. Looks like management likes the order book enough to bet its own cash on it.",
+        "One side-eye. China was 25% of revenue last quarter, down from 29% a year earlier, and the finance chief said shipments there will probably be under 25% of the business in 2027. Losing share with your biggest out-of-town customer is fine while everyone else is lining up. It's less fine if that line gets shorter.",
+        "I get the itch. A record quarter, a red morning, and your thumb is hovering over the buy button like it just got a restock alert. The catch: on Thursday the stock already slid 3.58% into the report while SOXX barely moved, so some of the doubt was priced in before anyone read a word. Buying this dip is a bet that the extra week is calendar noise, not makeup over slowing demand.",
+        "One thing on my calendar: Applied's February guide, for a normal 13-week quarter. If it's $11.1 billion or higher, this week's wobble was a calendar hiccup. If it comes in below that, the extra week was doing the heavy lifting, and my read was wrong."
+      ],
+      "performance": {
+        "window": "Nov. 12, 2026 · one session, close to close (Nov. 11 to Nov. 12), before the after-close earnings release",
+        "stockPct": -3.58,
+        "benchmark": "SOXX",
+        "benchmarkPct": -0.26
+      },
+      "flowRemark": "My options read from Thursday, the session before the report, didn't flag Applied at all. The loud bets were on other chip names. So there's no pre-print positioning here to cash in or panic over. I'm watching whether today's red morning pulls fresh bets in or the crowd just shrugs.",
+      "sources": [
+        {
+          "label": "Applied Materials · Q4 FY2026 results release (SEC 8-K)",
+          "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/exhibit991q42026earningsre.htm"
+        },
+        {
+          "label": "Motley Fool · Applied Materials Q4 2026 earnings call transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/11/13/applied-amat-q4-2026-earnings-call-transcript/"
+        },
+        {
+          "label": "AMAT price history",
+          "url": "https://stockanalysis.com/stocks/amat/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 3,
+          "mood": "noted"
+        },
+        {
+          "paragraph": 6,
+          "mood": "naughty"
+        }
+      ]
+    },
     {
       "id": "2026-11-12-nbis-one-time-bonus",
       "date": "2026-11-12",
