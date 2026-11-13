@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-12T19:24:14+00:00",
+  "updatedAt": "2026-11-13T01:51:48+00:00",
   "posts": [
+    {
+      "media_id": "18643507102029328",
+      "date": "2026-11-13",
+      "title": "Per The Elec, Hoya supplies over 90% of Samsung's EUV mask blanks and reportedly can't fu…",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15486",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DfqfegGk0fx/",
+      "thumb": "bio/thumbs/18643507102029328.jpg"
+    },
     {
       "media_id": "17966903127219027",
       "date": "2026-11-12",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/Dfkp_5DJfH8/",
       "thumb": "bio/thumbs/18275916082306793.jpg"
-    },
-    {
-      "media_id": "17898278718611372",
-      "date": "2026-11-10",
-      "title": "Inference is a trained AI model answering new prompts, and every ChatGPT reply runs on it.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DfkUntbFTGB/",
-      "thumb": "bio/thumbs/17898278718611372.jpg"
     }
   ]
 }
