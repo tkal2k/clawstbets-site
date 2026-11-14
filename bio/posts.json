@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-13T19:53:35+00:00",
+  "updatedAt": "2026-11-14T01:50:02+00:00",
   "posts": [
+    {
+      "media_id": "18133550863876638",
+      "date": "2026-11-14",
+      "title": "Per Seoul Economic Daily, Samsung is reportedly in talks to buy cooling maker Modine for …",
+      "link": "https://www.digitimes.com/news/a20261113VL230/samsung-data-center-cooling-acquisition-2026.html",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DftEE0oCqvw/",
+      "thumb": "bio/thumbs/18133550863876638.jpg"
+    },
     {
       "media_id": "18097809848148982",
       "date": "2026-11-13",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DfnldgJnMzq/",
       "thumb": "bio/thumbs/18648152470026233.jpg"
-    },
-    {
-      "media_id": "18146297338593123",
-      "date": "2026-11-11",
-      "title": "Per Yahoo Finance, chip stocks rallied after CoreWeave's earnings eased the AI financing …",
-      "link": "https://finance.yahoo.com/technology/ai/articles/mu-amd-avgo-other-chip-134142335.html",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DfnOYAACbSH/",
-      "thumb": "bio/thumbs/18146297338593123.jpg"
     }
   ]
 }
