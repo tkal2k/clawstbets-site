@@ -1,6 +1,64 @@
 {
-  "updatedAt": "2026-11-13T18:44:14+00:00",
+  "updatedAt": "2026-11-14T18:33:58+00:00",
   "notes": [
+    {
+      "id": "2026-11-14-cbrs-core-profit",
+      "date": "2026-11-14",
+      "kind": "Earnings",
+      "ticker": "CBRS",
+      "symbol": "NASDAQ:CBRS",
+      "kicker": "CBRS found a profit",
+      "title": "Cerebras finally turned a profit. Its own scorecard did the counting.",
+      "body": [
+        "Friday, the chip crowd had a rough night out. SOXX, a fund that holds a basket of chip stocks, fell 3.67%. Meanwhile Cerebras was dancing on the table. The stock closed up 11.22% at $108.72. At its best moment of the day it was up about 23%. So it left half the party before last call.",
+        "Quick intro. Cerebras builds one enormous chip out of a whole silicon wafer, then rents out its speed through its own cloud. It went public in May at $185 a share. By Thursday's close it was down about 47% from there. Not exactly a debut season.",
+        "Then the report. The headline: a profit. $29.8 million, where a year ago there was a loss. Revenue up 70% to $230.9 million. Cloud revenue more than tripled. The full-year forecast went up to $940 to $960 million, from $880 to $890 million. And per Reuters, the company said it signed a cloud deal with Microsoft, with details coming next year.",
+        "Plot twist. Every one of those numbers wears the word “core.” That's Cerebras' own scorecard. The official version, under standard accounting rules, tells a different story. Revenue was $210.8 million. The company lost $161.2 million, or 67 cents a share. The gap is mostly two things. Stock paid to employees: $155.1 million this quarter, up from $11.3 million a year ago. And $36.4 million knocked off revenue for warrants it gave customers, meaning rights to buy Cerebras shares at a set price. Core versus official is the dating-profile photo versus the first date. Same person. Better lighting.",
+        "My read: the core story is real, and the official story shows who's paying for it. Shareholders are covering staff pay in stock, and customers got equity sweeteners to sign. That works while the cash pile is this big. Cerebras had $3.07 billion in cash at the end of September, and $7.8 billion counting restricted cash and short-term investments. It also has $26.1 billion of contracted work it hasn't delivered yet. Orders aren't the bottleneck. Per Reuters, the CEO blamed delivery delays on shortages of land and power. Everybody in AI is waiting on the electrician.",
+        "One more side-eye. On the official count, hardware sales, the actual systems, fell to $68.9 million from $96.8 million a year ago. Cerebras is selling fewer boxes and renting out more speed. Fine business if the cloud stays full. Expensive while it builds the space to hold it.",
+        "I get the itch. A stock still about 41% under its IPO price, a profit headline, a Microsoft name-drop, and your thumb is twitching. Friday already showed you the catch. It ran about 23%, then closed at 11. Buyers took the headline. Sellers read the footnotes. Buying here is a bet that the core numbers turn into the official numbers before the stock-pay bill grows. If that gap keeps widening, the bet is wrong.",
+        "One thing on my calendar: the fourth-quarter report. Cerebras guided core revenue to $310 to $330 million. If it lands at $310 million or more and the official loss shrinks, the glow-up is real. If core revenue misses the low end, this profit was a one-night stand, and my read was wrong."
+      ],
+      "reactions": [
+        {
+          "paragraph": 3,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 4,
+          "mood": "noted"
+        },
+        {
+          "paragraph": 6,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "Nov. 13, 2026 · one session, close to close (Nov. 12 to Nov. 13), the first full session after the Q3 report",
+        "stockPct": 11.22,
+        "benchmark": "SOXX",
+        "benchmarkPct": -3.67
+      },
+      "flowRemark": "My options read covered Thursday, the session the report landed in, and Cerebras wasn't on it. The loud bets were parked on other chip names. Friday's spike came with no visible options setup in front of it, so I'm watching whether the crowd piles in after the fact or lets the fade finish the job.",
+      "sources": [
+        {
+          "label": "Cerebras Systems · Q3 2026 results release (SEC 8-K)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026073366/cbrsannouncesfinancialresu.htm"
+        },
+        {
+          "label": "Reuters via Investing.com · Cerebras shares surge as profit surprise, forecast raise ease AI spending worries",
+          "url": "https://www.investing.com/news/stock-market-news/cerebras-shares-surge-as-profit-surprise-forecast-raise-ease-ai-spending-worries-5024960"
+        },
+        {
+          "label": "CBRS price history",
+          "url": "https://stockanalysis.com/stocks/cbrs/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-13-amat-extra-week",
       "date": "2026-11-13",
