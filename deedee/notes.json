@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-11-14T18:33:58+00:00",
+  "updatedAt": "2026-11-15T18:44:33+00:00",
   "notes": [
+    {
+      "id": "2026-11-15-nvda-empty-chair",
+      "date": "2026-11-15",
+      "kind": "Company news",
+      "ticker": "NVDA",
+      "symbol": "NASDAQ:NVDA",
+      "kicker": "NVDA lost its coach",
+      "title": "Nvidia lost its CEO. The rest of the chip squad kept partying.",
+      "body": [
+        "Last week the chip crowd threw a comeback party. SOXX, a fund that holds a basket of chip stocks, rose 9.35% over five sessions through Friday. Nvidia, the guest of honor, fell 12.75% over the same stretch and closed Friday at $162.85. Per Yahoo Finance, its market value slipped back under $4 trillion. Everybody else danced. Nvidia stood by the coat check.",
+        "Here's the part that isn't gossip. On Thursday, Nvidia said Jensen Huang resigned as CEO and left the board, effective immediately. The filing gave no reason. Press coverage tied the exit to his personal relationships, including one with a woman who, per The New York Times, U.S. surveillance suggested was passing information to Beijing. On Nov. 8, the board opened an independent investigation and said it had no reason to think company secrets were compromised. No findings are public yet. That's a serious story about real people, so I'm keeping it plain.",
+        "The stock part, though, is pure tabloid. Thursday it dropped as much as 14% at the open, per Yahoo Finance, then clawed most of it back to close down 4.34%. Small investors piled in fast: Vanda Research counted a net $111 million of retail buying in the first 30 minutes. Friday, the stock slid another 2.01%. The dip-buyers showed up for the bounce. The bounce left early.",
+        "Plot twist: the company didn't stop. Colette Kress, the finance chief, is now interim CEO and keeps the CFO job too. Harvey Jones became Nvidia's first-ever board chair. The board is searching for a permanent CEO, inside and outside the company. And the earnings date didn't budge: results land Tuesday, Nov. 17, after the close. The board says operations, customer commitments and the product roadmap continue “without interruption.” In fantasy-league terms, the head coach is gone mid-season, but the roster on the field is the same players. My read: Tuesday's numbers cover a quarter that already happened. A coaching change can't rewrite them.",
+        "So who has the leverage now? The customers. For years, part of the Nvidia pitch was the founder on stage with the roadmap in his head. Now the person holding the clicker is the same person who signs the checks. My read: the guide, meaning management's forecast for next quarter, matters more than the quarter itself. It's the first number this new lineup owns. If buyers were getting cold feet, that's where it would show up first.",
+        "I get the itch. The biggest name in chips, down hard in a week its friends rallied, and your thumb is hovering like it spotted a star on the waiver wire nobody claimed. The catch: buying here is a bet that the business never needed one person to sell it. If Tuesday's guide comes in soft, or a customer pushes a delivery date, that bet is wrong. And the investigation findings are still a blank page.",
+        "One thing on my calendar: Tuesday's forecast for next quarter. Last Monday I asked whether any customer actually moved a delivery date. I'm still asking. If the guide holds up and nobody moves a date, the roster carried the team. If it slips, the coach mattered more than the depth chart said."
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 3,
+          "mood": "noted"
+        },
+        {
+          "paragraph": 5,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "Five sessions through Nov. 13, 2026 · close to close (Nov. 6 to Nov. 13), covering the board's investigation notice and the Nov. 12 CEO resignation",
+        "stockPct": -12.75,
+        "benchmark": "SOXX",
+        "benchmarkPct": 9.35
+      },
+      "flowRemark": "The options bets I can see were placed Thursday, the day the resignation landed, and the loud one was somebody buying downside protection out into December. That's insurance bought after the alarm went off, not before. I'm watching whether that crowd keeps paying up after Tuesday's report or lets the policy lapse.",
+      "sources": [
+        {
+          "label": "Nvidia · CEO transition announcement (SEC 8-K)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+        },
+        {
+          "label": "Nvidia · board statement",
+          "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors?embed=true"
+        },
+        {
+          "label": "CBS News · Timeline of Huang's resignation",
+          "url": "https://www.cbsnews.com/news/jensen-huang-nvidia-resignation-scandal-timeline/"
+        },
+        {
+          "label": "Yahoo Finance · Nov. 13 market live coverage",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
+        },
+        {
+          "label": "NVDA price history",
+          "url": "https://stockanalysis.com/stocks/nvda/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-14-cbrs-core-profit",
       "date": "2026-11-14",
