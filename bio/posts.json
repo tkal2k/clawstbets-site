@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-15T01:49:34+00:00",
+  "updatedAt": "2026-11-15T16:29:04+00:00",
   "posts": [
+    {
+      "media_id": "18118635956101319",
+      "date": "2026-11-15",
+      "title": "A foundry builds chips other companies design, and a fab only pays when it's nearly full.",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DfxNcHbivlB/",
+      "thumb": "bio/thumbs/18118635956101319.jpg"
+    },
     {
       "media_id": "18002791578012549",
       "date": "2026-11-15",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DfpzF_XjUc4/",
       "thumb": "bio/thumbs/17966903127219027.jpg"
-    },
-    {
-      "media_id": "18207140698374522",
-      "date": "2026-11-12",
-      "title": "Nebius, an AI cloud based in the Netherlands, still waiting on cash.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DfpoRFOEcVI/",
-      "thumb": "bio/thumbs/18207140698374522.jpg"
     }
   ]
 }
