@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-15T16:29:04+00:00",
+  "updatedAt": "2026-11-15T19:23:12+00:00",
   "posts": [
+    {
+      "media_id": "17997077892027591",
+      "date": "2026-11-15",
+      "title": "Per Seoul Economic Daily, Samsung's $1.9 billion Austin fab expansion is reportedly for t…",
+      "link": "https://en.sedaily.com/finance/2026/11/15/samsung-to-make-spacex-satellite-chips-in-texas",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DfxhYovmWmn/",
+      "thumb": "bio/thumbs/17997077892027591.jpg"
+    },
     {
       "media_id": "18118635956101319",
       "date": "2026-11-15",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DfqfegGk0fx/",
       "thumb": "bio/thumbs/18643507102029328.jpg"
-    },
-    {
-      "media_id": "17966903127219027",
-      "date": "2026-11-12",
-      "title": "Per CNBC, analysts warned Jensen Huang's exit could sink Nvidia 20%.",
-      "link": "https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DfpzF_XjUc4/",
-      "thumb": "bio/thumbs/17966903127219027.jpg"
     }
   ]
 }
