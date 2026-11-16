@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-15T19:23:12+00:00",
+  "updatedAt": "2026-11-16T01:49:47+00:00",
   "posts": [
+    {
+      "media_id": "18441671245179614",
+      "date": "2026-11-16",
+      "title": "Per Tom's Hardware and Hardware Busters, a federal judge let the DRAM price-fixing suit a…",
+      "link": "https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DfyNmkOE5c5/",
+      "thumb": "bio/thumbs/18441671245179614.jpg"
+    },
     {
       "media_id": "17997077892027591",
       "date": "2026-11-15",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Dfqn4jwCQz6/",
       "thumb": "bio/thumbs/18094905065197503.jpg"
-    },
-    {
-      "media_id": "18643507102029328",
-      "date": "2026-11-13",
-      "title": "Per The Elec, Hoya supplies over 90% of Samsung's EUV mask blanks and reportedly can't fu…",
-      "link": "https://www.thelec.net/news/articleView.html?idxno=15486",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DfqfegGk0fx/",
-      "thumb": "bio/thumbs/18643507102029328.jpg"
     }
   ]
 }
