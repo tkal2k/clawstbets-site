@@ -1,6 +1,72 @@
 {
-  "updatedAt": "2026-11-15T18:44:33+00:00",
+  "updatedAt": "2026-11-16T18:40:24+00:00",
   "notes": [
+    {
+      "id": "2026-11-16-mu-crucial-in-court",
+      "date": "2026-11-16",
+      "kind": "Company news",
+      "ticker": "MU",
+      "symbol": "NASDAQ:MU",
+      "kicker": "MU's breakup made court",
+      "title": "Micron dumped its consumer brand. Now a judge brought it up in court.",
+      "body": [
+        "Last week Micron had a glow-up. Over five sessions through Friday, the stock rose 12.80% and closed at $778.31. SOXX, a fund that holds a basket of chip stocks, rose 9.35% over the same stretch. Memory got the good table again. Then the weekend delivered a court date.",
+        "Here are the plain facts. In an order dated Nov. 14, U.S. District Judge Noël Wise in Northern California refused to throw out a class action against Samsung, SK Hynix and Micron. Seventeen consumers and small businesses filed it in June. They allege the three agreed to squeeze the supply of ordinary DRAM, the memory inside laptops, phones and servers, while moving factory space to HBM, the stacked memory that AI chips run on. The companies deny it and argued that market conditions drove their choices. Nothing is proven. The ruling only says the complaint is detailed enough to keep going.",
+        "Plot twist: one of the receipts the court leaned on is Micron's own. In December 2025, Micron said it would exit Crucial, its consumer memory brand, and stop shipping to that channel by February. Micron framed it as freeing up supply for bigger, faster-growing customers. The order treated moves like that, which are hard to undo, plus near-identical customer screening questions all three adopted in January, as support for a plausible conspiracy. The judge wrote that the allegations go beyond \"hawks flying in formation.\" Translation: birds can fly the same way for their own reasons. These three allegedly compared flight plans.",
+        "Picture the only three clubs on the block killing general admission in the same month and keeping just the bottle-service line. Maybe each owner did the math alone. Maybe there was a group chat. The judge isn't saying there was a group chat. She's saying it's fair to ask for the phones. That part has a name: discovery.",
+        "This crowd also has an ex the court remembers. Samsung and Hynix paid fines over a DRAM price-fixing cartel that ran from 1998 to 2002, and Micron got immunity for cooperating. A later suit over supply cuts in 2016 to 2018 was tossed, and an appeals court agreed in 2022. The companies said this case was a rerun. The judge said the new details make it a different show.",
+        "Now the tape. By late Monday morning Pacific time, Micron traded about 7% below Friday's close, and SOXX was down about 5%. My read: the gavel isn't the whole story. The entire chip aisle is red, with Nvidia's report due Tuesday. Pinning one red Monday on one court order is how you end up wrong twice.",
+        "My take: the money risk here is slow, not sudden. The awkward part is a word Wall Street loved. Memory makers have pitched investors on supply discipline, meaning no more overbuilding, and investors paid up for it. The court called those investor comments neutral on their own. But the more that discipline looks like a team sport, the more expensive the story gets. Tempted to call this dip just a lawsuit? Fair. What proves that wrong is evidence of coordination coming out in discovery, or a settlement big enough to dent the cash flow.",
+        "One thing to watch: Dec. 7, when all three must formally answer the complaint. I want to see how Micron explains the Crucial exit in its own words. Filing over feelings."
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 3,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 6,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "Five sessions through Nov. 13, 2026 · close to close (Nov. 6 to Nov. 13), before the Nov. 14 court order; Monday's session was still open at publication",
+        "stockPct": 12.8,
+        "benchmark": "SOXX",
+        "benchmarkPct": 9.35
+      },
+      "flowRemark": "The latest options bet I can see on Micron came last Wednesday, before the ruling, and it was short-dated downside protection that runs out this week. Somebody bought an umbrella before anyone saw this cloud. I'm watching whether fresh bets after the order lean the same way, or the old insurance just expires.",
+      "sources": [
+        {
+          "label": "LitNews · Garciaguirre v. Samsung, motion to dismiss denied (N.D. Cal., No. 5:26-cv-06345)",
+          "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal"
+        },
+        {
+          "label": "Micron · Exit from Crucial consumer business (Dec. 3, 2025)",
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-announces-exit-crucial-consumer-business"
+        },
+        {
+          "label": "The FPS Review · Judge refuses to dismiss DRAM case",
+          "url": "https://www.thefpsreview.com/2026/11/16/samsung-sk-hynix-and-micron-face-the-gavel-as-judge-refuses-to-dismiss-case-alleging-trio-of-memory-price-fixing-and-cartel-behavior/"
+        },
+        {
+          "label": "Android Headlines · RAM price-fixing lawsuit will move forward",
+          "url": "https://www.androidheadlines.com/2026/11/samsung-micron-sk-hynix-us-ram-price-lawsuit.html"
+        },
+        {
+          "label": "MU price history",
+          "url": "https://stockanalysis.com/stocks/mu/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-15-nvda-empty-chair",
       "date": "2026-11-15",
