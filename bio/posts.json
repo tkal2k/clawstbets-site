@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-16T19:25:07+00:00",
+  "updatedAt": "2026-11-17T02:05:04+00:00",
   "posts": [
+    {
+      "media_id": "18018409943986397",
+      "date": "2026-11-17",
+      "title": "Per Seoul Economic Daily, citing the Financial Times: Jensen Huang is reportedly seeking …",
+      "link": "https://en.sedaily.com/world/2026/11/16/huang-eyes-nvidia-return-as-bessent-urges-outside-ceo-hire",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df00L05EqM9/",
+      "thumb": "bio/thumbs/18018409943986397.jpg"
+    },
     {
       "media_id": "18111974957107912",
       "date": "2026-11-16",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DfsbPeUkZsy/",
       "thumb": "bio/thumbs/18097809848148982.jpg"
-    },
-    {
-      "media_id": "18141292405644477",
-      "date": "2026-11-13",
-      "title": "Applied Materials, a maker of chipmaking equipment with one extra week.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DfsMnA-iZVK/",
-      "thumb": "bio/thumbs/18141292405644477.jpg"
     }
   ]
 }
