@@ -1,6 +1,72 @@
 {
-  "updatedAt": "2026-11-16T18:40:24+00:00",
+  "updatedAt": "2026-11-17T18:42:19+00:00",
   "notes": [
+    {
+      "id": "2026-11-17-tsm-security-line",
+      "date": "2026-11-17",
+      "kind": "Market backdrop",
+      "ticker": "TSM",
+      "symbol": "NYSE:TSM",
+      "kicker": "TSM hit a checkpoint",
+      "title": "TSMC had its best month ever. Then Washington added a security line.",
+      "body": [
+        "Taiwan Semiconductor showed up to this week holding the best report card of its life. The market walked it to the exit anyway. Over three sessions through Monday, TSM fell 9.65% and closed at $373.45. SOXX, a fund that holds a basket of chip stocks, fell 9.12% over the same stretch. Best month ever, three red days in a row. I love a contradiction.",
+        "Start with the receipt. On Nov. 10, TSMC said October revenue was about NT$586.89 billion. That's up 14.7% from September and up 59.7% from a year earlier, and it's the biggest month the company has posted. TSMC is the factory. Companies like Nvidia draw the chip, and TSMC builds it. When its register rings like that, somebody is still ordering.",
+        "Plot twist: on Monday the Commerce Department released a new export rule, and TSMC's job title is in it. It's an interim final rule, which means it's real, not a proposal. It takes effect once it's published in the Federal Register, and the public gets 60 days to comment after that. The headline part is about rentals. Washington's worry is that companies based in China, which can't freely buy America's best AI chips, rent time on them in data centers abroad. The rule goes after that. It also requires a license to ship advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exception for US-based companies that file reports.",
+        "The part I circled is third on the list. Chip factories and packagers already have to assume certain advanced chips are restricted unless the customer clears a checklist. The new rule removes some of the ways to clear it when the chip designer, or its parent company, sits in a restricted country. Commerce says foreign foundries must do \"robust due diligence\" on who really owns the customer. Foundry means contract chip factory. That's TSMC.",
+        "Picture an airline that just sold more seats than ever. Then security adds a second line and tells the airline to check who really paid for each ticket. The flights still go. Boarding gets slower, and some passengers don't get on. Nobody at the gate can say how many yet.",
+        "Here's why I'm not pinning the whole drop on the rule. Monday was ugly for everyone. SOXX lost 5.41% in one day and TSM lost 6.34%. Nvidia, a major TSMC customer, reports after the close tonight, its first report since Jensen Huang's exit as CEO last week. That's a lot of nerves in one room. But by late Tuesday morning Pacific time, TSM was down about 4% more while SOXX was down about 1%. Monday it fell with the pack. Today it's out in front. My read: that gap is the rule.",
+        "My take: this is a paperwork problem until someone proves it's a revenue problem. TSMC's guide for this quarter, $52.3 billion to $54.3 billion in revenue, came out Oct. 15. That was a month before this rule existed, so the guide doesn't know about it. Tempted to buy a record month on sale? I get it. The catch is that nobody has priced the new security line. What proves the dip-buyers wrong: TSMC trimming that guide, or saying orders got delayed by the checks.",
+        "One thing to watch: TSMC's November revenue, due around Dec. 10. If the register keeps ringing after the rule kicks in, the line was just a line. Filing over feelings."
+      ],
+      "reactions": [
+        {
+          "paragraph": 1,
+          "mood": "noted"
+        },
+        {
+          "paragraph": 2,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 6,
+          "mood": "lip-lick"
+        }
+      ],
+      "performance": {
+        "window": "Three sessions through Nov. 16, 2026 · close to close (Nov. 11 to Nov. 16); Tuesday's session was still open at publication",
+        "stockPct": -9.65,
+        "benchmark": "SOXX",
+        "benchmarkPct": -9.12
+      },
+      "flowRemark": "Nothing on Taiwan Semiconductor stood out in the latest options pull I have, and that pull was gathered before today's open. The loud bets were on its neighbors. I'm watching whether fresh positioning shows up on TSM itself now that the rule has a foundry line in it, or whether traders keep treating it as a passenger.",
+      "sources": [
+        {
+          "label": "TSMC · October 2026 revenue report (Nov. 10, 2026)",
+          "url": "https://pr.tsmc.com/english/news/3349"
+        },
+        {
+          "label": "Commerce Department · Interim final rule, Addressing Remote Access to Advanced Semiconductors (RIN 0694-AK50)",
+          "url": "https://www.bis.gov/media/documents/rin-0694-ak50.pdf"
+        },
+        {
+          "label": "TSMC · Q3 2026 results and Q4 guidance (Form 6-K, Oct. 15, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+        },
+        {
+          "label": "24/7 Wall St. · TSMC's record month and three-day slide",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-booked-record-nt-004110791.html"
+        },
+        {
+          "label": "TSM price history",
+          "url": "https://stockanalysis.com/stocks/tsm/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-16-mu-crucial-in-court",
       "date": "2026-11-16",
