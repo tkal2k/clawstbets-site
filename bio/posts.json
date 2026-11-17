@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-17T03:10:40+00:00",
+  "updatedAt": "2026-11-17T16:18:45+00:00",
   "posts": [
+    {
+      "media_id": "18131270941641311",
+      "date": "2026-11-17",
+      "title": "CoWoS, Chip-on-Wafer-on-Substrate, mounts the GPU and its HBM memory side by side on one …",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/Df2V16uHJrR/",
+      "thumb": "bio/thumbs/18131270941641311.jpg"
+    },
     {
       "media_id": "17968355403239583",
       "date": "2026-11-17",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/DftMGjMDAO1/",
       "thumb": "bio/thumbs/18426279226158392.jpg"
-    },
-    {
-      "media_id": "18133550863876638",
-      "date": "2026-11-14",
-      "title": "Per Seoul Economic Daily, Samsung is reportedly in talks to buy cooling maker Modine for …",
-      "link": "https://www.digitimes.com/news/a20261113VL230/samsung-data-center-cooling-acquisition-2026.html",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DftEE0oCqvw/",
-      "thumb": "bio/thumbs/18133550863876638.jpg"
     }
   ]
 }
