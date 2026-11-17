@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-17T16:18:45+00:00",
+  "updatedAt": "2026-11-17T19:22:50+00:00",
   "posts": [
+    {
+      "media_id": "18064116293798747",
+      "date": "2026-11-17",
+      "title": "Per 24/7 Wall St., the chip index is down 23.9% since September, but the worst-since-2008…",
+      "link": "https://247wallst.com/investing/2026/11/17/chip-stocks-are-having-their-worst-two-months-since-2008/",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df2q8yAH8ox/",
+      "thumb": "bio/thumbs/18064116293798747.jpg"
+    },
     {
       "media_id": "18131270941641311",
       "date": "2026-11-17",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Dfunt1qHAM_/",
       "thumb": "bio/thumbs/17955202263338904.jpg"
-    },
-    {
-      "media_id": "18426279226158392",
-      "date": "2026-11-14",
-      "title": "Cisco, a maker of network switches and routers, stocking up.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DftMGjMDAO1/",
-      "thumb": "bio/thumbs/18426279226158392.jpg"
     }
   ]
 }
