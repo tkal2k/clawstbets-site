@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-18T18:05:49+00:00",
+  "updatedAt": "2026-11-18T19:25:47+00:00",
   "posts": [
+    {
+      "media_id": "18138417586638469",
+      "date": "2026-11-18",
+      "title": "Per CNBC and Proactive Investors, Nvidia beat by more than $6 billion and guided to $130 …",
+      "link": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df5QFXxlZuG/",
+      "thumb": "bio/thumbs/18138417586638469.jpg"
+    },
     {
       "media_id": "18129491728921500",
       "date": "2026-11-18",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DfxhYovmWmn/",
       "thumb": "bio/thumbs/17997077892027591.jpg"
-    },
-    {
-      "media_id": "18118635956101319",
-      "date": "2026-11-15",
-      "title": "A foundry builds chips other companies design, and a fab only pays when it's nearly full.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DfxNcHbivlB/",
-      "thumb": "bio/thumbs/18118635956101319.jpg"
     }
   ]
 }
