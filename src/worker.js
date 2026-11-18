@@ -24,7 +24,7 @@ const BIO_LINKS = [
   { slot: "dd_bio_rss", label: "RSS feed", sub: "for the reader nerds", href: "/deedee/feed.xml" },
   { slot: "dd_bio_discord", label: "Free Discord", sub: "ClawStreetBets sports leans", href: "https://discord.gg/pfuRrzvwhc" },
 ];
-const MOODS = new Set(["side-eye", "laugh", "sad", "gasp", "noted", "lip-lick", "naughty"]);
+const MOODS = new Set(["side-eye", "laugh", "sad", "gasp", "noted", "lip-lick", "naughty", "shook"]);
 const moodImage = note => `/deedee/assets/moods/${
   [note?.mood, ...(note?.reactions ?? []).map(r => r?.mood)].find(m => MOODS.has(m)) ?? "default"}.webp`;
 const ALLOWED_ORIGINS = new Set([SITE, "https://www.clawstbets.com"]);

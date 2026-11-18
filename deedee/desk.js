@@ -7,7 +7,7 @@ const doodleLayer = document.querySelector("#doodles");
 const formatDate = new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" });
 const formatReturn = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: "exceptZero" });
 const quoteSymbol = /^[A-Z0-9_]+:[A-Z0-9._-]+$/;
-const moods = new Set(["side-eye", "laugh", "sad", "gasp", "noted", "lip-lick", "naughty"]);
+const moods = new Set(["side-eye", "laugh", "sad", "gasp", "noted", "lip-lick", "naughty", "shook"]);
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const RED = "#c8251f", BLUE = "#23409a";
 let current;
