@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-11-17T18:42:19+00:00",
+  "updatedAt": "2026-11-18T18:40:54+00:00",
   "notes": [
+    {
+      "id": "2026-11-18-nvda-pay-later",
+      "date": "2026-11-18",
+      "kind": "After earnings",
+      "ticker": "NVDA",
+      "symbol": "NASDAQ:NVDA",
+      "kicker": "NVDA is fronting cash",
+      "title": "Nvidia threw its biggest party ever. The guests are paying later.",
+      "body": [
+        "Nvidia threw the biggest party in its history last night. Revenue for the quarter that ended Oct. 25 was $115.8 billion, up 103% from a year earlier and about $7.8 billion above the middle of its own forecast. This morning the stock opened higher, then slid. Around 10:40 a.m. Pacific it sat near $152, about 2% below Tuesday's close, while SOXX, a fund that holds a basket of chip stocks, was roughly flat. Record night. Cold morning.",
+        "Some context before anyone calls it a flop. Nvidia walked into the print already bruised. It closed Tuesday at $155.46, down 35.02% from its Oct. 6 close. SOXX fell 28.00% over the same stretch. This was also the first report since the board accepted Jensen Huang's resignation as CEO on Nov. 11. CFO Colette Kress is interim CEO while the board searches for a successor. The release now mentions an ongoing investigation by an independent board committee. What it covers isn't in any filing, so I'm not guessing.",
+        "Plot twist: a lot of the money hasn't arrived yet. Revenue grew $19.6 billion from July. Accounts receivable, the bills customers haven't paid, grew $18.0 billion. Nvidia now waits about 64 days to get paid, up from 60 last quarter. The company gave two reasons. Lots of new Rubin systems shipped late in the quarter. And it offered extended payment terms on big multi-quarter deals with certain investment-grade customers.",
+        "Picture a wedding caterer booked solid for a year. The food is great, the guests are thrilled, and the biggest couples now get to pay after the honeymoon. The caterer isn't broke. The caterer is just carrying the bill. Investment-grade means those couples are good for it. It still means Nvidia is fronting the money.",
+        "And the fronting isn't only invoices. Nvidia's supply commitments jumped from $279 billion to $390 billion, mostly multi-year memory deals. Its guarantees now add up to $118 billion of maximum exposure. Most of that is up to $105 billion of credit support for an Ohio data center campus that will be leased to OpenAI, phasing in from fiscal 2029. Nvidia says it hasn't paid on any guarantee so far. Its own commentary says many neoclouds and AI labs are growing faster than their balance sheets can support. That's Nvidia saying it, not me.",
+        "My take: the business is real, and most of the cash is too. Free cash flow was $43.8 billion, about double July's $21.3 billion. But Nvidia is acting more like a lender than it used to, and lenders get judged on who pays them back. Tempted to grab the AI king at a 35% discount? I get it. The catch: next quarter's $130.0 billion forecast includes an extra week, which flatters the growth. What proves the dip-buyers wrong: payment days climbing again, or a guarantee actually getting called.",
+        "One thing to watch: the 10-Q Nvidia says it will file in the coming weeks. If the 64 days was a launch-week hiccup, the next number should shrink. If it's simply how Nvidia sells now, it won't. Filing over feelings."
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 4,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 5,
+          "mood": "lip-lick"
+        }
+      ],
+      "performance": {
+        "window": "Record close to pre-earnings close: Oct. 6 to Nov. 17, 2026 · close to close; earnings came after the Nov. 17 close and Wednesday's session was still open at publication",
+        "stockPct": -35.02,
+        "benchmark": "SOXX",
+        "benchmarkPct": -28.0
+      },
+      "flowRemark": "The options pull I have was gathered this morning, after the report but before the open. The loudest bet on Nvidia was a protective one, someone paying up for downside insurance a couple of weeks out. I'm watching whether that hedging keeps building once the payment-terms story spreads, or fades once traders absorb the extra-week forecast.",
+      "sources": [
+        {
+          "label": "NVIDIA · Q3 fiscal 2027 results press release (Nov. 17, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
+        },
+        {
+          "label": "NVIDIA · CFO commentary on Q3 fiscal 2027 results (Nov. 17, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27cfocommentary.htm"
+        },
+        {
+          "label": "NVIDIA · Q2 fiscal 2027 results and Q3 outlook (Aug. 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm"
+        },
+        {
+          "label": "NVIDIA · Form 8-K, CEO resignation and interim CEO (Nov. 11, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
+        },
+        {
+          "label": "NVDA price history",
+          "url": "https://stockanalysis.com/stocks/nvda/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-17-tsm-security-line",
       "date": "2026-11-17",
