@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-18T16:17:04+00:00",
+  "updatedAt": "2026-11-18T18:05:49+00:00",
   "posts": [
+    {
+      "media_id": "18129491728921500",
+      "date": "2026-11-18",
+      "title": "NVIDIA, the chip designer behind AI data centers, carrying its customers.",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/Df5G5VuAap7/",
+      "thumb": "bio/thumbs/18129491728921500.jpg"
+    },
     {
       "media_id": "18061573313649659",
       "date": "2026-11-18",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/DfxNcHbivlB/",
       "thumb": "bio/thumbs/18118635956101319.jpg"
-    },
-    {
-      "media_id": "18002791578012549",
-      "date": "2026-11-15",
-      "title": "Per Seoul Economic Daily, citing a Reuters review, Chinese AI projects built around Nvidi…",
-      "link": "https://en.sedaily.com/world/2026/11/14/chinas-nvidia-powered-ai-projects-top-32-billion-reuters",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DfvoybOCJeE/",
-      "thumb": "bio/thumbs/18002791578012549.jpg"
     }
   ]
 }
