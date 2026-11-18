@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-17T19:22:50+00:00",
+  "updatedAt": "2026-11-18T01:48:25+00:00",
   "posts": [
+    {
+      "media_id": "18090027647313394",
+      "date": "2026-11-18",
+      "title": "Per Seoul Economic Daily, a Microsoft Azure executive says AI agents can use up to 3,000 …",
+      "link": "https://en.sedaily.com/world/2026/11/18/microsoft-says-ai-agents-can-use-3000-times-more-computing",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df3XFIAk64R/",
+      "thumb": "bio/thumbs/18090027647313394.jpg"
+    },
     {
       "media_id": "18064116293798747",
       "date": "2026-11-17",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/Dfu8xkLE3nn/",
       "thumb": "bio/thumbs/18114778261887866.jpg"
-    },
-    {
-      "media_id": "17955202263338904",
-      "date": "2026-11-14",
-      "title": "A data center is a building that houses the computers behind apps and services (IBM); AI …",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/Dfunt1qHAM_/",
-      "thumb": "bio/thumbs/17955202263338904.jpg"
     }
   ]
 }
