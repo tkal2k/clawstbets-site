@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-18T19:25:47+00:00",
+  "updatedAt": "2026-11-18T22:47:59+00:00",
   "posts": [
+    {
+      "media_id": "18091106081697048",
+      "date": "2026-11-18",
+      "title": "Per Tom's Hardware, citing Seoul Economic Daily and a Bank of America note, consumer NAND…",
+      "link": "https://finance.yahoo.com/technology/articles/ssds-laptops-phones-may-cheaper-120000125.html",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df5nNzqFTAu/",
+      "thumb": "bio/thumbs/18091106081697048.jpg"
+    },
     {
       "media_id": "18138417586638469",
       "date": "2026-11-18",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DfyNmkOE5c5/",
       "thumb": "bio/thumbs/18441671245179614.jpg"
-    },
-    {
-      "media_id": "17997077892027591",
-      "date": "2026-11-15",
-      "title": "Per Seoul Economic Daily, Samsung's $1.9 billion Austin fab expansion is reportedly for t…",
-      "link": "https://en.sedaily.com/finance/2026/11/15/samsung-to-make-spacex-satellite-chips-in-texas",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DfxhYovmWmn/",
-      "thumb": "bio/thumbs/17997077892027591.jpg"
     }
   ]
 }
