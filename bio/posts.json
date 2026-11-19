@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-19T17:56:46+00:00",
+  "updatedAt": "2026-11-19T19:27:15+00:00",
   "posts": [
+    {
+      "media_id": "18084349004367151",
+      "date": "2026-11-19",
+      "title": "Per Benzinga, short seller Hunterbrook says a blacklisted Chinese server maker used newer…",
+      "link": "https://www.tradingview.com/news/benzinga:d18bd2d54094b:0-amd-stock-falls-after-hunterbrook-raises-china-export-concerns/",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df71CHBCoRr/",
+      "thumb": "bio/thumbs/18084349004367151.jpg"
+    },
     {
       "media_id": "18107200442015776",
       "date": "2026-11-19",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/Df00L05EqM9/",
       "thumb": "bio/thumbs/18018409943986397.jpg"
-    },
-    {
-      "media_id": "18111974957107912",
-      "date": "2026-11-16",
-      "title": "Per Yahoo Finance, CNBC and Vanda Research: chip stocks sold off Monday ahead of Nvidia e…",
-      "link": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df0GYKbFcPS/",
-      "thumb": "bio/thumbs/18111974957107912.jpg"
     }
   ]
 }
