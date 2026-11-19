@@ -1,6 +1,63 @@
 {
-  "updatedAt": "2026-11-18T19:37:58+00:00",
+  "updatedAt": "2026-11-19T18:36:05+00:00",
   "notes": [
+    {
+      "id": "2026-11-19-amd-short-seller-folder",
+      "date": "2026-11-19",
+      "kind": "Company news",
+      "ticker": "AMD",
+      "symbol": "NASDAQ:AMD",
+      "kicker": "AMD got shorted",
+      "title": "AMD was having a better fall than its friends. Then a short seller showed up with a folder.",
+      "body": [
+        "Thursday's chip party started on time. Anthropic's market debut had chip stocks up early, and AMD opened above $540. Then, at 7:27 a.m. Pacific, a short seller walked in with a folder. By 10:35 a.m. AMD sat near $484, about 9% below Wednesday's close. SOXX, a fund that holds a basket of chip stocks, was down about 1%. One guest left the party early.",
+        "Some context first. AMD had been the one handling this selloff with some grace. From its Oct. 6 close, its best of the past year, through Wednesday, it fell 18.37%. SOXX fell 27.81% over the same stretch. Nine days ago I wrote about Google building its own chip and then calling AMD anyway. The market was treating AMD like the steady friend in the group chat.",
+        "Plot twist: the folder is about China. It came from Hunterbrook Media, whose sister fund, Hunterbrook Capital, says it is short AMD. Short means it makes money if the stock falls. The main claim: IEIT Systems, a Chinese server maker the U.S. put on its trade blacklist in March 2025, kept posting server updates with newer AMD firmware after that. Firmware is the code that tells a chip how to boot. Hunterbrook counts at least six newer versions across three server models. The latest was posted Oct. 19.",
+        "Now the part the headlines skip. Hunterbrook says it doesn't know how IEIT got the code, or whether anyone held a license to supply it. It says the records it found don't, on their own, establish a violation of export law. AMD told CNBC the claims misrepresent its business practices and relationships, and that it complies with U.S. export controls. Hunterbrook says AMD asked for more time to answer its questions and then didn't.",
+        "My read on why the stock still dropped: this is less a crime story than a dependence story. Hunterbrook lays out the exposure. In 2025, AMD billed $7.75 billion, or 22.4% of revenue, to China and Hong Kong. Two joint ventures, 85% owned by China's Tongfu Microelectronics, do most of AMD's chip assembly, testing and packaging. AMD bought $2 billion of services from them last year. It's like an ex who still has your streaming login. Maybe you never shared it. The regulators still want to see the account settings.",
+        "My take: AMD didn't get caught doing anything today. It got reminded that about a fifth of its billings and most of its packaging run through a country Washington keeps writing new rules about. That was true yesterday too. The market just read it in a short seller's font. Tempted to grab a 9% drop on a report that admits it can't prove a violation? I get it. The catch: if Washington starts asking questions, answers take months, and stocks trade on the silence. What proves the dip-buyers wrong: AMD disclosing a government inquiry, or a new rule that reaches the Tongfu plants.",
+        "One thing to watch: whether AMD answers the specific question in public. Who, if anyone, licensed the firmware IEIT posted? A clear answer with paperwork shrinks this story fast. More we-comply with no detail keeps that Oct. 19 date hanging there. Filing over feelings."
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 3,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 5,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "52-week-high close to pre-report close: Oct. 6 to Nov. 18, 2026 · close to close; the short report came out during Thursday's session, which was still open at publication",
+        "stockPct": -18.37,
+        "benchmark": "SOXX",
+        "benchmarkPct": -27.81
+      },
+      "flowRemark": "The options pull I have is from Wednesday morning, a full day before the report, so it can't show how traders reacted. The loudest bet then was already a protective one, someone paying up for downside insurance a few weeks out. I'm watching whether fresh hedging piles on now, or whether the drop pulls in bargain hunters buying calls.",
+      "sources": [
+        {
+          "label": "Hunterbrook Media · AMD Has Its Own China Problem (Nov. 19, 2026; discloses Hunterbrook Capital's short position)",
+          "url": "https://hntrbrk.com/investigations/amd-china"
+        },
+        {
+          "label": "CNBC · AMD falls on short-seller report of alleged China exposure, with AMD's statement",
+          "url": "https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html"
+        },
+        {
+          "label": "AMD price history",
+          "url": "https://stockanalysis.com/stocks/amd/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-18-nvda-pay-later",
       "date": "2026-11-18",
