@@ -21,8 +21,8 @@
   :root{
     --bg:#0c0c0c; --panel:#15140d; --panel2:#1a190f; --line:#2c2a1c;
     --gold:#e8a020; --gold-dim:#b87d18; --gold-soft:#ffce6b;
-    --txt:#ffffff; --mut:#b6b3a4; --dim:#7e7c70;
-    --grn:#3dba70; --red:#e05050;
+    --txt:#ffffff; --mut:#b6b3a4; --dim:#8c8a7e;
+    --grn:#3dba70; --red:#e35f5f;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --black:"Arial Black","Arial Bold",Gadget,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
@@ -182,8 +182,8 @@
   .disc{font-size:11.5px;color:var(--dim);line-height:1.7}
   .disc b{color:var(--mut)}
 </style>
-</head>
-<body>
+<style id="a11y-base">a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffd84a;outline-offset:2px}p a:not([class]),li a:not([class]){text-decoration:underline;text-underline-offset:2px}.skip-link{position:absolute;left:8px;top:-60px;z-index:10000;padding:10px 14px;background:#15171C;color:#fff;font:600 14px/1.2 system-ui,sans-serif;border-radius:4px;text-decoration:none}.skip-link:focus{top:8px}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}</style></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a>
 
 <div class="nfa-bar">Entertainment &amp; education only · NFA — Not Financial Advice · 21+ · Bet responsibly</div>
 
@@ -200,7 +200,7 @@
   </div>
 </nav>
 
-<main class="wrap">
+<main class="wrap" id="main-content">
   <header class="mhero">
     <div class="eyebrow">ClawStBets · AI-driven model lab</div>
     <h1>THE CLAW <span class="gold">MACHINE</span></h1>
@@ -227,7 +227,7 @@
         <select id="marketSel" aria-label="Market filter"><option>All markets</option><option>Moneyline</option><option>Spread</option><option>Total</option></select>
         <label>Min edge <b id="minEdgeLbl">0.0 pp</b><input type="range" id="minEdge" min="0" max="12" step="0.5" value="0"></label>
       </div>
-      <div class="table-wrap">
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable table">
         <table>
           <thead><tr><th>Matchup</th><th>Market</th><th>Play</th><th>Odds</th><th>Market</th><th>Model</th><th>Edge</th><th>Grade</th></tr></thead>
           <tbody id="rows"></tbody>
@@ -264,7 +264,7 @@
     <a href="index.html" style="color:var(--mut)">Home</a>
     <a href="faq.html" style="color:var(--mut)">FAQ</a>
     <a href="terms.html" style="color:var(--mut)">Terms</a>
-    <a href="privacy.html" style="color:var(--mut)">Privacy</a>
+    <a href="privacy.html" style="color:var(--mut)">Privacy</a> <a href="accessibility.html" style="color:var(--mut)">Accessibility</a>
     <a href="refund.html" style="color:var(--mut)">Refund Policy</a>
     <a href="index.html#pricing" style="color:var(--gold)">Join · $39.99/mo</a>
   </div>

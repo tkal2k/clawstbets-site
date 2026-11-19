@@ -20,8 +20,8 @@
   :root{
     --bg:#0c0c0c; --panel:#15140d; --panel2:#1a190f; --line:#2c2a1c;
     --gold:#e8a020; --gold-dim:#b87d18; --gold-soft:#ffce6b;
-    --txt:#ffffff; --mut:#b6b3a4; --dim:#7e7c70;
-    --grn:#3dba70; --red:#e05050;
+    --txt:#ffffff; --mut:#b6b3a4; --dim:#8c8a7e;
+    --grn:#3dba70; --red:#e35f5f;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --black:"Arial Black","Arial Bold",Gadget,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
@@ -126,8 +126,8 @@
     .cols{grid-template-columns:1fr}
   }
 </style>
-</head>
-<body>
+<style id="a11y-base">a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffd84a;outline-offset:2px}p a:not([class]),li a:not([class]){text-decoration:underline;text-underline-offset:2px}.skip-link{position:absolute;left:8px;top:-60px;z-index:10000;padding:10px 14px;background:#15171C;color:#fff;font:600 14px/1.2 system-ui,sans-serif;border-radius:4px;text-decoration:none}.skip-link:focus{top:8px}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}</style></head>
+<body><a class="skip-link" href="#app">Skip to content</a>
 
 <div class="nfa-bar">Entertainment &amp; education only · NFA — Not Financial Advice · 21+ · Bet responsibly</div>
 
@@ -158,7 +158,7 @@
   <div class="eyebrow">Our published record</div>
   <h2>Every card we posted, graded</h2>
   <p>Two products, never added together. The <strong>pick'em</strong> picks every game straight up: the betting favorite in weeks 1-3, the team our model has winning from week 4. <strong>The Spread Sheet</strong> picked every game against the spread in weeks 1-3 and picks the winner outright from week 4. Both are posted before the week's first kickoff. Picks, not stakes.</p>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0" role="region" aria-label="Scrollable table"><table>
     <thead><tr><th>Week</th><th class="r">Pick'em (straight up)</th><th class="r">Spread Sheet (ATS)</th><th class="r">Spread Sheet moneyline</th></tr></thead>
     <tbody id="pub-tbody"></tbody>
   </table></div>
@@ -173,7 +173,7 @@
     <svg id="su-svg" role="img" aria-label="Straight-up win percentage by source"></svg>
     <div class="cap">Win % picking winners. The dashed line is 50%.</div>
   </div>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0" role="region" aria-label="Scrollable table"><table>
     <thead id="su-thead"></thead>
     <tbody id="su-tbody"></tbody>
   </table></div>
@@ -198,7 +198,7 @@
   <div class="eyebrow">Against the spread</div>
   <h2>Nobody has beaten the number</h2>
   <p id="ats-p"></p>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0" role="region" aria-label="Scrollable table"><table>
     <thead><tr><th>Source</th><th class="r">ATS</th><th class="r">Cover %</th></tr></thead>
     <tbody id="ats-tbody"></tbody>
   </table></div>
@@ -208,12 +208,12 @@
   <div class="eyebrow" id="wk-eyebrow">This week</div>
   <h2 id="wk-h">The upsets</h2>
   <p id="wk-p"></p>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0" role="region" aria-label="Scrollable table"><table>
     <thead><tr><th>Game</th><th>Final</th><th>Favorite</th><th>Experts who called it</th><th>Our model</th></tr></thead>
     <tbody id="wk-tbody"></tbody>
   </table></div>
   <details><summary>Every upset this season</summary>
-    <div class="tbl"><table>
+    <div class="tbl" tabindex="0" role="region" aria-label="Scrollable table"><table>
       <thead><tr><th>Wk</th><th>Game</th><th>Final</th><th>Favorite</th><th>Experts who called it</th><th>Our model</th></tr></thead>
       <tbody id="all-tbody"></tbody>
     </table></div>
@@ -267,7 +267,7 @@
   <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;font-family:var(--mono);font-size:12px;letter-spacing:.04em">
     <a href="faq.html" style="color:var(--mut)">FAQ</a>
     <a href="terms.html" style="color:var(--mut)">Terms</a>
-    <a href="privacy.html" style="color:var(--mut)">Privacy</a>
+    <a href="privacy.html" style="color:var(--mut)">Privacy</a> <a href="accessibility.html" style="color:var(--mut)">Accessibility</a>
     <a href="refund.html" style="color:var(--mut)">Refund Policy</a>
     <a href="index.html#pricing" style="color:var(--gold)">Join · $39.99/mo</a>
   </div>

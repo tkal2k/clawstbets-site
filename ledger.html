@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <style>
   :root{--bg:#0c0c0c;--panel:#15140d;--panel2:#1a190f;--line:#2c2a1c;--gold:#e8a020;--gold-dim:#b87d18;--gold-soft:#ffce6b;
-    --txt:#ffffff;--mut:#b6b3a4;--dim:#7e7c70;--grn:#3dba70;--red:#e05050;
+    --txt:#ffffff;--mut:#b6b3a4;--dim:#8c8a7e;--grn:#3dba70;--red:#e35f5f;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--black:"Arial Black","Arial Bold",Gadget,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -47,13 +47,13 @@
   .disc{font-size:11.5px;color:var(--dim);line-height:1.7}
   @media(max-width:640px){.grid3{grid-template-columns:1fr} h1{font-size:22px}}
 </style>
-</head>
-<body data-rp-snapshot="508b6ee5264a5fb12b38dbc2013c745cee15a82d4415130750b92d51cca73422" data-rp-synced="2026-11-17T12:38:13+00:00" data-rp-net="-900.04" data-rp-record="133-189-0" data-rp-status="ok">
+<style id="a11y-base">a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffd84a;outline-offset:2px}p a:not([class]),li a:not([class]){text-decoration:underline;text-underline-offset:2px}.skip-link{position:absolute;left:8px;top:-60px;z-index:10000;padding:10px 14px;background:#15171C;color:#fff;font:600 14px/1.2 system-ui,sans-serif;border-radius:4px;text-decoration:none}.skip-link:focus{top:8px}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}</style></head>
+<body data-rp-snapshot="508b6ee5264a5fb12b38dbc2013c745cee15a82d4415130750b92d51cca73422" data-rp-synced="2026-11-17T12:38:13+00:00" data-rp-net="-900.04" data-rp-record="133-189-0" data-rp-status="ok"><a class="skip-link" href="#main-content">Skip to content</a>
 <div class="nfa-bar">21+ · Entertainment & education only · Not financial advice · 1-800-GAMBLER</div>
 <div class="wrap">
 <header><a class="brand" href="index.html">Claw<span class="gold">St</span>Bets</a></header>
 <div class="eyebrow">Full public ledger · every graded staked row</div>
-<h1>The ledger</h1>
+<h1 id="main-content">The ledger</h1>
 <p class="lead">Every staked bet the pipeline has graded since Mar 27, 2026, one row each, at the declared stake. No row carries a broker fill confirmation. Open bets are listed but not counted; voids settle at $0. The totals below are the sum of these rows — the same numbers as the track record on the home page. Unsized leans are in a separate table further down and are not in any total.</p>
 <div class="grid3">
   <div class="kpi"><div class="n neg">−$900.04</div><div class="l">All books net</div></div>
@@ -64,7 +64,7 @@
 
 <h2>Staked bets</h2>
 <div class="filters" data-target="staked"><button class="on" data-sport="all">All</button><button data-sport="mlb">MLB</button><button data-sport="wnba">WNBA</button><button data-sport="nfl">NFL</button><button data-sport="nba">NBA</button><button data-sport="wc">World Cup</button><button data-sport="nba_2026_finals">NBA Finals</button></div>
-<div class="tbl"><table id="staked">
+<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table"><table id="staked">
 <thead><tr><th>Date</th><th>Sport</th><th>Event</th><th>Selection</th><th>Line</th><th>Odds</th><th>Stake</th><th>Result</th><th>Net</th><th>CLV</th><th>ID</th></tr></thead>
 <tbody>
 <tr data-sport="mlb"><td>2026-03-27</td><td>MLB</td><td>Moon Shot 11-Leg</td><td class="legs">All 9 Ticket A legs + Marlins -1.5 RL (~-115 est) + Tigers ML (+100)</td><td>-1.5</td><td class="num">n/a</td><td class="num">$5.00</td><td class="LOSS">LOSS</td><td class="num">−$5.00</td><td class="num">—</td><td class="id">mlb-20260327-0af93e8c</td></tr>
@@ -407,7 +407,7 @@
 <h2>Unsized leans — not staked bets</h2>
 <p class="lead"><b>LEAN - SMALL PLAY, NOT THE BOT.</b> Directional reads the pipeline surfaces but does not stake: no stake, no P&amp;L, no ROI, no units. They are graded win-loss only and never enter the staked totals above.</p>
 <div class="filters" data-target="leans"><button class="on" data-sport="all">All</button><button data-sport="MLB leans">MLB leans</button><button data-sport="NFL Slate Four">NFL Slate Four</button><button data-sport="WNBA leans">WNBA leans</button></div>
-<div class="tbl"><table id="leans">
+<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table"><table id="leans">
 <thead><tr><th>Date</th><th>Board</th><th>Event</th><th>Pick</th><th>Price</th><th>Result</th><th>Type</th><th>ID</th></tr></thead>
 <tbody>
 <tr data-sport="MLB leans"><td>2026-07-02</td><td>MLB leans</td><td>TB vs KC</td><td>TB</td><td class="num">−120</td><td class="WIN">WIN</td><td class="lean-tag">LEAN - SMALL PLAY, NOT THE BOT</td><td class="id">lean-mlb-20260702-a3e7f3fe</td></tr>

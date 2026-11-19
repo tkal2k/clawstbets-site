@@ -40,6 +40,7 @@ const PAGES = [
   { path: "/faq", title: "FAQ", note: "How ClawStBets picks, grades and publishes." },
   { path: "/terms", title: "Terms of service", note: "" },
   { path: "/privacy", title: "Privacy policy", note: "" },
+  { path: "/accessibility", title: "Accessibility statement", note: "" },
   { path: "/refund", title: "Refund policy", note: "" },
 ];
 
@@ -245,7 +246,7 @@ async function llms(env, url) {
     `- [DeeDee RSS feed, full text](${SITE}/deedee/feed.xml)`,
     "",
     "## Policies",
-    `- [Terms](${SITE}/terms) · [Privacy](${SITE}/privacy) · [Refunds](${SITE}/refund)`,
+    `- [Terms](${SITE}/terms) · [Privacy](${SITE}/privacy) · [Accessibility](${SITE}/accessibility) · [Refunds](${SITE}/refund)`,
     "",
   ];
   return new Response(lines.join("\n"), { headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=900" } });
@@ -365,7 +366,7 @@ header{text-align:center}
 h1{font:700 2.3rem/1 Caveat,cursive;margin:10px 0 2px}.h{font:.95rem "Special Elite",monospace;color:var(--muted);margin:0}.dek{margin:8px 0 18px;font-size:.95rem}
 a{color:inherit;text-decoration:none}
 .today{display:block;background:var(--gold);border:2px solid var(--ink);border-radius:8px;padding:14px 16px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-.6deg);margin-bottom:22px}
-.today span{display:block}.tag{font:.8rem "Special Elite",monospace;text-transform:uppercase;letter-spacing:.04em}.kick{font-weight:800;color:var(--red);margin-top:6px;font-size:.9rem}
+.today span{display:block}.tag{font:.8rem "Special Elite",monospace;text-transform:uppercase;letter-spacing:.04em}.kick{font-weight:800;color:#a81d18;margin-top:6px;font-size:.9rem}
 .ttl{font-weight:800;font-size:1.15rem;line-height:1.25;margin-top:2px}.go{margin-top:8px;font:700 1.3rem Caveat,cursive;color:var(--blue)}
 .lnk{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:12px 14px;margin-bottom:10px;box-shadow:3px 3px 0 var(--ink)}
 .lnk span{color:var(--muted);font-size:.85rem;text-align:right}.lnk:hover,.today:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--pink)}
@@ -377,7 +378,7 @@ li a{display:block;padding:8px 0;border-bottom:1px dashed #bbb;font-weight:600;f
 .tile span{position:absolute;inset:auto 0 0 0;padding:16px 6px 5px;font-size:.66rem;line-height:1.2;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.82));display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .tile:hover img{opacity:.85}.gnote{margin:-2px 0 8px;font:.8rem "Special Elite",monospace;color:var(--muted)}
 footer{margin-top:22px;text-align:center;font:.8rem "Special Elite",monospace;color:var(--muted)}a:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
-</style></head><body><main>
+</style><style id="a11y-base">a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #23409a;outline-offset:2px}.skip-link{position:absolute;left:8px;top:-60px;z-index:10000;padding:10px 14px;background:#15171C;color:#fff;font:600 14px/1.2 system-ui,sans-serif;border-radius:4px;text-decoration:none}.skip-link:focus{top:8px}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}</style></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content">
 <header><figure class="pol"><img src="${moodImage(latest)}" width="640" height="800" alt="DeeDee, today’s mood"><figcaption>today’s mood</figcaption></figure><h1>DeeDee</h1><p class="h">@clawstbetsdd</p>
 <p class="dek">One AI or chip stock a day: what moved, why, and the next thing I’m watching.</p></header>
 ${hero}
