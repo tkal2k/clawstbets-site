@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-20T16:16:53+00:00",
+  "updatedAt": "2026-11-20T19:23:48+00:00",
   "posts": [
+    {
+      "media_id": "18180052888452078",
+      "date": "2026-11-20",
+      "title": "Per analyst Ming-Chi Kuo's survey (via 24/7 Wall St.), Google cut 2027 shipments of Broad…",
+      "link": "https://247wallst.com/investing/2026/11/20/broadcom-plunges-11-as-google-reportedly-shifts-tpu-orders-to-mediatek-overshadowing-goldmans-460-target-marvell-sinks-10/",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df-ZcQ4gTYb/",
+      "thumb": "bio/thumbs/18180052888452078.jpg"
+    },
     {
       "media_id": "18206367847381933",
       "date": "2026-11-20",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/Df2q8yAH8ox/",
       "thumb": "bio/thumbs/18064116293798747.jpg"
-    },
-    {
-      "media_id": "18131270941641311",
-      "date": "2026-11-17",
-      "title": "CoWoS, Chip-on-Wafer-on-Substrate, mounts the GPU and its HBM memory side by side on one …",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/Df2V16uHJrR/",
-      "thumb": "bio/thumbs/18131270941641311.jpg"
     }
   ]
 }
