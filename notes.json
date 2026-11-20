@@ -1,6 +1,63 @@
 {
-  "updatedAt": "2026-11-19T18:36:05+00:00",
+  "updatedAt": "2026-11-20T18:40:23+00:00",
   "notes": [
+    {
+      "id": "2026-11-20-micron-nand-price-check",
+      "date": "2026-11-20",
+      "kind": "Market backdrop",
+      "ticker": "MU",
+      "symbol": "NASDAQ:MU",
+      "kicker": "MU got price-checked",
+      "title": "Micron was already limping. Then a research firm read the price tags out loud.",
+      "body": [
+        "Friday's chip selloff had a lot of guests leave early. Micron didn't leave. It got carried out. Around 10:37 a.m. Pacific it traded near $606, about 12% under Thursday's close of $690.44. SOXX, a fund that holds a basket of chip stocks, was down about 8%. Samsung and SK Hynix had already slid in Seoul. Everyone was staring at the memory table.",
+        "Some context first. This wasn't Micron's first rough week. From the Nov. 12 close through Thursday, five sessions, it fell 13.53%. SOXX fell 10.99%. Four days ago I wrote about Micron ditching its consumer brand and ending up in court anyway. Until today the slide looked like the whole sector catching the same cold. Today it looked personal.",
+        "Plot twist: the gossip came from a spreadsheet. TrendForce, a Taiwan research firm that tracks memory prices, put out a forecast Thursday on NAND flash. That's the memory inside SSDs and phones that keeps your files when the power is off. TrendForce trimmed its fourth-quarter contract price rise to 8% to 13%. Contract prices are what big buyers pay on negotiated deals. For the first quarter of 2027, it sees them flat to down 5%. From the second quarter, it expects every NAND category in a falling price cycle, with drops that could widen as the year goes.",
+        "Why the turn? Mostly who stopped shopping. Chinese cloud companies cut their 2027 orders for data center SSDs by more than U.S. cloud companies added. TrendForce blames GPU shortages, heavy inventory and a price war over AI tokens. Meanwhile supply keeps coming: it sees NAND output growing 25% to 30% next year, with industry spending up 26.7% to $29.9 billion. It's like owning a limited vinyl pressing the week the label announces a repress. Your copy didn't change. The resale market did.",
+        "Now the part I want receipts on. Micron's AI story mostly lives in DRAM, the fast working memory that includes the HBM stacked next to AI chips. TrendForce's note is about NAND. It doesn't forecast DRAM and doesn't name Micron. The market sold memory as a set anyway: Western Digital, Seagate and SanDisk all fell double digits. My read: traders are betting one memory market's price cut spreads to the other. That's an inference, not a number.",
+        "My take: Micron's problem today is somebody else's forecast, not its own print. Its numbers come Dec. 17, when it reports fiscal first-quarter results. Until then it trades on other people's spreadsheets. Tempted by a stock sitting about half below its June record close? I get it. The catch: memory is a price business, and a respected price tracker just said NAND prices turn. What proves the dip-buyers wrong: Micron guiding NAND pricing lower on Dec. 17, or DRAM forecasts starting to sound like this one.",
+        "One thing to watch: what Micron says about NAND pricing for the quarter ending in February. If it says contract prices hold, TrendForce looks early and today looks like a panic sale. If Micron starts trimming its own NAND output plans, that's the repress landing. Filing over feelings."
+      ],
+      "reactions": [
+        {
+          "paragraph": 2,
+          "mood": "shook"
+        },
+        {
+          "paragraph": 4,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 5,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "Five sessions before the NAND selloff: Nov. 12 to Nov. 19, 2026 · close to close; Friday's session was still open at publication",
+        "stockPct": -13.53,
+        "benchmark": "SOXX",
+        "benchmarkPct": -10.99
+      },
+      "flowRemark": "The options pull I have is from before Thursday's open, so it predates the price forecast and today's drop. Back then the loudest single bet was a short-dated upside call, while the bigger picture already leaned defensive. I'm watching whether fresh downside hedges show up into the December report, or whether bargain hunters start buying calls.",
+      "sources": [
+        {
+          "label": "TrendForce · NAND Flash Prices Set to Decline in 2027 as Chinese CSP Order Cuts Outweigh North American Demand Growth (Nov. 19, 2026)",
+          "url": "https://www.trendforce.com/presscenter/news/20261119-13314.html"
+        },
+        {
+          "label": "24/7 Wall St. · Micron stock plunges as memory names sink in AI chip selloff (Nov. 20, 2026)",
+          "url": "https://247wallst.com/investing/2026/11/20/micron-stock-plunges-13-as-barrons-calls-memory-stocks-agonizingly-cheap-western-digital-sandisk-and-seagate-sink-in-ai-chip-selloff/"
+        },
+        {
+          "label": "MU price history",
+          "url": "https://stockanalysis.com/stocks/mu/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-19-amd-short-seller-folder",
       "date": "2026-11-19",
