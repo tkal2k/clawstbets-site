@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-11-20T19:23:48+00:00",
+  "updatedAt": "2026-11-21T16:18:32+00:00",
   "posts": [
+    {
+      "media_id": "18124199947943500",
+      "date": "2026-11-21",
+      "title": "DeepSeek is a Chinese lab that releases open-weight AI models, and it just opened its app…",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DgApCWTFQmg/",
+      "thumb": "bio/thumbs/18124199947943500.jpg"
+    },
+    {
+      "media_id": "17958508884318665",
+      "date": "2026-11-21",
+      "title": "Per TrendForce (citing the Financial Times and Reuters), TSMC and Samsung paused some chi…",
+      "link": "https://www.trendforce.com/news/2026/11/20/news-tsmc-samsung-reportedly-pause-china-consumer-chip-shipments-under-new-u-s-rules-16nm-orders-affected/",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/Df_GMxvEX7X/",
+      "thumb": "bio/thumbs/17958508884318665.jpg"
+    },
     {
       "media_id": "18180052888452078",
       "date": "2026-11-20",
@@ -90,24 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Df46d3dCC8R/",
       "thumb": "bio/thumbs/18061573313649659.jpg"
-    },
-    {
-      "media_id": "18090027647313394",
-      "date": "2026-11-18",
-      "title": "Per Seoul Economic Daily, a Microsoft Azure executive says AI agents can use up to 3,000 …",
-      "link": "https://en.sedaily.com/world/2026/11/18/microsoft-says-ai-agents-can-use-3000-times-more-computing",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df3XFIAk64R/",
-      "thumb": "bio/thumbs/18090027647313394.jpg"
-    },
-    {
-      "media_id": "18064116293798747",
-      "date": "2026-11-17",
-      "title": "Per 24/7 Wall St., the chip index is down 23.9% since September, but the worst-since-2008…",
-      "link": "https://247wallst.com/investing/2026/11/17/chip-stocks-are-having-their-worst-two-months-since-2008/",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df2q8yAH8ox/",
-      "thumb": "bio/thumbs/18064116293798747.jpg"
     }
   ]
 }
