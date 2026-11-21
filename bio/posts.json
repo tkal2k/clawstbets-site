@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-21T16:18:32+00:00",
+  "updatedAt": "2026-11-21T19:22:02+00:00",
   "posts": [
+    {
+      "media_id": "18390388564239887",
+      "date": "2026-11-21",
+      "title": "Per Seoul Economic Daily, citing The Information, SoftBank's Masayoshi Son sounded out ba…",
+      "link": "https://en.sedaily.com/world/2026/11/21/son-weighed-1-trillion-bid-for-sk-hynix-before-shelving-idea",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgA-BgaCIrg/",
+      "thumb": "bio/thumbs/18390388564239887.jpg"
+    },
     {
       "media_id": "18124199947943500",
       "date": "2026-11-21",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Df5G5VuAap7/",
       "thumb": "bio/thumbs/18129491728921500.jpg"
-    },
-    {
-      "media_id": "18061573313649659",
-      "date": "2026-11-18",
-      "title": "Hybrid bonding stacks chips copper-to-copper, fusing pads directly instead of using solde…",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/Df46d3dCC8R/",
-      "thumb": "bio/thumbs/18061573313649659.jpg"
     }
   ]
 }
