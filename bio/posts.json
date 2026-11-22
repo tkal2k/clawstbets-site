@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-22T16:25:48+00:00",
+  "updatedAt": "2026-11-22T17:43:40+00:00",
   "posts": [
+    {
+      "media_id": "17960760477266199",
+      "date": "2026-11-22",
+      "title": "Lenovo, a PC and server maker based in China, buying ahead.",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DgDXigKDyef/",
+      "thumb": "bio/thumbs/17960760477266199.jpg"
+    },
     {
       "media_id": "18080757857749235",
       "date": "2026-11-22",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Df7fO8YibZJ/",
       "thumb": "bio/thumbs/17988284622089207.jpg"
-    },
-    {
-      "media_id": "18091106081697048",
-      "date": "2026-11-18",
-      "title": "Per Tom's Hardware, citing Seoul Economic Daily and a Bank of America note, consumer NAND…",
-      "link": "https://finance.yahoo.com/technology/articles/ssds-laptops-phones-may-cheaper-120000125.html",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df5nNzqFTAu/",
-      "thumb": "bio/thumbs/18091106081697048.jpg"
     }
   ]
 }
