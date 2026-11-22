@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-22T17:43:40+00:00",
+  "updatedAt": "2026-11-22T18:46:28+00:00",
   "posts": [
+    {
+      "media_id": "18019254401752309",
+      "date": "2026-11-22",
+      "title": "WPG, a chip distributor based in Taiwan, mostly selling memory now.",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DgDeud6DDBR/",
+      "thumb": "bio/thumbs/18019254401752309.jpg"
+    },
     {
       "media_id": "17960760477266199",
       "date": "2026-11-22",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Df7qqE1k4ed/",
       "thumb": "bio/thumbs/18107200442015776.jpg"
-    },
-    {
-      "media_id": "17988284622089207",
-      "date": "2026-11-19",
-      "title": "Qwen is Alibaba's family of open-weight AI models.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/Df7fO8YibZJ/",
-      "thumb": "bio/thumbs/17988284622089207.jpg"
     }
   ]
 }
