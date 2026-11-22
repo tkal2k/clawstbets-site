@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-11-21T18:36:17+00:00",
+  "updatedAt": "2026-11-22T18:44:37+00:00",
   "notes": [
+    {
+      "id": "2026-11-22-tsm-turned-away-at-gate",
+      "date": "2026-11-22",
+      "kind": "Company news",
+      "ticker": "TSM",
+      "symbol": "NYSE:TSM",
+      "kicker": "TSM closed the gate",
+      "title": "TSMC started turning away Chinese orders. Somehow the chip crowd took it worse.",
+      "body": [
+        "Last Tuesday I said TSMC's new security line was a paperwork problem until someone proved it was a revenue problem. By Thursday, the line was turning people away. Over the two sessions since the new US rule kicked in, TSM fell 12.11% and closed Friday at $318.71. SOXX, a fund that holds a basket of chip stocks, fell 13.01% over the same stretch. The company that got the bad news fell less than the crowd it hangs out with.",
+        "Here's what happened. A Commerce Department rule took effect on Thursday, Nov. 19. It closes a route some Chinese chip designers used to get advanced chips made without their own export licenses. Now their advanced chips are presumed to be controlled unless an exception applies. Same day, the Financial Times reported that TSMC and Samsung had paused some shipments to Chinese customers while license applications sit with Washington. Reuters added the detail I care about. Citing two people familiar with the matter, it said TSMC is halting orders on its 16-nanometer-and-smaller processes for affected Chinese designers unless they get licenses. Those customers are generally limited to older 28- and 40-nanometer processes, and only if the chips skip high-bandwidth memory and fancy packaging. Shipments already moving can go out under the old terms until Dec. 21.",
+        "Remember my airport metaphor from last week? The airline sold a record number of seats, then security added a second line. Well, some passengers just got walked back to the curb. Most of the plane still boards. China-based customers were about 5% of TSMC's revenue last quarter, down from about 8% a year earlier, per its quarterly numbers as reported by the FT. That's a smaller row than it used to be.",
+        "Plot twist: the stock didn't take the worst of it. On Friday alone, TSM fell 9.48%. SOXX fell 10.55%. The whole chip sector had a terrible night out, and plenty of names took harder hits. My read: the market was already busy panicking about AI spending, and a rule that hits about a twentieth of TSMC's sales wasn't the main event. The gap is small, though. Nobody should frame it as TSMC winning the week.",
+        "So, did my test from last Tuesday fail? Half of it did. I said the dip-buyers were wrong if orders got delayed by the checks. Some orders are now officially delayed. The other half, TSMC trimming its quarterly guide of $52.3 billion to $54.3 billion, hasn't happened. TSMC hasn't said anything public about the halt in the coverage I read. That silence is doing a lot of work.",
+        "My take: this is still a small-slice problem, but now it's a dated one. Smartphone chip licenses are likely to be approved, the FT reported, but the wait could stall production. Tempted to call a record-revenue foundry down 14.66% since my last receipt a bargain? I get it. The risk is that the license queue gets longer, not shorter, and the in-transit window closes before approvals land. What proves the bargain hunters wrong: TSMC cutting that guide or flagging lost China orders.",
+        "One thing to watch: TSMC's November revenue, due around Dec. 10. It's the first monthly number with the new line in place. Filing over feelings."
+      ],
+      "reactions": [
+        {
+          "paragraph": 0,
+          "mood": "noted"
+        },
+        {
+          "paragraph": 3,
+          "mood": "shook"
+        },
+        {
+          "paragraph": 5,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "Two sessions since the rule took effect: Nov. 18 to Nov. 20, 2026 · close to close",
+        "stockPct": -12.11,
+        "benchmark": "SOXX",
+        "benchmarkPct": -13.01
+      },
+      "flowRemark": "My options pull is from Wednesday morning, before the rule took effect and before Friday's drop. Back then the loudest bet was short-dated downside protection that expired Friday, so that trade is done. I'm watching whether new hedges show up into the November revenue report or whether buyers start reaching for calls.",
+      "sources": [
+        {
+          "label": "Reuters via Taipei Times · TSMC tightens China AI chip curbs (Nov. 20, 2026)",
+          "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/20/2003868041"
+        },
+        {
+          "label": "StockAnalysis · TSMC and Samsung suspend some chip shipments to Chinese customers, citing the FT (Nov. 19, 2026)",
+          "url": "https://stockanalysis.com/news/tsmc-samsung-suspend-chip-shipments-china/"
+        },
+        {
+          "label": "Commerce Department · Interim final rule, Addressing Remote Access to Advanced Semiconductors (RIN 0694-AK50)",
+          "url": "https://www.bis.gov/media/documents/rin-0694-ak50.pdf"
+        },
+        {
+          "label": "TSMC · Q3 2026 results and Q4 guidance (Form 6-K, Oct. 15, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+        },
+        {
+          "label": "TSM price history",
+          "url": "https://stockanalysis.com/stocks/tsm/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-21-lite-long-engagement",
       "date": "2026-11-21",
