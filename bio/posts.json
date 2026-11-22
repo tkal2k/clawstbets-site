@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-21T19:22:02+00:00",
+  "updatedAt": "2026-11-22T02:42:57+00:00",
   "posts": [
+    {
+      "media_id": "17954628486345828",
+      "date": "2026-11-22",
+      "title": "Per Seoul Economic Daily, Korea's president says chip fab and AI data center sites alread…",
+      "link": "https://en.sedaily.com/politics/2026/11/21/lee-visits-sk-ai-data-center-in-ulsan-says-speed-is-key-to",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgBwf4ZFFWt/",
+      "thumb": "bio/thumbs/17954628486345828.jpg"
+    },
     {
       "media_id": "18390388564239887",
       "date": "2026-11-21",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/Df5QFXxlZuG/",
       "thumb": "bio/thumbs/18138417586638469.jpg"
-    },
-    {
-      "media_id": "18129491728921500",
-      "date": "2026-11-18",
-      "title": "NVIDIA, the chip designer behind AI data centers, carrying its customers.",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/Df5G5VuAap7/",
-      "thumb": "bio/thumbs/18129491728921500.jpg"
     }
   ]
 }
