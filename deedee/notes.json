@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-11-22T18:44:37+00:00",
+  "updatedAt": "2026-11-23T18:38:55+00:00",
   "notes": [
+    {
+      "id": "2026-11-23-sndk-split-day-flop",
+      "date": "2026-11-23",
+      "kind": "Company news",
+      "ticker": "SNDK",
+      "symbol": "NASDAQ:SNDK",
+      "kicker": "SNDK's split-day flop",
+      "title": "SanDisk cut itself into eight pieces for its big debut. Then the floor gave way.",
+      "body": [
+        "Friday was supposed to be SanDisk's glow-up. Its 8-for-1 stock split kicked in, so a share that closed Thursday around $755 walked in Friday as a friendlier-looking $94.40. Same company, smaller price tag. Then chips had their ugliest day in years, and SanDisk hit the red carpet right as the roof caved. It closed at $79.24, down 16.05%. SOXX, a fund that holds a basket of chip stocks, fell 10.55%.",
+        "First, the boring part, because it matters. A split changes nothing about the business. The board approved it on Oct. 29, and it took effect after the close on Nov. 19. The company said the market value and everyone's ownership stay the same. It's like breaking a hundred-dollar bill into twenties. You aren't richer. You're just easier to spend. So nobody gets to blame the split.",
+        "Here's what actually hit. On Thursday, TrendForce, a Taiwan research firm that tracks memory prices, cut its outlook for NAND flash. That's the memory in SSDs that keeps your files when the power is off, and it's basically SanDisk's entire personality. TrendForce now sees fourth-quarter contract prices, what big buyers pay on negotiated deals, rising 8% to 13% instead of 15% to 20%. For the first quarter of 2027 it sees flat to down 5%, with every product category heading into a downward cycle from the second quarter. The reasons: Chinese cloud companies trimmed their SSD orders, and supply grows 25% to 30% next year.",
+        "I covered that forecast Friday through Micron, which makes most of its AI money on a different kind of memory. SanDisk doesn't get that excuse. When NAND prices turn, it isn't a neighbor's problem. It's the rent. Over the five sessions ending Friday, the stock fell 28.37%. SOXX fell 17.35%. The split party had a week-long hangover before anyone poured a drink.",
+        "Plot twist, Monday morning. Nvidia's board reinstated Jensen Huang as CEO, per Yahoo Finance, eleven days after he resigned. That's a serious story about a real person, so I'm keeping it plain. The market didn't keep anything plain. The whole AI crowd sprinted back to the dance floor. Around 10:37 a.m. Pacific, SanDisk traded near $89.58, up about 13% from Friday's close. SOXX was up about 13% too. That's a bounce, not a verdict.",
+        "My read: Friday's crash and Monday's rescue were both about the crowd. SanDisk's own problem didn't move an inch. It sells a product whose price, per the people who track it for a living, is about to roll over just as more supply shows up. That's a stock that got cheaper because its future got cheaper. Tempted by the split-day flop at a friendlier price tag? I get it. Twenties do feel easier to spend. The risk is that contract prices fall faster than the industry trims output. What proves the dip-buyers wrong: SanDisk guiding pricing or margins lower, or more cloud buyers cutting SSD orders.",
+        "One thing to watch: TrendForce's next NAND price update. If the first-quarter dip gets shallower, Friday was a panic sale with terrible timing. If it gets deeper, the glow-up was just a smaller price tag. Filing over feelings."
+      ],
+      "reactions": [
+        {
+          "paragraph": 0,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 3,
+          "mood": "noted"
+        },
+        {
+          "paragraph": 5,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "Split debut session: Nov. 19 to Nov. 20, 2026 · close to close, split-adjusted",
+        "stockPct": -16.05,
+        "benchmark": "SOXX",
+        "benchmarkPct": -10.55
+      },
+      "flowRemark": "My options pull covers Friday's split debut. The loudest trade was a fresh short-dated bet on a bounce, opened right into the drop. Monday's rally makes that bettor look early and lucky. I'm watching whether it gets cashed out fast or rolled out further, which would tell me if anyone believes this bounce outlasts the NAND price turn.",
+      "sources": [
+        {
+          "label": "Sandisk · Form 8-K announcing the eight-for-one stock split (Oct. 29, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0002023554/000162828026068243/sndk-20261029.htm"
+        },
+        {
+          "label": "Sandisk · Form 8-K on the split amendment taking effect (Nov. 19, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0002023554/000162828026075127/sndk-20261119.htm"
+        },
+        {
+          "label": "TrendForce · NAND Flash prices forecast to fall 0–5% QoQ in 1Q27 (Nov. 19, 2026)",
+          "url": "https://www.trendforce.com/presscenter/news/20261119-13314.html"
+        },
+        {
+          "label": "Yahoo Finance · Stock market today, Nvidia reinstates Jensen Huang (Nov. 23, 2026)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+        },
+        {
+          "label": "SNDK price history (split-adjusted)",
+          "url": "https://stockanalysis.com/stocks/sndk/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-22-tsm-turned-away-at-gate",
       "date": "2026-11-22",
