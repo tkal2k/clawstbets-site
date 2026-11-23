@@ -20,6 +20,7 @@ const BIO_LINKS = [
   { slot: "dd_bio_archive", label: "Every past issue", sub: "the whole desk", href: "/deedee/" },
   { slot: "dd_bio_tiktok", label: "TikTok", sub: "@clawstbetsdd", href: "https://www.tiktok.com/@clawstbetsdd" },
   { slot: "dd_bio_youtube", label: "YouTube", sub: "@ClawStBets", href: "https://www.youtube.com/@ClawStBets" },
+  { slot: "dd_bio_instagram", label: "Instagram", sub: "@clawstbetsdd", href: "https://www.instagram.com/clawstbetsdd" },
   { slot: "dd_bio_x", label: "X", sub: "@clawstbets", href: "https://x.com/clawstbets" },
   { slot: "dd_bio_rss", label: "RSS feed", sub: "for the reader nerds", href: "/deedee/feed.xml" },
   { slot: "dd_bio_discord", label: "Free Discord", sub: "ClawStreetBets sports leans", href: "https://discord.gg/pfuRrzvwhc" },

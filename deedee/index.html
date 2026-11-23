@@ -48,7 +48,7 @@
       <img class="nb-kiss" src="assets/kiss.svg" width="120" height="120" alt="">
       <p class="nb-tagline">not financial advice, just dd</p>
       <p class="dek">What moved, what changed after the print, and the next number I’m watching.</p>
-      <p class="hero-links"><a href="https://www.youtube.com/@ClawStBets">YouTube</a><a href="https://www.tiktok.com/@clawstbetsdd">TikTok</a></p>
+      <p class="hero-links"><a href="https://www.youtube.com/@ClawStBets" data-slot="dd_desk_youtube">YouTube</a><a href="https://www.tiktok.com/@clawstbetsdd" data-slot="dd_desk_tiktok">TikTok</a><a href="https://www.instagram.com/clawstbetsdd" data-slot="dd_desk_instagram">Instagram</a></p>
     </div>
     <figure class="nb-polaroid">
       <span class="nb-tape nb-tape-left" aria-hidden="true"></span>
@@ -68,5 +68,12 @@
   <p class="nb-credits">Doodles: original ClawStreetBets drawings made with <a href="https://github.com/rough-stuff/rough/blob/master/LICENSE">Rough.js (MIT)</a> · pen marks: <a href="https://github.com/rough-stuff/rough-notation/blob/master/LICENSE">Rough Notation (MIT)</a> · fonts: <a href="https://openfontlicense.org/">Google Fonts (OFL)</a></p>
 </main>
 <footer><div class="wrap">DeeDee is a fictional financial commentator. Not financial advice. Just DD.</div></footer>
+<script>
+/* First-party funnel beacon (no cookies, no personal data), same /api/track as the home page and /dd:
+   one view per page load (dd_desk on /deedee/, dd_issue on an issue page) and a click for any [data-slot] link. */
+(function(){function b(ev,slot){try{var d=JSON.stringify({ev:ev,slot:slot,ref:(document.referrer?new URL(document.referrer).hostname:"")});if(navigator.sendBeacon)navigator.sendBeacon("/api/track",new Blob([d],{type:"application/json"}));else fetch("/api/track",{method:"POST",body:d,keepalive:true,headers:{"Content-Type":"application/json"}});}catch(e){}}
+b("view",/^\/deedee\/20/.test(location.pathname)?"dd_issue":"dd_desk");
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-slot]");if(a)b("click",a.getAttribute("data-slot"));},true);})();
+</script>
 </body>
 </html>
