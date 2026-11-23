@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-23T01:47:14+00:00",
+  "updatedAt": "2026-11-23T16:17:36+00:00",
   "posts": [
+    {
+      "media_id": "17869372956675473",
+      "date": "2026-11-23",
+      "title": "HBM4 stacks DRAM like HBM always has, but doubles the bus from 1024 bits to 2,048 lanes p…",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DgFyexelM_B/",
+      "thumb": "bio/thumbs/17869372956675473.jpg"
+    },
     {
       "media_id": "18080875505773152",
       "date": "2026-11-23",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/Df-EDgBIfei/",
       "thumb": "bio/thumbs/18206367847381933.jpg"
-    },
-    {
-      "media_id": "18344091742279105",
-      "date": "2026-11-20",
-      "title": "Per the Korea Herald, Apple is in final talks with Samsung on a four- to five-year DRAM s…",
-      "link": "https://www.koreaherald.com/article/10942672",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df8gr1jEkJO/",
-      "thumb": "bio/thumbs/18344091742279105.jpg"
     }
   ]
 }
