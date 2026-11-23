@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-22T20:11:53+00:00",
+  "updatedAt": "2026-11-23T01:47:14+00:00",
   "posts": [
+    {
+      "media_id": "18080875505773152",
+      "date": "2026-11-23",
+      "title": "Per Seoul Economic Daily, citing MarketWatch, Anthropic floated only about 8.4% of its sh…",
+      "link": "https://en.sedaily.com/world/2026/11/23/anthropic-faces-lockup-flood-14-times-larger-than-ipo-float",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgEO6aLFBOw/",
+      "thumb": "bio/thumbs/18080875505773152.jpg"
+    },
     {
       "media_id": "18383432452300774",
       "date": "2026-11-22",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/Df8gr1jEkJO/",
       "thumb": "bio/thumbs/18344091742279105.jpg"
-    },
-    {
-      "media_id": "18084349004367151",
-      "date": "2026-11-19",
-      "title": "Per Benzinga, short seller Hunterbrook says a blacklisted Chinese server maker used newer…",
-      "link": "https://www.tradingview.com/news/benzinga:d18bd2d54094b:0-amd-stock-falls-after-hunterbrook-raises-china-export-concerns/",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df71CHBCoRr/",
-      "thumb": "bio/thumbs/18084349004367151.jpg"
     }
   ]
 }
