@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-23T19:23:17+00:00",
+  "updatedAt": "2026-11-24T01:53:31+00:00",
   "posts": [
+    {
+      "media_id": "17956395213322023",
+      "date": "2026-11-24",
+      "title": "Per Applied Digital, an unnamed tier-one hyperscaler signed an 18-year, 150 MW lease wort…",
+      "link": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgG0bq0Ejzc/",
+      "thumb": "bio/thumbs/17956395213322023.jpg"
+    },
     {
       "media_id": "17920136817464966",
       "date": "2026-11-23",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/Df_GMxvEX7X/",
       "thumb": "bio/thumbs/17958508884318665.jpg"
-    },
-    {
-      "media_id": "18180052888452078",
-      "date": "2026-11-20",
-      "title": "Per analyst Ming-Chi Kuo's survey (via 24/7 Wall St.), Google cut 2027 shipments of Broad…",
-      "link": "https://247wallst.com/investing/2026/11/20/broadcom-plunges-11-as-google-reportedly-shifts-tpu-orders-to-mediatek-overshadowing-goldmans-460-target-marvell-sinks-10/",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df-ZcQ4gTYb/",
-      "thumb": "bio/thumbs/18180052888452078.jpg"
     }
   ]
 }
