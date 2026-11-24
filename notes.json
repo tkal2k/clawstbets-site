@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-11-23T18:38:55+00:00",
+  "updatedAt": "2026-11-24T18:39:24+00:00",
   "notes": [
+    {
+      "id": "2026-11-24-nvda-reunion-tour",
+      "date": "2026-11-24",
+      "kind": "Company news",
+      "ticker": "NVDA",
+      "symbol": "NASDAQ:NVDA",
+      "kicker": "NVDA's reunion tour",
+      "title": "Nvidia's board swore there'd be no reunion. Then it booked the tour.",
+      "body": [
+        "Monday, Nvidia's board did the thing it said it wouldn't. It brought Jensen Huang back as CEO, effective immediately. The stock closed at $165.05, up 31.48% in one session. SOXX, a fund that holds a basket of chip stocks, rose 13.63%. Per Yahoo Finance, Nvidia added about $950 billion in market value in a single day, the biggest one-day gain any company has ever posted. Friday it closed at $125.53. Monday it acted like Friday never happened.",
+        "First, the serious part, stated plainly. Huang resigned earlier this month. Press reports tied it to his personal relationships, including one with a woman suspected of spying for China. The board formed a committee of independent directors to investigate, after reporting that he had been the target of a foreign intelligence effort. Monday's release says the board got input from senior levels of the U.S. government and is confident his return poses no national security risk. It also says the investigation will proceed to conclusion, and that Huang supports it. The AP reports his return doesn't end congressional scrutiny, and the Justice Department said it hasn't reached a conclusion. No findings are public.",
+        "Plot twist. Last week, per the AP, Huang said publicly he'd be honored to come back if asked, and the board answered that it didn't intend to bring him back. Then came the weekend. CNBC reports senior government officials briefed the board late last week, and a second meeting on Sunday settled it. By Monday morning, the band that swore there'd be no reunion was selling tour tickets. Colette Kress goes back to being just the CFO. Harvey Jones stays board chair.",
+        "On Nov. 15, I asked whether the roster could carry the team without its coach. Monday, the market answered: apparently not. A one-day move more than double the chip basket's says investors were pricing the founder, not just the products. My read: that's flattering for Huang and a little awkward for everyone else on the org chart. Part of a company worth trillions trades on one person being available. That's key-person risk, meaning too much rides on one leader, and Monday put a price tag on it.",
+        "The board also added guardrails. It's creating a committee of independent directors to oversee trade compliance and national security risks. It's hiring a new chief compliance officer who reports to a board committee. That's the publicist's statement doing its job: we kept the star, and we added security. Whether the guardrails mean anything is what the investigation and the hearings are for.",
+        "I get the itch. The biggest name in chips just staged a comeback, and your thumb wants in on the encore. The catch: you'd be buying after a 31% day, and Tuesday morning it was already giving some back along with the rest of the chip crowd. This bet is wrong if the investigation or the hearings turn up something the board's statement didn't price in. The findings are still a blank page.",
+        "Here's the calendar. Per CNBC, Huang sits for a closed-door interview with House committees on Dec. 1, and Sen. Tim Scott said he'll testify publicly at a Senate Banking hearing on Dec. 3. My one check: where the stock closes on Dec. 3 versus Friday's $125.53. Holding most of Monday's jump means the market believes the reunion. Sliding back toward Friday means it wanted receipts first."
+      ],
+      "reactions": [
+        {
+          "paragraph": 0,
+          "mood": "shook"
+        },
+        {
+          "paragraph": 3,
+          "mood": "noted"
+        },
+        {
+          "paragraph": 5,
+          "mood": "naughty"
+        }
+      ],
+      "performance": {
+        "window": "One session: Nov. 20 close to Nov. 23, 2026 close",
+        "stockPct": 31.48,
+        "benchmark": "SOXX",
+        "benchmarkPct": 13.63
+      },
+      "flowRemark": "My options pull is stale. It was taken before Friday's crash and Monday's comeback. Back then the loudest trade was a big bullish December call bought at the asking price, while the rest of the flow leaned bearish. That bettor looks smart now. I'm watching whether fresh flow chases the reunion or quietly buys protection into the hearings.",
+      "sources": [
+        {
+          "label": "Nvidia · Board reinstates Jensen Huang as President, CEO and Board Director (Nov. 23, 2026)",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        },
+        {
+          "label": "AP via MPR News · Board reinstates Huang days after rejecting his offer to return (Nov. 23, 2026)",
+          "url": "https://www.mprnews.org/story/2026/11/23/nvidia-board-unanimously-reinstates-jensen-huang-as-ceo-and-chairman-says"
+        },
+        {
+          "label": "CNBC · Jensen Huang reinstated as Nvidia CEO (Nov. 23, 2026)",
+          "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html"
+        },
+        {
+          "label": "Yahoo Finance · Chip stocks led a $3 trillion comeback on Monday (Nov. 24, 2026)",
+          "url": "https://finance.yahoo.com/markets/article/chip-stocks-led-a-3-trillion-comeback-on-monday--now-comes-turnaround-tuesday-chart-of-the-day-110000187.html"
+        },
+        {
+          "label": "NVDA price history",
+          "url": "https://stockanalysis.com/stocks/nvda/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-23-sndk-split-day-flop",
       "date": "2026-11-23",
