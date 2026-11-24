@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-24T16:18:53+00:00",
+  "updatedAt": "2026-11-24T19:22:41+00:00",
   "posts": [
+    {
+      "media_id": "18136381654742902",
+      "date": "2026-11-24",
+      "title": "Per Yahoo Finance, Nvidia gave back 8% the day after its 31% Huang-return surge, Micron a…",
+      "link": "https://finance.yahoo.com/markets/article/nvidia-amd-broadcom-lead-chip-stocks-lower-as-ai-trade-comes-under-pressure-141635463.html",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgIsfxJHEUf/",
+      "thumb": "bio/thumbs/18136381654742902.jpg"
+    },
     {
       "media_id": "18497007682106230",
       "date": "2026-11-24",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DgBwf4ZFFWt/",
       "thumb": "bio/thumbs/17954628486345828.jpg"
-    },
-    {
-      "media_id": "18390388564239887",
-      "date": "2026-11-21",
-      "title": "Per Seoul Economic Daily, citing The Information, SoftBank's Masayoshi Son sounded out ba…",
-      "link": "https://en.sedaily.com/world/2026/11/21/son-weighed-1-trillion-bid-for-sk-hynix-before-shelving-idea",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DgA-BgaCIrg/",
-      "thumb": "bio/thumbs/18390388564239887.jpg"
     }
   ]
 }
