@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-24T01:53:31+00:00",
+  "updatedAt": "2026-11-24T02:58:06+00:00",
   "posts": [
+    {
+      "media_id": "18128201434809981",
+      "date": "2026-11-24",
+      "title": "Five things from last week: NVIDIA's data center revenue rose 110%, India's smartphone sh…",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DgG7yErCaFs/",
+      "thumb": "bio/thumbs/18128201434809981.jpg"
+    },
     {
       "media_id": "17956395213322023",
       "date": "2026-11-24",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/DgApCWTFQmg/",
       "thumb": "bio/thumbs/18124199947943500.jpg"
-    },
-    {
-      "media_id": "17958508884318665",
-      "date": "2026-11-21",
-      "title": "Per TrendForce (citing the Financial Times and Reuters), TSMC and Samsung paused some chi…",
-      "link": "https://www.trendforce.com/news/2026/11/20/news-tsmc-samsung-reportedly-pause-china-consumer-chip-shipments-under-new-u-s-rules-16nm-orders-affected/",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/Df_GMxvEX7X/",
-      "thumb": "bio/thumbs/17958508884318665.jpg"
     }
   ]
 }
