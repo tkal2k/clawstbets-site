@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-25T19:26:56+00:00",
+  "updatedAt": "2026-11-25T22:48:21+00:00",
   "posts": [
+    {
+      "media_id": "18246781003316278",
+      "date": "2026-11-25",
+      "title": "Per Nikkei via TrendForce, Samsung and SK hynix reportedly license wafer-bonding tech fro…",
+      "link": "https://www.trendforce.com/news/2026/11/25/news-sk-hynix-reportedly-joins-samsung-in-licensing-ymtcs-xtacking-technology-as-nand-race-heats-up/",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgLo01nuG-D/",
+      "thumb": "bio/thumbs/18246781003316278.jpg"
+    },
     {
       "media_id": "17897869914527213",
       "date": "2026-11-25",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DgGHxVQkejY/",
       "thumb": "bio/thumbs/17920136817464966.jpg"
-    },
-    {
-      "media_id": "17869372956675473",
-      "date": "2026-11-23",
-      "title": "HBM4 stacks DRAM like HBM always has, but doubles the bus from 1024 bits to 2,048 lanes p…",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DgFyexelM_B/",
-      "thumb": "bio/thumbs/17869372956675473.jpg"
     }
   ]
 }
