@@ -1,6 +1,72 @@
 {
-  "updatedAt": "2026-11-24T18:39:24+00:00",
+  "updatedAt": "2026-11-25T18:40:22+00:00",
   "notes": [
+    {
+      "id": "2026-11-25-dell-party-paid-in-advance",
+      "date": "2026-11-25",
+      "kind": "After earnings",
+      "ticker": "DELL",
+      "symbol": "NYSE:DELL",
+      "kicker": "DELL's party, prepaid",
+      "title": "Dell threw a record party. The stock got kicked out before it started.",
+      "body": [
+        "Tuesday night, Dell posted record revenue of $54.9 billion, more than double a year ago. Adjusted earnings came in at $9.45 a share, when Wall Street expected $6.59. The awkward part: the stock had already been tossed out of the building hours earlier. Dell closed Tuesday at $295.28, down 11.83% in one session. SOXX, a fund that holds a basket of chip stocks, fell 8.27%.",
+        "Blame the neighbor. HPE, Dell's closest rival in the server business, reported Monday night and dropped 16.31% on Tuesday. One outlet pinned the sector selloff on HPE's profit-margin outlook. Either way, investors watched one server maker wobble and emptied the whole aisle. Dell got punished for a party it hadn't thrown yet.",
+        "Then it threw one. AI-optimized servers brought in $22.0 billion, up 291%. Dell booked $60.2 billion of AI orders in the quarter and ended with a $132.3 billion AI backlog, meaning orders signed but not yet shipped. It raised its full-year revenue forecast to $202 billion from $192 billion. The board also approved another $25 billion in buybacks, the company buying its own shares.",
+        "Plot twist, and it's in Dell's own guidance. Next quarter, Dell expects about $56.3 billion in revenue. That's more than this quarter. It also expects adjusted earnings of $8.40 a share. That's less than this quarter's $9.45. More sales, less profit per share. Hold on. That's the line I'd want explained before I clap.",
+        "My read: this quarter's margin had help. Dell's inventory, the stuff sitting in its warehouses, swelled to $29.4 billion from $10.4 billion in January. CNBC says rising memory prices squeezed the PC side. It looks like Dell stocked up on parts before they got pricey, then sold servers at this year's prices. That's Black Friday in reverse: grab the TV at the doorbuster price, then charge your roommate full retail. Great for one quarter. Then the cheap stock runs out.",
+        "Here's who is fronting the cash. Dell owed its suppliers $57.8 billion at the end of October, up from $33.6 billion in January. So the warehouse is partly on the suppliers' tab. That works while orders keep shipping. It gets tense if they slow.",
+        "I get the itch. Record quarter, stock down double digits, a $25 billion buyback standing behind it. Feels like a doorbuster. Wednesday it opened lower again with the rest of the chip crowd, then spent the morning climbing back toward Tuesday's close. The catch: you'd be buying the quarter Dell already told you won't repeat. This bet is wrong if January's margin shrinks the way that lower profit guide hints, or worse.",
+        "My one check: Dell's adjusted operating margin for the January quarter, against this quarter's 14.2%. Holding near it means the margin was earned and Tuesday was guilt by association. Sliding well below it means the party was paid for in advance. Noted."
+      ],
+      "reactions": [
+        {
+          "paragraph": 0,
+          "mood": "gasp"
+        },
+        {
+          "paragraph": 3,
+          "mood": "side-eye"
+        },
+        {
+          "paragraph": 6,
+          "mood": "lip-lick"
+        }
+      ],
+      "performance": {
+        "window": "One session: Nov. 23 close to Nov. 24, 2026 close (before Dell's after-hours report)",
+        "stockPct": -11.83,
+        "benchmark": "SOXX",
+        "benchmarkPct": -8.27
+      },
+      "flowRemark": "My options pull is stale. It was taken before Tuesday's slide and before the report. Back then the loudest trade was a big short-dated put bought at the asking price, a bet on a drop into earnings. Tuesday paid that bettor before Dell even took the stage. I'm watching whether fresh flow treats the record quarter as a rescue or a chance to sell.",
+      "sources": [
+        {
+          "label": "Dell Technologies · Q3 fiscal 2027 financial results, Form 8-K Exhibit 99.1 (Nov. 24, 2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001571996/000157199626000050/exhibit991earnings8kq3fy27.htm"
+        },
+        {
+          "label": "CNBC · Dell earnings beat on AI strength, company authorizes $25 billion buyback (Nov. 24, 2026)",
+          "url": "https://www.cnbc.com/2026/11/24/dell-earnings-report-q3-2027.html"
+        },
+        {
+          "label": "Wisevoter · Dell revenue jumps on AI server demand (Nov. 25, 2026)",
+          "url": "https://wisevoter.com/world/us/2026/11/25/dell-revenue-jumps-ai-server-demand"
+        },
+        {
+          "label": "DELL price history",
+          "url": "https://stockanalysis.com/stocks/dell/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        },
+        {
+          "label": "HPE price history",
+          "url": "https://stockanalysis.com/stocks/hpe/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-24-nvda-reunion-tour",
       "date": "2026-11-24",
