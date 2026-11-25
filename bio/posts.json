@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-25T18:20:15+00:00",
+  "updatedAt": "2026-11-25T19:26:56+00:00",
   "posts": [
+    {
+      "media_id": "17897869914527213",
+      "date": "2026-11-25",
+      "title": "Per ABC News and CNBC, Huang's return didn't stop the chip slide: the Dow fell over 1,000…",
+      "link": "https://abcnews.com/Business/stocks-tumble-tech-sell-off-resumes-nvidia-falls/story?id=138442070",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgLRx8CSFMY/",
+      "thumb": "bio/thumbs/17897869914527213.jpg"
+    },
     {
       "media_id": "18115817606233274",
       "date": "2026-11-25",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/DgFyexelM_B/",
       "thumb": "bio/thumbs/17869372956675473.jpg"
-    },
-    {
-      "media_id": "18080875505773152",
-      "date": "2026-11-23",
-      "title": "Per Seoul Economic Daily, citing MarketWatch, Anthropic floated only about 8.4% of its sh…",
-      "link": "https://en.sedaily.com/world/2026/11/23/anthropic-faces-lockup-flood-14-times-larger-than-ipo-float",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DgEO6aLFBOw/",
-      "thumb": "bio/thumbs/18080875505773152.jpg"
     }
   ]
 }
