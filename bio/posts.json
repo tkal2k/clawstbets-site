@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-24T19:22:41+00:00",
+  "updatedAt": "2026-11-25T01:49:28+00:00",
   "posts": [
+    {
+      "media_id": "17911680903327616",
+      "date": "2026-11-25",
+      "title": "Per TrendForce, citing Datasection's filing, the Japanese AI data center operator cut its…",
+      "link": "https://www.trendforce.com/news/2026/11/23/news-datasection-slashes-forecast-nearly-90-raising-questions-over-taiwanese-suppliers-b200b300-orders/",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgJYwM3BQPa/",
+      "thumb": "bio/thumbs/17911680903327616.jpg"
+    },
     {
       "media_id": "18136381654742902",
       "date": "2026-11-24",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/DgDOpZFjRRx/",
       "thumb": "bio/thumbs/18080757857749235.jpg"
-    },
-    {
-      "media_id": "17954628486345828",
-      "date": "2026-11-22",
-      "title": "Per Seoul Economic Daily, Korea's president says chip fab and AI data center sites alread…",
-      "link": "https://en.sedaily.com/politics/2026/11/21/lee-visits-sk-ai-data-center-in-ulsan-says-speed-is-key-to",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DgBwf4ZFFWt/",
-      "thumb": "bio/thumbs/17954628486345828.jpg"
     }
   ]
 }
