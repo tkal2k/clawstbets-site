@@ -1,6 +1,68 @@
 {
-  "updatedAt": "2026-11-25T18:40:22+00:00",
+  "updatedAt": "2026-11-27T18:41:27+00:00",
   "notes": [
+    {
+      "id": "2026-11-27-nvda-carded-at-the-door",
+      "date": "2026-11-27",
+      "kind": "Company news",
+      "ticker": "NVDA",
+      "symbol": "NASDAQ:NVDA",
+      "kicker": "NVDA got carded",
+      "title": "Chip stocks partied on Black Friday. Nvidia got carded at the door.",
+      "body": [
+        "Black Friday, and chip stocks finally came back to the party. SOXX, a fund holding a basket of chip stocks, closed the shortened session up 4.73% from Wednesday. Nvidia, the name the party is usually thrown for, finished up 0.88%. That's not celebrating. That's showing up, saying hi, and standing by the coat rack all night.",
+        "The reason landed on Thanksgiving, while the market was closed. The Financial Times reported that Nvidia told the companies that build servers around its chips, including Dell and Supermicro, to stop shipping AI servers to Malaysia, Singapore, Thailand and Indonesia. Per the report, those partners told buyers in the four countries their orders wouldn't go through. Nvidia, Dell and Supermicro didn't immediately answer Reuters.",
+        "Why those four? New US export rules that took effect last week require a license to ship advanced chips to several Southeast Asian countries. The goal, per the reporting, is to stop Chinese AI developers from dodging the China ban by renting computing power from cloud companies in the region that run Nvidia chips. A cloud executive told the FT nobody knows how to apply for the license yet. The FT's sources said it's unclear whether the halt is temporary.",
+        "Plot twist: Nvidia actually opened higher with everyone else. Then it slid to about 2.6% below Wednesday's close in the first half hour, while the rest of the chip crowd kept dancing. It clawed back before the 1 p.m. Eastern bell, but only to a sliver of a gain. Hold on. The basket did more than four. Nvidia did less than one.",
+        "My read: this is a sublet problem. Nvidia hands the keys to a cloud company in Singapore. The cloud company rents out rooms by the hour. Washington just noticed who has been crashing on the couch, and now every key needs a signed form. The form doesn't exist yet. So nobody gets keys. That's not demand disappearing. It's demand stuck in the lobby.",
+        "How big is the lobby? The FT, citing company accounts, says Nvidia booked $104 billion of revenue through its Singapore subsidiary in 2025. Careful with that number. It's where sales get billed, not where servers end up, and some Taiwan and China revenue runs through that unit too. So it is not $104 billion at risk. It does tell you how much paperwork runs through one address.",
+        "I get the itch. Nvidia trailing a rally by almost four points on a holiday half-day, over a pause that might be temporary, looks like a markdown with nobody in line. The catch: temporary is the FT's sources shrugging, not a promise. This read is wrong if the licenses never show up and those orders get rerouted for good or quietly cancelled.",
+        "My one check: whether Nvidia, Dell or Supermicro say shipments to those four countries have restarted, or that licenses came through, before the year ends. A restart means Friday was a paperwork tax. Silence into January means the lobby is turning into a waiting room. Noted."
+      ],
+      "reactions": [
+        {
+          "paragraph": 0,
+          "mood": "laugh"
+        },
+        {
+          "paragraph": 3,
+          "mood": "shook"
+        },
+        {
+          "paragraph": 6,
+          "mood": "lip-lick"
+        }
+      ],
+      "performance": {
+        "window": "Shortened session: Nov. 25 close to Nov. 27, 2026 close at 1 p.m. ET (market closed Nov. 26 for Thanksgiving)",
+        "stockPct": 0.88,
+        "benchmark": "SOXX",
+        "benchmarkPct": 4.73
+      },
+      "flowRemark": "My options pull was taken before Friday's open, so it mostly reflects Wednesday, before the shipping report hit trading. Back then one trader paid up for short-dated upside calls while the broader tide leaned the other way. Mixed signals, old news. I'm watching whether fresh flow treats the halt as a pause or a problem.",
+      "sources": [
+        {
+          "label": "Reuters via Investing.com · Nvidia halts server shipments to four Southeast Asian countries, FT reports (Nov. 26, 2026)",
+          "url": "https://www.investing.com/news/stock-market-news/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports-5053574"
+        },
+        {
+          "label": "The National · Nvidia halts chip shipments to South-East Asia amid US crackdown (Nov. 26, 2026)",
+          "url": "https://www.thenationalnews.com/future/technology/2026/11/26/nvidia-halts-chip-shipments-to-south-east-asia-amid-us-crackdown/"
+        },
+        {
+          "label": "Yahoo Finance · Chip stocks lead a Black Friday rally, but Nvidia misses out (Nov. 27, 2026)",
+          "url": "https://finance.yahoo.com/markets/article/chip-stocks-lead-a-black-friday-rally-but-nvidia-misses-out-alphacheck-145727185.html"
+        },
+        {
+          "label": "NVDA price history",
+          "url": "https://stockanalysis.com/stocks/nvda/history/"
+        },
+        {
+          "label": "SOXX price history",
+          "url": "https://stockanalysis.com/etf/soxx/history/"
+        }
+      ]
+    },
     {
       "id": "2026-11-25-dell-party-paid-in-advance",
       "date": "2026-11-25",
