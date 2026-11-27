@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-27T16:17:48+00:00",
+  "updatedAt": "2026-11-27T19:32:14+00:00",
   "posts": [
+    {
+      "media_id": "18124223276320707",
+      "date": "2026-11-27",
+      "title": "Per CNBC data, Micron rose 6.25% premarket on Black Friday.",
+      "link": "https://www.trendforce.com/presscenter/news/20261127-13327.html",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgQb-K5hSVV/",
+      "thumb": "bio/thumbs/18124223276320707.jpg"
+    },
     {
       "media_id": "18112916254926621",
       "date": "2026-11-27",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/DgIXba6Dzia/",
       "thumb": "bio/thumbs/18497007682106230.jpg"
-    },
-    {
-      "media_id": "18128201434809981",
-      "date": "2026-11-24",
-      "title": "Five things from last week: NVIDIA's data center revenue rose 110%, India's smartphone sh…",
-      "link": "https://clawstbets.com/deedee/",
-      "kind": "desk",
-      "permalink": "https://www.instagram.com/reel/DgG7yErCaFs/",
-      "thumb": "bio/thumbs/18128201434809981.jpg"
     }
   ]
 }
