@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-25T22:48:21+00:00",
+  "updatedAt": "2026-11-27T01:47:37+00:00",
   "posts": [
+    {
+      "media_id": "17869457046679419",
+      "date": "2026-11-27",
+      "title": "Per Seoul Economic Daily, citing Nikkei, Kioxia is testing 144 of its SSDs in an Nvidia A…",
+      "link": "https://en.sedaily.com/world/2026/11/27/kioxia-teams-with-nvidia-to-test-ssds-for-ai-memory-role",
+      "kind": "source",
+      "permalink": "https://www.instagram.com/reel/DgOiGxghYy7/",
+      "thumb": "bio/thumbs/17869457046679419.jpg"
+    },
     {
       "media_id": "18246781003316278",
       "date": "2026-11-25",
@@ -99,15 +108,6 @@
       "kind": "source",
       "permalink": "https://www.instagram.com/reel/DgG0bq0Ejzc/",
       "thumb": "bio/thumbs/17956395213322023.jpg"
-    },
-    {
-      "media_id": "17920136817464966",
-      "date": "2026-11-23",
-      "title": "Nvidia reinstated Jensen Huang as CEO and, per ABC News, Micron, Dell and CoreWeave jumpe…",
-      "link": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DgGHxVQkejY/",
-      "thumb": "bio/thumbs/17920136817464966.jpg"
     }
   ]
 }
