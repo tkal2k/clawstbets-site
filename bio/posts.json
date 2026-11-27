@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-27T01:47:37+00:00",
+  "updatedAt": "2026-11-27T16:17:48+00:00",
   "posts": [
+    {
+      "media_id": "18112916254926621",
+      "date": "2026-11-27",
+      "title": "A chiplet splits one big chip into small specialized dies joined in one package.",
+      "link": "https://clawstbets.com/deedee/",
+      "kind": "desk",
+      "permalink": "https://www.instagram.com/reel/DgQFsCoSqqY/",
+      "thumb": "bio/thumbs/18112916254926621.jpg"
+    },
     {
       "media_id": "17869457046679419",
       "date": "2026-11-27",
@@ -99,15 +108,6 @@
       "kind": "desk",
       "permalink": "https://www.instagram.com/reel/DgG7yErCaFs/",
       "thumb": "bio/thumbs/18128201434809981.jpg"
-    },
-    {
-      "media_id": "17956395213322023",
-      "date": "2026-11-24",
-      "title": "Per Applied Digital, an unnamed tier-one hyperscaler signed an 18-year, 150 MW lease wort…",
-      "link": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
-      "kind": "source",
-      "permalink": "https://www.instagram.com/reel/DgG0bq0Ejzc/",
-      "thumb": "bio/thumbs/17956395213322023.jpg"
     }
   ]
 }
